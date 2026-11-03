@@ -8,6 +8,7 @@ import Biblioteca from './painel/Biblioteca.jsx'
 import FilaSOS from './painel/FilaSOS.jsx'
 import Configuracoes from './painel/Configuracoes.jsx'
 import PreviaColuna from './PreviaColuna.jsx'
+import PaginaPaciente from './paciente/PaginaPaciente.jsx'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="sos" element={<FilaSOS />} />
         <Route path="configuracoes" element={<Configuracoes />} />
       </Route>
+      <Route path="/p" element={<PaginaPaciente />} />
       <Route path="/previa-coluna" element={<PreviaColuna />} />
       <Route path="*" element={<Navigate to="/painel" replace />} />
     </Routes>

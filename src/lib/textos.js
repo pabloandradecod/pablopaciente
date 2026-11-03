@@ -33,8 +33,7 @@ export const TEXTOS = {
     alertaAcao: 'Ligar para o SAMU (192)',
     expectativa: 'Você tem preferência nos horários de retorno.',
     confirmar: 'Enviar pedido pelo WhatsApp',
-    mensagem: 'Sou {nome}, paciente do Dr. Pablo, e travei de novo. Quero agendar um retorno.',
-    enviado: 'Pedido registrado. Se o WhatsApp não abriu, toque no botão abaixo.'
+    mensagem: 'Sou {nome}, paciente do Dr. Pablo, e travei de novo. Quero agendar um retorno.'
   }
 }
 
