@@ -19,6 +19,7 @@
 }
 
 html { -webkit-text-size-adjust: 100%; }
+body { overflow-wrap: break-word; }
 body {
   @apply bg-cinza-50 text-tinta font-sans antialiased;
 }

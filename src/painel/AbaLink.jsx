@@ -94,7 +94,7 @@ export default function AbaLink({ paciente }) {
         <Card className="border-petroleo/30">
           <h3 className="font-bold text-petroleo-escuro">Link pronto</h3>
           <div className="mt-2 break-all rounded-xl bg-cinza-50 p-3 font-mono text-xs text-cinza-600">{novoLink}</div>
-          <div className="mt-2 whitespace-pre-line rounded-xl border border-cinza-100 p-3 text-sm">{mensagem}</div>
+          <div className="mt-2 whitespace-pre-line rounded-xl border border-cinza-100 p-3 text-sm [overflow-wrap:anywhere]">{mensagem}</div>
           <div className="mt-3 flex flex-wrap gap-2">
             <Botao href={linkWhatsapp(paciente.whatsapp, mensagem)} target="_blank" rel="noopener noreferrer" variante="destaque" tamanho="lg" icone="whatsapp">
               Enviar no WhatsApp
