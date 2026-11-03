@@ -20,6 +20,6 @@ conforme a Lei Geral de Proteção de Dados (Lei 13.709/2018). Os dados não sã
 
 ## Pontos para decidir na revisão
 
-- Prazo de guarda do prontuário (o COFFITO exige guarda; o resumo do link pode ser revogado a qualquer momento).
+- Prazo de guarda do prontuário: confirmar a exigência atual do COFFITO e do CREFITO-4. O resumo do link pode ser revogado a qualquer momento, mas o prontuário continua sob sua guarda.
 - Canal para o paciente pedir exclusão ou correção (sugestão: o próprio WhatsApp do consultório).
 - Se o consentimento é colhido presencialmente (você marca no painel) ou pelo próprio paciente.
