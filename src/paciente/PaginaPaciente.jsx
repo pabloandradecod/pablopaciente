@@ -741,6 +741,7 @@ function Estrelas() {
 }
 
 // Primeira coisa do link: pedido de avaliação no Google (o mesmo para todos os pacientes).
+// Fica sempre visível: tocar no botão não garante que a pessoa terminou a avaliação.
 function AvaliacaoGoogle() {
   const CHAVE = 'pp_avaliou_google'
   const [avaliou, setAvaliou] = useState(() => {
@@ -757,15 +758,6 @@ function AvaliacaoGoogle() {
     } catch {
       /* sem armazenamento */
     }
-  }
-
-  if (avaliou) {
-    return (
-      <a href={TEXTOS.linkAvaliacaoGoogle} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-2xl bg-papel px-4 py-3 text-sm font-semibold text-petroleo-escuro">
-        <Estrelas />
-        <span>Obrigado pela avaliação!</span>
-      </a>
-    )
   }
 
   return (
@@ -787,6 +779,7 @@ function AvaliacaoGoogle() {
         </svg>
         Avaliar no Google
       </a>
+      {avaliou && <p className="mt-3 text-center text-sm font-semibold text-destaque">Obrigado pela avaliação! Ela ajuda muito.</p>}
     </div>
   )
 }
