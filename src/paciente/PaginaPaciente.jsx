@@ -217,6 +217,10 @@ function Conteudo({ dados, acesso }) {
             </p>
           </Revelar>
 
+          <Revelar atraso={100} className="mt-7">
+            <AvaliacaoGoogle />
+          </Revelar>
+
           {sessoes.length > 0 && (
             <Revelar atraso={150} className="mt-8 grid grid-cols-3 gap-2.5">
               <Estatistica valor={<Contador valor={sessoes.length} />} rotulo={sessoes.length === 1 ? 'sessão' : 'sessões'} />
@@ -660,6 +664,71 @@ function SugestaoTreino({ treinos, orientacoes }) {
           educação física. Respeite seus limites e pare se sentir dor.
         </p>
       </div>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------- avaliação no Google
+
+function Estrelas() {
+  return (
+    <div className="flex gap-0.5" aria-hidden="true">
+      {[0, 1, 2, 3, 4].map((i) => (
+        <svg key={i} width="18" height="18" viewBox="0 0 24 24" fill="#F4C542">
+          <path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2L2.9 9.4l6.3-.9z" />
+        </svg>
+      ))}
+    </div>
+  )
+}
+
+// Primeira coisa do link: pedido de avaliação no Google (o mesmo para todos os pacientes).
+function AvaliacaoGoogle() {
+  const CHAVE = 'pp_avaliou_google'
+  const [avaliou, setAvaliou] = useState(() => {
+    try {
+      return localStorage.getItem(CHAVE) === '1'
+    } catch {
+      return false
+    }
+  })
+  const marcar = () => {
+    setAvaliou(true)
+    try {
+      localStorage.setItem(CHAVE, '1')
+    } catch {
+      /* sem armazenamento */
+    }
+  }
+
+  if (avaliou) {
+    return (
+      <a href={TEXTOS.linkAvaliacaoGoogle} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-2xl bg-papel px-4 py-3 text-sm font-semibold text-petroleo-escuro">
+        <Estrelas />
+        <span>Obrigado pela avaliação!</span>
+      </a>
+    )
+  }
+
+  return (
+    <div className="rounded-[28px] bg-petroleo-escuro p-5 text-white">
+      <Estrelas />
+      <h2 className="mt-3 text-[22px] font-extrabold leading-tight tracking-tight">Faça uma avaliação e me ajude no Google</h2>
+      <p className="mt-1.5 text-[15px] leading-relaxed text-white/75">
+        Leva menos de um minuto e ajuda outras pessoas com dor nas costas a encontrar atendimento.
+      </p>
+      <a
+        href={TEXTOS.linkAvaliacaoGoogle}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={marcar}
+        className="mt-4 flex h-14 w-full items-center justify-center gap-2 rounded-2xl bg-destaque text-base font-extrabold text-petroleo-escuro shadow-[0_8px_24px_-10px_rgba(244,197,66,0.9)]"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2L2.9 9.4l6.3-.9z" />
+        </svg>
+        Avaliar no Google
+      </a>
     </div>
   )
 }

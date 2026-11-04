@@ -7,6 +7,8 @@ export const TEXTOS = {
   especialidade: 'Fisioterapia e Quiropraxia',
   cidade: 'Três Pontas, MG',
 
+  linkAvaliacaoGoogle: 'https://g.page/r/Ce70y6DZOjdrEBM/review',
+
   rodapeLegal:
     'Este é um resumo para você. O prontuário oficial fica sob guarda do profissional.',
 
