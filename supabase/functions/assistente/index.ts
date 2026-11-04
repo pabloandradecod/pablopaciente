@@ -75,8 +75,8 @@ Deno.serve(async (req) => {
   const montar = (schema: unknown) => ({
     model: MODELO,
     max_tokens: 16000,
-    // Instruções + campos + catálogo: iguais em todo pedido, ficam em cache (mais barato).
-    system: [{ type: "text", text: sistema, cache_control: { type: "ephemeral" } }],
+    // Sem cache: os pedidos são espaçados (mais de 5 min), e gravar cache custaria mais.
+    system: sistema,
     messages: [{ role: "user", content: mensagem }],
     output_config: { effort: "medium", format: { type: "json_schema", schema } },
   });

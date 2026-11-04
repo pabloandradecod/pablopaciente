@@ -148,6 +148,7 @@ const SECOES = [
   { id: 'coluna', rotulo: 'Coluna' },
   { id: 'evolucao', rotulo: 'Evolução' },
   { id: 'exercicios', rotulo: 'Exercícios' },
+  { id: 'treino', rotulo: 'Treino' },
   { id: 'indicar', rotulo: 'Indicar' }
 ]
 
@@ -167,7 +168,8 @@ function CabecalhoSecao({ numero, titulo, sub }) {
 // ---------------------------------------------------------------- página
 
 function Conteudo({ dados, acesso }) {
-  const { paciente, avaliacao, sessoes, exercicios } = dados
+  const { paciente, avaliacao, sessoes, exercicios, treino } = dados
+  const treinos = (treino?.treinos || []).filter((t) => t.itens?.length)
   const [sessaoSel, setSessaoSel] = useState(null)
   const [ativa, setAtiva] = useState('avaliacao')
   const ultima = sessoes.at(-1)
@@ -182,7 +184,7 @@ function Conteudo({ dados, acesso }) {
   const comDor = sessoes.filter((s) => s.dor_antes != null)
   const itens = (avaliacao?.itens || []).filter((i) => temValor(i))
   const secoes = SECOES.filter(
-    (s) => (s.id !== 'avaliacao' || itens.length) && (s.id !== 'evolucao' || comDor.length) && (s.id !== 'exercicios' || exercicios.length)
+    (s) => (s.id !== 'avaliacao' || itens.length) && (s.id !== 'evolucao' || comDor.length) && (s.id !== 'exercicios' || exercicios.length) && (s.id !== 'treino' || treinos.length)
   )
 
   // Destaca no menu a seção que está na tela.
@@ -323,7 +325,17 @@ function Conteudo({ dados, acesso }) {
           </section>
         )}
 
-        {/* 05. Indicar */}
+        {/* 05. Sugestão de treino */}
+        {treinos.length > 0 && (
+          <section id="treino" className="scroll-mt-20">
+            <Revelar>
+              <CabecalhoSecao numero="05" titulo="Sugestão de treino" sub="Uma referência para a sua rotina na academia, dividida em A, B e C." />
+            </Revelar>
+            <SugestaoTreino treinos={treinos} orientacoes={treino?.observacao} />
+          </section>
+        )}
+
+        {/* 06. Indicar */}
         <section id="indicar" className="scroll-mt-20">
           <Revelar>
             <Indicacao nome={paciente.primeiro_nome} />
@@ -574,7 +586,7 @@ function Indicacao({ nome }) {
   return (
     <div className="relative overflow-hidden rounded-[32px] bg-petroleo-escuro p-7 text-white">
       <img src="/marca/simbolo.webp" alt="" aria-hidden="true" className="pointer-events-none absolute -right-10 -top-6 h-56 opacity-[0.08] invert" />
-      <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-destaque">05 · Indique</p>
+      <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-destaque">06 · Indique</p>
       <h2 className="mt-3 text-[30px] font-extrabold leading-[1.05] tracking-tight">
         Conhece alguém que vive com dor nas costas?
       </h2>
@@ -590,6 +602,64 @@ function Indicacao({ nome }) {
         <Icone nome="whatsapp" tamanho={22} />
         Indicar pelo WhatsApp
       </a>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------- sugestão de treino
+
+function SugestaoTreino({ treinos, orientacoes }) {
+  const [ativo, setAtivo] = useState(treinos[0].letra)
+  const atual = treinos.find((t) => t.letra === ativo) || treinos[0]
+  return (
+    <div>
+      <div className="mb-3 flex gap-2">
+        {treinos.map((t) => (
+          <button
+            key={t.letra}
+            onClick={() => setAtivo(t.letra)}
+            aria-pressed={ativo === t.letra}
+            className={`flex-1 rounded-2xl px-3 py-3 text-left transition ${ativo === t.letra ? 'bg-petroleo-escuro text-white' : 'bg-white text-tinta'}`}
+          >
+            <span className="block text-2xl font-extrabold leading-none">{t.letra}</span>
+            <span className={`mt-1 block line-clamp-2 text-[11px] font-semibold leading-tight ${ativo === t.letra ? 'text-white/75' : 'text-cinza-600'}`}>{t.foco || `Treino ${t.letra}`}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="rounded-[28px] bg-white p-4">
+        <div className="mb-3 flex items-baseline justify-between px-1">
+          <h3 className="text-lg font-extrabold text-petroleo-escuro">Treino {atual.letra}</h3>
+          <span className="text-xs font-semibold text-cinza-600">{atual.itens.length} exercícios</span>
+        </div>
+        <div className="grid grid-cols-2 gap-2.5">
+          {atual.itens.map((it, i) => (
+            <div key={`${atual.letra}-${i}`} className="overflow-hidden rounded-2xl border border-cinza-100">
+              <VideoLoop src={urlVideo(it.video)} proporcao="aspect-square" />
+              <div className="p-2.5">
+                <div className="text-[13px] font-bold leading-tight text-tinta">{it.nome}</div>
+                <div className="mt-1 text-sm font-extrabold text-petroleo-escuro">
+                  {it.series}× <span className="font-bold">{it.reps}</span>
+                </div>
+                {it.observacao && <p className="mt-1 text-[11px] leading-snug text-cinza-600">{it.observacao}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+        {orientacoes && <p className="mt-4 rounded-2xl bg-papel p-3 text-sm leading-relaxed text-cinza-600">{orientacoes}</p>}
+      </div>
+
+      {/* Aviso: sugestão do fisioterapeuta, não obrigação */}
+      <div className="mt-4 rounded-[24px] bg-gradient-to-br from-[#E9AE12] to-[#C98A00] p-5 text-white shadow-[0_12px_30px_-14px_rgba(201,138,0,0.9)]">
+        <div className="flex items-center gap-2">
+          <Icone nome="alerta" tamanho={22} espessura={2.25} />
+          <span className="text-[17px] font-extrabold leading-tight [text-shadow:0_1px_2px_rgba(0,0,0,0.25)]">Sugestão do fisioterapeuta</span>
+        </div>
+        <p className="mt-2 text-[15px] font-semibold leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.25)]">
+          Este treino é uma sugestão de referência, não uma obrigação. Ele não substitui o acompanhamento de um profissional de
+          educação física. Respeite seus limites e pare se sentir dor.
+        </p>
+      </div>
     </div>
   )
 }

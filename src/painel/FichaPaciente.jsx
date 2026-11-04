@@ -11,11 +11,13 @@ import AbaAvaliacao from './AbaAvaliacao.jsx'
 import AbaSessoes from './AbaSessoes.jsx'
 import AbaExercicios from './AbaExercicios.jsx'
 import AbaLink from './AbaLink.jsx'
+import AbaTreino from './AbaTreino.jsx'
 
 const ABAS = [
   { id: 'avaliacao', rotulo: 'Avaliação', icone: 'documento' },
   { id: 'sessoes', rotulo: 'Sessões', icone: 'coluna' },
   { id: 'exercicios', rotulo: 'Exercícios', icone: 'haltere' },
+  { id: 'treino', rotulo: 'Treino', icone: 'grafico' },
   { id: 'link', rotulo: 'Link', icone: 'link' }
 ]
 
@@ -62,7 +64,7 @@ export default function FichaPaciente() {
         <Botao para={`/painel/pacientes/${id}/editar`} variante="secundario" tamanho="sm" icone="editar">Editar</Botao>
       </div>
 
-      <div className="mb-5 grid grid-cols-4 gap-1 rounded-2xl bg-cinza-100 p-1">
+      <div className="mb-5 grid grid-cols-5 gap-1 rounded-2xl bg-cinza-100 p-1">
         {ABAS.map((a) => (
           <button
             key={a.id}
@@ -80,6 +82,7 @@ export default function FichaPaciente() {
       {aba === 'avaliacao' && <AbaAvaliacao pacienteId={id} />}
       {aba === 'sessoes' && <AbaSessoes pacienteId={id} />}
       {aba === 'exercicios' && <AbaExercicios pacienteId={id} />}
+      {aba === 'treino' && <AbaTreino paciente={p} />}
       {aba === 'link' && <AbaLink paciente={p} />}
 
       <div className="mt-10 border-t border-cinza-200 pt-5">

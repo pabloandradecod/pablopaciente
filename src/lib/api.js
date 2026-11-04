@@ -241,3 +241,18 @@ export async function chamarAssistente(corpo) {
   if (data?.erro) throw new Error(data.erro)
   return data
 }
+
+// ---------------- Sugestão de treino A/B/C ----------------
+export async function lerTreino(pacienteId) {
+  const rows = checar(await supabase.from('paciente_treinos').select('*').eq('paciente_id', pacienteId))
+  return rows[0] || null
+}
+export async function salvarTreino(pacienteId, treinos, observacao) {
+  return checar(
+    await supabase
+      .from('paciente_treinos')
+      .upsert({ paciente_id: pacienteId, treinos, observacao: observacao || null }, { onConflict: 'paciente_id' })
+      .select()
+      .single()
+  )
+}

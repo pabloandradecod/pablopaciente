@@ -59,3 +59,15 @@ npm run dev                  # http://localhost:5173/painel
 4. Recarregue o painel: o botão **Gerar com IA** aparece no Assistente. Sem a chave, o painel usa a ponte manual (copiar e colar no app do Claude).
 
 Modelo: Claude Opus 5.5, esforço médio, resposta em JSON validado por esquema (só exercícios da galeria). Cada análise mostra o custo estimado.
+
+## Domínio próprio (pablopaciente.com.br)
+
+1. **Netlify:** Domain management > Add a domain > `pablopaciente.com.br` > confirmar. Adicione também `www.pablopaciente.com.br`.
+2. **Registro.br:** no domínio, em DNS > Editar zona, crie:
+   - Tipo `A`, nome em branco (raiz), valor `75.2.60.5`
+   - Tipo `CNAME`, nome `www`, valor `moonlit-vacherin-275173.netlify.app.`
+3. Aguarde a propagação (de minutos a algumas horas). O Netlify ativa o HTTPS sozinho; em Domain management, marque `pablopaciente.com.br` como domínio principal.
+4. **Supabase** > Authentication > URL Configuration:
+   - Site URL: `https://pablopaciente.com.br`
+   - Redirect URLs: acrescente `https://pablopaciente.com.br/painel` (mantenha o endereço do Netlify enquanto houver links antigos).
+5. Links novos enviados pelo painel já saem com o domínio novo quando o painel for aberto por `https://pablopaciente.com.br/painel`. Links antigos continuam funcionando.

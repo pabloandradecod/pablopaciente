@@ -4,7 +4,7 @@ import {
   assistenteDisponivel, chamarAssistente, contarSessoes, criarExercicios, listarCampos, listarExercicios, listarPacientes, listarPrescricao, prescrever,
   removerPrescricao, salvarAvaliacao, salvarExercicio, salvarRelatorio, ultimaAvaliacao, urlVideo
 } from '../lib/api.js'
-import { filtrarAvaliacao, lerResposta, montarEsquema, montarMensagem, montarPrompt, montarSistema, normalizarRespostaApi } from '../lib/assistente.js'
+import { expandirIds, filtrarAvaliacao, lerResposta, montarEsquema, montarMensagem, montarPrompt, montarSistema, normalizarRespostaApi } from '../lib/assistente.js'
 import { hojeISO, primeiroNome } from '../lib/datas.js'
 import { useDitado } from './useDitado.js'
 import Botao from '../components/ui/Botao.jsx'
@@ -128,6 +128,7 @@ export default function Assistente() {
         esquemaReserva: montarEsquema(contexto, { idsLivres: true })
       })
       const n = normalizarRespostaApi(r.dados)
+      n.dados.exercicios = expandirIds(n.dados.exercicios, contexto)
       setLeitura({
         versao: Date.now(),
         relatorio: n.relatorio,
@@ -150,6 +151,7 @@ export default function Assistente() {
       return
     }
     setErroLeitura('')
+    r.dados.exercicios = expandirIds(r.dados.exercicios, contexto)
     setLeitura({ versao: Date.now(), origem: 'ponte_manual', relatorio: r.relatorio, dados: { ...r.dados, avaliacao: filtrarAvaliacao(r.dados.avaliacao, contexto.campos) } })
   }
 
