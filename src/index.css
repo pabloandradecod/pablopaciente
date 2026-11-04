@@ -59,3 +59,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .revelar { opacity: 1; transform: none; transition: none; }
   .seg-tratado, .barra-crescer, .marca-texto { animation: none; }
 }
+
+/* ---------- Impressão / PDF do resumo do paciente ---------- */
+.so-impressao { display: none; }
+@media print {
+  @page { size: A4; margin: 14mm 13mm; }
+  html, body { background: #fff !important; }
+  .nao-imprimir { display: none !important; }
+  .so-impressao { display: block !important; }
+  .quebra-evitar { break-inside: avoid; }
+  .so-impressao h2 { break-after: avoid; }
+  .so-impressao tr { break-inside: avoid; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

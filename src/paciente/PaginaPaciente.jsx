@@ -14,6 +14,7 @@ import MapaColuna, { LegendaMapa } from '../components/coluna/MapaColuna.jsx'
 import { nomeSegmento, TODOS_CODIGOS } from '../components/coluna/segmentos.js'
 import GraficoEvolucao, { corDor } from '../components/GraficoEvolucao.jsx'
 import VideoLoop from '../components/VideoLoop.jsx'
+import Impressao from './Impressao.jsx'
 import { paraLista } from '../components/ui/Campo.jsx'
 
 export default function PaginaPaciente() {
@@ -171,6 +172,33 @@ function Conteudo({ dados, acesso }) {
   const { paciente, avaliacao, sessoes, exercicios, treino } = dados
   const treinos = (treino?.treinos || []).filter((t) => t.itens?.length)
   const [sessaoSel, setSessaoSel] = useState(null)
+  const [parteImpressao, setParteImpressao] = useState('completo')
+  const [imprimir, setImprimir] = useState(0)
+
+  function exportar(parte) {
+    setParteImpressao(parte)
+    setImprimir((n) => n + 1)
+  }
+
+  // Espera as imagens da versão de impressão carregarem e abre o "Imprimir / Salvar como PDF".
+  useEffect(() => {
+    if (!imprimir) return
+    const tituloOriginal = document.title
+    const nome = paciente.nome.trim().split(/\s+/).slice(0, 2).join(' ')
+    document.title = parteImpressao === 'completo' ? `Resumo ${nome} - Dr Pablo Andrade` : `Exercicios ${nome} - Dr Pablo Andrade`
+    const imgs = [...document.querySelectorAll('.so-impressao img')]
+    Promise.all(
+      imgs.map((img) => {
+        img.loading = 'eager'
+        return img.complete ? null : new Promise((ok) => ((img.onload = ok), (img.onerror = ok)))
+      })
+    ).then(() => {
+      setTimeout(() => {
+        window.print()
+        document.title = tituloOriginal
+      }, 150)
+    })
+  }, [imprimir]) // eslint-disable-line react-hooks/exhaustive-deps
   const [ativa, setAtiva] = useState('avaliacao')
   const ultima = sessoes.at(-1)
 
@@ -202,7 +230,8 @@ function Conteudo({ dados, acesso }) {
   }, [secoes])
 
   return (
-    <div className="min-h-screen bg-papel pb-36">
+    <>
+    <div className="nao-imprimir min-h-screen bg-papel pb-36">
       {/* Cabeçalho com a logo */}
       <header className="bg-white px-5 pb-10 pt-7">
         <div className="mx-auto max-w-2xl">
@@ -339,6 +368,32 @@ function Conteudo({ dados, acesso }) {
           </section>
         )}
 
+        {/* PDF para o médico ou educador físico */}
+        <Revelar>
+          <div className="rounded-[28px] bg-white p-5">
+            <div className="flex items-center gap-2 text-lg font-extrabold text-petroleo-escuro">
+              <Icone nome="documento" tamanho={22} /> Levar para outro profissional
+            </div>
+            <p className="mt-1 text-[15px] leading-relaxed text-cinza-600">
+              Gere um PDF para mostrar ao seu médico ou ao seu educador físico. No celular, escolha "Salvar como PDF" ou "Compartilhar".
+            </p>
+            <div className="mt-4 grid gap-2 sm:grid-cols-2">
+              <button
+                onClick={() => exportar('completo')}
+                className="flex h-14 items-center justify-center gap-2 rounded-2xl bg-petroleo-escuro px-4 text-[15px] font-bold text-white"
+              >
+                <Icone nome="documento" tamanho={20} /> PDF completo (médico)
+              </button>
+              <button
+                onClick={() => exportar('exercicios')}
+                className="flex h-14 items-center justify-center gap-2 rounded-2xl border-2 border-petroleo/20 px-4 text-[15px] font-bold text-petroleo"
+              >
+                <Icone nome="haltere" tamanho={20} /> Exercícios e treino (educador físico)
+              </button>
+            </div>
+          </div>
+        </Revelar>
+
         {/* 06. Indicar */}
         <section id="indicar" className="scroll-mt-20">
           <Revelar>
@@ -355,6 +410,8 @@ function Conteudo({ dados, acesso }) {
 
       <BotaoSOS token={acesso.token} chave={acesso.chave} nome={paciente.nome} />
     </div>
+    <Impressao dados={dados} parte={parteImpressao} />
+    </>
   )
 }
 
