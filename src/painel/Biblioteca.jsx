@@ -37,7 +37,7 @@ export default function Biblioteca() {
       const dados = { ...edicao, series_padrao: Number(edicao.series_padrao) || 1 }
       delete dados.criado_em
       if (arquivo) {
-        if (arquivo.size > 20 * 1024 * 1024) throw new Error('Vídeo acima de 20 MB. Use um vídeo curto, de até 15 segundos.')
+        if (arquivo.size > 50 * 1024 * 1024) throw new Error('Vídeo acima de 50 MB. Grave de 10 a 20 segundos, em 1080p ou 720p.')
         const antigo = dados.video_path
         dados.video_path = await enviarVideo(arquivo)
         await removerVideo(antigo)
@@ -85,7 +85,7 @@ export default function Biblioteca() {
               <div className="flex items-center justify-between gap-2">
                 <span className="font-semibold">{ex.nome}</span>
                 {!ex.ativo && <span className="rounded-full bg-cinza-100 px-2 py-0.5 text-xs font-semibold text-cinza-600">Inativo</span>}
-                {ex.ativo && !ex.video_path && <span className="rounded-full bg-alerta-claro px-2 py-0.5 text-xs font-semibold text-alerta">Sem animação</span>}
+                {ex.ativo && !ex.video_path && <span className="rounded-full bg-alerta-claro px-2 py-0.5 text-xs font-semibold text-alerta">Sem vídeo</span>}
               </div>
               <div className="mt-0.5 text-xs text-cinza-600">{ex.series_padrao} séries × {ex.reps_padrao}</div>
             </div>
@@ -98,7 +98,7 @@ export default function Biblioteca() {
           <form onSubmit={salvar} className="space-y-4">
             <Campo id="ex-nome" rotulo="Nome" required value={edicao.nome} onChange={(e) => setEdicao({ ...edicao, nome: e.target.value })} />
             <div>
-              <Rotulo dica="(curto, sem som, até 20 MB)">Vídeo em loop</Rotulo>
+              <Rotulo dica="(10 a 20 s, vertical, até 50 MB)">Vídeo em loop</Rotulo>
               {(arquivo || edicao.video_path) && (
                 <div className="mb-2 overflow-hidden rounded-xl">
                   <VideoLoop src={arquivo ? URL.createObjectURL(arquivo) : urlVideo(edicao.video_path)} />
@@ -116,7 +116,7 @@ export default function Biblioteca() {
                 <label className="flex h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-cinza-200 text-sm font-semibold text-petroleo hover:bg-petroleo-claro">
                   <Icone nome="upload" tamanho={18} />
                   <span className="truncate">{arquivo ? arquivo.name : 'Enviar vídeo'}</span>
-                  <input type="file" accept="video/mp4,video/webm,video/quicktime" className="hidden" onChange={(e) => setArquivo(e.target.files?.[0] || null)} />
+                  <input type="file" accept="video/*" className="hidden" onChange={(e) => setArquivo(e.target.files?.[0] || null)} />
                 </label>
               </div>
             </div>

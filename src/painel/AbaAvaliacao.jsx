@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { listarCampos, listarRelatorios, salvarAvaliacao, ultimaAvaliacao } from '../lib/api.js'
 import TextoRelatorio from '../components/TextoRelatorio.jsx'
 import Icone from '../components/ui/Icone.jsx'
+import GerarExercicios from './GerarExercicios.jsx'
 import { formatarData, formatarDataHora, hojeISO } from '../lib/datas.js'
 import Card from '../components/ui/Card.jsx'
 import Botao from '../components/ui/Botao.jsx'
@@ -9,7 +10,7 @@ import { Campo } from '../components/ui/Campo.jsx'
 import Carregando from '../components/ui/Carregando.jsx'
 import CampoAvaliacao from './CampoAvaliacao.jsx'
 
-export default function AbaAvaliacao({ pacienteId }) {
+export default function AbaAvaliacao({ pacienteId, paciente }) {
   const [campos, setCampos] = useState(null)
   const [av, setAv] = useState(null)
   const [salvando, setSalvando] = useState(false)
@@ -72,6 +73,7 @@ export default function AbaAvaliacao({ pacienteId }) {
         {msg && <span className={`text-sm font-medium ${msg.includes('salva') ? 'text-ok' : 'text-alerta'}`}>{msg}</span>}
       </div>
       {av.id && <p className="text-xs text-cinza-600">Avaliação de {formatarData(av.data)}. Os campos podem ser ajustados em Ajustes.</p>}
+      {paciente && <GerarExercicios key={av.id || 'nova'} paciente={paciente} campos={campos} avaliacao={av} />}
       <Relatorios pacienteId={pacienteId} />
     </div>
   )

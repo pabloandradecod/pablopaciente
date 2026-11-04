@@ -540,7 +540,8 @@ function Exercicios({ exercicios }) {
             <article key={i} className="w-[84%] shrink-0 snap-center overflow-hidden rounded-[28px] bg-white sm:w-auto">
               {e.video_path ? (
                 <div className="relative">
-                  <VideoLoop src={urlVideo(e.video_path)} />
+                  {/* Vídeos próprios (gravados no celular) são verticais; as animações, quadradas. */}
+                  <VideoLoop src={urlVideo(e.video_path)} proporcao={e.video_path.startsWith('galeria/') ? 'aspect-[4/3]' : 'aspect-[3/4]'} />
                   <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-xs font-extrabold text-petroleo-escuro">
                     {i + 1} / {exercicios.length}
                   </span>

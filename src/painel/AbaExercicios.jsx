@@ -22,7 +22,7 @@ export default function AbaExercicios({ pacienteId }) {
 
   const usados = new Set(itens.map((i) => i.exercicio_id))
   // Só exercícios com animação podem ser prescritos.
-  const disponiveis = biblioteca.filter((e) => !usados.has(e.id) && e.video_path)
+  const disponiveis = biblioteca.filter((e) => !usados.has(e.id))
 
   async function adicionar(ex) {
     await adicionarPrescricao({
@@ -67,7 +67,7 @@ export default function AbaExercicios({ pacienteId }) {
             <div className="flex items-start justify-between gap-3">
               <div className="font-semibold">
                 {i.exercicios?.nome}
-                {!i.exercicios?.video_path && <span className="ml-2 rounded bg-alerta-claro px-1.5 py-0.5 text-[11px] font-bold text-alerta">sem animação</span>}
+                {!i.exercicios?.video_path && <span className="ml-2 rounded bg-alerta-claro px-1.5 py-0.5 text-[11px] font-bold text-alerta">sem vídeo</span>}
               </div>
               <button
                 onClick={async () => {
@@ -116,7 +116,7 @@ export default function AbaExercicios({ pacienteId }) {
 
       <Modal aberto={adicionando} aoFechar={() => setAdicionando(false)} titulo="Adicionar exercício">
         {disponiveis.length === 0 ? (
-          <p className="text-sm text-cinza-600">Nenhum exercício com animação disponível. Adicione da galeria em Exercícios.</p>
+          <p className="text-sm text-cinza-600">Todos os exercícios da biblioteca já foram adicionados.</p>
         ) : (
           <ul className="space-y-2">
             {disponiveis.map((e) => (
@@ -127,7 +127,10 @@ export default function AbaExercicios({ pacienteId }) {
                 >
                   <span>
                     <span className="block font-semibold">{e.nome}</span>
-                    <span className="text-xs text-cinza-600">{e.series_padrao} séries × {e.reps_padrao}</span>
+                    <span className="text-xs text-cinza-600">
+                      {e.series_padrao} séries × {e.reps_padrao}
+                      {!e.video_path && <span className="ml-1.5 font-semibold text-alerta">· sem vídeo</span>}
+                    </span>
                   </span>
                   <Icone nome="mais" className="text-petroleo" />
                 </button>

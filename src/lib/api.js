@@ -113,7 +113,7 @@ export async function excluirExercicio(id) {
 export async function enviarVideo(arquivo) {
   const ext = (arquivo.name.split('.').pop() || 'mp4').toLowerCase()
   const caminho = `${crypto.randomUUID()}.${ext}`
-  checar(await supabase.storage.from('exercicios').upload(caminho, arquivo, { contentType: arquivo.type, upsert: false }))
+  checar(await supabase.storage.from('exercicios').upload(caminho, arquivo, { contentType: arquivo.type || 'video/mp4', upsert: false }))
   return caminho
 }
 export async function removerVideo(caminho) {

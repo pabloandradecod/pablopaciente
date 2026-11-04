@@ -364,3 +364,105 @@ export function treinosDaResposta(dados, galeria) {
     }
   })
 }
+
+// ---------------------------------------------------------------- gerar exercícios (prescrição livre)
+// A IA sugere livremente; se o exercício já existe na biblioteca do Dr. Pablo, usa o código dele
+// (para reaproveitar o vídeo gravado). Exercícios novos voltam com código "novo".
+
+function bibliotecaComCodigos(biblioteca) {
+  return (biblioteca || []).filter((e) => e.ativo).map((e, i) => ({ codigo: `p${i + 1}`, exercicio: e }))
+}
+
+export function montarSistemaExercicios({ biblioteca }) {
+  const lista = bibliotecaComCodigos(biblioteca)
+    .map(({ codigo, exercicio }) => `${codigo} ${exercicio.nome}${exercicio.video_path ? ' (com vídeo)' : ''}`)
+    .join('\n')
+  return `Você é um fisioterapeuta com doutorado, referência em coluna vertebral, dor lombar e quiropraxia baseada em evidências. Com base na avaliação feita pelo Dr. Pablo Andrade (fisioterapeuta, Três Pontas/MG), você monta a prescrição de exercícios para o paciente fazer em casa.
+
+REGRAS
+1. Monte entre 4 e 7 exercícios adequados à fase (aguda: alívio, mobilidade suave, isometria; subaguda e crônica: controle motor e fortalecimento progressivo de core, glúteos e quadril). Prefira exercícios simples, sem aparelho, a menos que a avaliação indique academia.
+2. Nome: curto e padrão em português, como um fisioterapeuta brasileiro chamaria (ex.: "Ponte de glúteo", "Prancha lateral com joelhos apoiados", "Gato e camelo").
+3. BIBLIOTECA: se um exercício da biblioteca servir, use o código dele em "codigo" e o mesmo nome. Prefira os que têm vídeo. Para um exercício que não está na biblioteca, use "codigo": "novo".
+4. Para cada exercício: séries; em "reps", só as repetições ou o tempo de UMA série (ex.: "10", "8 por lado", "20 s"); "instrucoes" passo a passo em 2 a 4 frases simples, para o paciente entender sozinho; "observacao" com o principal cuidado ou erro a evitar.
+5. Nunca prometa cura, prazo ou resultado. Não use "vértebra fora do lugar", "deslocada" ou "colocada no lugar".
+6. "orientacao": 1 ou 2 frases para o paciente sobre frequência e quando parar.
+
+BIBLIOTECA DO DR. PABLO (código e nome)
+${lista || '(vazia)'}`
+}
+
+export function montarMensagemExercicios({ paciente, campos, respostas, notas }) {
+  const porChave = Object.fromEntries((campos || []).map((c) => [c.chave, c]))
+  const linhas = Object.entries(respostas || {})
+    .filter(([, v]) => v !== null && v !== '' && !(Array.isArray(v) && !v.length))
+    .map(([k, v]) => {
+      const rotulo = porChave[k]?.rotulo || k
+      let valor = v
+      if (Array.isArray(v)) valor = v.join(', ')
+      else if (v && typeof v === 'object') valor = `${v.resposta === 'sim' ? 'Sim' : 'Não'}${[...(v.opcoes || []), v.detalhe].filter(Boolean).length ? `: ${[...(v.opcoes || []), v.detalhe].filter(Boolean).join(', ')}` : ''}`
+      return `- ${rotulo}: ${valor}`
+    })
+    .join('\n')
+  return `PACIENTE
+Primeiro nome: ${paciente.nome.trim().split(/\s+/)[0]}
+Idade: ${idade(paciente.data_nascimento) ?? 'não informada'} anos
+
+AVALIAÇÃO
+${linhas || '(sem respostas)'}
+
+O QUE O DR. PABLO QUER PRIORIZAR:
+"""
+${notas?.trim() || 'Sem observação extra.'}
+"""`
+}
+
+export function montarEsquemaExercicios({ biblioteca }) {
+  const codigos = [...bibliotecaComCodigos(biblioteca).map((b) => b.codigo), 'novo']
+  return {
+    type: 'object',
+    additionalProperties: false,
+    required: ['exercicios', 'orientacao'],
+    properties: {
+      orientacao: { type: 'string' },
+      exercicios: {
+        type: 'array',
+        items: {
+          type: 'object',
+          additionalProperties: false,
+          required: ['codigo', 'nome', 'series', 'reps', 'instrucoes', 'observacao'],
+          properties: {
+            codigo: { type: 'string', enum: codigos },
+            nome: { type: 'string' },
+            series: { type: 'integer' },
+            reps: { type: 'string' },
+            instrucoes: { type: 'string' },
+            observacao: { type: 'string' }
+          }
+        }
+      }
+    }
+  }
+}
+
+const normalizarNome = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+
+// Liga cada sugestão a um exercício da biblioteca (pelo código ou pelo nome igual).
+export function ligarSugestoes(dados, biblioteca) {
+  const comCodigo = Object.fromEntries(bibliotecaComCodigos(biblioteca).map((b) => [b.codigo, b.exercicio]))
+  const porNome = Object.fromEntries((biblioteca || []).map((e) => [normalizarNome(e.nome), e]))
+  return (dados?.exercicios || []).map((s) => {
+    const e = comCodigo[s.codigo] || porNome[normalizarNome(s.nome)] || null
+    return {
+      nome: e?.nome || s.nome,
+      series: Number(s.series) || 3,
+      reps: String(s.reps || '10'),
+      instrucoes: s.instrucoes || e?.instrucoes || '',
+      observacao: s.observacao || '',
+      exercicioId: e?.id || null,
+      video: e?.video_path || null,
+      incluir: true
+    }
+  })
+}
+
+export { normalizarNome }
