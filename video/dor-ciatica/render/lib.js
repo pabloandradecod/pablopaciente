@@ -22,7 +22,7 @@ const f1 = n => (Math.round(n * 10) / 10);
 let _uid = 0; const uid = p => `${p}${++_uid}`;
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
-function g(content, tr = '', extra = '') { return `<g ${tr ? `transform="${tr}"` : ''} ${extra}>${content}</g>`; }
+function g(content, tr = '', extra = '') { if (!tr && !extra) return `<g >${content}</g>`; return `<g ${tr ? `transform="${tr}"` : ''} ${extra}>${content}</g>`; }
 function pop(content, x, y, p, extra = '') { // aparece com "pulo" a partir do centro (x,y)
   if (p <= 0) return '';
   const s = back(p);
