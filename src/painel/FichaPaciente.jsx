@@ -46,7 +46,7 @@ export default function FichaPaciente() {
 
   return (
     <div>
-      <Link to="/painel" className="mb-3 inline-flex items-center gap-1 text-sm font-semibold text-petroleo">
+      <Link to="/painel/pacientes" className="mb-3 inline-flex items-center gap-1 text-sm font-semibold text-petroleo">
         <Icone nome="voltar" tamanho={16} /> Pacientes
       </Link>
 
@@ -105,7 +105,7 @@ export default function FichaPaciente() {
           disabled={confirmaNome.trim().toLowerCase() !== p.nome.split(' ')[0].toLowerCase()}
           onClick={async () => {
             await excluirPaciente(id)
-            navegar('/painel', { replace: true })
+            navegar('/painel/pacientes', { replace: true })
           }}
         >
           Excluir definitivamente

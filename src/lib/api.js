@@ -197,3 +197,22 @@ export async function pacienteDados(token, chave) {
 export async function pacientePedirSOS(token, chave, triagem) {
   return checar(await supabase.rpc('paciente_pedir_sos', { p_token: token, p_chave: chave, p_triagem: triagem }))
 }
+
+// ---------------- Assistente (relatórios internos) ----------------
+export async function listarRelatorios(pacienteId) {
+  return checar(
+    await supabase.from('relatorios_ia').select('*').eq('paciente_id', pacienteId).order('criado_em', { ascending: false })
+  )
+}
+export async function salvarRelatorio(r) {
+  return checar(await supabase.from('relatorios_ia').insert(r).select().single())
+}
+export async function prescrever(item) {
+  return checar(
+    await supabase.from('paciente_exercicios').upsert(item, { onConflict: 'paciente_id,exercicio_id' }).select().single()
+  )
+}
+export async function contarSessoes(pacienteId) {
+  const { count } = await supabase.from('sessoes').select('id', { count: 'exact', head: true }).eq('paciente_id', pacienteId)
+  return count || 0
+}

@@ -59,7 +59,7 @@ export default function PacienteForm() {
 
   return (
     <form onSubmit={salvar} className="mx-auto max-w-xl">
-      <Link to={id ? `/painel/pacientes/${id}` : '/painel'} className="mb-3 inline-flex items-center gap-1 text-sm font-semibold text-petroleo">
+      <Link to={id ? `/painel/pacientes/${id}` : '/painel/pacientes'} className="mb-3 inline-flex items-center gap-1 text-sm font-semibold text-petroleo">
         <Icone nome="voltar" tamanho={16} /> Voltar
       </Link>
       <h1 className="mb-4 text-2xl font-bold text-petroleo-escuro">{id ? 'Editar paciente' : 'Novo paciente'}</h1>

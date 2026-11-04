@@ -28,7 +28,13 @@ const caminhos = {
   relogio: <><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></>,
   telefone: <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" />,
   olho: <><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" /><circle cx="12" cy="12" r="3" /></>,
-  menu: <path d="M4 7h16M4 12h16M4 17h16" />
+  menu: <path d="M4 7h16M4 12h16M4 17h16" />,
+  conversa: <><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 3.5V16h0A1.5 1.5 0 0 1 4 14.5z" /><path d="M8.5 9h7M8.5 12h4.5" /></>,
+  microfone: <><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" /></>,
+  parar: <rect x="6.5" y="6.5" width="11" height="11" rx="2" />,
+  colar: <><rect x="6" y="4.5" width="12" height="16" rx="2" /><path d="M9 4.5V3.5h6v1M9 11h6M9 15h4" /></>,
+  externo: <><path d="M14 4h6v6M20 4l-9 9" /><path d="M18 14v4.5A1.5 1.5 0 0 1 16.5 20h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" /></>,
+  estrela: <path d="m12 3 2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z" />
 }
 
 export default function Icone({ nome, tamanho = 20, className = '', espessura = 1.75 }) {

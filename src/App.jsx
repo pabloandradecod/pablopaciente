@@ -6,6 +6,7 @@ import PaginaPaciente from './paciente/PaginaPaciente.jsx'
 // O painel é carregado sob demanda: o paciente baixa só o necessário para o link.
 const Layout = lazy(() => import('./painel/Layout.jsx'))
 const Pacientes = lazy(() => import('./painel/Pacientes.jsx'))
+const Assistente = lazy(() => import('./painel/Assistente.jsx'))
 const PacienteForm = lazy(() => import('./painel/PacienteForm.jsx'))
 const FichaPaciente = lazy(() => import('./painel/FichaPaciente.jsx'))
 const SessaoForm = lazy(() => import('./painel/SessaoForm.jsx'))
@@ -20,7 +21,8 @@ export default function App() {
       <Routes>
         <Route path="/p" element={<PaginaPaciente />} />
         <Route path="/painel" element={<Layout />}>
-          <Route index element={<Pacientes />} />
+          <Route index element={<Assistente />} />
+          <Route path="pacientes" element={<Pacientes />} />
           <Route path="pacientes/novo" element={<PacienteForm />} />
           <Route path="pacientes/:id" element={<FichaPaciente />} />
           <Route path="pacientes/:id/editar" element={<PacienteForm />} />

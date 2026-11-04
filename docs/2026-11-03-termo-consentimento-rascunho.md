@@ -16,9 +16,15 @@ minha data de nascimento.
 Posso pedir a qualquer momento acesso, correção ou exclusão dos meus dados, ou revogar este consentimento,
 conforme a Lei Geral de Proteção de Dados (Lei 13.709/2018). Os dados não são compartilhados com terceiros.
 
+Autorizo também que o relato da minha avaliação, sem meu nome completo, telefone ou data de nascimento, seja processado
+por ferramenta de inteligência artificial (Claude, da Anthropic, com servidores fora do Brasil) apenas para apoiar o
+Dr. Pablo na organização do relatório e do plano de exercícios. As decisões clínicas são sempre do profissional.
+
 ---
 
 ## Pontos para decidir na revisão
+
+- Parágrafo da inteligência artificial: incluído em 2026-11-04 por causa do Assistente do painel. Ao aprovar, atualize o texto e a versão em Ajustes.
 
 - Prazo de guarda do prontuário: confirmar a exigência atual do COFFITO e do CREFITO-4. O resumo do link pode ser revogado a qualquer momento, mas o prontuário continua sob sua guarda.
 - Canal para o paciente pedir exclusão ou correção (sugestão: o próprio WhatsApp do consultório).
