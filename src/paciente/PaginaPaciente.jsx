@@ -149,7 +149,7 @@ const SECOES = [
   { id: 'coluna', rotulo: 'Coluna' },
   { id: 'evolucao', rotulo: 'Evolução' },
   { id: 'exercicios', rotulo: 'Exercícios' },
-  { id: 'treino', rotulo: 'Treino' },
+  { id: 'treino', rotulo: 'Academia' },
   { id: 'indicar', rotulo: 'Indicar' }
 ]
 
@@ -352,7 +352,7 @@ function Conteudo({ dados, acesso }) {
         {exercicios.length > 0 && (
           <section id="exercicios" className="scroll-mt-20">
             <Revelar>
-              <CabecalhoSecao numero="04" titulo="Seus exercícios" sub="Faça no seu ritmo. Se a dor aumentar durante um exercício, pare e avise o Dr. Pablo." />
+              <CabecalhoSecao numero="04" titulo="Exercícios do Dr. Pablo" sub="Seus exercícios de casa. Faça no seu ritmo. Se a dor aumentar durante um exercício, pare e avise o Dr. Pablo." />
             </Revelar>
             <Exercicios exercicios={exercicios} />
           </section>
@@ -362,7 +362,7 @@ function Conteudo({ dados, acesso }) {
         {treinos.length > 0 && (
           <section id="treino" className="scroll-mt-20">
             <Revelar>
-              <CabecalhoSecao numero="05" titulo="Sugestão de treino" sub="Uma referência para a sua rotina na academia, dividida em A, B e C." />
+              <CabecalhoSecao numero="05" titulo="Exercícios para academia" sub="Sugestão de treino para a academia, dividida em A, B e C." />
             </Revelar>
             <SugestaoTreino treinos={treinos} orientacoes={treino?.observacao} />
           </section>

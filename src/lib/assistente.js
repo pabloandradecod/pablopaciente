@@ -76,7 +76,7 @@ REGRAS
 4. Sinais de alerta (bandeiras vermelhas) primeiro: síndrome da cauda equina (anestesia em sela, alteração urinária ou intestinal, perda de força progressiva), suspeita de fratura (trauma, osteoporose, corticoide), infecção (febre), neoplasia (histórico de câncer, perda de peso sem explicação, dor noturna que não alivia), déficit neurológico. Se houver, destaque e recomende encaminhamento médico.
 5. Considere bandeiras amarelas (medo de se movimentar, catastrofização, estresse, sono, trabalho).
 6. Não invente dados. O que faltar vai em "Pontos a investigar".
-7. Prescrição é a parte mais importante. Escolha SOMENTE do CATÁLOGO abaixo, usando o código exato (ex.: g12); nunca invente exercício nem código. Monte entre 4 e 7 exercícios adequados à fase (aguda: alívio, mobilidade suave, isometria; subaguda e crônica: controle motor e fortalecimento progressivo de core, glúteos e quadril). Prefira exercícios simples, que o paciente consiga fazer em casa sem aparelho, a menos que o relato diga que ele treina em academia. Para cada um: séries; em "reps", só as repetições ou o tempo de UMA série (ex.: "10", "8 por lado", "20 s"), sem repetir o número de séries; como fazer (1 ou 2 frases simples, para o paciente) e um cuidado ou observação curta.
+7. Prescrição é a parte mais importante. Estes são os EXERCÍCIOS DO DR. PABLO (prescrição terapêutica). NÃO existe catálogo de animações aqui e você NÃO deve sugerir exercícios de academia ou de máquina. Monte entre 4 e 7 exercícios adequados à fase (aguda: alívio, mobilidade suave, isometria; subaguda e crônica: controle motor e fortalecimento progressivo de core, glúteos e quadril), que o paciente faça em casa, sem aparelho. Se um exercício da BIBLIOTECA DO DR. PABLO servir, use o código dele (ex.: p3) em "codigo" e o mesmo nome; senão, "codigo": "novo" e um nome curto e padrão em português. Para cada um: séries; em "reps", só as repetições ou o tempo de UMA série (ex.: "10", "8 por lado", "20 s"), sem repetir o número de séries; "instrucoes" passo a passo em 2 a 4 frases simples para o paciente; "observacao" com o principal cuidado.
 8. Seja direto. O relatório deve ser enxuto (até uns 250 palavras no total), em tópicos, com estes títulos: ## Resumo, ## Sinais de alerta, ## Hipóteses funcionais, ## Prescrição e progressão, ## Pontos a investigar.
 9. Quando receber uma RESPOSTA ANTERIOR e um AJUSTE PEDIDO, refaça a resposta completa aplicando o ajuste e mantendo o resto.`
 
@@ -86,7 +86,7 @@ Parte 2: no final, UM único bloco de código \`\`\`json com esta estrutura:
 {
   "avaliacao": { "<chave>": <valor> },
   "alertas": ["frase curta", "..."],
-  "exercicios": [ { "id": "código do catálogo, ex.: g12", "series": 3, "reps": "10 ou 30 s", "instrucoes": "como fazer, em 1 ou 2 frases", "observacao": "cuidado curto" } ]
+  "exercicios": [ { "codigo": "p3 ou novo", "nome": "nome do exercício", "series": 3, "reps": "10 ou 30 s", "instrucoes": "como fazer, em 2 a 4 frases", "observacao": "cuidado curto" } ]
 }
 Em "avaliacao", use só as chaves de CAMPOS, no formato indicado em cada uma, e omita o que não foi informado. "alertas" fica vazio [] se não houver.`
 
@@ -95,11 +95,10 @@ Responda preenchendo o JSON definido:
 - "relatorio": o relatório em markdown, com os títulos da regra 8.
 - "alertas": sinais de alerta em frases curtas ([] se não houver).
 - "avaliacao": uma chave para cada campo de CAMPOS, no formato indicado; use null quando o relato não informar.
-- "exercicios": a prescrição, com o código do CATÁLOGO em "id".`
+- "exercicios": os exercícios do Dr. Pablo, com "codigo" da biblioteca (ou "novo") e "nome".`
 
 // Parte fixa (igual para todos os pacientes): fica em cache na API.
-export function montarSistema({ campos, biblioteca, galeria, modo = 'manual' }) {
-  const catalogo = montarCatalogo(biblioteca, galeria, { terapia: true })
+export function montarSistema({ campos, biblioteca, modo = 'manual' }) {
   return `${REGRAS}
 
 ${modo === 'api' ? FORMATO_API : FORMATO_MANUAL}
@@ -107,8 +106,8 @@ ${modo === 'api' ? FORMATO_API : FORMATO_MANUAL}
 CAMPOS DA AVALIAÇÃO (chave | formato | rótulo | opções)
 ${montarCampos(campos)}
 
-CATÁLOGO DE EXERCÍCIOS (código e nome). Todos têm animação. Use somente estes códigos.
-${catalogo.texto}`
+BIBLIOTECA DO DR. PABLO (código e nome)
+${listaBibliotecaPropria(biblioteca)}`
 }
 
 // Parte variável: o paciente, o relato e, se houver, o ajuste pedido.
@@ -140,7 +139,7 @@ export function montarPrompt(args) {
 }
 
 // Esquema JSON da resposta (modo API): garante formato e ids válidos.
-export function montarEsquema({ campos, biblioteca, galeria }, { idsLivres = false } = {}) {
+export function montarEsquema({ campos, biblioteca }) {
   const nulo = (schema) => ({ anyOf: [schema, { type: 'null' }] })
   const porTipo = (c) => {
     const ops = c.opcoes || []
@@ -160,7 +159,6 @@ export function montarEsquema({ campos, biblioteca, galeria }, { idsLivres = fal
     }
   }
   const ativos = campos.filter((c) => c.ativo)
-  const ids = montarCatalogo(biblioteca, galeria, { terapia: true }).ids
   return {
     type: 'object',
     additionalProperties: false,
@@ -174,21 +172,7 @@ export function montarEsquema({ campos, biblioteca, galeria }, { idsLivres = fal
         required: ativos.map((c) => c.chave),
         properties: Object.fromEntries(ativos.map((c) => [c.chave, nulo(porTipo(c))]))
       },
-      exercicios: {
-        type: 'array',
-        items: {
-          type: 'object',
-          additionalProperties: false,
-          required: ['id', 'series', 'reps', 'instrucoes', 'observacao'],
-          properties: {
-            id: idsLivres ? { type: 'string' } : { type: 'string', enum: ids },
-            series: { type: 'integer' },
-            reps: { type: 'string' },
-            instrucoes: { type: 'string' },
-            observacao: { type: 'string' }
-          }
-        }
-      }
+      exercicios: esquemaExerciciosProprios(biblioteca)
     }
   }
 }
@@ -201,7 +185,7 @@ export function normalizarRespostaApi(dados) {
     dados: {
       avaliacao,
       alertas: (dados?.alertas || []).filter((a) => typeof a === 'string' && a.trim()),
-      exercicios: (dados?.exercicios || []).filter((e) => e && typeof e.id === 'string').map((e) => ({ ...e, id: e.id.trim() }))
+      exercicios: (dados?.exercicios || []).filter((e) => e && (e.nome || e.codigo))
     }
   }
 }
@@ -233,7 +217,7 @@ export function lerResposta(texto) {
     dados: {
       avaliacao: dados.avaliacao && typeof dados.avaliacao === 'object' ? dados.avaliacao : {},
       alertas: Array.isArray(dados.alertas) ? dados.alertas.filter((a) => typeof a === 'string' && a.trim()) : [],
-      exercicios: Array.isArray(dados.exercicios) ? dados.exercicios.filter((e) => e && typeof e.id === 'string').map((e) => ({ ...e, id: e.id.trim() })) : []
+      exercicios: Array.isArray(dados.exercicios) ? dados.exercicios.filter((e) => e && (e.nome || e.codigo)) : []
     }
   }
 }
@@ -270,7 +254,11 @@ export function filtrarAvaliacao(avaliacao, campos) {
 
 export function montarSistemaTreino({ galeria }) {
   const catalogo = montarCatalogo([], galeria)
-  return `Você é um fisioterapeuta com doutorado, especialista em coluna e em retorno ao exercício após dor lombar. Você monta uma SUGESTÃO de treino de academia dividido em A, B e C para pacientes do Dr. Pablo Andrade (fisioterapeuta, quiropraxia, Três Pontas/MG).
+  return `Você é um fisioterapeuta com doutorado, especialista em coluna e em retorno ao exercício após dor lombar. Você monta os EXERCÍCIOS PARA ACADEMIA: uma SUGESTÃO de treino dividido em A, B e C para pacientes do Dr. Pablo Andrade (fisioterapeuta, quiropraxia, Três Pontas/MG).
+
+SEPARAÇÃO OBRIGATÓRIA
+- Esta seção usa SOMENTE as animações do CATÁLOGO abaixo (academia). Cada exercício precisa ter o código do catálogo.
+- Os exercícios terapêuticos de casa do Dr. Pablo são outra seção do sistema; não repita aqui exercícios de reabilitação que não estejam no catálogo.
 
 REGRAS
 1. É uma sugestão de referência, não uma prescrição obrigatória. Nunca prometa resultado.
@@ -369,26 +357,57 @@ export function treinosDaResposta(dados, galeria) {
 // A IA sugere livremente; se o exercício já existe na biblioteca do Dr. Pablo, usa o código dele
 // (para reaproveitar o vídeo gravado). Exercícios novos voltam com código "novo".
 
+// Item da biblioteca que usa animação da galeria (academia). Nunca entra nos exercícios do Dr. Pablo.
+export function ehGaleria(e) {
+  return String(e?.video_path || '').startsWith('galeria/')
+}
+
 function bibliotecaComCodigos(biblioteca) {
-  return (biblioteca || []).filter((e) => e.ativo).map((e, i) => ({ codigo: `p${i + 1}`, exercicio: e }))
+  return (biblioteca || []).filter((e) => e.ativo && !ehGaleria(e)).map((e, i) => ({ codigo: `p${i + 1}`, exercicio: e }))
+}
+
+function listaBibliotecaPropria(biblioteca) {
+  const l = bibliotecaComCodigos(biblioteca).map(({ codigo, exercicio }) => `${codigo} ${exercicio.nome}${exercicio.video_path ? ' (já tem vídeo do Dr. Pablo)' : ''}`)
+  return l.length ? l.join('\n') : '(vazia: use "codigo": "novo")'
+}
+
+function esquemaExerciciosProprios(biblioteca) {
+  return {
+    type: 'array',
+    items: {
+      type: 'object',
+      additionalProperties: false,
+      required: ['codigo', 'nome', 'series', 'reps', 'instrucoes', 'observacao'],
+      properties: {
+        codigo: { type: 'string', enum: [...bibliotecaComCodigos(biblioteca).map((b) => b.codigo), 'novo'] },
+        nome: { type: 'string' },
+        series: { type: 'integer' },
+        reps: { type: 'string' },
+        instrucoes: { type: 'string' },
+        observacao: { type: 'string' }
+      }
+    }
+  }
 }
 
 export function montarSistemaExercicios({ biblioteca }) {
-  const lista = bibliotecaComCodigos(biblioteca)
-    .map(({ codigo, exercicio }) => `${codigo} ${exercicio.nome}${exercicio.video_path ? ' (com vídeo)' : ''}`)
-    .join('\n')
-  return `Você é um fisioterapeuta com doutorado, referência em coluna vertebral, dor lombar e quiropraxia baseada em evidências. Com base na avaliação feita pelo Dr. Pablo Andrade (fisioterapeuta, Três Pontas/MG), você monta a prescrição de exercícios para o paciente fazer em casa.
+  return `Você é um fisioterapeuta com doutorado, referência em coluna vertebral, dor lombar e quiropraxia baseada em evidências. Com base na avaliação feita pelo Dr. Pablo Andrade (fisioterapeuta, Três Pontas/MG), você monta os EXERCÍCIOS DO DR. PABLO: a prescrição terapêutica que o paciente faz em casa.
+
+SEPARAÇÃO OBRIGATÓRIA
+- Estes são exercícios terapêuticos do fisioterapeuta, feitos em casa, sem aparelho. O Dr. Pablo grava os vídeos deles.
+- NÃO sugira exercícios de academia, de máquina, com barra ou com carga externa. Treino de academia é outra seção do sistema, montada à parte.
+- Use apenas a BIBLIOTECA DO DR. PABLO abaixo ou crie um exercício novo. Não existe outro catálogo.
 
 REGRAS
-1. Monte entre 4 e 7 exercícios adequados à fase (aguda: alívio, mobilidade suave, isometria; subaguda e crônica: controle motor e fortalecimento progressivo de core, glúteos e quadril). Prefira exercícios simples, sem aparelho, a menos que a avaliação indique academia.
+1. Monte entre 4 e 7 exercícios adequados à fase (aguda: alívio, mobilidade suave, isometria; subaguda e crônica: controle motor e fortalecimento progressivo de core, glúteos e quadril).
 2. Nome: curto e padrão em português, como um fisioterapeuta brasileiro chamaria (ex.: "Ponte de glúteo", "Prancha lateral com joelhos apoiados", "Gato e camelo").
-3. BIBLIOTECA: se um exercício da biblioteca servir, use o código dele em "codigo" e o mesmo nome. Prefira os que têm vídeo. Para um exercício que não está na biblioteca, use "codigo": "novo".
+3. Se um exercício da biblioteca servir, use o código dele em "codigo" e o MESMO nome; prefira os que já têm vídeo. Para um exercício que não está na biblioteca, "codigo": "novo".
 4. Para cada exercício: séries; em "reps", só as repetições ou o tempo de UMA série (ex.: "10", "8 por lado", "20 s"); "instrucoes" passo a passo em 2 a 4 frases simples, para o paciente entender sozinho; "observacao" com o principal cuidado ou erro a evitar.
 5. Nunca prometa cura, prazo ou resultado. Não use "vértebra fora do lugar", "deslocada" ou "colocada no lugar".
 6. "orientacao": 1 ou 2 frases para o paciente sobre frequência e quando parar.
 
 BIBLIOTECA DO DR. PABLO (código e nome)
-${lista || '(vazia)'}`
+${listaBibliotecaPropria(biblioteca)}`
 }
 
 export function montarMensagemExercicios({ paciente, campos, respostas, notas }) {
@@ -417,29 +436,13 @@ ${notas?.trim() || 'Sem observação extra.'}
 }
 
 export function montarEsquemaExercicios({ biblioteca }) {
-  const codigos = [...bibliotecaComCodigos(biblioteca).map((b) => b.codigo), 'novo']
   return {
     type: 'object',
     additionalProperties: false,
     required: ['exercicios', 'orientacao'],
     properties: {
       orientacao: { type: 'string' },
-      exercicios: {
-        type: 'array',
-        items: {
-          type: 'object',
-          additionalProperties: false,
-          required: ['codigo', 'nome', 'series', 'reps', 'instrucoes', 'observacao'],
-          properties: {
-            codigo: { type: 'string', enum: codigos },
-            nome: { type: 'string' },
-            series: { type: 'integer' },
-            reps: { type: 'string' },
-            instrucoes: { type: 'string' },
-            observacao: { type: 'string' }
-          }
-        }
-      }
+      exercicios: esquemaExerciciosProprios(biblioteca)
     }
   }
 }
@@ -449,7 +452,7 @@ const normalizarNome = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/
 // Liga cada sugestão a um exercício da biblioteca (pelo código ou pelo nome igual).
 export function ligarSugestoes(dados, biblioteca) {
   const comCodigo = Object.fromEntries(bibliotecaComCodigos(biblioteca).map((b) => [b.codigo, b.exercicio]))
-  const porNome = Object.fromEntries((biblioteca || []).map((e) => [normalizarNome(e.nome), e]))
+  const porNome = Object.fromEntries((biblioteca || []).filter((e) => !ehGaleria(e)).map((e) => [normalizarNome(e.nome), e]))
   return (dados?.exercicios || []).map((s) => {
     const e = comCodigo[s.codigo] || porNome[normalizarNome(s.nome)] || null
     return {

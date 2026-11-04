@@ -52,7 +52,7 @@ export default function Impressao({ dados, parte }) {
 
       <div className="mt-4">
         <div className="text-[9pt] font-bold uppercase tracking-[0.15em] text-[#0E5C62]">
-          {completo ? 'Resumo de acompanhamento fisioterapêutico' : 'Exercícios e sugestão de treino'}
+          {completo ? 'Resumo de acompanhamento fisioterapêutico' : 'Exercícios do Dr. Pablo e exercícios para academia'}
         </div>
         <h1 className="mt-1 text-[20pt] font-extrabold leading-tight text-[#0A4247]">{paciente.nome}</h1>
         <div className="mt-1 text-[9.5pt] text-[#5C6668]">
@@ -117,7 +117,7 @@ export default function Impressao({ dados, parte }) {
 
       {exercicios.length > 0 && (
         <section>
-          <Titulo>Exercícios orientados</Titulo>
+          <Titulo>Exercícios do Dr. Pablo (para fazer em casa)</Titulo>
           <table className="w-full border-collapse text-[10pt]">
             <tbody>
               {exercicios.map((e, k) => (
@@ -145,7 +145,7 @@ export default function Impressao({ dados, parte }) {
 
       {treinos.length > 0 && (
         <section>
-          <Titulo>Sugestão de treino</Titulo>
+          <Titulo>Exercícios para academia (sugestão de treino A, B e C)</Titulo>
           <p className="mb-2 text-[9pt] text-[#5C6668]">
             Sugestão de referência do fisioterapeuta, não uma prescrição obrigatória. Não substitui o acompanhamento de um profissional de
             educação física.

@@ -12,7 +12,7 @@
 insert into public.exercicios (id, nome, instrucoes, series_padrao, reps_padrao, video_path) values
   ('a0000000-0000-4000-8000-000000000001', 'Ponte de glúteo',
    'Deite de barriga para cima, joelhos dobrados e pés apoiados. Contraia o abdômen e suba o quadril até alinhar com joelhos e ombros. Segure 2 segundos e desça devagar.',
-   3, '12', 'galeria/membros-inferiores/ponte-de-gluteo.mp4'),
+   3, '12', null),
   ('a0000000-0000-4000-8000-000000000002', 'Gato e camelo',
    'Em quatro apoios, mãos abaixo dos ombros e joelhos abaixo do quadril. Arredonde as costas olhando para o umbigo e depois afunde levemente a coluna olhando para frente. Movimento lento, sem forçar.',
    2, '10', null),
@@ -21,7 +21,7 @@ insert into public.exercicios (id, nome, instrucoes, series_padrao, reps_padrao,
    3, '8 de cada lado', null),
   ('a0000000-0000-4000-8000-000000000004', 'Prancha frontal nos joelhos',
    'Apoie antebraços e joelhos no chão. Alinhe cabeça, tronco e quadril. Contraia o abdômen e respire normalmente durante todo o tempo.',
-   3, '20 s', 'galeria/abdomen-core/prancha.mp4'),
+   3, '20 s', null),
   ('a0000000-0000-4000-8000-000000000005', 'Alongamento do piriforme',
    'Deitado de barriga para cima, cruze o tornozelo sobre o joelho oposto e puxe a coxa de baixo em direção ao peito até sentir alongar o glúteo. Mantenha sem dor.',
    2, '30 s de cada lado', null)
@@ -83,8 +83,9 @@ insert into public.paciente_exercicios (paciente_id, exercicio_id, series, reps,
   ('b0000000-0000-4000-8000-000000000002', 'a0000000-0000-4000-8000-000000000004', 2, '15 s', 2)
 on conflict do nothing;
 
--- Exercícios sem animação ficam inativos: não aparecem para prescrever nem para a IA.
-update public.exercicios set ativo = false where video_path is null;
+-- Exemplos sem uso ficam inativos (os da biblioteca do Dr. Pablo começam sem vídeo).
+update public.exercicios set ativo = false
+ where id in ('a0000000-0000-4000-8000-000000000002', 'a0000000-0000-4000-8000-000000000003', 'a0000000-0000-4000-8000-000000000005');
 
 -- Tokens de teste (o banco guarda só o hash) --------------------------
 insert into public.paciente_tokens (paciente_id, token_hash) values

@@ -102,10 +102,10 @@ export default function AbaTreino({ paciente }) {
   return (
     <div className="space-y-4">
       <Card>
-        <h2 className="font-bold text-petroleo-escuro">Sugestão de treino A, B e C</h2>
+        <h2 className="font-bold text-petroleo-escuro">Exercícios para academia (treino A, B e C)</h2>
         <p className="mt-1 text-sm text-cinza-600">
-          Treino de referência para a academia, só com exercícios da galeria. No link, aparece com o aviso de que é uma sugestão do
-          fisioterapeuta.
+          Só com as animações da galeria. Não mistura com os exercícios do Dr. Pablo. No link, aparece com o aviso de que é uma sugestão
+          do fisioterapeuta.
         </p>
         {api && (
           <div className="mt-4 rounded-2xl bg-cinza-50 p-3">

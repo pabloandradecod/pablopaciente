@@ -22,7 +22,8 @@ export default function AbaExercicios({ pacienteId }) {
 
   const usados = new Set(itens.map((i) => i.exercicio_id))
   // Só exercícios com animação podem ser prescritos.
-  const disponiveis = biblioteca.filter((e) => !usados.has(e.id))
+  // Só a biblioteca do Dr. Pablo (as animações da galeria ficam na aba Academia).
+  const disponiveis = biblioteca.filter((e) => !usados.has(e.id) && !String(e.video_path || '').startsWith('galeria/'))
 
   async function adicionar(ex) {
     await adicionarPrescricao({
@@ -50,7 +51,10 @@ export default function AbaExercicios({ pacienteId }) {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h2 className="font-bold text-petroleo-escuro">Exercícios do paciente</h2>
+        <div>
+          <h2 className="font-bold text-petroleo-escuro">Exercícios do Dr. Pablo</h2>
+          <p className="text-xs text-cinza-600">Prescrição terapêutica para casa. O treino com animações fica na aba Academia.</p>
+        </div>
         <Botao icone="mais" onClick={() => setAdicionando(true)}>Adicionar</Botao>
       </div>
       {erro && <p className="text-sm text-alerta">{erro}</p>}

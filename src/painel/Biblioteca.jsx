@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { criarExercicios, enviarVideo, excluirExercicio, listarExercicios, removerVideo, salvarExercicio, urlVideo } from '../lib/api.js'
-import Galeria from './Galeria.jsx'
+import { enviarVideo, excluirExercicio, listarExercicios, removerVideo, salvarExercicio, urlVideo } from '../lib/api.js'
+import GaleriaAcademia from './GaleriaAcademia.jsx'
 import Botao from '../components/ui/Botao.jsx'
 import { AreaTexto, Campo, Rotulo } from '../components/ui/Campo.jsx'
 import Icone from '../components/ui/Icone.jsx'
@@ -16,7 +16,7 @@ export default function Biblioteca() {
   const [arquivo, setArquivo] = useState(null)
   const [salvando, setSalvando] = useState(false)
   const [erro, setErro] = useState('')
-  const [galeria, setGaleria] = useState(null) // null | 'unico' | 'varios'
+  const [aba, setAba] = useState('pablo') // 'pablo' | 'academia'
 
   const carregar = () => listarExercicios({ incluirInativos: true }).then(setLista).catch((e) => setErro(e.message))
   useEffect(() => {
@@ -65,22 +65,32 @@ export default function Biblioteca() {
 
   return (
     <div>
+      <h1 className="text-2xl font-bold text-petroleo-escuro">Exercícios</h1>
+      <div className="my-4 grid grid-cols-2 gap-1 rounded-2xl bg-cinza-100 p-1">
+        {[
+          ['pablo', 'Exercícios do Dr. Pablo'],
+          ['academia', 'Exercícios para academia']
+        ].map(([id, rotulo]) => (
+          <button key={id} onClick={() => setAba(id)} className={`rounded-xl px-2 py-2.5 text-sm font-bold ${aba === id ? 'bg-white text-petroleo shadow-sm' : 'text-cinza-600'}`}>
+            {rotulo}
+          </button>
+        ))}
+      </div>
+
+      {aba === 'academia' ? (
+        <GaleriaAcademia />
+      ) : (
+      <>
       <div className="mb-4 flex items-center justify-between gap-3">
-        <div>
-          <h1 className="text-2xl font-bold text-petroleo-escuro">Exercícios</h1>
-          <p className="text-sm text-cinza-600">Sua biblioteca. Na ficha de cada paciente você escolhe e ajusta.</p>
-        </div>
-        <div className="flex gap-2">
-          <Botao variante="secundario" icone="video" onClick={() => setGaleria('varios')}>Galeria</Botao>
-          <Botao icone="mais" onClick={() => abrir(null)}>Novo</Botao>
-        </div>
+        <p className="text-sm text-cinza-600">Sua biblioteca, com os vídeos que você grava. É daqui que sai a prescrição terapêutica dos pacientes.</p>
+        <Botao icone="mais" onClick={() => abrir(null)}>Novo</Botao>
       </div>
 
       {!lista && <Carregando />}
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {lista?.map((ex) => (
           <button key={ex.id} onClick={() => abrir(ex)} className={`overflow-hidden rounded-2xl border border-cinza-100 bg-white text-left transition hover:border-petroleo/30 ${ex.ativo ? '' : 'opacity-60'}`}>
-            <VideoLoop src={urlVideo(ex.video_path)} />
+            <VideoLoop src={urlVideo(ex.video_path)} proporcao="aspect-[4/3]" />
             <div className="p-4">
               <div className="flex items-center justify-between gap-2">
                 <span className="font-semibold">{ex.nome}</span>
@@ -92,6 +102,8 @@ export default function Biblioteca() {
           </button>
         ))}
       </div>
+      </>
+      )}
 
       <Modal aberto={!!edicao} aoFechar={() => setEdicao(null)} titulo={edicao?.id ? 'Editar exercício' : 'Novo exercício'}>
         {edicao && (
@@ -104,21 +116,11 @@ export default function Biblioteca() {
                   <VideoLoop src={arquivo ? URL.createObjectURL(arquivo) : urlVideo(edicao.video_path)} />
                 </div>
               )}
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  type="button"
-                  onClick={() => setGaleria('unico')}
-                  className="flex h-11 items-center justify-center gap-2 rounded-xl border border-cinza-200 text-sm font-semibold text-petroleo hover:bg-petroleo-claro"
-                >
-                  <Icone nome="video" tamanho={18} />
-                  Da galeria
-                </button>
-                <label className="flex h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-cinza-200 text-sm font-semibold text-petroleo hover:bg-petroleo-claro">
-                  <Icone nome="upload" tamanho={18} />
-                  <span className="truncate">{arquivo ? arquivo.name : 'Enviar vídeo'}</span>
-                  <input type="file" accept="video/*" className="hidden" onChange={(e) => setArquivo(e.target.files?.[0] || null)} />
-                </label>
-              </div>
+              <label className="flex h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-cinza-200 text-sm font-semibold text-petroleo hover:bg-petroleo-claro">
+                <Icone nome="upload" tamanho={18} />
+                <span className="truncate">{arquivo ? arquivo.name : edicao.video_path ? 'Trocar vídeo' : 'Enviar vídeo'}</span>
+                <input type="file" accept="video/*" className="hidden" onChange={(e) => setArquivo(e.target.files?.[0] || null)} />
+              </label>
             </div>
             <AreaTexto id="ex-inst" rotulo="Instruções" rows={4} value={edicao.instrucoes} onChange={(e) => setEdicao({ ...edicao, instrucoes: e.target.value })} />
             <div className="grid grid-cols-2 gap-3">
@@ -137,29 +139,6 @@ export default function Biblioteca() {
           </form>
         )}
       </Modal>
-      <Galeria
-        aberto={!!galeria}
-        modo={galeria || 'unico'}
-        jaUsados={(lista || []).map((e) => e.video_path).filter(Boolean)}
-        aoFechar={() => setGaleria(null)}
-        aoEscolher={async (escolha) => {
-          if (galeria === 'unico') {
-            setArquivo(null)
-            setEdicao((ed) => ({ ...ed, video_path: escolha.video, nome: ed.nome || escolha.nome }))
-            setGaleria(null)
-            return
-          }
-          try {
-            await criarExercicios(
-              escolha.map((i) => ({ nome: i.nome, video_path: i.video, instrucoes: '', series_padrao: 3, reps_padrao: '12' }))
-            )
-            setGaleria(null)
-            carregar()
-          } catch (err) {
-            setErro(err.message)
-          }
-        }}
-      />
     </div>
   )
 }

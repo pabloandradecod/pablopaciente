@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import {
-  assistenteDisponivel, chamarAssistente, contarSessoes, criarExercicios, listarCampos, listarExercicios, listarPacientes, listarPrescricao, prescrever,
-  removerPrescricao, salvarAvaliacao, salvarExercicio, salvarRelatorio, ultimaAvaliacao, urlVideo
+  assistenteDisponivel, chamarAssistente, contarSessoes, listarCampos, listarExercicios, listarPacientes, listarPrescricao, salvarAvaliacao,
+  salvarRelatorio, ultimaAvaliacao
 } from '../lib/api.js'
-import { expandirIds, filtrarAvaliacao, lerResposta, montarEsquema, montarMensagem, montarPrompt, montarSistema, normalizarRespostaApi } from '../lib/assistente.js'
+import { filtrarAvaliacao, ligarSugestoes, lerResposta, montarEsquema, montarMensagem, montarPrompt, montarSistema, normalizarRespostaApi } from '../lib/assistente.js'
 import { hojeISO, primeiroNome } from '../lib/datas.js'
 import { useDitado } from './useDitado.js'
 import Botao from '../components/ui/Botao.jsx'
@@ -12,6 +12,7 @@ import Icone from '../components/ui/Icone.jsx'
 import { Simbolo } from '../components/ui/Logo.jsx'
 import TextoRelatorio from '../components/TextoRelatorio.jsx'
 import CampoAvaliacao from './CampoAvaliacao.jsx'
+import { CartoesSugestoes, salvarPrescricaoPropria } from './prescricaoPropria.jsx'
 
 const semAcento = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
@@ -45,7 +46,7 @@ export default function Assistente() {
   const [pacientes, setPacientes] = useState(null)
   const [busca, setBusca] = useState('')
   const [paciente, setPaciente] = useState(null)
-  const [contexto, setContexto] = useState(null) // campos, biblioteca, galeria, avaliação anterior, sessões
+  const [contexto, setContexto] = useState(null) // campos, biblioteca, avaliação anterior, sessões
   const [relato, setRelato] = useState('')
   const [copiado, setCopiado] = useState(false)
   const [promptVisivel, setPromptVisivel] = useState('')
@@ -86,14 +87,13 @@ export default function Assistente() {
     setSalvo(false)
     setErroIa('')
     setManual(false)
-    const [campos, biblioteca, galeria, avaliacaoAnterior, totalSessoes] = await Promise.all([
+    const [campos, biblioteca, avaliacaoAnterior, totalSessoes] = await Promise.all([
       listarCampos(),
       listarExercicios(),
-      import('../lib/galeria.json').then((m) => m.default),
       ultimaAvaliacao(p.id),
       contarSessoes(p.id)
     ])
-    setContexto({ campos, biblioteca, galeria, avaliacaoAnterior, totalSessoes })
+    setContexto({ campos, biblioteca, avaliacaoAnterior, totalSessoes })
   }
 
   function recomecar() {
@@ -124,11 +124,9 @@ export default function Assistente() {
       const r = await chamarAssistente({
         sistema,
         mensagem,
-        esquema: montarEsquema(contexto),
-        esquemaReserva: montarEsquema(contexto, { idsLivres: true })
+        esquema: montarEsquema(contexto)
       })
       const n = normalizarRespostaApi(r.dados)
-      n.dados.exercicios = expandirIds(n.dados.exercicios, contexto)
       setLeitura({
         versao: Date.now(),
         relatorio: n.relatorio,
@@ -151,7 +149,6 @@ export default function Assistente() {
       return
     }
     setErroLeitura('')
-    r.dados.exercicios = expandirIds(r.dados.exercicios, contexto)
     setLeitura({ versao: Date.now(), origem: 'ponte_manual', relatorio: r.relatorio, dados: { ...r.dados, avaliacao: filtrarAvaliacao(r.dados.avaliacao, contexto.campos) } })
   }
 
@@ -377,7 +374,7 @@ function Relato({ paciente, relato, setRelato, aoLevar, copiado, api, aoGerar, g
 
 function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar, gerando }) {
   const [ajuste, setAjuste] = useState('')
-  const { campos, biblioteca, galeria } = contexto
+  const { campos, biblioteca } = contexto
   const [verRelatorio, setVerRelatorio] = useState(true)
   const [salvando, setSalvando] = useState(false)
   const [erro, setErro] = useState('')
@@ -388,66 +385,22 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
     listarPrescricao(paciente.id).then(setAtuais).catch(() => {})
   }, [paciente.id])
 
-  // Resolve cada sugestão para um exercício da biblioteca ou da galeria.
-  const [sugestoes, setSugestoes] = useState(() =>
-    leitura.dados.exercicios
-      .map((s) => {
-        if (s.id.startsWith('lib:')) {
-          const e = biblioteca.find((x) => x.id === s.id.slice(4))
-          // Só exercícios com animação.
-          return e?.video_path && { chave: s.id, nome: e.nome, video: e.video_path, exercicioId: e.id, instrucoesAtuais: e.instrucoes, series: s.series || e.series_padrao, reps: String(s.reps || e.reps_padrao), instrucoes: s.instrucoes || e.instrucoes || '', observacao: s.observacao || '', incluir: true }
-        }
-        if (s.id.startsWith('gal:')) {
-          const g = galeria.itens.find((x) => x.id === s.id.slice(4))
-          if (!g) return null
-          const existente = biblioteca.find((x) => x.video_path === g.video)
-          return { chave: s.id, nome: existente?.nome || g.nome, video: g.video, exercicioId: existente?.id, instrucoesAtuais: existente?.instrucoes, galeria: g, series: s.series || 3, reps: String(s.reps || '10'), instrucoes: s.instrucoes || existente?.instrucoes || '', observacao: s.observacao || '', incluir: true }
-        }
-        return null
-      })
-      .filter(Boolean)
-  )
-  const ignorados = leitura.dados.exercicios.length - sugestoes.length
+  // Exercícios do Dr. Pablo: liga à biblioteca própria (nunca à galeria de academia).
+  const [sugestoes, setSugestoes] = useState(() => ligarSugestoes(leitura.dados, biblioteca))
+  const [msgVideo, setMsgVideo] = useState('')
   const av = leitura.dados.avaliacao
   const preenchidos = campos.filter((c) => av[c.chave] !== undefined)
   const vazios = campos.filter((c) => av[c.chave] === undefined)
 
   const mudarAv = (chave, valor) =>
     setLeitura((l) => ({ ...l, dados: { ...l.dados, avaliacao: { ...l.dados.avaliacao, [chave]: valor } } }))
-  const mudarEx = (i, campo, valor) => setSugestoes((l) => l.map((x, k) => (k === i ? { ...x, [campo]: valor } : x)))
 
   async function salvar() {
     setSalvando(true)
     setErro('')
     try {
       await salvarAvaliacao({ paciente_id: paciente.id, data: hojeISO(), respostas: leitura.dados.avaliacao })
-      const novos = sugestoes.filter((s) => s.incluir && !s.exercicioId)
-      if (novos.length) {
-        const criados = await criarExercicios(
-          novos.map((s) => ({ nome: s.galeria.nome, video_path: s.video, instrucoes: s.instrucoes || '', series_padrao: Number(s.series) || 3, reps_padrao: s.reps }))
-        )
-        novos.forEach((s) => (s.exercicioId = criados.find((c) => c.video_path === s.video)?.id))
-      }
-      // Exercício já existente sem instruções: aproveita as que vieram do assistente.
-      for (const s of sugestoes.filter((x) => x.incluir && x.exercicioId && !x.instrucoesAtuais?.trim() && x.instrucoes?.trim())) {
-        await salvarExercicio({ id: s.exercicioId, instrucoes: s.instrucoes.trim() })
-      }
-      const escolhidos = sugestoes.filter((x) => x.incluir && x.exercicioId)
-      if (substituir) {
-        const manter = new Set(escolhidos.map((x) => x.exercicioId))
-        for (const p of atuais.filter((p) => !manter.has(p.exercicio_id))) await removerPrescricao(p.id)
-      }
-      let ordem = 1
-      for (const s of escolhidos) {
-        await prescrever({
-          paciente_id: paciente.id,
-          exercicio_id: s.exercicioId,
-          series: Math.max(1, Math.min(20, Number(s.series) || 1)),
-          reps: s.reps || '10',
-          observacao: s.observacao || null,
-          ordem: ordem++
-        })
-      }
+      await salvarPrescricaoPropria({ pacienteId: paciente.id, sugestoes, substituir, atuais })
       await salvarRelatorio({ paciente_id: paciente.id, relatorio: leitura.relatorio || '(sem texto)', resposta: leitura.dados, origem: leitura.origem === 'api' ? 'api' : 'ponte_manual' })
       aoSalvar()
     } catch (e) {
@@ -508,47 +461,16 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
         </div>
       </div>
 
-      {/* Exercícios sugeridos */}
+      {/* Exercícios do Dr. Pablo */}
       <div className="mt-4">
-        <div className="mb-2 flex items-center gap-2 font-bold text-petroleo-escuro"><Icone nome="haltere" tamanho={18} /> Exercícios sugeridos</div>
-        {ignorados > 0 && <p className="mb-2 text-xs text-cinza-600">{ignorados} sugestão(ões) sem animação ou fora do catálogo foram descartadas.</p>}
-        <div className="space-y-2">
-          {sugestoes.map((s, i) => (
-            <div key={s.chave} className={`flex gap-3 rounded-2xl border p-2.5 transition ${s.incluir ? 'border-petroleo/30 bg-white' : 'border-cinza-100 bg-cinza-50 opacity-60'}`}>
-              <div className="h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-white">
-                {s.video ? (
-                  s.video.startsWith('galeria/') ? (
-                    <img src={`/${s.video.replace(/\.mp4$/, '.webp')}`} alt="" className="h-full w-full object-contain" />
-                  ) : (
-                    <video src={urlVideo(s.video)} muted playsInline autoPlay loop className="h-full w-full object-contain" />
-                  )
-                ) : (
-                  <div className="flex h-full items-center justify-center text-petroleo/50"><Icone nome="video" /></div>
-                )}
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="flex items-start justify-between gap-2">
-                  <div className="min-w-0 text-sm font-bold leading-tight">
-                    <div>{s.nome}</div>
-                    {!s.exercicioId && <span className="mt-1 inline-block rounded bg-destaque-claro px-1.5 py-0.5 text-[10px] font-bold text-petroleo-escuro">novo na biblioteca</span>}
-                  </div>
-                  <label className="flex shrink-0 items-center gap-1 text-xs font-semibold text-cinza-600">
-                    <input type="checkbox" checked={s.incluir} onChange={(e) => mudarEx(i, 'incluir', e.target.checked)} className="h-4 w-4 accent-[#0E5C62]" />
-                    incluir
-                  </label>
-                </div>
-                <div className="mt-1.5 flex gap-1.5">
-                  <input type="number" min="1" max="20" value={s.series} onChange={(e) => mudarEx(i, 'series', e.target.value)} className="h-8 w-14 rounded-lg border border-cinza-200 px-2 text-sm" aria-label="Séries" />
-                  <span className="self-center text-sm text-cinza-600">×</span>
-                  <input value={s.reps} onChange={(e) => mudarEx(i, 'reps', e.target.value)} className="h-8 min-w-0 flex-1 rounded-lg border border-cinza-200 px-2 text-sm" aria-label="Repetições" />
-                </div>
-                <textarea value={s.instrucoes} onChange={(e) => mudarEx(i, 'instrucoes', e.target.value)} placeholder="Como fazer" rows={2} className="mt-1.5 w-full rounded-lg border border-cinza-200 px-2 py-1 text-xs" />
-                <input value={s.observacao} onChange={(e) => mudarEx(i, 'observacao', e.target.value)} placeholder="Observação para o paciente" className="mt-1 h-8 w-full rounded-lg border border-cinza-200 px-2 text-xs" />
-              </div>
-            </div>
-          ))}
-          {sugestoes.length === 0 && <p className="text-sm text-cinza-600">Nenhum exercício sugerido.</p>}
-        </div>
+        <div className="mb-1 flex items-center gap-2 font-bold text-petroleo-escuro"><Icone nome="haltere" tamanho={18} /> Exercícios do Dr. Pablo</div>
+        <p className="mb-2 text-xs text-cinza-600">Prescrição terapêutica para casa. O treino de academia (animações) fica na aba Academia da ficha.</p>
+        {sugestoes.length === 0 ? (
+          <p className="text-sm text-cinza-600">Nenhum exercício sugerido.</p>
+        ) : (
+          <CartoesSugestoes sugestoes={sugestoes} setSugestoes={setSugestoes} aoMensagem={setMsgVideo} />
+        )}
+        {msgVideo && <p className={`mt-2 text-sm font-medium ${/salvo/.test(msgVideo) ? 'text-ok' : 'text-alerta'}`}>{msgVideo}</p>}
       </div>
 
       {erro && <p className="mt-3 text-sm font-medium text-alerta">{erro}</p>}
@@ -556,7 +478,7 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
         <label className="mt-4 flex items-start gap-2.5 rounded-2xl border border-cinza-100 p-3 text-sm">
           <input type="checkbox" checked={substituir} onChange={(e) => setSubstituir(e.target.checked)} className="mt-0.5 h-5 w-5 shrink-0 accent-[#0E5C62]" />
           <span>
-            <strong>Substituir a prescrição atual</strong> ({atuais.length} exercício{atuais.length > 1 ? 's' : ''}: {atuais.map((p) => p.exercicios?.nome).filter(Boolean).join(', ')}).
+            <strong>Substituir os exercícios atuais</strong> ({atuais.length} exercício{atuais.length > 1 ? 's' : ''}: {atuais.map((p) => p.exercicios?.nome).filter(Boolean).join(', ')}).
             <span className="block text-xs text-cinza-600">Desmarque para somar os novos aos que ele já tem.</span>
           </span>
         </label>

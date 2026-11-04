@@ -16,8 +16,8 @@ import AbaTreino from './AbaTreino.jsx'
 const ABAS = [
   { id: 'avaliacao', rotulo: 'Avaliação', icone: 'documento' },
   { id: 'sessoes', rotulo: 'Sessões', icone: 'coluna' },
-  { id: 'exercicios', rotulo: 'Exercícios', icone: 'haltere' },
-  { id: 'treino', rotulo: 'Treino', icone: 'grafico' },
+  { id: 'exercicios', rotulo: 'Dr. Pablo', icone: 'usuario' },
+  { id: 'treino', rotulo: 'Academia', icone: 'haltere' },
   { id: 'link', rotulo: 'Link', icone: 'link' }
 ]
 
