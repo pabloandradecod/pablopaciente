@@ -29,7 +29,12 @@ export function montarPrompt({ paciente, campos, avaliacaoAnterior, totalSessoes
     })
     .join('\n')
 
-  const linhasBiblioteca = biblioteca.filter((e) => e.ativo).map((e) => `- lib:${e.id} | ${e.nome}`).join('\n')
+  // Só entram exercícios com animação: a galeria e os da biblioteca que têm vídeo próprio.
+  const videosGaleria = new Set((galeria?.itens || []).map((i) => i.video))
+  const linhasBiblioteca = biblioteca
+    .filter((e) => e.ativo && e.video_path && !videosGaleria.has(e.video_path))
+    .map((e) => `- lib:${e.id} | ${e.nome}`)
+    .join('\n')
   const nomesCat = Object.fromEntries((galeria?.categorias || []).map((c) => [c.id, c.nome]))
   const porCategoria = {}
   for (const i of galeria?.itens || []) (porCategoria[i.categoria] ||= []).push(i)
@@ -54,25 +59,22 @@ REGRAS
 4. Sinais de alerta (bandeiras vermelhas) primeiro: síndrome da cauda equina (anestesia em sela, alteração urinária ou intestinal, perda de força progressiva), suspeita de fratura (trauma, osteoporose, corticoide), infecção (febre), neoplasia (histórico de câncer, perda de peso sem explicação, dor noturna que não alivia), déficit neurológico. Se houver, destaque e recomende encaminhamento médico.
 5. Considere bandeiras amarelas (medo de se movimentar, catastrofização, estresse, sono, trabalho).
 6. Não invente dados. O que faltar vai em "Pontos a investigar".
-7. Exercícios: escolha SOMENTE do CATÁLOGO abaixo, usando o id exato. Prefira a biblioteca (lib:) e use a galeria (gal:) quando fizer sentido. Entre 3 e 6 exercícios, adequados à fase (aguda: alívio, mobilidade suave, isometria; subaguda e crônica: controle motor e fortalecimento progressivo de core, glúteos e quadril). Defina séries, repetições ou tempo, e uma observação curta para o paciente, em linguagem simples.
+7. Prescrição é a parte mais importante. Escolha SOMENTE do CATÁLOGO abaixo, usando o id exato; nunca invente exercício nem id. Monte entre 4 e 7 exercícios adequados à fase (aguda: alívio, mobilidade suave, isometria; subaguda e crônica: controle motor e fortalecimento progressivo de core, glúteos e quadril). Prefira exercícios simples, que o paciente consiga fazer em casa sem aparelho, a menos que o relato diga que ele treina em academia. Para cada um: séries, repetições ou tempo, como fazer (1 ou 2 frases simples) e um cuidado ou observação curta.
+8. Seja direto. O relatório deve ser enxuto (até uns 250 palavras no total), em tópicos.
 
 FORMATO DA RESPOSTA (sempre o mesmo, inclusive quando eu pedir ajustes)
-Parte 1, relatório em português com estes títulos:
-## Resumo do caso
+Parte 1, relatório curto em português, com estes títulos:
+## Resumo
 ## Sinais de alerta
-## Achados da avaliação
 ## Hipóteses funcionais
-## Raciocínio clínico
-## Plano de tratamento sugerido
-## Exercícios sugeridos e justificativa
-## Orientações ao paciente
+## Prescrição e progressão
 ## Pontos a investigar
 
 Parte 2, no final, UM único bloco de código \`\`\`json com esta estrutura:
 {
   "avaliacao": { "<chave>": <valor> },
   "alertas": ["frase curta", "..."],
-  "exercicios": [ { "id": "lib:... ou gal:...", "series": 3, "reps": "10 ou 30 s", "observacao": "texto curto" } ]
+  "exercicios": [ { "id": "gal:... ou lib:...", "series": 3, "reps": "10 ou 30 s", "instrucoes": "como fazer, em 1 ou 2 frases", "observacao": "cuidado curto" } ]
 }
 Em "avaliacao", use só as chaves de CAMPOS, no formato indicado em cada uma, e omita o que não foi informado. "alertas" fica vazio [] se não houver.
 
@@ -85,12 +87,8 @@ ${anterior}
 CAMPOS DA AVALIAÇÃO (chave | formato | rótulo | opções)
 ${linhasCampos}
 
-CATÁLOGO DE EXERCÍCIOS (id | nome)
-Biblioteca do Dr. Pablo:
-${linhasBiblioteca || '- (vazia)'}
-
-Galeria:
-${linhasGaleria}
+CATÁLOGO DE EXERCÍCIOS (id | nome). Todos têm animação. Use somente estes ids.
+${linhasBiblioteca ? `Vídeos próprios do Dr. Pablo:\n${linhasBiblioteca}\n\n` : ''}${linhasGaleria}
 
 ${parteRelato}`
 }
@@ -122,7 +120,7 @@ export function lerResposta(texto) {
     dados: {
       avaliacao: dados.avaliacao && typeof dados.avaliacao === 'object' ? dados.avaliacao : {},
       alertas: Array.isArray(dados.alertas) ? dados.alertas.filter((a) => typeof a === 'string' && a.trim()) : [],
-      exercicios: Array.isArray(dados.exercicios) ? dados.exercicios.filter((e) => e && typeof e.id === 'string') : []
+      exercicios: Array.isArray(dados.exercicios) ? dados.exercicios.filter((e) => e && typeof e.id === 'string').map((e) => ({ ...e, id: e.id.trim() })) : []
     }
   }
 }

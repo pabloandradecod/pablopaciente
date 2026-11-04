@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import {
   contarSessoes, criarExercicios, listarCampos, listarExercicios, listarPacientes, prescrever, salvarAvaliacao,
-  salvarRelatorio, ultimaAvaliacao, urlVideo
+  salvarExercicio, salvarRelatorio, ultimaAvaliacao, urlVideo
 } from '../lib/api.js'
 import { filtrarAvaliacao, lerResposta, montarPrompt } from '../lib/assistente.js'
 import { hojeISO, primeiroNome } from '../lib/datas.js'
@@ -302,13 +302,14 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar }) {
       .map((s) => {
         if (s.id.startsWith('lib:')) {
           const e = biblioteca.find((x) => x.id === s.id.slice(4))
-          return e && { chave: s.id, nome: e.nome, video: e.video_path, exercicioId: e.id, series: s.series || e.series_padrao, reps: String(s.reps || e.reps_padrao), observacao: s.observacao || '', incluir: true }
+          // Só exercícios com animação.
+          return e?.video_path && { chave: s.id, nome: e.nome, video: e.video_path, exercicioId: e.id, instrucoesAtuais: e.instrucoes, series: s.series || e.series_padrao, reps: String(s.reps || e.reps_padrao), instrucoes: s.instrucoes || e.instrucoes || '', observacao: s.observacao || '', incluir: true }
         }
         if (s.id.startsWith('gal:')) {
           const g = galeria.itens.find((x) => x.id === s.id.slice(4))
           if (!g) return null
           const existente = biblioteca.find((x) => x.video_path === g.video)
-          return { chave: s.id, nome: existente?.nome || g.nome, video: g.video, exercicioId: existente?.id, galeria: g, series: s.series || 3, reps: String(s.reps || '10'), observacao: s.observacao || '', incluir: true }
+          return { chave: s.id, nome: existente?.nome || g.nome, video: g.video, exercicioId: existente?.id, instrucoesAtuais: existente?.instrucoes, galeria: g, series: s.series || 3, reps: String(s.reps || '10'), instrucoes: s.instrucoes || existente?.instrucoes || '', observacao: s.observacao || '', incluir: true }
         }
         return null
       })
@@ -331,9 +332,13 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar }) {
       const novos = sugestoes.filter((s) => s.incluir && !s.exercicioId)
       if (novos.length) {
         const criados = await criarExercicios(
-          novos.map((s) => ({ nome: s.galeria.nome, video_path: s.video, instrucoes: '', series_padrao: Number(s.series) || 3, reps_padrao: s.reps }))
+          novos.map((s) => ({ nome: s.galeria.nome, video_path: s.video, instrucoes: s.instrucoes || '', series_padrao: Number(s.series) || 3, reps_padrao: s.reps }))
         )
         novos.forEach((s) => (s.exercicioId = criados.find((c) => c.video_path === s.video)?.id))
+      }
+      // Exercício já existente sem instruções: aproveita as que vieram do assistente.
+      for (const s of sugestoes.filter((x) => x.incluir && x.exercicioId && !x.instrucoesAtuais?.trim() && x.instrucoes?.trim())) {
+        await salvarExercicio({ id: s.exercicioId, instrucoes: s.instrucoes.trim() })
       }
       let ordem = 1
       for (const s of sugestoes.filter((x) => x.incluir && x.exercicioId)) {
@@ -406,7 +411,7 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar }) {
       {/* Exercícios sugeridos */}
       <div className="mt-4">
         <div className="mb-2 flex items-center gap-2 font-bold text-petroleo-escuro"><Icone nome="haltere" tamanho={18} /> Exercícios sugeridos</div>
-        {ignorados > 0 && <p className="mb-2 text-xs text-cinza-600">{ignorados} sugestão(ões) não encontrada(s) no catálogo foram ignoradas.</p>}
+        {ignorados > 0 && <p className="mb-2 text-xs text-cinza-600">{ignorados} sugestão(ões) sem animação ou fora do catálogo foram descartadas.</p>}
         <div className="space-y-2">
           {sugestoes.map((s, i) => (
             <div key={s.chave} className={`flex gap-3 rounded-2xl border p-2.5 transition ${s.incluir ? 'border-petroleo/30 bg-white' : 'border-cinza-100 bg-cinza-50 opacity-60'}`}>
@@ -423,9 +428,9 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar }) {
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-start justify-between gap-2">
-                  <div className="text-sm font-bold leading-tight">
-                    {s.nome}
-                    {!s.exercicioId && <span className="ml-1.5 rounded bg-destaque-claro px-1.5 py-0.5 text-[10px] font-bold text-petroleo-escuro">entra na biblioteca</span>}
+                  <div className="min-w-0 text-sm font-bold leading-tight">
+                    <div>{s.nome}</div>
+                    {!s.exercicioId && <span className="mt-1 inline-block rounded bg-destaque-claro px-1.5 py-0.5 text-[10px] font-bold text-petroleo-escuro">novo na biblioteca</span>}
                   </div>
                   <label className="flex shrink-0 items-center gap-1 text-xs font-semibold text-cinza-600">
                     <input type="checkbox" checked={s.incluir} onChange={(e) => mudarEx(i, 'incluir', e.target.checked)} className="h-4 w-4 accent-[#0E5C62]" />
@@ -437,7 +442,8 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar }) {
                   <span className="self-center text-sm text-cinza-600">×</span>
                   <input value={s.reps} onChange={(e) => mudarEx(i, 'reps', e.target.value)} className="h-8 min-w-0 flex-1 rounded-lg border border-cinza-200 px-2 text-sm" aria-label="Repetições" />
                 </div>
-                <input value={s.observacao} onChange={(e) => mudarEx(i, 'observacao', e.target.value)} placeholder="Observação para o paciente" className="mt-1.5 h-8 w-full rounded-lg border border-cinza-200 px-2 text-xs" />
+                <textarea value={s.instrucoes} onChange={(e) => mudarEx(i, 'instrucoes', e.target.value)} placeholder="Como fazer" rows={2} className="mt-1.5 w-full rounded-lg border border-cinza-200 px-2 py-1 text-xs" />
+                <input value={s.observacao} onChange={(e) => mudarEx(i, 'observacao', e.target.value)} placeholder="Observação para o paciente" className="mt-1 h-8 w-full rounded-lg border border-cinza-200 px-2 text-xs" />
               </div>
             </div>
           ))}
