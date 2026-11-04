@@ -30,7 +30,11 @@ export default defineConfig({
       workbox: {
         // Dados de saúde nunca ficam em cache: só o app (HTML/JS/CSS) é cacheado.
         navigateFallback: '/index.html',
-        runtimeCaching: []
+        runtimeCaching: [],
+        // Versão nova assume na hora (sem esperar o usuário fechar todas as abas).
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true
       }
     })
   ]
