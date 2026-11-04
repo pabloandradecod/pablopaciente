@@ -38,20 +38,30 @@ on conflict (id) do nothing;
 -- Avaliações ----------------------------------------------------------
 insert into public.avaliacoes (paciente_id, data, respostas) values
   ('b0000000-0000-4000-8000-000000000001', '2026-09-08', jsonb_build_object(
-     'queixa_principal', 'Dor na lombar que piora no fim do dia',
+     'queixa_principal', '["Dor lombar"]'::jsonb,
+     'lado_dor', 'Centro',
      'tempo_queixa', 'Mais de 6 meses',
+     'como_comecou', 'Aos poucos',
+     'episodios', 'Acontece com frequência',
      'dor_inicial', 7,
-     'o_que_piora', 'Ficar muito tempo sentada no trabalho e lavar louça',
-     'o_que_melhora', 'Caminhar e deitar com as pernas dobradas',
-     'irradiacao', jsonb_build_object('resposta', 'nao', 'detalhe', ''),
+     'impacto', 'Moderado',
+     'o_que_piora', '["Ficar sentado", "Fim do dia", "Lavar louça"]'::jsonb,
+     'o_que_melhora', '["Caminhar", "Deitar de lado"]'::jsonb,
+     'atividade', 'Sedentário',
+     'irradiacao', jsonb_build_object('resposta', 'nao', 'detalhe', '', 'opcoes', '[]'::jsonb),
      'observacoes', 'Trabalha como costureira, 8 h sentada.')),
   ('b0000000-0000-4000-8000-000000000002', '2026-10-20', jsonb_build_object(
-     'queixa_principal', 'Travou a lombar ao levantar uma caixa',
+     'queixa_principal', '["Lombar travada", "Dor que desce para a perna"]'::jsonb,
+     'lado_dor', 'Esquerdo',
      'tempo_queixa', 'Menos de 1 semana',
+     'como_comecou', 'Depois de pegar peso',
+     'episodios', 'Primeira vez',
      'dor_inicial', 8,
-     'o_que_piora', 'Abaixar, levantar da cama e tossir',
-     'o_que_melhora', 'Ficar deitado de lado',
-     'irradiacao', jsonb_build_object('resposta', 'sim', 'detalhe', 'Parte de trás da coxa esquerda'),
+     'impacto', 'Muito',
+     'o_que_piora', '["Abaixar ou pegar peso", "Levantar da cama", "Tossir ou espirrar"]'::jsonb,
+     'o_que_melhora', '["Deitar de lado"]'::jsonb,
+     'atividade', '1 a 2 vezes por semana',
+     'irradiacao', jsonb_build_object('resposta', 'sim', 'detalhe', '', 'opcoes', '["Coxa (atrás)", "Lado esquerdo"]'::jsonb),
      'observacoes', 'Sem sinais de alerta na triagem.'));
 
 -- Sessões -------------------------------------------------------------

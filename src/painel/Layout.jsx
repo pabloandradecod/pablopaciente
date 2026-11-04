@@ -62,7 +62,7 @@ function LayoutAutenticado() {
     <div className="min-h-screen pb-20 md:pb-0">
       <header className="sticky top-0 z-30 bg-petroleo-escuro text-white">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
-          <Logo claro compacto />
+          <Logo claro altura={34} />
           <nav className="hidden items-center gap-1 md:flex">
             {ITENS.map((i) => (
               <NavLink

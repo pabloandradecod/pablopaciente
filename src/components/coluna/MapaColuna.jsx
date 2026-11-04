@@ -23,7 +23,8 @@ export default function MapaColuna({
   modo = 'ver',
   rotulos = true,
   className = '',
-  titulo = 'Mapa da coluna, vista posterior'
+  titulo = 'Mapa da coluna, vista posterior',
+  animar = false
 }) {
   const marcados = new Set(selecionados)
   const editavel = modo === 'editar'
@@ -40,8 +41,12 @@ export default function MapaColuna({
     }
   }
 
+  let ordemAnim = 0
   const props = (codigo) => {
-    if (!editavel) return {}
+    if (!editavel) {
+      if (!animar || !marcados.has(codigo)) return {}
+      return { className: 'seg-tratado', style: { animationDelay: `${ordemAnim++ * 0.08}s, ${1 + ordemAnim * 0.08}s` } }
+    }
     const alternar = () => onAlternar?.(codigo)
     return {
       role: 'button',
@@ -87,7 +92,7 @@ export default function MapaColuna({
       {vertebras.map((v) => {
         const e = estilo(v.codigo)
         return (
-          <g key={v.codigo} {...props(v.codigo)}>
+          <g key={`${v.codigo}-${animar ? selecionados.join() : ''}`} {...props(v.codigo)}>
             {editavel && (
               // Área de toque maior que o desenho, cobrindo a linha inteira.
               <rect x={CX - 80} y={v.y - 1} width={160} height={v.h + 2} fill="transparent" />

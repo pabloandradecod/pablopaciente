@@ -44,10 +44,10 @@ export function LinkInativo() {
 
 export function Tela({ children }) {
   return (
-    <div className="min-h-screen bg-petroleo-escuro px-4 py-8">
+    <div className="min-h-screen bg-papel px-5 py-8">
       <div className="mx-auto max-w-sm">
-        <Logo claro />
-        <div className="mt-8 rounded-3xl bg-white p-6">{children}</div>
+        <Logo altura={50} className="mx-auto" />
+        <div className="mt-10 rounded-[28px] bg-white p-7 shadow-[0_20px_60px_-30px_rgba(10,66,71,0.35)]">{children}</div>
       </div>
     </div>
   )
@@ -84,7 +84,7 @@ export default function Confirmacao({ token, aoConfirmar }) {
       <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-petroleo-claro text-petroleo">
         <Icone nome="cadeado" />
       </div>
-      <h1 className="text-xl font-bold text-petroleo-escuro">Confirme que é você</h1>
+      <h1 className="text-[28px] font-extrabold leading-tight tracking-tight text-petroleo-escuro">Confirme que é você</h1>
       <p className="mt-1.5 text-[15px] text-cinza-600">Por segurança, digite sua data de nascimento. Isso só é pedido na primeira vez neste celular.</p>
       <form onSubmit={enviar} className="mt-5">
         <label htmlFor="nasc" className="mb-1.5 block text-sm font-semibold">Data de nascimento</label>

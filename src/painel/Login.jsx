@@ -28,7 +28,7 @@ export default function Login() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-petroleo-escuro px-4">
       <div className="w-full max-w-sm rounded-3xl bg-white p-7">
-        <Logo />
+        <Logo altura={52} />
         <h1 className="mt-7 text-xl font-bold text-petroleo-escuro">Painel do profissional</h1>
         {enviado ? (
           <div className="mt-4 rounded-2xl bg-petroleo-claro p-4 text-sm text-petroleo-escuro">

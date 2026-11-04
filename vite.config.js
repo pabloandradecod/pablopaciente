@@ -10,9 +10,9 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['logo.svg', 'icons/icon.svg'],
+      includeAssets: ['marca/*.webp', 'icons/*.png'],
       manifest: {
-        name: 'Dr. Pablo Andrade | Fisioterapia',
+        name: 'Quiropraxia Dr. Pablo Andrade',
         short_name: 'Dr. Pablo',
         description: 'Seu acompanhamento com o Dr. Pablo Andrade.',
         lang: 'pt-BR',
@@ -20,11 +20,11 @@ export default defineConfig({
         scope: '/',
         display: 'standalone',
         background_color: '#FFFFFF',
-        theme_color: '#0E5C62',
+        theme_color: '#0A4247',
         icons: [
           { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png' },
-          { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
+          { src: '/icons/icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
         ]
       },
       workbox: {

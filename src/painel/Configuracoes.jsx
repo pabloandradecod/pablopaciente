@@ -13,7 +13,8 @@ const TIPOS = {
   escala: 'Escala 0 a 10',
   sim_nao: 'Sim / Não',
   sim_nao_texto: 'Sim / Não + detalhe',
-  lista: 'Lista de opções'
+  lista: 'Escolha única',
+  multipla: 'Múltipla escolha'
 }
 
 const paraChave = (s) =>
@@ -108,7 +109,7 @@ export default function Configuracoes() {
             <Selecao id="c-tipo" rotulo="Tipo" value={edicao.tipo} onChange={(e) => setEdicao({ ...edicao, tipo: e.target.value })} disabled={!!edicao.id}>
               {Object.entries(TIPOS).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
             </Selecao>
-            {edicao.tipo === 'lista' && (
+            {['lista', 'multipla', 'sim_nao_texto'].includes(edicao.tipo) && (
               <AreaTexto id="c-op" rotulo="Opções" dica="(uma por linha)" rows={4} value={edicao.opcoes} onChange={(e) => setEdicao({ ...edicao, opcoes: e.target.value })} />
             )}
             {edicao.tipo === 'sim_nao_texto' && (

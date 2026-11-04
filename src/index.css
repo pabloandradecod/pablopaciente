@@ -16,6 +16,8 @@
   --color-alerta: #B42318;
   --color-alerta-claro: #FEF3F2;
   --color-ok: #127A4B;
+  --color-papel: #F5F3EE;
+  --color-laranja: #E58A3A;
 }
 
 html { -webkit-text-size-adjust: 100%; }
@@ -25,3 +27,35 @@ body {
 }
 button, a { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 2px solid var(--color-destaque); outline-offset: 2px; }
+
+/* ---------- Animações do link do paciente ---------- */
+.revelar { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.revelar.visivel { opacity: 1; transform: none; }
+
+@keyframes brilho {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(244, 197, 66, 0)); }
+  50% { filter: drop-shadow(0 0 5px rgba(244, 197, 66, 0.95)); }
+}
+@keyframes acender {
+  from { opacity: .25; transform: scale(.96); }
+  to { opacity: 1; transform: none; }
+}
+.seg-tratado { transform-box: fill-box; transform-origin: center; animation: acender .5s ease-out both, brilho 2.8s ease-in-out 1s infinite; }
+
+@keyframes crescer { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.barra-crescer { transform-origin: bottom; animation: crescer .9s cubic-bezier(.2,.7,.2,1) both; }
+
+@keyframes marcador { from { background-size: 0% 38%; } to { background-size: 100% 38%; } }
+.marca-texto {
+  background-image: linear-gradient(var(--color-destaque), var(--color-destaque));
+  background-repeat: no-repeat; background-position: 0 88%; background-size: 100% 38%;
+  animation: marcador .9s .3s cubic-bezier(.2,.7,.2,1) both;
+}
+
+.sem-barra { scrollbar-width: none; }
+.sem-barra::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .revelar { opacity: 1; transform: none; transition: none; }
+  .seg-tratado, .barra-crescer, .marca-texto { animation: none; }
+}
