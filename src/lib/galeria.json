@@ -1,0 +1,781 @@
+{
+ "categorias": [
+  {
+   "id": "deltoides",
+   "nome": "Ombros (deltoides)"
+  },
+  {
+   "id": "triceps",
+   "nome": "Tríceps"
+  },
+  {
+   "id": "panturrilha",
+   "nome": "Panturrilha"
+  }
+ ],
+ "itens": [
+  {
+   "id": "deltoides/abducao-maquina",
+   "nome": "Abdução máquina",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/abducao-maquina.mp4",
+   "capa": "galeria/deltoides/abducao-maquina.webp"
+  },
+  {
+   "id": "deltoides/arnold-press",
+   "nome": "Arnold press",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/arnold-press.mp4",
+   "capa": "galeria/deltoides/arnold-press.webp"
+  },
+  {
+   "id": "deltoides/arnold-press-feminino",
+   "nome": "Arnold press feminino",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/arnold-press-feminino.mp4",
+   "capa": "galeria/deltoides/arnold-press-feminino.webp"
+  },
+  {
+   "id": "deltoides/arremesso-com-barra-push-jerk",
+   "nome": "Arremesso com barra (push jerk)",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/arremesso-com-barra-push-jerk.mp4",
+   "capa": "galeria/deltoides/arremesso-com-barra-push-jerk.webp"
+  },
+  {
+   "id": "deltoides/crucifixo-invertido-cabo",
+   "nome": "Crucifixo invertido cabo",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/crucifixo-invertido-cabo.mp4",
+   "capa": "galeria/deltoides/crucifixo-invertido-cabo.webp"
+  },
+  {
+   "id": "deltoides/crucifixo-invertido-com-halteres-1",
+   "nome": "Crucifixo invertido com halteres 1",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/crucifixo-invertido-com-halteres-1.mp4",
+   "capa": "galeria/deltoides/crucifixo-invertido-com-halteres-1.webp"
+  },
+  {
+   "id": "deltoides/crucifixo-invertido-com-halteres-1-2",
+   "nome": "Crucifixo invertido com halteres 2",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/crucifixo-invertido-com-halteres-1-2.mp4",
+   "capa": "galeria/deltoides/crucifixo-invertido-com-halteres-1-2.webp"
+  },
+  {
+   "id": "deltoides/crucifixo-invertido-na-maqina",
+   "nome": "Crucifixo invertido na máquina",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/crucifixo-invertido-na-maqina.mp4",
+   "capa": "galeria/deltoides/crucifixo-invertido-na-maqina.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento",
+   "nome": "Desenvolvimento",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento.mp4",
+   "capa": "galeria/deltoides/desenvolvimento.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-com-halteres",
+   "nome": "Desenvolvimento com halteres",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-com-halteres.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-com-halteres.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-com-impulso-push-press",
+   "nome": "Desenvolvimento com impulso (push press)",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-com-impulso-push-press.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-com-impulso-push-press.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-com-pino-no-rack",
+   "nome": "Desenvolvimento com pino no rack",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-com-pino-no-rack.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-com-pino-no-rack.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-landmine",
+   "nome": "Desenvolvimento landmine",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-landmine.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-landmine.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-militar",
+   "nome": "Desenvolvimento militar",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-militar.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-militar.webp"
+  },
+  {
+   "id": "deltoides/military-press-3",
+   "nome": "Desenvolvimento militar 3",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/military-press-3.mp4",
+   "capa": "galeria/deltoides/military-press-3.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-maquina",
+   "nome": "Desenvolvimento máquina",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-maquina.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-maquina.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-no-cabo",
+   "nome": "Desenvolvimento no cabo",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-no-cabo.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-no-cabo.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-no-smith",
+   "nome": "Desenvolvimento no smith",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-no-smith.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-no-smith.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-nuca",
+   "nome": "Desenvolvimento nuca",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-nuca.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-nuca.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-sentado-com-barra",
+   "nome": "Desenvolvimento sentado com barra",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-sentado-com-barra.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-sentado-com-barra.webp"
+  },
+  {
+   "id": "deltoides/desenvolvimento-unilateral",
+   "nome": "Desenvolvimento unilateral",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/desenvolvimento-unilateral.mp4",
+   "capa": "galeria/deltoides/desenvolvimento-unilateral.webp"
+  },
+  {
+   "id": "deltoides/elevacao-frontal-com-barra",
+   "nome": "Elevação frontal com barra",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-frontal-com-barra.mp4",
+   "capa": "galeria/deltoides/elevacao-frontal-com-barra.webp"
+  },
+  {
+   "id": "deltoides/elevacao-frontal-com-halteres",
+   "nome": "Elevação frontal com halteres",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-frontal-com-halteres.mp4",
+   "capa": "galeria/deltoides/elevacao-frontal-com-halteres.webp"
+  },
+  {
+   "id": "deltoides/elevacao-frontal-inclinado",
+   "nome": "Elevação frontal inclinada",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-frontal-inclinado.mp4",
+   "capa": "galeria/deltoides/elevacao-frontal-inclinado.webp"
+  },
+  {
+   "id": "deltoides/elevacao-frontal-mao-juntas",
+   "nome": "Elevação frontal mãos juntas",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-frontal-mao-juntas.mp4",
+   "capa": "galeria/deltoides/elevacao-frontal-mao-juntas.webp"
+  },
+  {
+   "id": "deltoides/elevacao-frontal-no-cabo",
+   "nome": "Elevação frontal no cabo",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-frontal-no-cabo.mp4",
+   "capa": "galeria/deltoides/elevacao-frontal-no-cabo.webp"
+  },
+  {
+   "id": "deltoides/elevacao-frontal-sentado",
+   "nome": "Elevação frontal sentado",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-frontal-sentado.mp4",
+   "capa": "galeria/deltoides/elevacao-frontal-sentado.webp"
+  },
+  {
+   "id": "deltoides/elevacao-frontal-unilateral",
+   "nome": "Elevação frontal unilateral",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-frontal-unilateral.mp4",
+   "capa": "galeria/deltoides/elevacao-frontal-unilateral.webp"
+  },
+  {
+   "id": "deltoides/elevacao-frontal-unilateral-3",
+   "nome": "Elevação frontal unilateral 3",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-frontal-unilateral-3.mp4",
+   "capa": "galeria/deltoides/elevacao-frontal-unilateral-3.webp"
+  },
+  {
+   "id": "deltoides/frontal-lateral-invertido",
+   "nome": "Elevação frontal, lateral e invertida",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/frontal-lateral-invertido.mp4",
+   "capa": "galeria/deltoides/frontal-lateral-invertido.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-descida-frontal",
+   "nome": "Elevação lateral + descida frontal",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-descida-frontal.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-descida-frontal.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-1",
+   "nome": "Elevação lateral 1",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-1.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-1.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-4",
+   "nome": "Elevação lateral 4",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-4.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-4.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-inclinado-apoio-banco",
+   "nome": "Elevação lateral apoiado no banco",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-inclinado-apoio-banco.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-inclinado-apoio-banco.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-com-inclinacao",
+   "nome": "Elevação lateral com inclinação",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-com-inclinacao.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-com-inclinacao.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-inclinado-no-cabo-2",
+   "nome": "Elevação lateral inclinada no cabo",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-inclinado-no-cabo-2.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-inclinado-no-cabo-2.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-na-maquina",
+   "nome": "Elevação lateral na máquina",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-na-maquina.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-na-maquina.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-no-cabo",
+   "nome": "Elevação lateral no cabo",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-no-cabo.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-no-cabo.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-no-cross-cruzado",
+   "nome": "Elevação lateral no cross cruzado",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-no-cross-cruzado.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-no-cross-cruzado.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-tronco-apoiado",
+   "nome": "Elevação lateral tronco apoiado",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-tronco-apoiado.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-tronco-apoiado.webp"
+  },
+  {
+   "id": "deltoides/elevacao-lateral-unilateral-no-cabo",
+   "nome": "Elevação lateral unilateral no cabo",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/elevacao-lateral-unilateral-no-cabo.mp4",
+   "capa": "galeria/deltoides/elevacao-lateral-unilateral-no-cabo.webp"
+  },
+  {
+   "id": "deltoides/rotacao-externa",
+   "nome": "Rotação externa",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/rotacao-externa.mp4",
+   "capa": "galeria/deltoides/rotacao-externa.webp"
+  },
+  {
+   "id": "deltoides/rotacao-interna",
+   "nome": "Rotação interna",
+   "categoria": "deltoides",
+   "video": "galeria/deltoides/rotacao-interna.mp4",
+   "capa": "galeria/deltoides/rotacao-interna.webp"
+  },
+  {
+   "id": "panturrilha/agachamento-com-elevacao-de-calcanhar",
+   "nome": "Agachamento com elevação de calcanhar",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/agachamento-com-elevacao-de-calcanhar.mp4",
+   "capa": "galeria/panturrilha/agachamento-com-elevacao-de-calcanhar.webp"
+  },
+  {
+   "id": "panturrilha/gemeos-sentado",
+   "nome": "Gêmeos sentado",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/gemeos-sentado.mp4",
+   "capa": "galeria/panturrilha/gemeos-sentado.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-burrinho",
+   "nome": "Panturrilha burrinho",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-burrinho.mp4",
+   "capa": "galeria/panturrilha/panturrilha-burrinho.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-com-halteres",
+   "nome": "Panturrilha com halteres",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-com-halteres.mp4",
+   "capa": "galeria/panturrilha/panturrilha-com-halteres.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-em-pe-com-halteres",
+   "nome": "Panturrilha em pé com halteres",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-em-pe-com-halteres.mp4",
+   "capa": "galeria/panturrilha/panturrilha-em-pe-com-halteres.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-em-pe-maquina",
+   "nome": "Panturrilha em pé máquina",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-em-pe-maquina.mp4",
+   "capa": "galeria/panturrilha/panturrilha-em-pe-maquina.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-em-pe-na-maquina",
+   "nome": "Panturrilha em pé na máquina",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-em-pe-na-maquina.mp4",
+   "capa": "galeria/panturrilha/panturrilha-em-pe-na-maquina.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-em-pe-na-maquina-2",
+   "nome": "Panturrilha em pé na máquina 2",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-em-pe-na-maquina-2.mp4",
+   "capa": "galeria/panturrilha/panturrilha-em-pe-na-maquina-2.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-em-pe-no-cabo",
+   "nome": "Panturrilha em pé no cabo",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-em-pe-no-cabo.mp4",
+   "capa": "galeria/panturrilha/panturrilha-em-pe-no-cabo.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-em-pe-unilateral",
+   "nome": "Panturrilha em pé unilateral",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-em-pe-unilateral.mp4",
+   "capa": "galeria/panturrilha/panturrilha-em-pe-unilateral.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-excentrica",
+   "nome": "Panturrilha excêntrica",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-excentrica.mp4",
+   "capa": "galeria/panturrilha/panturrilha-excentrica.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-leg-press-horizontal",
+   "nome": "Panturrilha leg press horizontal",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-leg-press-horizontal.mp4",
+   "capa": "galeria/panturrilha/panturrilha-leg-press-horizontal.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-maquina-2",
+   "nome": "Panturrilha máquina 2",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-maquina-2.mp4",
+   "capa": "galeria/panturrilha/panturrilha-maquina-2.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-leg-45",
+   "nome": "Panturrilha no leg 45",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-leg-45.mp4",
+   "capa": "galeria/panturrilha/panturrilha-leg-45.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-no-leg-press",
+   "nome": "Panturrilha no leg press",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-no-leg-press.mp4",
+   "capa": "galeria/panturrilha/panturrilha-no-leg-press.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-no-smith",
+   "nome": "Panturrilha no smith",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-no-smith.mp4",
+   "capa": "galeria/panturrilha/panturrilha-no-smith.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-sentado-com-halter",
+   "nome": "Panturrilha sentado com halter",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-sentado-com-halter.mp4",
+   "capa": "galeria/panturrilha/panturrilha-sentado-com-halter.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-sentado-na-maquina",
+   "nome": "Panturrilha sentado na máquina",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-sentado-na-maquina.mp4",
+   "capa": "galeria/panturrilha/panturrilha-sentado-na-maquina.webp"
+  },
+  {
+   "id": "panturrilha/panturrilha-unilateral",
+   "nome": "Panturrilha unilateral",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/panturrilha-unilateral.mp4",
+   "capa": "galeria/panturrilha/panturrilha-unilateral.webp"
+  },
+  {
+   "id": "panturrilha/soleo-1",
+   "nome": "Sóleo 1",
+   "categoria": "panturrilha",
+   "video": "galeria/panturrilha/soleo-1.mp4",
+   "capa": "galeria/panturrilha/soleo-1.webp"
+  },
+  {
+   "id": "triceps/extensao-no-elastico",
+   "nome": "Extensão no elástico",
+   "categoria": "triceps",
+   "video": "galeria/triceps/extensao-no-elastico.mp4",
+   "capa": "galeria/triceps/extensao-no-elastico.webp"
+  },
+  {
+   "id": "triceps/extensao-unilateral",
+   "nome": "Extensão unilateral",
+   "categoria": "triceps",
+   "video": "galeria/triceps/extensao-unilateral.mp4",
+   "capa": "galeria/triceps/extensao-unilateral.webp"
+  },
+  {
+   "id": "triceps/extensao-unilateral-no-cabo",
+   "nome": "Extensão unilateral no cabo",
+   "categoria": "triceps",
+   "video": "galeria/triceps/extensao-unilateral-no-cabo.mp4",
+   "capa": "galeria/triceps/extensao-unilateral-no-cabo.webp"
+  },
+  {
+   "id": "triceps/flexao-diamante",
+   "nome": "Flexão diamante",
+   "categoria": "triceps",
+   "video": "galeria/triceps/flexao-diamante.mp4",
+   "capa": "galeria/triceps/flexao-diamante.webp"
+  },
+  {
+   "id": "triceps/flexao-esfinge",
+   "nome": "Flexão esfinge",
+   "categoria": "triceps",
+   "video": "galeria/triceps/flexao-esfinge.mp4",
+   "capa": "galeria/triceps/flexao-esfinge.webp"
+  },
+  {
+   "id": "triceps/mergulho-banco",
+   "nome": "Mergulho banco",
+   "categoria": "triceps",
+   "video": "galeria/triceps/mergulho-banco.mp4",
+   "capa": "galeria/triceps/mergulho-banco.webp"
+  },
+  {
+   "id": "triceps/mergulho-no-banco-2",
+   "nome": "Mergulho no banco 2",
+   "categoria": "triceps",
+   "video": "galeria/triceps/mergulho-no-banco-2.mp4",
+   "capa": "galeria/triceps/mergulho-no-banco-2.webp"
+  },
+  {
+   "id": "triceps/paralelas",
+   "nome": "Paralelas",
+   "categoria": "triceps",
+   "video": "galeria/triceps/paralelas.mp4",
+   "capa": "galeria/triceps/paralelas.webp"
+  },
+  {
+   "id": "triceps/paralelas-no-graviton",
+   "nome": "Paralelas no graviton",
+   "categoria": "triceps",
+   "video": "galeria/triceps/paralelas-no-graviton.mp4",
+   "capa": "galeria/triceps/paralelas-no-graviton.webp"
+  },
+  {
+   "id": "triceps/supino-pegada-fechada",
+   "nome": "Supino pegada fechada",
+   "categoria": "triceps",
+   "video": "galeria/triceps/supino-pegada-fechada.mp4",
+   "capa": "galeria/triceps/supino-pegada-fechada.webp"
+  },
+  {
+   "id": "triceps/triceps-acima-da-cabeca-com-halter",
+   "nome": "Tríceps acima da cabeça com halter",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-acima-da-cabeca-com-halter.mp4",
+   "capa": "galeria/triceps/triceps-acima-da-cabeca-com-halter.webp"
+  },
+  {
+   "id": "triceps/triceps-acima-da-cabeca-no-cabo",
+   "nome": "Tríceps acima da cabeça no cabo",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-acima-da-cabeca-no-cabo.mp4",
+   "capa": "galeria/triceps/triceps-acima-da-cabeca-no-cabo.webp"
+  },
+  {
+   "id": "triceps/triceps-acima-da-cabeca-no-cabo-2",
+   "nome": "Tríceps acima da cabeça no cabo 2",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-acima-da-cabeca-no-cabo-2.mp4",
+   "capa": "galeria/triceps/triceps-acima-da-cabeca-no-cabo-2.webp"
+  },
+  {
+   "id": "triceps/triceps-coice-com-halter",
+   "nome": "Tríceps coice com halter",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-coice-com-halter.mp4",
+   "capa": "galeria/triceps/triceps-coice-com-halter.webp"
+  },
+  {
+   "id": "triceps/triceps-coice-com-halteres",
+   "nome": "Tríceps coice com halteres",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-coice-com-halteres.mp4",
+   "capa": "galeria/triceps/triceps-coice-com-halteres.webp"
+  },
+  {
+   "id": "triceps/triceps-com-coice-com-halteres-2",
+   "nome": "Tríceps coice com halteres 2",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-com-coice-com-halteres-2.mp4",
+   "capa": "galeria/triceps/triceps-com-coice-com-halteres-2.webp"
+  },
+  {
+   "id": "triceps/triceps-coice-no-cabo",
+   "nome": "Tríceps coice no cabo",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-coice-no-cabo.mp4",
+   "capa": "galeria/triceps/triceps-coice-no-cabo.webp"
+  },
+  {
+   "id": "triceps/triceps-coice-no-cabo-2",
+   "nome": "Tríceps coice no cabo 2",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-coice-no-cabo-2.mp4",
+   "capa": "galeria/triceps/triceps-coice-no-cabo-2.webp"
+  },
+  {
+   "id": "triceps/triceps-extensao-unilateral",
+   "nome": "Tríceps extensão unilateral",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-extensao-unilateral.mp4",
+   "capa": "galeria/triceps/triceps-extensao-unilateral.webp"
+  },
+  {
+   "id": "triceps/triceps-fechado",
+   "nome": "Tríceps fechado",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-fechado.mp4",
+   "capa": "galeria/triceps/triceps-fechado.webp"
+  },
+  {
+   "id": "triceps/triceps-frances",
+   "nome": "Tríceps francês",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-frances.mp4",
+   "capa": "galeria/triceps/triceps-frances.webp"
+  },
+  {
+   "id": "triceps/triceps-frances-barra-w",
+   "nome": "Tríceps francês barra W",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-frances-barra-w.mp4",
+   "capa": "galeria/triceps/triceps-frances-barra-w.webp"
+  },
+  {
+   "id": "triceps/triceps-frances-com-barra",
+   "nome": "Tríceps francês com barra",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-frances-com-barra.mp4",
+   "capa": "galeria/triceps/triceps-frances-com-barra.webp"
+  },
+  {
+   "id": "triceps/triceps-frances-inclinado-com-halter",
+   "nome": "Tríceps francês inclinado com halter",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-frances-inclinado-com-halter.mp4",
+   "capa": "galeria/triceps/triceps-frances-inclinado-com-halter.webp"
+  },
+  {
+   "id": "triceps/triceps-frances-no-cabo-com-corda",
+   "nome": "Tríceps francês no cabo com corda",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-frances-no-cabo-com-corda.mp4",
+   "capa": "galeria/triceps/triceps-frances-no-cabo-com-corda.webp"
+  },
+  {
+   "id": "triceps/triceps-frances-sentado",
+   "nome": "Tríceps francês sentado",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-frances-sentado.mp4",
+   "capa": "galeria/triceps/triceps-frances-sentado.webp"
+  },
+  {
+   "id": "triceps/triceps-frances-unilateral-cabo",
+   "nome": "Tríceps francês unilateral cabo",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-frances-unilateral-cabo.mp4",
+   "capa": "galeria/triceps/triceps-frances-unilateral-cabo.webp"
+  },
+  {
+   "id": "triceps/triceps-frances-unilateral-sentado",
+   "nome": "Tríceps francês unilateral sentado",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-frances-unilateral-sentado.mp4",
+   "capa": "galeria/triceps/triceps-frances-unilateral-sentado.webp"
+  },
+  {
+   "id": "triceps/triceps-maquina-1",
+   "nome": "Tríceps máquina 1",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-maquina-1.mp4",
+   "capa": "galeria/triceps/triceps-maquina-1.webp"
+  },
+  {
+   "id": "triceps/triceps-maquina-2",
+   "nome": "Tríceps máquina 2",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-maquina-2.mp4",
+   "capa": "galeria/triceps/triceps-maquina-2.webp"
+  },
+  {
+   "id": "triceps/triceps-na-corda",
+   "nome": "Tríceps na corda",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-na-corda.mp4",
+   "capa": "galeria/triceps/triceps-na-corda.webp"
+  },
+  {
+   "id": "triceps/triceps-pulley",
+   "nome": "Tríceps pulley",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-pulley.mp4",
+   "capa": "galeria/triceps/triceps-pulley.webp"
+  },
+  {
+   "id": "triceps/triceps-pulley-com-barra-v",
+   "nome": "Tríceps pulley com barra V",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-pulley-com-barra-v.mp4",
+   "capa": "galeria/triceps/triceps-pulley-com-barra-v.webp"
+  },
+  {
+   "id": "triceps/triceps-pulley-com-barra-w",
+   "nome": "Tríceps pulley com barra W",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-pulley-com-barra-w.mp4",
+   "capa": "galeria/triceps/triceps-pulley-com-barra-w.webp"
+  },
+  {
+   "id": "triceps/triceps-pulley-pronado",
+   "nome": "Tríceps pulley pronado",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-pulley-pronado.mp4",
+   "capa": "galeria/triceps/triceps-pulley-pronado.webp"
+  },
+  {
+   "id": "triceps/triceps-pulley-supinado",
+   "nome": "Tríceps pulley supinado",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-pulley-supinado.mp4",
+   "capa": "galeria/triceps/triceps-pulley-supinado.webp"
+  },
+  {
+   "id": "triceps/triceps-supinado-2",
+   "nome": "Tríceps supinado 2",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-supinado-2.mp4",
+   "capa": "galeria/triceps/triceps-supinado-2.webp"
+  },
+  {
+   "id": "triceps/triceps-testa-1",
+   "nome": "Tríceps testa 1",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-testa-1.mp4",
+   "capa": "galeria/triceps/triceps-testa-1.webp"
+  },
+  {
+   "id": "triceps/triceps-testa-com-halteres",
+   "nome": "Tríceps testa com halteres",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-testa-com-halteres.mp4",
+   "capa": "galeria/triceps/triceps-testa-com-halteres.webp"
+  },
+  {
+   "id": "triceps/triceps-testa-inclinado",
+   "nome": "Tríceps testa inclinado",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-testa-inclinado.mp4",
+   "capa": "galeria/triceps/triceps-testa-inclinado.webp"
+  },
+  {
+   "id": "triceps/triceps-testa-inclinado-2",
+   "nome": "Tríceps testa inclinado 2",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-testa-inclinado-2.mp4",
+   "capa": "galeria/triceps/triceps-testa-inclinado-2.webp"
+  },
+  {
+   "id": "triceps/triceps-testa-no-cabo",
+   "nome": "Tríceps testa no cabo",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-testa-no-cabo.mp4",
+   "capa": "galeria/triceps/triceps-testa-no-cabo.webp"
+  },
+  {
+   "id": "triceps/triceps-testa-polia-alta",
+   "nome": "Tríceps testa polia alta",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-testa-polia-alta.mp4",
+   "capa": "galeria/triceps/triceps-testa-polia-alta.webp"
+  },
+  {
+   "id": "triceps/triceps-testa-supinado",
+   "nome": "Tríceps testa supinado",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-testa-supinado.mp4",
+   "capa": "galeria/triceps/triceps-testa-supinado.webp"
+  },
+  {
+   "id": "triceps/triceps-testa-unilateral",
+   "nome": "Tríceps testa unilateral",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-testa-unilateral.mp4",
+   "capa": "galeria/triceps/triceps-testa-unilateral.webp"
+  },
+  {
+   "id": "triceps/triceps-unilateral-cabo-ajoelhado",
+   "nome": "Tríceps unilateral cabo ajoelhado",
+   "categoria": "triceps",
+   "video": "galeria/triceps/triceps-unilateral-cabo-ajoelhado.mp4",
+   "capa": "galeria/triceps/triceps-unilateral-cabo-ajoelhado.webp"
+  }
+ ]
+}

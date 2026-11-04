@@ -100,6 +100,9 @@ export async function listarExercicios({ incluirInativos = false } = {}) {
   if (!incluirInativos) q = q.eq('ativo', true)
   return checar(await q)
 }
+export async function criarExercicios(lista) {
+  return checar(await supabase.from('exercicios').insert(lista).select())
+}
 export async function salvarExercicio(e) {
   const q = e.id ? supabase.from('exercicios').update(e).eq('id', e.id) : supabase.from('exercicios').insert(e)
   return checar(await q.select().single())
@@ -114,11 +117,14 @@ export async function enviarVideo(arquivo) {
   return caminho
 }
 export async function removerVideo(caminho) {
-  if (!caminho) return
+  if (!caminho || caminho.startsWith('galeria/')) return
   await supabase.storage.from('exercicios').remove([caminho])
 }
 export function urlVideo(caminho) {
-  if (!caminho || !supabase) return null
+  if (!caminho) return null
+  // Animações da galeria ficam no próprio site.
+  if (caminho.startsWith('galeria/')) return `/${caminho}`
+  if (!supabase) return null
   return supabase.storage.from('exercicios').getPublicUrl(caminho).data.publicUrl
 }
 

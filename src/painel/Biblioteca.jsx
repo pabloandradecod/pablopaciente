@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { enviarVideo, excluirExercicio, listarExercicios, removerVideo, salvarExercicio, urlVideo } from '../lib/api.js'
+import { criarExercicios, enviarVideo, excluirExercicio, listarExercicios, removerVideo, salvarExercicio, urlVideo } from '../lib/api.js'
+import Galeria from './Galeria.jsx'
 import Botao from '../components/ui/Botao.jsx'
 import { AreaTexto, Campo, Rotulo } from '../components/ui/Campo.jsx'
 import Icone from '../components/ui/Icone.jsx'
@@ -15,6 +16,7 @@ export default function Biblioteca() {
   const [arquivo, setArquivo] = useState(null)
   const [salvando, setSalvando] = useState(false)
   const [erro, setErro] = useState('')
+  const [galeria, setGaleria] = useState(null) // null | 'unico' | 'varios'
 
   const carregar = () => listarExercicios({ incluirInativos: true }).then(setLista).catch((e) => setErro(e.message))
   useEffect(() => {
@@ -38,7 +40,7 @@ export default function Biblioteca() {
         if (arquivo.size > 20 * 1024 * 1024) throw new Error('Vídeo acima de 20 MB. Use um vídeo curto, de até 15 segundos.')
         const antigo = dados.video_path
         dados.video_path = await enviarVideo(arquivo)
-        if (antigo) await removerVideo(antigo)
+        await removerVideo(antigo)
       }
       await salvarExercicio(dados)
       setEdicao(null)
@@ -68,7 +70,10 @@ export default function Biblioteca() {
           <h1 className="text-2xl font-bold text-petroleo-escuro">Exercícios</h1>
           <p className="text-sm text-cinza-600">Sua biblioteca. Na ficha de cada paciente você escolhe e ajusta.</p>
         </div>
-        <Botao icone="mais" onClick={() => abrir(null)}>Novo</Botao>
+        <div className="flex gap-2">
+          <Botao variante="secundario" icone="video" onClick={() => setGaleria('varios')}>Galeria</Botao>
+          <Botao icone="mais" onClick={() => abrir(null)}>Novo</Botao>
+        </div>
       </div>
 
       {!lista && <Carregando />}
@@ -98,11 +103,21 @@ export default function Biblioteca() {
                   <VideoLoop src={arquivo ? URL.createObjectURL(arquivo) : urlVideo(edicao.video_path)} />
                 </div>
               )}
-              <label className="flex h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-cinza-200 text-sm font-semibold text-petroleo hover:bg-petroleo-claro">
-                <Icone nome="upload" tamanho={18} />
-                {arquivo ? arquivo.name : edicao.video_path ? 'Trocar vídeo' : 'Escolher vídeo'}
-                <input type="file" accept="video/mp4,video/webm,video/quicktime" className="hidden" onChange={(e) => setArquivo(e.target.files?.[0] || null)} />
-              </label>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={() => setGaleria('unico')}
+                  className="flex h-11 items-center justify-center gap-2 rounded-xl border border-cinza-200 text-sm font-semibold text-petroleo hover:bg-petroleo-claro"
+                >
+                  <Icone nome="video" tamanho={18} />
+                  Da galeria
+                </button>
+                <label className="flex h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-cinza-200 text-sm font-semibold text-petroleo hover:bg-petroleo-claro">
+                  <Icone nome="upload" tamanho={18} />
+                  <span className="truncate">{arquivo ? arquivo.name : 'Enviar vídeo'}</span>
+                  <input type="file" accept="video/mp4,video/webm,video/quicktime" className="hidden" onChange={(e) => setArquivo(e.target.files?.[0] || null)} />
+                </label>
+              </div>
             </div>
             <AreaTexto id="ex-inst" rotulo="Instruções" rows={4} value={edicao.instrucoes} onChange={(e) => setEdicao({ ...edicao, instrucoes: e.target.value })} />
             <div className="grid grid-cols-2 gap-3">
@@ -121,6 +136,29 @@ export default function Biblioteca() {
           </form>
         )}
       </Modal>
+      <Galeria
+        aberto={!!galeria}
+        modo={galeria || 'unico'}
+        jaUsados={(lista || []).map((e) => e.video_path).filter(Boolean)}
+        aoFechar={() => setGaleria(null)}
+        aoEscolher={async (escolha) => {
+          if (galeria === 'unico') {
+            setArquivo(null)
+            setEdicao((ed) => ({ ...ed, video_path: escolha.video, nome: ed.nome || escolha.nome }))
+            setGaleria(null)
+            return
+          }
+          try {
+            await criarExercicios(
+              escolha.map((i) => ({ nome: i.nome, video_path: i.video, instrucoes: '', series_padrao: 3, reps_padrao: '12' }))
+            )
+            setGaleria(null)
+            carregar()
+          } catch (err) {
+            setErro(err.message)
+          }
+        }}
+      />
     </div>
   )
 }
