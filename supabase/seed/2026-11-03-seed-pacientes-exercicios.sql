@@ -4,8 +4,8 @@
 -- fictícios no painel (ou rode o bloco "LIMPEZA" no fim deste arquivo).
 --
 -- Links de teste (local):
---   Maria: http://localhost:5173/p#demo-maria-7f3c9a1e5b2d4f6a8c0e1b3d5f7a9c2e   nascimento 12/04/1978
---   João:  http://localhost:5173/p#demo-joao-4b8d2f6a0c4e8a2c6e0a4c8e2a6c0e4a8   nascimento 25/09/1990
+--   Maria: http://localhost:5173/p#demo-maria-7f3c9a1e5b2d4f6a8c0e1b3d5f7a9c2e   senha 1234
+--   João:  http://localhost:5173/p#demo-joao-4b8d2f6a0c4e8a2c6e0a4c8e2a6c0e4a8   sem senha: entra pela data 25/09/1990
 -- =====================================================================
 
 -- Exercícios -----------------------------------------------------------
@@ -101,3 +101,9 @@ insert into public.sos_pedidos (paciente_id, triagem, status, criado_em) values
 -- LIMPEZA (rode só quando quiser apagar os dados fictícios)
 -- delete from public.pacientes where id in ('b0000000-0000-4000-8000-000000000001', 'b0000000-0000-4000-8000-000000000002');
 -- =====================================================================
+
+-- Senha de acesso da Maria (o João fica sem senha, para mostrar o acesso antigo pela data).
+-- Requer a migração 20261104040000_senha_paciente.sql.
+update public.pacientes
+   set senha_hash = extensions.crypt('1234', extensions.gen_salt('bf', 8))
+ where id = 'b0000000-0000-4000-8000-000000000001';

@@ -16,7 +16,7 @@ export const TEXTOS = {
   mensagemLinkPadrao:
     'Olá, {nome}! Aqui é o Dr. Pablo Andrade. Preparei uma página só sua com o resumo da sua avaliação, ' +
     'os segmentos tratados e os seus exercícios: {link}\n\n' +
-    'Na primeira vez, ela pede sua data de nascimento para confirmar que é você. ' +
+    'Na primeira vez, ela pede a senha que combinamos no consultório. ' +
     'Se travar de novo, use o botão "Pedir retorno" na própria página.',
 
   sos: {

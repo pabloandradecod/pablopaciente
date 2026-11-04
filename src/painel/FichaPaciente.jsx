@@ -59,6 +59,11 @@ export default function FichaPaciente() {
             <span>{idade(p.data_nascimento)} anos</span>
             <span>{formatarTelefone(p.whatsapp)}</span>
             <span>Desde {formatarData(p.primeira_consulta)}</span>
+            {p.senha_hash ? (
+              <span className="font-semibold text-petroleo">Acesso por senha</span>
+            ) : (
+              <Link to={`/painel/pacientes/${id}/editar`} className="font-semibold text-alerta underline">Sem senha: definir</Link>
+            )}
           </div>
         </div>
         <Botao para={`/painel/pacientes/${id}/editar`} variante="secundario" tamanho="sm" icone="editar">Editar</Botao>

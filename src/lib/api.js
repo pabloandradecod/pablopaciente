@@ -256,3 +256,15 @@ export async function salvarTreino(pacienteId, treinos, observacao) {
       .single()
   )
 }
+
+// ---------------- Senha de acesso do paciente ----------------
+export async function pacienteMetodo(token) {
+  return checar(await supabase.rpc('paciente_metodo', { p_token: token }))
+}
+export async function pacienteEntrar(token, segredo) {
+  return checar(await supabase.rpc('paciente_entrar', { p_token: token, p_segredo: segredo }))
+}
+export async function definirSenha(pacienteId, senha) {
+  const { error } = await supabase.rpc('admin_definir_senha', { p_paciente_id: pacienteId, p_senha: senha })
+  if (error) throw new Error(error.message.includes('senha_curta') ? 'A senha precisa ter pelo menos 4 caracteres.' : error.message)
+}

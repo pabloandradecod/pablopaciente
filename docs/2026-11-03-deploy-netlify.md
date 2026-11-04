@@ -34,7 +34,7 @@ Tempo estimado: 30 minutos. Faça na ordem.
 
 1. Abra `https://SEU-SITE/painel`, digite seu e-mail e entre pelo link que chegar.
 2. Abra um paciente, aba **Link**, toque em **Gerar link** e envie para o seu próprio WhatsApp.
-3. Abra o link no celular, confirme a data de nascimento e teste o botão **Pedir retorno**.
+3. Abra o link no celular, digite a senha do paciente e teste o botão **Pedir retorno**.
 4. Confira o pedido em **Fila SOS**.
 
 ## 4. Antes de usar com pacientes reais

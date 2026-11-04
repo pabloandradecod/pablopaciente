@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams, Link } from 'react-router-dom'
-import { lerConfiguracoes, lerPaciente, salvarPaciente } from '../lib/api.js'
+import { definirSenha, lerConfiguracoes, lerPaciente, salvarPaciente } from '../lib/api.js'
 import { hojeISO } from '../lib/datas.js'
 import { formatarTelefone } from '../lib/whatsapp.js'
 import Card from '../components/ui/Card.jsx'
@@ -15,6 +15,8 @@ export default function PacienteForm() {
   const [cfg, setCfg] = useState(null)
   const [form, setForm] = useState({ nome: '', data_nascimento: '', whatsapp: '', primeira_consulta: hojeISO() })
   const [aceite, setAceite] = useState(false)
+  const [senha, setSenha] = useState('')
+  const [temSenha, setTemSenha] = useState(false)
   const [salvando, setSalvando] = useState(false)
   const [erro, setErro] = useState('')
 
@@ -25,6 +27,7 @@ export default function PacienteForm() {
         .then((p) => {
           setForm({ nome: p.nome, data_nascimento: p.data_nascimento, whatsapp: formatarTelefone(p.whatsapp), primeira_consulta: p.primeira_consulta })
           setAceite(true)
+          setTemSenha(Boolean(p.senha_hash))
         })
         .catch((e) => setErro(e.message))
     }
@@ -38,6 +41,8 @@ export default function PacienteForm() {
     const whatsapp = form.whatsapp.replace(/\D/g, '')
     if (whatsapp.length < 10) return setErro('Informe o WhatsApp com DDD.')
     if (!id && !aceite) return setErro('O paciente precisa aceitar o termo de consentimento.')
+    if (!id && senha.trim().length < 4) return setErro('Crie uma senha de acesso com pelo menos 4 caracteres.')
+    if (id && senha && senha.trim().length < 4) return setErro('A nova senha precisa ter pelo menos 4 caracteres.')
     setSalvando(true)
     try {
       const dados = { ...form, nome: form.nome.trim(), whatsapp }
@@ -48,6 +53,7 @@ export default function PacienteForm() {
         dados.consentimento_versao = cfg?.termo_versao || 'sem-versao'
       }
       const p = await salvarPaciente(dados)
+      if (senha.trim()) await definirSenha(p.id, senha.trim())
       navegar(`/painel/pacientes/${p.id}`, { replace: true })
     } catch (err) {
       setErro(err.message)
@@ -81,6 +87,30 @@ export default function PacienteForm() {
           value={form.whatsapp}
           onChange={(e) => setForm((f) => ({ ...f, whatsapp: formatarTelefone(e.target.value) }))}
         />
+        <div>
+          <label htmlFor="senha" className="mb-1.5 block text-sm font-semibold text-tinta">
+            {id ? 'Nova senha de acesso' : 'Senha de acesso do paciente'}
+            <span className="ml-1 font-normal text-cinza-600">
+              {id ? (temSenha ? '(deixe em branco para manter a atual)' : '(este paciente ainda entra pela data de nascimento)') : '(ele usa para abrir o link)'}
+            </span>
+          </label>
+          <div className="flex gap-2">
+            <input
+              id="senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              autoComplete="off"
+              autoCapitalize="off"
+              placeholder="Mínimo 4 caracteres"
+              className="h-11 min-w-0 flex-1 rounded-xl border border-cinza-200 bg-white px-3.5 text-[15px] tracking-wider focus:border-petroleo focus:outline-none focus:ring-2 focus:ring-petroleo/15"
+            />
+            <Botao type="button" variante="secundario" onClick={() => setSenha(String(Math.floor(100000 + Math.random() * 900000)))}>Gerar</Botao>
+          </div>
+          <p className="mt-1 text-xs text-cinza-600">
+            Anote e passe para o paciente. Por segurança, a senha não pode ser vista depois, só trocada.
+            {id && temSenha && ' Trocar a senha desconecta os celulares que já entraram.'}
+          </p>
+        </div>
       </Card>
 
       {!id && (

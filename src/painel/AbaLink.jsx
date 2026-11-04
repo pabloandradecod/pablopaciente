@@ -88,6 +88,13 @@ export default function AbaLink({ paciente }) {
         <p className="mt-3 text-xs text-cinza-600">
           Por segurança, o link completo só aparece no momento em que é gerado. Para reenviar, gere um novo.
         </p>
+        {paciente.senha_hash ? (
+          <p className="mt-2 text-xs text-cinza-600">O paciente entra com a senha que você definiu no cadastro. Se ele esqueceu, defina uma nova em Editar.</p>
+        ) : (
+          <p className="mt-2 rounded-xl bg-alerta-claro p-2.5 text-xs font-semibold text-alerta">
+            Este paciente ainda não tem senha e entra pela data de nascimento. Defina uma senha em Editar.
+          </p>
+        )}
       </Card>
 
       {novoLink && (
