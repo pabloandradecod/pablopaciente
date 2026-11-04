@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import {
-  contarSessoes, criarExercicios, listarCampos, listarExercicios, listarPacientes, prescrever, salvarAvaliacao,
+  assistenteDisponivel, chamarAssistente, contarSessoes, criarExercicios, listarCampos, listarExercicios, listarPacientes, prescrever, salvarAvaliacao,
   salvarExercicio, salvarRelatorio, ultimaAvaliacao, urlVideo
 } from '../lib/api.js'
-import { filtrarAvaliacao, lerResposta, montarPrompt } from '../lib/assistente.js'
+import { filtrarAvaliacao, lerResposta, montarEsquema, montarMensagem, montarPrompt, montarSistema, normalizarRespostaApi } from '../lib/assistente.js'
 import { hojeISO, primeiroNome } from '../lib/datas.js'
 import { useDitado } from './useDitado.js'
 import Botao from '../components/ui/Botao.jsx'
@@ -53,9 +53,14 @@ export default function Assistente() {
   const [leitura, setLeitura] = useState(null) // { relatorio, dados }
   const [erroLeitura, setErroLeitura] = useState('')
   const [salvo, setSalvo] = useState(false)
+  const [api, setApi] = useState(null) // true quando a chave da API está cadastrada
+  const [gerando, setGerando] = useState(false)
+  const [erroIa, setErroIa] = useState('')
+  const [manual, setManual] = useState(false)
   const fim = useRef(null)
 
   useEffect(() => {
+    assistenteDisponivel().then(setApi)
     listarPacientes().then((l) => {
       setPacientes(l)
       const id = params.get('paciente')
@@ -69,7 +74,7 @@ export default function Assistente() {
 
   useEffect(() => {
     fim.current?.scrollIntoView({ behavior: 'smooth', block: 'end' })
-  }, [paciente, contexto, copiado, leitura, salvo])
+  }, [paciente, contexto, copiado, leitura, salvo, gerando])
 
   async function escolher(p) {
     setPaciente(p)
@@ -79,6 +84,8 @@ export default function Assistente() {
     setColado('')
     setLeitura(null)
     setSalvo(false)
+    setErroIa('')
+    setManual(false)
     const [campos, biblioteca, galeria, avaliacaoAnterior, totalSessoes] = await Promise.all([
       listarCampos(),
       listarExercicios(),
@@ -106,6 +113,35 @@ export default function Assistente() {
     setCopiado(true)
   }
 
+  // Modo API: gera direto no painel. `ajuste` refaz a última resposta com o pedido do Dr. Pablo.
+  async function gerarComIa(ajuste) {
+    if (!relato.trim()) return setErroIa('Escreva ou dite o relato antes de gerar.')
+    setGerando(true)
+    setErroIa('')
+    try {
+      const sistema = montarSistema({ ...contexto, modo: 'api' })
+      const mensagem = montarMensagem({ paciente, ...contexto, relato, anterior: ajuste ? leitura?.bruto : null, ajuste, modo: 'api' })
+      const r = await chamarAssistente({
+        sistema,
+        mensagem,
+        esquema: montarEsquema(contexto),
+        esquemaReserva: montarEsquema(contexto, { idsLivres: true })
+      })
+      const n = normalizarRespostaApi(r.dados)
+      setLeitura({
+        versao: Date.now(),
+        relatorio: n.relatorio,
+        dados: { ...n.dados, avaliacao: filtrarAvaliacao(n.dados.avaliacao, contexto.campos) },
+        bruto: r.dados,
+        custo: r.custo_usd,
+        origem: 'api'
+      })
+    } catch (e) {
+      setErroIa(e.message)
+    }
+    setGerando(false)
+  }
+
   function ler() {
     const r = lerResposta(colado)
     if (r.erro) {
@@ -114,7 +150,7 @@ export default function Assistente() {
       return
     }
     setErroLeitura('')
-    setLeitura({ versao: Date.now(), relatorio: r.relatorio, dados: { ...r.dados, avaliacao: filtrarAvaliacao(r.dados.avaliacao, contexto.campos) } })
+    setLeitura({ versao: Date.now(), origem: 'ponte_manual', relatorio: r.relatorio, dados: { ...r.dados, avaliacao: filtrarAvaliacao(r.dados.avaliacao, contexto.campos) } })
   }
 
   const filtrados = useMemo(() => {
@@ -172,7 +208,34 @@ export default function Assistente() {
         )}
 
         {paciente && contexto && (
-          <Relato paciente={paciente} relato={relato} setRelato={setRelato} aoLevar={levarParaClaude} copiado={copiado} />
+          <Relato
+            paciente={paciente}
+            relato={relato}
+            setRelato={setRelato}
+            aoLevar={levarParaClaude}
+            copiado={copiado}
+            api={api && !manual}
+            aoGerar={() => gerarComIa()}
+            gerando={gerando}
+            jaGerou={Boolean(leitura)}
+            aoUsarManual={() => setManual(true)}
+          />
+        )}
+
+        {gerando && (
+          <Assist>
+            <p className="flex items-center gap-2 font-semibold text-petroleo">
+              <span className="h-4 w-4 animate-spin rounded-full border-2 border-petroleo border-t-transparent" />
+              Analisando a avaliação e montando a prescrição...
+            </p>
+            <p className="mt-1 text-sm text-cinza-600">Leva de 20 a 60 segundos.</p>
+          </Assist>
+        )}
+
+        {erroIa && !gerando && (
+          <Assist>
+            <p className="font-semibold text-alerta">{erroIa}</p>
+          </Assist>
         )}
 
         {copiado && (
@@ -228,7 +291,16 @@ export default function Assistente() {
         )}
 
         {leitura && !salvo && (
-          <Revisao key={leitura.versao} paciente={paciente} contexto={contexto} leitura={leitura} setLeitura={setLeitura} aoSalvar={() => setSalvo(true)} />
+          <Revisao
+            key={leitura.versao}
+            paciente={paciente}
+            contexto={contexto}
+            leitura={leitura}
+            setLeitura={setLeitura}
+            aoSalvar={() => setSalvo(true)}
+            aoAjustar={leitura.origem === 'api' ? (texto) => gerarComIa(texto) : null}
+            gerando={gerando}
+          />
         )}
 
         {salvo && (
@@ -250,13 +322,13 @@ export default function Assistente() {
 
 // ---------------------------------------------------------------- relato
 
-function Relato({ paciente, relato, setRelato, aoLevar, copiado }) {
+function Relato({ paciente, relato, setRelato, aoLevar, copiado, api, aoGerar, gerando, jaGerou, aoUsarManual }) {
   const ditado = useDitado((t) => setRelato((r) => (r ? `${r} ${t}` : t)))
   return (
     <Assist>
       <p>
         Me conte a avaliação de <strong>{primeiroNome(paciente.nome)}</strong>: queixa, tempo, testes, achados, o que você tratou. Pode
-        escrever ou ditar aqui, ou deixar para ditar direto no Claude.
+        {api ? 'escrever ou ditar aqui.' : 'escrever ou ditar aqui, ou deixar para ditar direto no Claude.'}
       </p>
       <div className="relative mt-3">
         <textarea
@@ -281,16 +353,28 @@ function Relato({ paciente, relato, setRelato, aoLevar, copiado }) {
       </div>
       {ditado.ouvindo && <p className="mt-1 text-xs font-semibold text-alerta">Ouvindo... toque no quadrado para parar.</p>}
       {!ditado.suportado && <p className="mt-1 text-xs text-cinza-600">Para ditar neste aparelho, use o microfone do teclado.</p>}
-      <Botao tamanho="lg" bloco className="mt-3" icone="copiar" onClick={aoLevar}>
-        {copiado ? 'Copiar de novo para o Claude' : relato.trim() ? 'Levar para o Claude' : 'Levar para o Claude (vou ditar lá)'}
-      </Botao>
+      {api ? (
+        <>
+          <Botao tamanho="lg" bloco className="mt-3" icone="estrela" onClick={aoGerar} carregando={gerando} disabled={!relato.trim()}>
+            {jaGerou ? 'Gerar de novo' : 'Gerar com IA'}
+          </Botao>
+          <button onClick={aoUsarManual} className="mt-2 w-full text-center text-xs font-semibold text-cinza-600 underline">
+            ou usar a ponte manual (copiar para o app do Claude)
+          </button>
+        </>
+      ) : (
+        <Botao tamanho="lg" bloco className="mt-3" icone="copiar" onClick={aoLevar}>
+          {copiado ? 'Copiar de novo para o Claude' : relato.trim() ? 'Levar para o Claude' : 'Levar para o Claude (vou ditar lá)'}
+        </Botao>
+      )}
     </Assist>
   )
 }
 
 // ---------------------------------------------------------------- revisão
 
-function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar }) {
+function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar, gerando }) {
+  const [ajuste, setAjuste] = useState('')
   const { campos, biblioteca, galeria } = contexto
   const [verRelatorio, setVerRelatorio] = useState(true)
   const [salvando, setSalvando] = useState(false)
@@ -351,7 +435,7 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar }) {
           ordem: ordem++
         })
       }
-      await salvarRelatorio({ paciente_id: paciente.id, relatorio: leitura.relatorio || '(sem texto)', resposta: leitura.dados })
+      await salvarRelatorio({ paciente_id: paciente.id, relatorio: leitura.relatorio || '(sem texto)', resposta: leitura.dados, origem: leitura.origem === 'api' ? 'api' : 'ponte_manual' })
       aoSalvar()
     } catch (e) {
       setErro(e.message)
@@ -361,7 +445,10 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar }) {
 
   return (
     <Assist>
-      <p className="font-bold">Li a resposta. Revise antes de salvar:</p>
+      <p className="font-bold">{leitura.origem === 'api' ? 'Pronto. Revise antes de salvar:' : 'Li a resposta. Revise antes de salvar:'}</p>
+      {leitura.custo != null && (
+        <p className="mt-0.5 text-xs text-cinza-600">Custo desta análise: cerca de US$ {leitura.custo.toFixed(3).replace('.', ',')}</p>
+      )}
 
       {leitura.dados.alertas.length > 0 && (
         <div className="mt-3 rounded-2xl border border-alerta/30 bg-alerta-claro p-3">
@@ -453,9 +540,25 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar }) {
 
       {erro && <p className="mt-3 text-sm font-medium text-alerta">{erro}</p>}
       <Botao tamanho="lg" bloco className="mt-4" onClick={salvar} carregando={salvando} icone="check">Salvar na ficha</Botao>
-      <p className="mt-2 text-xs text-cinza-600">
-        Quer mudar algo? Peça no Claude ("troque X por Y", "2 séries") e cole a nova resposta acima.
-      </p>
+      {aoAjustar ? (
+        <div className="mt-4 rounded-2xl bg-cinza-50 p-3">
+          <p className="text-sm font-bold text-petroleo-escuro">Quer mudar algo?</p>
+          <textarea
+            value={ajuste}
+            onChange={(e) => setAjuste(e.target.value)}
+            rows={2}
+            placeholder='Ex.: "troque a prancha por ponte unilateral", "deixe tudo com 2 séries"'
+            className="mt-2 w-full rounded-xl border border-cinza-200 p-2.5 text-sm focus:border-petroleo focus:outline-none"
+          />
+          <Botao variante="secundario" className="mt-2" icone="estrela" carregando={gerando} disabled={!ajuste.trim()} onClick={() => aoAjustar(ajuste)}>
+            Pedir ajuste
+          </Botao>
+        </div>
+      ) : (
+        <p className="mt-2 text-xs text-cinza-600">
+          Quer mudar algo? Peça no Claude ("troque X por Y", "2 séries") e cole a nova resposta acima.
+        </p>
+      )}
     </Assist>
   )
 }

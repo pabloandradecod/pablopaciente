@@ -50,3 +50,12 @@ npm install
 cp .env.example .env.local   # preencha URL e chave
 npm run dev                  # http://localhost:5173/painel
 ```
+
+## Assistente com IA (API da Anthropic)
+
+1. Em [console.anthropic.com](https://console.anthropic.com): **Settings > API Keys > Create Key** e, em **Billing**, adicione créditos. Em **Limits**, defina um teto mensal de gasto.
+2. No Supabase: **Edge Functions > Secrets** (`https://supabase.com/dashboard/project/<projeto>/functions/secrets`) e crie o secret `ANTHROPIC_API_KEY` com a chave.
+3. A função `assistente` (código em `supabase/functions/assistente/index.ts`) já está publicada. Para republicar: `supabase functions deploy assistente`.
+4. Recarregue o painel: o botão **Gerar com IA** aparece no Assistente. Sem a chave, o painel usa a ponte manual (copiar e colar no app do Claude).
+
+Modelo: Claude Opus 5.5, esforço médio, resposta em JSON validado por esquema (só exercícios da galeria). Cada análise mostra o custo estimado.

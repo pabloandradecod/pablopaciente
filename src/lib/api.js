@@ -216,3 +216,28 @@ export async function contarSessoes(pacienteId) {
   const { count } = await supabase.from('sessoes').select('id', { count: 'exact', head: true }).eq('paciente_id', pacienteId)
   return count || 0
 }
+
+// ---------------- Assistente via API (Edge Function) ----------------
+export async function assistenteDisponivel() {
+  try {
+    const { data, error } = await supabase.functions.invoke('assistente', { body: { verificar: true } })
+    return !error && data?.configurada === true
+  } catch {
+    return false
+  }
+}
+export async function chamarAssistente(corpo) {
+  const { data, error } = await supabase.functions.invoke('assistente', { body: corpo })
+  if (error) {
+    // Tenta ler a mensagem amigável devolvida pela função.
+    let texto = ''
+    try {
+      texto = (await error.context?.json?.())?.erro || ''
+    } catch {
+      /* sem corpo */
+    }
+    throw new Error(texto || 'Não foi possível falar com a IA agora.')
+  }
+  if (data?.erro) throw new Error(data.erro)
+  return data
+}

@@ -522,12 +522,20 @@ function Exercicios({ exercicios }) {
           const feito = feitos.includes(e.nome)
           return (
             <article key={i} className="w-[84%] shrink-0 snap-center overflow-hidden rounded-[28px] bg-white sm:w-auto">
-              <div className="relative">
-                <VideoLoop src={urlVideo(e.video_path)} />
-                <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-xs font-extrabold text-petroleo-escuro">
-                  {i + 1} / {exercicios.length}
-                </span>
-              </div>
+              {e.video_path ? (
+                <div className="relative">
+                  <VideoLoop src={urlVideo(e.video_path)} />
+                  <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-xs font-extrabold text-petroleo-escuro">
+                    {i + 1} / {exercicios.length}
+                  </span>
+                </div>
+              ) : (
+                <div className="px-5 pt-5">
+                  <span className="rounded-full bg-petroleo-claro px-2.5 py-1 text-xs font-extrabold text-petroleo-escuro">
+                    {i + 1} / {exercicios.length}
+                  </span>
+                </div>
+              )}
               <div className="p-5">
                 <h3 className="text-xl font-extrabold leading-tight tracking-tight text-petroleo-escuro">{e.nome}</h3>
                 <div className="mt-3 flex items-baseline gap-2">
