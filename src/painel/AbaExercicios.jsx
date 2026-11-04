@@ -21,7 +21,8 @@ export default function AbaExercicios({ pacienteId }) {
   if (!itens) return erro ? <p className="text-sm text-alerta">{erro}</p> : <Carregando />
 
   const usados = new Set(itens.map((i) => i.exercicio_id))
-  const disponiveis = biblioteca.filter((e) => !usados.has(e.id))
+  // Só exercícios com animação podem ser prescritos.
+  const disponiveis = biblioteca.filter((e) => !usados.has(e.id) && e.video_path)
 
   async function adicionar(ex) {
     await adicionarPrescricao({
@@ -64,7 +65,10 @@ export default function AbaExercicios({ pacienteId }) {
         {itens.map((i) => (
           <li key={i.id} className="rounded-2xl border border-cinza-100 bg-white p-4">
             <div className="flex items-start justify-between gap-3">
-              <div className="font-semibold">{i.exercicios?.nome}</div>
+              <div className="font-semibold">
+                {i.exercicios?.nome}
+                {!i.exercicios?.video_path && <span className="ml-2 rounded bg-alerta-claro px-1.5 py-0.5 text-[11px] font-bold text-alerta">sem animação</span>}
+              </div>
               <button
                 onClick={async () => {
                   await removerPrescricao(i.id)
@@ -112,7 +116,7 @@ export default function AbaExercicios({ pacienteId }) {
 
       <Modal aberto={adicionando} aoFechar={() => setAdicionando(false)} titulo="Adicionar exercício">
         {disponiveis.length === 0 ? (
-          <p className="text-sm text-cinza-600">Todos os exercícios da biblioteca já foram adicionados. Cadastre novos em Exercícios.</p>
+          <p className="text-sm text-cinza-600">Nenhum exercício com animação disponível. Adicione da galeria em Exercícios.</p>
         ) : (
           <ul className="space-y-2">
             {disponiveis.map((e) => (

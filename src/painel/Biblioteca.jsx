@@ -85,6 +85,7 @@ export default function Biblioteca() {
               <div className="flex items-center justify-between gap-2">
                 <span className="font-semibold">{ex.nome}</span>
                 {!ex.ativo && <span className="rounded-full bg-cinza-100 px-2 py-0.5 text-xs font-semibold text-cinza-600">Inativo</span>}
+                {ex.ativo && !ex.video_path && <span className="rounded-full bg-alerta-claro px-2 py-0.5 text-xs font-semibold text-alerta">Sem animação</span>}
               </div>
               <div className="mt-0.5 text-xs text-cinza-600">{ex.series_padrao} séries × {ex.reps_padrao}</div>
             </div>

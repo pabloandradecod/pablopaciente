@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import {
-  assistenteDisponivel, chamarAssistente, contarSessoes, criarExercicios, listarCampos, listarExercicios, listarPacientes, prescrever, salvarAvaliacao,
-  salvarExercicio, salvarRelatorio, ultimaAvaliacao, urlVideo
+  assistenteDisponivel, chamarAssistente, contarSessoes, criarExercicios, listarCampos, listarExercicios, listarPacientes, listarPrescricao, prescrever,
+  removerPrescricao, salvarAvaliacao, salvarExercicio, salvarRelatorio, ultimaAvaliacao, urlVideo
 } from '../lib/api.js'
 import { filtrarAvaliacao, lerResposta, montarEsquema, montarMensagem, montarPrompt, montarSistema, normalizarRespostaApi } from '../lib/assistente.js'
 import { hojeISO, primeiroNome } from '../lib/datas.js'
@@ -379,6 +379,12 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
   const [verRelatorio, setVerRelatorio] = useState(true)
   const [salvando, setSalvando] = useState(false)
   const [erro, setErro] = useState('')
+  // Prescrição atual do paciente: por padrão a nova substitui a antiga.
+  const [atuais, setAtuais] = useState([])
+  const [substituir, setSubstituir] = useState(true)
+  useEffect(() => {
+    listarPrescricao(paciente.id).then(setAtuais).catch(() => {})
+  }, [paciente.id])
 
   // Resolve cada sugestão para um exercício da biblioteca ou da galeria.
   const [sugestoes, setSugestoes] = useState(() =>
@@ -424,8 +430,13 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
       for (const s of sugestoes.filter((x) => x.incluir && x.exercicioId && !x.instrucoesAtuais?.trim() && x.instrucoes?.trim())) {
         await salvarExercicio({ id: s.exercicioId, instrucoes: s.instrucoes.trim() })
       }
+      const escolhidos = sugestoes.filter((x) => x.incluir && x.exercicioId)
+      if (substituir) {
+        const manter = new Set(escolhidos.map((x) => x.exercicioId))
+        for (const p of atuais.filter((p) => !manter.has(p.exercicio_id))) await removerPrescricao(p.id)
+      }
       let ordem = 1
-      for (const s of sugestoes.filter((x) => x.incluir && x.exercicioId)) {
+      for (const s of escolhidos) {
         await prescrever({
           paciente_id: paciente.id,
           exercicio_id: s.exercicioId,
@@ -539,6 +550,15 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
       </div>
 
       {erro && <p className="mt-3 text-sm font-medium text-alerta">{erro}</p>}
+      {atuais.length > 0 && (
+        <label className="mt-4 flex items-start gap-2.5 rounded-2xl border border-cinza-100 p-3 text-sm">
+          <input type="checkbox" checked={substituir} onChange={(e) => setSubstituir(e.target.checked)} className="mt-0.5 h-5 w-5 shrink-0 accent-[#0E5C62]" />
+          <span>
+            <strong>Substituir a prescrição atual</strong> ({atuais.length} exercício{atuais.length > 1 ? 's' : ''}: {atuais.map((p) => p.exercicios?.nome).filter(Boolean).join(', ')}).
+            <span className="block text-xs text-cinza-600">Desmarque para somar os novos aos que ele já tem.</span>
+          </span>
+        </label>
+      )}
       <Botao tamanho="lg" bloco className="mt-4" onClick={salvar} carregando={salvando} icone="check">Salvar na ficha</Botao>
       {aoAjustar ? (
         <div className="mt-4 rounded-2xl bg-cinza-50 p-3">

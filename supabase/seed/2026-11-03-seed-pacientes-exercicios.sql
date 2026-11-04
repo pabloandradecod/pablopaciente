@@ -78,11 +78,13 @@ insert into public.sessoes (paciente_id, data, dor_antes, dor_depois, segmentos)
 -- Exercícios prescritos ----------------------------------------------
 insert into public.paciente_exercicios (paciente_id, exercicio_id, series, reps, ordem) values
   ('b0000000-0000-4000-8000-000000000001', 'a0000000-0000-4000-8000-000000000001', 3, '12', 1),
-  ('b0000000-0000-4000-8000-000000000001', 'a0000000-0000-4000-8000-000000000003', 3, '8 de cada lado', 2),
-  ('b0000000-0000-4000-8000-000000000001', 'a0000000-0000-4000-8000-000000000004', 3, '20 s', 3),
-  ('b0000000-0000-4000-8000-000000000002', 'a0000000-0000-4000-8000-000000000002', 2, '10', 1),
-  ('b0000000-0000-4000-8000-000000000002', 'a0000000-0000-4000-8000-000000000005', 2, '30 s de cada lado', 2)
+  ('b0000000-0000-4000-8000-000000000001', 'a0000000-0000-4000-8000-000000000004', 3, '20 s', 2),
+  ('b0000000-0000-4000-8000-000000000002', 'a0000000-0000-4000-8000-000000000001', 2, '10', 1),
+  ('b0000000-0000-4000-8000-000000000002', 'a0000000-0000-4000-8000-000000000004', 2, '15 s', 2)
 on conflict do nothing;
+
+-- Exercícios sem animação ficam inativos: não aparecem para prescrever nem para a IA.
+update public.exercicios set ativo = false where video_path is null;
 
 -- Tokens de teste (o banco guarda só o hash) --------------------------
 insert into public.paciente_tokens (paciente_id, token_hash) values
