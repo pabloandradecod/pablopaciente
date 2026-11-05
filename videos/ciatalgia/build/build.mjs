@@ -146,6 +146,8 @@ groups.forEach((g, i) => {
   g.end = Math.min(g.words[g.words.length - 1].end + 0.35, next ? next.words[0].start - 0.08 : total);
   if (g.end - g.start < 0.4) g.end = g.start + 0.4;
 });
+// nunca dois grupos na tela ao mesmo tempo
+groups.forEach((g, i) => { const n = groups[i + 1]; if (n && n.start < g.end) { const m = (g.end + n.start) / 2; g.end = m; n.start = m; } });
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
 const whoColor = { pablo: "#FFFFFF", vertebra: "#FFE7A3", nervo: "#FFD54A" };
 const capHtml = groups.map((g, i) => `    <div id="cap-${i}" class="cap" data-who="${g.who}"><span class="cap-in" style="color:${whoColor[g.who]}">${g.words.map((w, k) => `<span id="cap-${i}-${k}" class="w">${esc(w.text)}</span>`).join(" ")}</span></div>`).join("\n");
