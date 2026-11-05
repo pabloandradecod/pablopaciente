@@ -118,7 +118,7 @@
         <circle cx="1430" cy="470" r="312" fill="#fff" stroke="#013E4C" stroke-width="9"/>
         <g clip-path="url(#f02-clip)">
           <rect x="1110" y="160" width="660" height="640" fill="#FFE4DC"/>
-          <g transform="translate(1430,700) scale(1.05)"><g id="f02m-root">
+          <g transform="translate(1430,600) scale(1.05)"><g id="f02m-root">
     <g transform="translate(-26,-40)"><g id="f02m-legB"><line x1="0" y1="0" x2="0" y2="30" stroke="#013E4C" stroke-width="32" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="30" stroke="#D9574D" stroke-width="18" stroke-linecap="round"/><ellipse cx="4" cy="36" rx="20" ry="10" fill="#013E4C"/></g></g>
     <g transform="translate(26,-40)"><g id="f02m-legF"><line x1="0" y1="0" x2="0" y2="30" stroke="#013E4C" stroke-width="32" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="30" stroke="#D9574D" stroke-width="18" stroke-linecap="round"/><ellipse cx="6" cy="36" rx="20" ry="10" fill="#013E4C"/></g></g>
     <g id="f02m-body">
@@ -177,7 +177,7 @@
   </g>
     </g></g>
   </g></g>
-          <g id="f02-hug"><path d="M1350 440 Q1430 520 1510 440" fill="none" stroke="#013E4C" stroke-width="44" stroke-linecap="round"/><path d="M1350 440 Q1430 520 1510 440" fill="none" stroke="#F2766B" stroke-width="30" stroke-linecap="round"/><circle cx="1350" cy="440" r="17" fill="#F2766B" stroke="#013E4C" stroke-width="6"/><circle cx="1510" cy="440" r="17" fill="#F2766B" stroke="#013E4C" stroke-width="6"/></g>
+          <g id="f02-hug"><path d="M1340 455 Q1430 545 1520 455" fill="none" stroke="#013E4C" stroke-width="44" stroke-linecap="round"/><path d="M1340 455 Q1430 545 1520 455" fill="none" stroke="#F2766B" stroke-width="30" stroke-linecap="round"/><circle cx="1340" cy="455" r="17" fill="#F2766B" stroke="#013E4C" stroke-width="6"/><circle cx="1520" cy="455" r="17" fill="#F2766B" stroke="#013E4C" stroke-width="6"/></g>
         </g>
         <path d="M1180 690 L1060 790 L1220 730" fill="#fff" stroke="#013E4C" stroke-width="8" stroke-linejoin="round"/>
       </g>
@@ -282,7 +282,7 @@
   };
   return R;
 })();
-      const K = {"dur":25.39,"lines":[{"who":"pablo","start":0.6,"end":14.659},{"who":"piriforme","start":15.059,"end":17.628},{"who":"nervo","start":18.028,"end":20.033},{"who":"pablo","start":20.433,"end":24.593}],"lembra":0.7,"melh":1.906,"mexer":3.823,"mot":4.755,"dez":6.125,"cart":8.043,"desce":11.112,"ai":9.851,"nad":14.071,"m0":15.059,"m1":17.628,"n0":18.028,"n1":20.032999999999998,"p3":20.432999999999996,"cia":21.28,"outra":22.718,"inv":23.753,"sq":"M1160.0 470.0 C1173.3 470.0 1211.7 468.7 1240.0 470.0 C1268.3 471.3 1300.0 475.0 1330.0 478.0 C1360.0 481.0 1390.0 488.0 1420.0 488.0 C1450.0 488.0 1480.0 481.0 1510.0 478.0 C1540.0 475.0 1568.3 471.3 1600.0 470.0 C1631.7 468.7 1683.3 470.0 1700.0 470.0"};
+      const K = {"dur":25.39,"lines":[{"who":"pablo","start":0.6,"end":14.659},{"who":"piriforme","start":15.059,"end":17.628},{"who":"nervo","start":18.028,"end":20.033},{"who":"pablo","start":20.433,"end":24.593}],"lembra":0.64,"melh":1.76,"mexer":3.56,"mot":4.64,"dez":6.39,"cart":8.16,"desce":11.18,"ai":10.1,"nad":13.92,"m0":15.059,"m1":17.628,"n0":18.028,"n1":20.032999999999998,"p3":20.432999999999996,"cia":22.43,"outra":22.93,"inv":23.68,"sq":"M1160.0 470.0 C1173.3 470.0 1211.7 468.7 1240.0 470.0 C1268.3 471.3 1300.0 475.0 1330.0 478.0 C1360.0 481.0 1390.0 488.0 1420.0 488.0 C1450.0 488.0 1480.0 481.0 1510.0 478.0 C1540.0 475.0 1568.3 471.3 1600.0 470.0 C1631.7 468.7 1683.3 470.0 1700.0 470.0"};
       const tl = gsap.timeline({ paused: true });
       (function (tl, K, R) {
         const z = "f02z";
@@ -317,19 +317,19 @@
         R.pose(tl, z, K.ai, 0.15, { torso: 14, shB: 40, elB: -60, shF: -140, elF: -30, hipB: 10 }, "power4.out");
         R.shake(tl, "#f02z-root", K.ai, 0.6, 6);
         tl.set("#f02-glow", { opacity: 1 }, K.ai);
-        tl.fromTo("#f02-glow", { scale: 0.6, transformOrigin: "868px 610px" }, { scale: 1.25, duration: 0.35, yoyo: true, repeat: 5, ease: "sine.inOut" }, K.ai);
+        tl.fromTo("#f02-glow", { scale: 0.6, svgOrigin: "868 610" }, { scale: 1.25, duration: 0.35, yoyo: true, repeat: 5, ease: "sine.inOut" }, K.ai);
         R.face(tl, z, K.nad + 0.4, { eyes: "pain", mouth: "frown" });
         // bolha: Piriforme abraça, Nervo reclama
         R.pop(tl, "#f02-bubble", K.m0 - 0.5, 0.45, 0.3);
         R.face(tl, "f02m", K.m0 - 0.5, { eyes: "happy" });
         R.face(tl, "f02n", K.m0 - 0.5, { eyes: "wide" });
-        R.setPose(tl, "f02m", 0, { armF: 0, armB: 0 });
-        tl.fromTo("#f02-hug", { scaleY: 0.2, transformOrigin: "1430px 440px" }, { scaleY: 1, duration: 0.3, ease: "back.out(2)" }, K.m0 - 0.1);
+        tl.set("#f02m-armF, #f02m-armB", { opacity: 0 }, 0);
+        tl.fromTo("#f02-hug", { scaleY: 0.2, svgOrigin: "1430 450" }, { scaleY: 1, duration: 0.3, ease: "back.out(2)" }, K.m0 - 0.1);
         R.nerveTo(tl, "f02n", K.m0 + 0.2, 0.3, K.sq);
         R.squash(tl, "#f02m-body", K.m0 + 0.3);
         R.face(tl, "f02n", K.n0 - 0.1, { eyes: "pain" });
         R.shake(tl, "#f02n-face", K.n0, K.n1 - K.n0, 5);
-        tl.to("#f02-bubble", { scale: 0, opacity: 0, transformOrigin: "1430px 470px", duration: 0.3, ease: "back.in(2)" }, K.n1 + 0.15);
+        tl.to("#f02-bubble", { scale: 0, opacity: 0, svgOrigin: "1430 470", duration: 0.3, ease: "back.in(2)" }, K.n1 + 0.15);
         tl.to("#f02-glow", { opacity: 0, duration: 0.3 }, K.n1 + 0.15);
         // E agora?
         R.face(tl, z, K.p3, { eyes: "wide", mouth: "flat" });
