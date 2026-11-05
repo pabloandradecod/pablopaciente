@@ -1,0 +1,275 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #FFF6E9; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #f05-ttl { left:100px; top:60px; font-size:60px; }
+        #f05-ttl span { color:#FF5A4E; }
+        #f05-cnt { left:790px; top:200px; font-size:58px; }
+        #f05-cnt span { color:#FF5A4E; }
+        #f05-afas { left:780px; top:730px; width:720px; padding:18px 26px; font-size:34px; display:flex; align-items:center; gap:20px; }
+        #f05-cost, #f05-bum { font-size:30px; padding:8px 16px; }
+        #f05-cost { left:520px; top:300px; } #f05-bum { left:520px; top:640px; }
+        #f05-lomb { left:110px; top:470px; font-size:34px; padding:8px 18px; color:#fff; background:#FF5A4E; border-color:#013E4C; }
+        #f05-sozi { left:1520px; top:430px; padding:12px 20px; font-size:30px; }
+      
+  </style>
+  <div id="root" data-composition-id="f05" data-width="1920" data-height="1080">
+
+    <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <rect x="0" y="880" width="1920" height="200" fill="#CFE3DF"/>
+      <line x1="0" y1="880" x2="1920" y2="880" stroke="#013E4C" stroke-width="7"/>
+      <!-- costas do Seu Zé (vista de trás) -->
+      <g id="f05-back">
+        <circle cx="360" cy="230" r="62" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M300 200 Q300 170 330 175 M420 200 Q420 170 390 175" stroke="#9AA7AD" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <path d="M230 310 Q360 280 490 310 L500 560 Q500 600 470 610 L250 610 Q220 600 220 560 Z" fill="#4A90C2" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M215 330 L165 520 M505 330 L555 520" fill="none" stroke="#013E4C" stroke-width="54" stroke-linecap="round"/>
+        <path d="M215 330 L165 520 M505 330 L555 520" fill="none" stroke="#4A90C2" stroke-width="40" stroke-linecap="round"/>
+        <path d="M245 610 Q250 720 360 730 Q470 720 475 610 Z" fill="#7A5634" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M360 640 L360 728" stroke="#013E4C" stroke-width="5"/>
+        <circle cx="360" cy="330" r="7" fill="#013E4C" opacity="0.35"/><circle cx="360" cy="360" r="7" fill="#013E4C" opacity="0.35"/><circle cx="360" cy="390" r="7" fill="#013E4C" opacity="0.35"/><circle cx="360" cy="420" r="7" fill="#013E4C" opacity="0.35"/><circle cx="360" cy="450" r="7" fill="#013E4C" opacity="0.35"/><circle cx="360" cy="480" r="7" fill="#013E4C" opacity="0.35"/><circle cx="360" cy="510" r="7" fill="#013E4C" opacity="0.35"/><circle cx="360" cy="540" r="7" fill="#013E4C" opacity="0.35"/><circle cx="360" cy="570" r="7" fill="#013E4C" opacity="0.35"/>
+        <g id="f05-ribs" opacity="0"><path d="M260 420 Q300 450 350 440 M460 420 Q420 450 370 440" stroke="#013E4C" stroke-width="6" fill="none" stroke-linecap="round"/></g>
+        <g id="f05-band" opacity="0"><rect x="226" y="452" width="268" height="150" rx="30" fill="#FF5A4E" opacity="0.55"/><rect x="226" y="452" width="268" height="150" rx="30" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="14 10"/></g>
+      </g>
+      <line id="f05-lc" x1="490" y1="320" x2="440" y2="440" stroke="#013E4C" stroke-width="4" stroke-dasharray="8 6" opacity="0"/>
+      <line id="f05-lb" x1="510" y1="660" x2="450" y2="640" stroke="#013E4C" stroke-width="4" stroke-dasharray="8 6" opacity="0"/>
+      <!-- troféu irônico -->
+      <g id="f05-tro" opacity="0"><g transform="translate(1660,250)"><path d="M-70 -120 L70 -120 L58 -30 Q0 20 -58 -30 Z" fill="#FFC94A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><path d="M-70 -108 Q-120 -96 -90 -54 Q-80 -44 -62 -48 M70 -108 Q120 -96 90 -54 Q80 -44 62 -48" fill="none" stroke="#013E4C" stroke-width="8"/><rect x="-14" y="-8" width="28" height="44" fill="#FFC94A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><rect x="-60" y="34" width="120" height="34" rx="6" fill="#013E4C"/><text x="0" y="58" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="20" fill="#fff">CAMPEÃ</text><text x="0" y="-62" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="34" fill="#013E4C">#1</text></g></g>
+      <g id="f05-pp0"><g transform="translate(800,360)">
+        <circle cx="0" cy="-60" r="28" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+        <path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#B9C7CC" stroke="#013E4C" stroke-width="5"/>
+        <g id="f05-pr0" opacity="0"><path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/><circle cx="22" cy="40" r="10" fill="#F2C59A" stroke="#013E4C" stroke-width="4"/><path d="M-10 -66 L-2 -60 L-10 -54 M10 -66 L2 -60 L10 -54" stroke="#013E4C" stroke-width="4" fill="none"/></g>
+        <g id="f05-pn0"><circle cx="-9" cy="-63" r="4" fill="#013E4C"/><circle cx="9" cy="-63" r="4" fill="#013E4C"/></g>
+      </g></g><g id="f05-pp1"><g transform="translate(940,360)">
+        <circle cx="0" cy="-60" r="28" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+        <path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#B9C7CC" stroke="#013E4C" stroke-width="5"/>
+        <g id="f05-pr1" opacity="0"><path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/><circle cx="22" cy="40" r="10" fill="#F2C59A" stroke="#013E4C" stroke-width="4"/><path d="M-10 -66 L-2 -60 L-10 -54 M10 -66 L2 -60 L10 -54" stroke="#013E4C" stroke-width="4" fill="none"/></g>
+        <g id="f05-pn1"><circle cx="-9" cy="-63" r="4" fill="#013E4C"/><circle cx="9" cy="-63" r="4" fill="#013E4C"/></g>
+      </g></g><g id="f05-pp2"><g transform="translate(1080,360)">
+        <circle cx="0" cy="-60" r="28" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+        <path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#B9C7CC" stroke="#013E4C" stroke-width="5"/>
+        <g id="f05-pr2" opacity="0"><path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/><circle cx="22" cy="40" r="10" fill="#F2C59A" stroke="#013E4C" stroke-width="4"/><path d="M-10 -66 L-2 -60 L-10 -54 M10 -66 L2 -60 L10 -54" stroke="#013E4C" stroke-width="4" fill="none"/></g>
+        <g id="f05-pn2"><circle cx="-9" cy="-63" r="4" fill="#013E4C"/><circle cx="9" cy="-63" r="4" fill="#013E4C"/></g>
+      </g></g><g id="f05-pp3"><g transform="translate(1220,360)">
+        <circle cx="0" cy="-60" r="28" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+        <path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#B9C7CC" stroke="#013E4C" stroke-width="5"/>
+        <g id="f05-pr3" opacity="0"><path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/><circle cx="22" cy="40" r="10" fill="#F2C59A" stroke="#013E4C" stroke-width="4"/><path d="M-10 -66 L-2 -60 L-10 -54 M10 -66 L2 -60 L10 -54" stroke="#013E4C" stroke-width="4" fill="none"/></g>
+        <g id="f05-pn3"><circle cx="-9" cy="-63" r="4" fill="#013E4C"/><circle cx="9" cy="-63" r="4" fill="#013E4C"/></g>
+      </g></g><g id="f05-pp4"><g transform="translate(1360,360)">
+        <circle cx="0" cy="-60" r="28" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+        <path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#B9C7CC" stroke="#013E4C" stroke-width="5"/>
+        <g id="f05-pr4" opacity="0"><path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/><circle cx="22" cy="40" r="10" fill="#F2C59A" stroke="#013E4C" stroke-width="4"/><path d="M-10 -66 L-2 -60 L-10 -54 M10 -66 L2 -60 L10 -54" stroke="#013E4C" stroke-width="4" fill="none"/></g>
+        <g id="f05-pn4"><circle cx="-9" cy="-63" r="4" fill="#013E4C"/><circle cx="9" cy="-63" r="4" fill="#013E4C"/></g>
+      </g></g><g id="f05-pp5"><g transform="translate(800,550)">
+        <circle cx="0" cy="-60" r="28" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+        <path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#B9C7CC" stroke="#013E4C" stroke-width="5"/>
+        <g id="f05-pr5" opacity="0"><path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/><circle cx="22" cy="40" r="10" fill="#F2C59A" stroke="#013E4C" stroke-width="4"/><path d="M-10 -66 L-2 -60 L-10 -54 M10 -66 L2 -60 L10 -54" stroke="#013E4C" stroke-width="4" fill="none"/></g>
+        <g id="f05-pn5"><circle cx="-9" cy="-63" r="4" fill="#013E4C"/><circle cx="9" cy="-63" r="4" fill="#013E4C"/></g>
+      </g></g><g id="f05-pp6"><g transform="translate(940,550)">
+        <circle cx="0" cy="-60" r="28" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+        <path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#B9C7CC" stroke="#013E4C" stroke-width="5"/>
+        <g id="f05-pr6" opacity="0"><path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/><circle cx="22" cy="40" r="10" fill="#F2C59A" stroke="#013E4C" stroke-width="4"/><path d="M-10 -66 L-2 -60 L-10 -54 M10 -66 L2 -60 L10 -54" stroke="#013E4C" stroke-width="4" fill="none"/></g>
+        <g id="f05-pn6"><circle cx="-9" cy="-63" r="4" fill="#013E4C"/><circle cx="9" cy="-63" r="4" fill="#013E4C"/></g>
+      </g></g><g id="f05-pp7"><g transform="translate(1080,550)">
+        <circle cx="0" cy="-60" r="28" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+        <path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#B9C7CC" stroke="#013E4C" stroke-width="5"/>
+        <g id="f05-pr7" opacity="0"><path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/><circle cx="22" cy="40" r="10" fill="#F2C59A" stroke="#013E4C" stroke-width="4"/><path d="M-10 -66 L-2 -60 L-10 -54 M10 -66 L2 -60 L10 -54" stroke="#013E4C" stroke-width="4" fill="none"/></g>
+        <g id="f05-pn7"><circle cx="-9" cy="-63" r="4" fill="#013E4C"/><circle cx="9" cy="-63" r="4" fill="#013E4C"/></g>
+      </g></g><g id="f05-pp8"><g transform="translate(1220,550)">
+        <circle cx="0" cy="-60" r="28" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+        <path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#B9C7CC" stroke="#013E4C" stroke-width="5"/>
+        <g id="f05-pr8" opacity="0"><path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/><circle cx="22" cy="40" r="10" fill="#F2C59A" stroke="#013E4C" stroke-width="4"/><path d="M-10 -66 L-2 -60 L-10 -54 M10 -66 L2 -60 L10 -54" stroke="#013E4C" stroke-width="4" fill="none"/></g>
+        <g id="f05-pn8"><circle cx="-9" cy="-63" r="4" fill="#013E4C"/><circle cx="9" cy="-63" r="4" fill="#013E4C"/></g>
+      </g></g><g id="f05-pp9"><g transform="translate(1360,550)">
+        <circle cx="0" cy="-60" r="28" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" stroke-width="5"/>
+        <path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#B9C7CC" stroke="#013E4C" stroke-width="5"/>
+        <g id="f05-pr9" opacity="0"><path d="M-32 70 L-32 0 Q-32 -28 0 -28 Q32 -28 32 0 L32 70 Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/><circle cx="22" cy="40" r="10" fill="#F2C59A" stroke="#013E4C" stroke-width="4"/><path d="M-10 -66 L-2 -60 L-10 -54 M10 -66 L2 -60 L10 -54" stroke="#013E4C" stroke-width="4" fill="none"/></g>
+        <g id="f05-pn9"><circle cx="-9" cy="-63" r="4" fill="#013E4C"/><circle cx="9" cy="-63" r="4" fill="#013E4C"/></g>
+      </g></g>
+      <g id="f05-v-wrap"><g transform="translate(1660,880) scale(0.95)"><g id="f05v-root">
+    <g transform="translate(-22,-44)"><g id="f05v-legB"><line x1="0" y1="0" x2="0" y2="40" stroke="#013E4C" stroke-width="28" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="40" stroke="#F7EEDB" stroke-width="14" stroke-linecap="round"/><ellipse cx="4" cy="44" rx="18" ry="9" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/></g></g>
+    <g transform="translate(22,-44)"><g id="f05v-legF"><line x1="0" y1="0" x2="0" y2="40" stroke="#013E4C" stroke-width="28" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="40" stroke="#F7EEDB" stroke-width="14" stroke-linecap="round"/><ellipse cx="6" cy="44" rx="18" ry="9" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/></g></g>
+    <g id="f05v-body">
+      <path d="M-14 -150 L-6 -232 Q0 -246 6 -232 L14 -150 Z" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M-92 -168 Q-104 -176 -96 -190 Q-86 -200 -72 -190 L-30 -168 M92 -168 Q104 -176 96 -190 Q86 -200 72 -190 L30 -168" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M-56 -150 Q-60 -196 0 -202 Q60 -196 56 -150 Z" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      <ellipse cx="0" cy="-168" rx="20" ry="15" fill="#FFF6E9" stroke="#013E4C" stroke-width="5"/>
+      <g transform="translate(-74,-96)"><g id="f05v-armB"><line x1="0" y1="0" x2="0" y2="44" stroke="#013E4C" stroke-width="27" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="44" stroke="#F7EEDB" stroke-width="13" stroke-linecap="round"/><circle cx="0" cy="48" r="11" fill="#F7EEDB" stroke="#013E4C" stroke-width="5"/></g></g>
+      <g transform="translate(74,-96)"><g id="f05v-armF"><line x1="0" y1="0" x2="0" y2="44" stroke="#013E4C" stroke-width="27" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="44" stroke="#F7EEDB" stroke-width="13" stroke-linecap="round"/><circle cx="0" cy="48" r="11" fill="#F7EEDB" stroke="#013E4C" stroke-width="5"/></g></g>
+      <rect x="-80" y="-152" width="160" height="112" rx="34" fill="#F7EEDB" stroke="#013E4C" stroke-width="7"/>
+      <ellipse cx="0" cy="-146" rx="70" ry="13" fill="#9CD3E6" stroke="#013E4C" stroke-width="5"/>
+      <ellipse cx="-46" cy="-70" rx="12" ry="7" fill="#FF5A4E" opacity="0.35"/><ellipse cx="46" cy="-70" rx="12" ry="7" fill="#FF5A4E" opacity="0.35"/>
+      <g id="f05v-eyes">
+    <g id="f05v-e-normal"><ellipse cx="-22" cy="-104" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-19" cy="-103" r="5.5" fill="#013E4C"/><ellipse cx="22" cy="-104" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="25" cy="-103" r="5.5" fill="#013E4C"/></g>
+    <g id="f05v-e-wide" opacity="0"><ellipse cx="-22" cy="-106" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-20" cy="-106" r="4" fill="#013E4C"/><ellipse cx="22" cy="-106" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="24" cy="-106" r="4" fill="#013E4C"/></g>
+    <g id="f05v-e-pain" opacity="0"><path d="M-31 -112 L-15 -104 L-31 -96" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M31 -112 L15 -104 L31 -96" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f05v-e-happy" opacity="0"><path d="M-31 -101 Q-22 -115 -13 -101" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M13 -101 Q22 -115 31 -101" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f05v-e-closed" opacity="0"><path d="M-31 -102 Q-22 -96 -13 -102" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M13 -102 Q22 -96 31 -102" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+      <g id="f05v-mouths">
+    <g id="f05v-m-smile"><path d="M-14 -73 Q0 -60 14 -74" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f05v-m-open" opacity="0"><path d="M-13 -75 Q0 -72 13 -76 Q10 -56 0 -56 Q-11 -57 -13 -75Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-6 -60 Q0 -65 6 -60" fill="#FF5A4E" /></g>
+    <g id="f05v-m-scream" opacity="0"><ellipse cx="0" cy="-64" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="0" cy="-53" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f05v-m-frown" opacity="0"><path d="M-13 -64 Q0 -76 13 -64" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f05v-m-flat" opacity="0"><path d="M-11 -68 L11 -69" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f05v-m-grin" opacity="0"><path d="M-16 -75 Q0 -71 16 -76 Q12 -54 0 -54 Q-13 -55 -16 -75Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+    </g>
+  </g></g></g>
+    </svg>
+    <div id="f05-ttl" class="abs title">A dor mais <span>comum</span> do mundo</div>
+    <div id="f05-cost" class="abs card label" style="opacity:0">costelas</div>
+    <div id="f05-bum" class="abs card label" style="opacity:0">bumbum</div>
+    <div id="f05-lomb" class="abs card label" style="opacity:0">REGIÃO LOMBAR</div>
+    <div id="f05-cnt" class="abs title" style="opacity:0"><span>8</span> em cada <span>10</span> pessoas</div>
+    <div id="f05-afas" class="abs card label" style="opacity:0">
+      <svg width="90" height="90" viewBox="-45 -45 90 90"><circle r="40" fill="#BFE6EE" stroke="#013E4C" stroke-width="5"/><path d="M-30 -10 Q-10 -30 10 -16 Q20 0 0 10 Q-20 20 -30 -10Z M8 18 Q24 10 30 22 Q20 34 8 18Z" fill="#3DD9A4" stroke="#013E4C" stroke-width="3"/></svg>
+      <div>Uma das principais causas de <b style="color:#FF5A4E">afastamento do trabalho</b> no mundo</div>
+    </div>
+    <div id="f05-sozi" class="abs card label" style="opacity:0">você não tá sozinho!</div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":18.44,"lines":[{"who":"pablo","start":0.6,"end":14.701},{"who":"vertebra","start":15.101,"end":17.64}],"baixo":2.211,"cost":3.901,"bum":4.741,"camp":5.981,"oito":7.171,"dez":7.961,"crise":9.841,"afas":12.911,"mundo":14.741,"v0":15.101,"v1":17.64,"soz":17.871};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        R.rise(tl, "#f05-ttl", 0.1, 0.5);
+        tl.fromTo("#f05-back", { x: -500, opacity: 0 }, { x: 0, opacity: 1, duration: 0.6, ease: "back.out(1.4)" }, 0.2);
+        // região: entre as costelas e o bumbum
+        R.fadeIn(tl, "#f05-ribs", K.cost - 0.1, 0.3);
+        R.pop(tl, "#f05-cost", K.cost - 0.1, 0.35);
+        tl.set("#f05-lc", { opacity: 1 }, K.cost);
+        R.draw(tl, "#f05-lc", K.cost, 0.3);
+        R.pop(tl, "#f05-bum", K.bum - 0.1, 0.35);
+        tl.set("#f05-lb", { opacity: 1 }, K.bum);
+        R.draw(tl, "#f05-lb", K.bum, 0.3);
+        tl.set("#f05-band", { opacity: 1 }, K.bum + 0.3);
+        tl.fromTo("#f05-band", { scaleY: 0, svgOrigin: "360 527" }, { scaleY: 1, svgOrigin: "360 527", duration: 0.4, ease: "back.out(2)" }, K.bum + 0.3);
+        tl.to("#f05-band", { opacity: 0.6, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, K.bum + 0.8);
+        R.pop(tl, "#f05-lomb", K.bum + 0.5, 0.4);
+        // campeã
+        R.pop(tl, "#f05-tro", K.camp - 0.1, 0.5);
+        tl.to("#f05-tro", { rotation: 8, svgOrigin: "1660 250", duration: 0.2, yoyo: true, repeat: 3 }, K.camp + 0.5);
+        // 10 pessoas, 8 com dor
+        for (let i = 0; i < 10; i++) R.pop(tl, `#f05-pp${i}`, K.camp + 0.4 + i * 0.06, 0.3);
+        R.rise(tl, "#f05-cnt", K.oito - 0.1, 0.4);
+        for (let i = 0; i < 8; i++) {
+          const t = K.oito + 0.3 + i * 0.12;
+          tl.set(`#f05-pr${i}`, { opacity: 1 }, t);
+          tl.set(`#f05-pn${i}`, { opacity: 0 }, t);
+          R.shake(tl, `#f05-pp${i}`, t, 0.2, 3);
+        }
+        // afastamento
+        R.pop(tl, "#f05-afas", K.afas - 0.2, 0.45);
+        // Vértebra: você não tá sozinho
+        tl.fromTo("#f05-v-wrap", { y: 420 }, { y: 0, duration: 0.45, ease: "back.out(1.6)" }, K.v0 - 0.5);
+        R.face(tl, "f05v", K.v0 - 0.5, { eyes: "happy" });
+        R.pose(tl, "f05v", K.v0, 0.3, { armF: -150, armB: 150 }, "back.out(2)");
+        R.pop(tl, "#f05-sozi", K.soz - 0.2, 0.4);
+        for (let i = 0; i < 10; i++) tl.to(`#f05-pp${i}`, { y: -14, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out" }, K.soz + i * 0.04);
+      })(tl, K, R);
+      K.lines.filter(l=>l.who==="vertebra").forEach(l=>R.talk(tl,"f05v",l.start,l.end));
+      tl.set({}, {}, K.dur);
+      window.__timelines["f05"] = tl;
+    })();
+  </script>
+</template>

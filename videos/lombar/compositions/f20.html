@@ -1,0 +1,271 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #FFF6E9; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #f20-head { left:110px; top:80px; font-size:76px; }
+        #f20-head span { color:#3DD9A4; }
+        #f20-card { left:1320px; top:150px; width:500px; padding:26px 32px; }
+        #f20-card .t { font-size:44px; }
+        #f20-card .row { font-size:31px; margin-top:12px; display:flex; align-items:center; gap:14px; }
+        #f20-card .dot { width:22px; height:22px; border-radius:50%; border:5px solid #013E4C; flex:none; }
+        #f20-stop { left:1340px; top:720px; width:480px; padding:14px 18px; font-size:30px; text-align:center; line-height:1.25; }
+        #f20-stop .ok { color:#1E9C72; } #f20-stop .no { color:#C9372A; }
+        #f20-pl { left:740px; top:668px; width:500px; text-align:center; font-size:26px; }
+        #f20-sl { left:150px; top:760px; width:520px; text-align:center; font-size:26px; }
+        #f20-cnt { left:760px; top:206px; width:150px; height:150px; border-radius:50%; background:#FFC94A; border:7px solid #013E4C; font-size:40px; display:flex; align-items:center; justify-content:center; text-align:center; line-height:1; }
+      
+  </style>
+  <div id="root" data-composition-id="f20" data-width="1920" data-height="1080">
+
+    <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <rect x="0" y="0" width="1920" height="740" fill="#E7F3F1"/>
+      <rect x="0" y="740" width="1920" height="340" fill="#CFE3DF"/>
+      <line x1="0" y1="740" x2="1920" y2="740" stroke="#013E4C" stroke-width="7"/>
+      <!-- vista de lado (referência da posição) -->
+      <rect x="110" y="700" width="560" height="32" rx="14" fill="#3DD9A4" stroke="#013E4C" stroke-width="6"/>
+      <g transform="translate(470,650) scale(1.05)"><g id="f20z-root">
+    <g opacity="1" style="filter: brightness(0.86)"><g transform="translate(-8,0)"><g id="f20z-hipB">
+    <line x1="0" y1="0" x2="0" y2="88" stroke="#013E4C" stroke-width="46" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="88" stroke="#7A5634" stroke-width="32" stroke-linecap="round"/>
+    <g transform="translate(0,88)"><g id="f20z-knB">
+      <line x1="0" y1="0" x2="0" y2="86" stroke="#013E4C" stroke-width="42" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="86" stroke="#7A5634" stroke-width="28" stroke-linecap="round"/>
+      <g transform="translate(0,90)"><g id="f20z-anB">
+        <path d="M-18 -6 Q-20 14 -8 16 L44 16 Q56 14 52 2 Q46 -10 20 -10 L-8 -14 Q-18 -14 -18 -6Z" fill="#4A2E1A" stroke="#013E4C" stroke-width="6" stroke-linejoin="round"/>
+      </g></g>
+    </g></g>
+  </g></g></g>
+    <g id="f20z-torso">
+      <g opacity="1" style="filter: brightness(0.86)"><g transform="translate(4,-138)"><g id="f20z-shB">
+    <line x1="0" y1="0" x2="0" y2="68" stroke="#013E4C" stroke-width="40" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="68" stroke="#4A90C2" stroke-width="26" stroke-linecap="round"/>
+    <g transform="translate(0,68)"><g id="f20z-elB">
+      <line x1="0" y1="0" x2="0" y2="62" stroke="#013E4C" stroke-width="36" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="62" stroke="#F2C59A" stroke-width="22" stroke-linecap="round"/>
+      <g transform="translate(0,66)"><g id="f20z-handB"><circle cx="0" cy="0" r="16" fill="#F2C59A" stroke="#013E4C" stroke-width="6"/><path d="M6 -10 Q16 -14 18 -4" fill="none" stroke="#013E4C" stroke-width="4" stroke-linecap="round"/></g></g>
+    </g></g>
+  </g></g></g>
+      <path d="M-44 8 Q-52 -80 -40 -150 Q0 -172 42 -150 Q70 -70 55.6 8 Z" fill="#4A90C2" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M-30 -120 L40 -120 M-36 -80 L62 -80 M-40 -40 L64 -40" stroke="#fff" stroke-width="4" opacity="0.35"/>
+    <path d="M-6 -150 L12 -130 L30 -150" fill="none" stroke="#013E4C" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="-46" y="-6" width="103.6" height="16" rx="6" fill="#3B2A1C" stroke="#013E4C" stroke-width="4"/>
+      <g transform="translate(4,-150)"><g id="f20z-neck"><g id="f20z-head">
+    <rect x="-8" y="-22" width="26" height="30" rx="8" fill="#F2C59A" stroke="#013E4C" stroke-width="7"/>
+    <circle cx="6" cy="-75" r="60" fill="#F2C59A" stroke="#013E4C" stroke-width="7"/>
+    <ellipse cx="-44" cy="-70" rx="12" ry="16" fill="#F2C59A" stroke="#013E4C" stroke-width="7"/>
+    <path d="M-56 -86 Q-62 -54 -40 -36 Q-46 -60 -34 -84 Z" fill="#C9C9C9" stroke="#013E4C" stroke-width="4"/>
+    <path d="M-10 -128 Q4 -140 22 -132" stroke="#013E4C" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M62 -70 Q80 -60 66 -50" fill="#F2C59A" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/>
+    <g id="f20z-eyes">
+    <g id="f20z-e-normal"><ellipse cx="14" cy="-82" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="17" cy="-81" r="5.5" fill="#013E4C"/><ellipse cx="44" cy="-82" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="47" cy="-81" r="5.5" fill="#013E4C"/></g>
+    <g id="f20z-e-wide" opacity="0"><ellipse cx="14" cy="-84" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="16" cy="-84" r="4" fill="#013E4C"/><ellipse cx="44" cy="-84" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="46" cy="-84" r="4" fill="#013E4C"/></g>
+    <g id="f20z-e-pain" opacity="0"><path d="M5 -90 L21 -82 L5 -74" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M53 -90 L37 -82 L53 -74" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f20z-e-happy" opacity="0"><path d="M5 -79 Q14 -93 23 -79" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M35 -79 Q44 -93 53 -79" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f20z-e-closed" opacity="0"><path d="M5 -80 Q14 -74 23 -80" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M35 -80 Q44 -74 53 -80" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+    <path d="M2 -100 L24 -98 M36 -98 L56 -101" stroke="#9AA7AD" stroke-width="7" stroke-linecap="round"/>
+    <g id="f20z-mouths">
+    <g id="f20z-m-smile"><path d="M20 -37 Q34 -24 48 -38" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f20z-m-open" opacity="0"><path d="M21 -39 Q34 -36 47 -40 Q44 -20 34 -20 Q23 -21 21 -39Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 -24 Q34 -29 40 -24" fill="#FF5A4E" /></g>
+    <g id="f20z-m-scream" opacity="0"><ellipse cx="34" cy="-28" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="34" cy="-17" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f20z-m-frown" opacity="0"><path d="M21 -28 Q34 -40 47 -28" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f20z-m-flat" opacity="0"><path d="M23 -32 L45 -33" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f20z-m-grin" opacity="0"><path d="M18 -39 Q34 -35 50 -40 Q46 -18 34 -18 Q21 -19 18 -39Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+    <path d="M14 -50 Q34 -60 58 -50 Q52 -40 36 -44 Q20 -40 14 -50Z" fill="#C9C9C9" stroke="#013E4C" stroke-width="4" stroke-linejoin="round"/>
+  </g></g></g>
+      <g transform="translate(4,-138)"><g id="f20z-shF">
+    <line x1="0" y1="0" x2="0" y2="68" stroke="#013E4C" stroke-width="40" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="68" stroke="#4A90C2" stroke-width="26" stroke-linecap="round"/>
+    <g transform="translate(0,68)"><g id="f20z-elF">
+      <line x1="0" y1="0" x2="0" y2="62" stroke="#013E4C" stroke-width="36" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="62" stroke="#F2C59A" stroke-width="22" stroke-linecap="round"/>
+      <g transform="translate(0,66)"><g id="f20z-handF"><circle cx="0" cy="0" r="16" fill="#F2C59A" stroke="#013E4C" stroke-width="6"/><path d="M6 -10 Q16 -14 18 -4" fill="none" stroke="#013E4C" stroke-width="4" stroke-linecap="round"/></g></g>
+    </g></g>
+  </g></g>
+    </g>
+    <g transform="translate(8,0)"><g id="f20z-hipF">
+    <line x1="0" y1="0" x2="0" y2="88" stroke="#013E4C" stroke-width="46" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="88" stroke="#7A5634" stroke-width="32" stroke-linecap="round"/>
+    <g transform="translate(0,88)"><g id="f20z-knF">
+      <line x1="0" y1="0" x2="0" y2="86" stroke="#013E4C" stroke-width="42" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="86" stroke="#7A5634" stroke-width="28" stroke-linecap="round"/>
+      <g transform="translate(0,90)"><g id="f20z-anF">
+        <path d="M-18 -6 Q-20 14 -8 16 L44 16 Q56 14 52 2 Q46 -10 20 -10 L-8 -14 Q-18 -14 -18 -6Z" fill="#4A2E1A" stroke="#013E4C" stroke-width="6" stroke-linejoin="round"/>
+      </g></g>
+    </g></g>
+  </g></g>
+  </g></g>
+      <!-- painel "visto dos pés" -->
+      <g id="f20-panel" opacity="0">
+        <rect x="740" y="190" width="500" height="470" rx="28" fill="#fff" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <clipPath id="f20-clip"><rect x="744" y="194" width="492" height="462" rx="24"/></clipPath>
+        <g clip-path="url(#f20-clip)">
+          <rect x="740" y="630" width="500" height="40" fill="#3DD9A4"/>
+          <rect x="910" y="330" width="140" height="250" rx="40" fill="#4A90C2" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="980" cy="300" r="46" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="890" y="560" width="180" height="70" rx="26" fill="#7A5634" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <g id="f20-legs"><path d="M945 600 L950 400 L915 610" fill="none" stroke="#013E4C" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M945 600 L950 400 L915 610" fill="none" stroke="#7A5634" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+      <ellipse cx="915" cy="624" rx="30" ry="20" fill="#4A2E1A" stroke="#013E4C" stroke-width="6"/><path d="M1015 600 L1010 400 L1045 610" fill="none" stroke="#013E4C" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M1015 600 L1010 400 L1045 610" fill="none" stroke="#7A5634" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+      <ellipse cx="1045" cy="624" rx="30" ry="20" fill="#4A2E1A" stroke="#013E4C" stroke-width="6"/>
+            <circle cx="950" cy="400" r="26" fill="#7A5634" stroke="#013E4C" stroke-width="6"/><circle cx="1010" cy="400" r="26" fill="#7A5634" stroke="#013E4C" stroke-width="6"/>
+          </g>
+          <path id="f20-arcL" d="M880 420 Q840 470 840 540" fill="none" stroke="#FF5A4E" stroke-width="9" stroke-linecap="round" stroke-dasharray="16 10" opacity="0"/>
+          <path id="f20-arcR" d="M1080 420 Q1120 470 1120 540" fill="none" stroke="#FF5A4E" stroke-width="9" stroke-linecap="round" stroke-dasharray="16 10" opacity="0"/>
+        </g>
+      </g>
+      <!-- limpador de para-brisa -->
+      <g id="f20-wiper" opacity="0">
+        <path d="M110 520 Q110 300 400 300 Q690 300 690 520 Z" fill="#CFEFF7" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M110 520 L690 520" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <g id="f20-wblade"><path d="M400 520 L400 330" stroke="#013E4C" stroke-width="12" stroke-linecap="round"/><path d="M400 500 L400 340" stroke="#555" stroke-width="5"/></g>
+        <circle cx="400" cy="520" r="14" fill="#013E4C"/>
+      </g>
+    </svg>
+    <div id="f20-head" class="abs title">3. <span>ROTAÇÃO DEITADO</span></div>
+    <div id="f20-pl" class="abs label" style="opacity:0">visto dos pés: os joelhos vão juntos</div>
+    <div id="f20-sl" class="abs label">deitado, joelhos dobrados</div>
+    <div id="f20-cnt" class="abs title" style="opacity:0">10 pra<br>cada lado</div>
+    <div id="f20-card" class="abs card">
+      <div class="t title">Rotação deitado</div>
+      <div class="row label" id="f20-r0"><div class="dot" style="background:#3DD9A4"></div>Joelhos dobrados e juntos</div>
+      <div class="row label" id="f20-r1"><div class="dot" style="background:#3DD9A4"></div>Vão devagar pra um lado</div>
+      <div class="row label" id="f20-r2"><div class="dot" style="background:#3DD9A4"></div>Depois pro outro</div>
+      <div class="row label" id="f20-r3"><div class="dot" style="background:#FFC94A"></div><b>10 pra cada lado</b></div>
+    </div>
+    <div id="f20-stop" class="abs card label">Desconforto leve: <b class="ok">OK</b><br>Dor forte: <b class="no">diminui</b></div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":11.82,"lines":[{"who":"pablo","start":0.6,"end":10.221}],"tres":0.936,"rot":0.936,"joelhos":1.646,"juntos":3.356,"devagar":5.146,"lado":6.016,"outro":6.616,"limp":7.676,"dez":8.756};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        const z = "f20z";
+        R.setPose(tl, z, 0, { root: -90, torso: 0, neck: 0, shB: 0, shF: 0, elB: 0, elF: 0, hipB: -45, hipF: -45, knB: 118, knF: 118, anB: 17, anF: 17 });
+        R.face(tl, z, 0, { eyes: "normal", mouth: "smile" });
+        R.blinks(tl, z, 0, K.dur);
+        R.slideIn(tl, "#f20-head", 0.05, 0.5, -300);
+        R.slideIn(tl, "#f20-card", 0.2, 0.55, 400);
+        R.pop(tl, "#f20-stop", 0.6, 0.4);
+        [K.joelhos, K.lado, K.outro, K.dez].forEach((t, i) => tl.fromTo(`#f20-r${i}`, { opacity: 0.25 }, { opacity: 1, duration: 0.25 }, t));
+        // painel dos pés entra na "rotação"
+        R.pop(tl, "#f20-panel", K.rot - 0.1, 0.45, 0.6);
+        R.fadeIn(tl, "#f20-pl", K.joelhos);
+        tl.to("#f20-legs", { scale: 1.04, svgOrigin: "980 600", duration: 0.2, yoyo: true, repeat: 1 }, K.juntos);
+        // vai pra um lado... e pro outro
+        const L = -48, Rr = 48;
+        tl.to("#f20-legs", { rotation: L, svgOrigin: "980 600", duration: 0.9, ease: "sine.inOut" }, K.lado - 0.3);
+        R.fadeIn(tl, "#f20-arcL", K.lado - 0.2, 0.3);
+        tl.to("#f20-legs", { rotation: Rr, svgOrigin: "980 600", duration: 1.3, ease: "sine.inOut" }, K.outro - 0.2);
+        R.fadeIn(tl, "#f20-arcR", K.outro - 0.1, 0.3);
+        // limpador de para-brisa em sincronia
+        tl.fromTo("#f20-wiper", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(2)" }, K.limp - 0.3);
+        tl.to("#f20-sl", { opacity: 0, duration: 0.2 }, K.limp - 0.3);
+        let t = K.limp, side = -1;
+        while (t + 1.1 < K.dur - 0.3) {
+          tl.to("#f20-legs", { rotation: side * 48, svgOrigin: "980 600", duration: 1.0, ease: "sine.inOut" }, t);
+          tl.to("#f20-wblade", { rotation: side * 70, svgOrigin: "400 520", duration: 1.0, ease: "sine.inOut" }, t);
+          t += 1.1; side = -side;
+        }
+        R.pop(tl, "#f20-cnt", K.dez - 0.1, 0.4);
+        R.face(tl, z, K.dez, { eyes: "happy", mouth: "smile" });
+      })(tl, K, R);
+      
+      tl.set({}, {}, K.dur);
+      window.__timelines["f20"] = tl;
+    })();
+  </script>
+</template>
