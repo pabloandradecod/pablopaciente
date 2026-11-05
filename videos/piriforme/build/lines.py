@@ -17,7 +17,7 @@ LINES = [
  (9, P, "O que se sente: uma dor funda na nádega, que piora depois de um tempo sentado, ao levantar da cadeira ou ao cruzar a perna. Às vezes desce por trás da coxa. É mais comum em mulheres e em adultos de meia-idade.", None),
  (10, P, "Modo detetive ligado! O suspeito de hoje: o piriforme.", None),
  (11, P, "Na conversa, as pistas são: dói mais na nádega do que na lombar? Piora sentado ou ao levantar da cadeira? E repare: se tossir e espirrar não piora, e não tem perda de força nem de sensibilidade, a coluna fica menos suspeita e o piriforme sobe no ranking.", None),
- (12, P, "No exame, primeiro a palpação: apertando bem no ponto entre o sacro e o topo do fêmur, a dor do paciente aparece. É a famosa: \"É AÍ, doutor!\"", "No exame, primeiro a palpação: apertando bem no ponto entre o sacro e o topo do fêmur, a dor do paciente aparece. É a famosa: é aí, doutor!"),
+ (12, P, "No exame, primeiro a palpação: apertando bem no ponto entre o sacro e o topo do fêmur, a dor do paciente aparece. É a famosa: É AÍ, doutor!", "No exame, primeiro a palpação: apertando bem no ponto entre o sacro e o topo do fêmur, a dor do paciente aparece. É a famosa: é aí, doutor!"),
  (13, P, "O teste mais usado é o FAIR: flexão, adução e rotação interna do quadril. O paciente deitado de lado, eu dobro o quadril e o joelho e levo a perna pra dentro. Isso estica o piriforme. Se reproduz a dor na nádega, o teste é positivo.",
      "O teste mais usado é o féir: flexão, adução e rotação interna do quadril. O paciente deitado de lado, eu dobro o quadril e o joelho e levo a perna pra dentro. Isso estica o piriforme. Se reproduz a dor na nádega, o teste é positivo."),
  (13, N, "Ele me apertou de novo!", None),

@@ -1,0 +1,141 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #013E4C; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #f31-logo { left:510px; top:70px; width:900px; height:265px; }
+        #f31-lab { left:0; right:0; top:375px; text-align:center; color:#FFC94A; font-size:44px; }
+        #root .f31-slot { width:640px; height:360px; border:7px dashed #FFF6E9; border-radius:26px; background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center; }
+        #root .f31-in { color:#FFF6E9; opacity:0.55; font-size:34px; }
+        #f31-thanks { left:0; right:0; top:880px; text-align:center; color:#FFF6E9; font-size:40px; }
+        #f31-thanks b { color:#3DD9A4; }
+      
+  </style>
+  <div id="root" data-composition-id="f31" data-width="1920" data-height="1080">
+
+    <svg class="abs" id="f31-dots" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <circle cx="0" cy="0" r="6" fill="#0B5566"/><circle cx="233" cy="397" r="10" fill="#0B5566"/><circle cx="466" cy="794" r="14" fill="#0B5566"/><circle cx="699" cy="111" r="18" fill="#0B5566"/><circle cx="932" cy="508" r="6" fill="#0B5566"/><circle cx="1165" cy="905" r="10" fill="#0B5566"/><circle cx="1398" cy="222" r="14" fill="#0B5566"/><circle cx="1631" cy="619" r="18" fill="#0B5566"/><circle cx="1864" cy="1016" r="6" fill="#0B5566"/><circle cx="177" cy="333" r="10" fill="#0B5566"/><circle cx="410" cy="730" r="14" fill="#0B5566"/><circle cx="643" cy="47" r="18" fill="#0B5566"/><circle cx="876" cy="444" r="6" fill="#0B5566"/><circle cx="1109" cy="841" r="10" fill="#0B5566"/><circle cx="1342" cy="158" r="14" fill="#0B5566"/><circle cx="1575" cy="555" r="18" fill="#0B5566"/><circle cx="1808" cy="952" r="6" fill="#0B5566"/><circle cx="121" cy="269" r="10" fill="#0B5566"/><circle cx="354" cy="666" r="14" fill="#0B5566"/><circle cx="587" cy="1063" r="18" fill="#0B5566"/><circle cx="820" cy="380" r="6" fill="#0B5566"/><circle cx="1053" cy="777" r="10" fill="#0B5566"/><circle cx="1286" cy="94" r="14" fill="#0B5566"/><circle cx="1519" cy="491" r="18" fill="#0B5566"/><circle cx="1752" cy="888" r="6" fill="#0B5566"/><circle cx="65" cy="205" r="10" fill="#0B5566"/>
+    </svg>
+    <img id="f31-logo" class="abs" src="assets/marca/logo-completa-branca.webp" />
+    <div id="f31-lab" class="abs title">ASSISTA TAMBÉM</div>
+    <div id="f31-s0" class="abs f31-slot" style="left:250px;top:460px"><div class="f31-in label">vídeo recomendado</div></div><div id="f31-s1" class="abs f31-slot" style="left:1030px;top:460px"><div class="f31-in label">vídeo recomendado</div></div>
+    <div id="f31-thanks" class="abs label">Valeu por assistir! <b>Até o próximo episódio.</b></div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":9,"lines":[]};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        tl.fromTo("#f31-dots", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 0);
+        tl.fromTo("#f31-logo", { y: -60, opacity: 0, scale: 0.9 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.6)" }, 0.1);
+        R.rise(tl, "#f31-lab", 0.5, 0.45);
+        R.pop(tl, "#f31-s0", 0.7, 0.5, 0.6);
+        R.pop(tl, "#f31-s1", 0.85, 0.5, 0.6);
+        R.rise(tl, "#f31-thanks", 1.3, 0.5, 30);
+        tl.to("#f31-logo", { scale: 1.03, duration: 1.5, yoyo: true, repeat: 3, ease: "sine.inOut", transformOrigin: "50% 50%" }, 1.5);
+        tl.to("#f31-logo, #f31-lab, #f31-thanks, .f31-slot, #f31-dots", { opacity: 0, duration: 0.5, ease: "power2.in" }, K.dur - 0.6);
+      })(tl, K, R);
+      
+      tl.set({}, {}, K.dur);
+      window.__timelines["f31"] = tl;
+    })();
+  </script>
+</template>
