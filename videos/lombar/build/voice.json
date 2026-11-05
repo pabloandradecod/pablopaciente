@@ -1,0 +1,261 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Domingo de sol, e o Seu Zé resolveu cuidar do jardim: carregou terra, arrancou mato, ficou horas abaixado. Na segunda de manhã, o despertador tocou, ele tentou levantar e... travou! Agora anda igual robô, com medo de fazer qualquer movimento.",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 14.08
+ },
+ {
+  "frame": 2,
+  "who": "guardas",
+  "text": "Ninguém se mexe! Área isolada!",
+  "file": "assets/voice/f02-2-guardas.wav",
+  "dur": 2.176
+ },
+ {
+  "frame": 2,
+  "who": "alarmildo",
+  "text": "Alerta! Alerta! Perigo máximo!",
+  "file": "assets/voice/f02-3-alarmildo.wav",
+  "dur": 1.892
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Será que estragou alguma coisa na coluna? Calma, que a gente vai entender!",
+  "file": "assets/voice/f02-4-pablo.wav",
+  "dur": 4.352
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Hoje o assunto é a dor lombar, a lombalgia: o que é, por que ela acontece, como a gente investiga, os melhores exercícios e as chances de melhora. E já adianto: na maioria das vezes, a notícia é boa.",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 11.669
+ },
+ {
+  "frame": 3,
+  "who": "disquinho",
+  "text": "Dessa vez não fui eu, hein!",
+  "file": "assets/voice/f03-2-disquinho.wav",
+  "dur": 1.86
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "A dor lombar é a dor na parte de baixo das costas, entre as costelas e o bumbum. E ela é campeã: cerca de oito em cada dez pessoas vão ter pelo menos uma crise na vida. É uma das principais causas de afastamento do trabalho no mundo todo.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 14.101
+ },
+ {
+  "frame": 5,
+  "who": "vertebra",
+  "text": "Ou seja: se você tem, você não tá sozinho!",
+  "file": "assets/voice/f05-2-vertebra.wav",
+  "dur": 2.539
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "Ela é dividida pelo tempo: aguda, até seis semanas; subaguda, de seis a doze; e crônica, quando passa de doze semanas, ou seja, uns três meses.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 8.981
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "Na avaliação, a gente separa em três caixas. A gigante, com cerca de noventa por cento dos casos, é a dor lombar inespecífica: não tem uma lesão única que explique tudo. Uma caixa menor, com dor que desce pela perna, como a hérnia que vimos no episódio passado. E uma caixinha minúscula, com menos de um por cento: as causas graves.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 18.645
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "E de onde vem a dor? Pode envolver músculos, ligamentos, as pequenas articulações da coluna, o disco, a sacroilíaca... Geralmente é uma mistura, e nem sempre dá pra apontar um culpado só. E tudo bem: isso não impede o tratamento de funcionar.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 14.549
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "E aqui vai o segredo mais importante: a dor é um alarme de proteção do corpo. Às vezes, o alarme fica sensível demais, tipo alarme de carro que dispara com uma folha caindo. Dormir mal, estresse, medo de se mexer, ficar parado e achar que a coluna é frágil deixam o alarme ainda mais sensível.",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 16.853
+ },
+ {
+  "frame": 9,
+  "who": "alarmildo",
+  "text": "Eu só tô tentando ajudar... mas às vezes eu exagero!",
+  "file": "assets/voice/f09-2-alarmildo.wav",
+  "dur": 3.02
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "E os músculos da lombar, os nossos Guardas, travam tudo pra proteger. É aquela sensação de travamento. Mas a verdade é que a coluna é forte, feita pra se mexer e carregar peso. Dor não significa estrago.",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 12.416
+ },
+ {
+  "frame": 10,
+  "who": "guardas",
+  "text": "Exageramos um pouquinho, foi mal!",
+  "file": "assets/voice/f10-2-guardas.wav",
+  "dur": 2.193
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Modo detetive ligado! E hoje a missão é descobrir em qual caixa a dor do Seu Zé está.",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 5.141
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "Na conversa: como começou? A dor muda com movimento e posição? Desce pela perna? Dói mais à noite, mesmo parado? E também: como está o sono, o estresse, o trabalho? Tem medo de se mexer? Essas respostas mostram o quanto o alarme está sensível.",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 14.123
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "No exame, eu vejo como a coluna se mexe, pra frente, pra trás e pros lados, o que alivia e o que piora. Palpo a região e faço o exame neurológico: força, sensibilidade e reflexos. No caso do Seu Zé, tudo normal.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 12.629
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "Atenção às bandeiras vermelhas: histórico de câncer, perda de peso sem motivo, febre, dor constante à noite que não muda com a posição, trauma forte, osteoporose ou uso prolongado de corticoide, perda de controle da urina ou das fezes, dormência na região da sela e fraqueza que piora. Aí precisa de avaliação médica rápida.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 18.859
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "E tem as bandeiras amarelas: não são perigo, mas avisam que a dor pode demorar mais. Medo de se mexer, achar que só vai piorar, estresse, tristeza, problemas no trabalho e esperar só por tratamento passivo. Elas também fazem parte do tratamento.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 14.784
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "E o exame de imagem? Na dor lombar inespecífica, sem bandeiras vermelhas, ele geralmente não é necessário. Muita gente sem dor tem desgaste na imagem, e fazer exame cedo demais pode levar a tratamentos que não ajudam. Ele é indicado com bandeira vermelha ou quando a dor no nervo não melhora.",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 17.024
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "Hora de mexer! O melhor remédio pra dor lombar é movimento. Repouso absoluto atrasa a melhora. Regra de ouro: um desconforto leve durante o exercício é normal; se a dor ficar forte, diminui a amplitude ou o ritmo.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 12.8
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "Um: gato e camelo. De quatro apoios, arredonda as costas como um gato bravo e depois deixa a barriga descer, devagar. Dez repetições, sem forçar.",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 8.768
+ },
+ {
+  "frame": 18,
+  "who": "vertebra",
+  "text": "Miau! Ops... muuu? Camelo faz o quê?",
+  "file": "assets/voice/f18-2-vertebra.wav",
+  "dur": 1.963
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Dois: joelho ao peito. Deitado, puxa um joelho em direção ao peito e segura, depois troca. Vinte a trinta segundos, três vezes de cada lado.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 8.747
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Três: rotação deitado. Joelhos dobrados e juntos, deixa os joelhos irem devagar pra um lado e pro outro, como um limpador de para-brisa. Dez pra cada lado.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 9.621
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Quatro: ponte. Sobe o quadril, segura dois segundos e desce devagar. Três séries de dez a doze.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 5.675
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "Cinco: perdigueiro. Estica braço e perna opostos sem girar o tronco. Oito de cada lado.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 5.227
+ },
+ {
+  "frame": 22,
+  "who": "guardas",
+  "text": "Esse aí até a gente aprova!",
+  "file": "assets/voice/f22-2-guardas.wav",
+  "dur": 1.981
+ },
+ {
+  "frame": 23,
+  "who": "pablo",
+  "text": "Seis: caminhada, e qualquer exercício que você goste. Bicicleta, natação, pilates, musculação, dança. O melhor exercício é aquele que você consegue manter.",
+  "file": "assets/voice/f23-1-pablo.wav",
+  "dur": 9.28
+ },
+ {
+  "frame": 24,
+  "who": "pablo",
+  "text": "E alguns cuidados ajudam o alarme a abaixar o volume: calor local na crise, dormir bem, fazer pausas quando passa muito tempo sentado. E a terapia manual e a quiropraxia podem aliviar, principalmente junto com o exercício.",
+  "file": "assets/voice/f24-1-pablo.wav",
+  "dur": 13.568
+ },
+ {
+  "frame": 24,
+  "who": "alarmildo",
+  "text": "Ahhh, assim eu consigo ficar mais calmo!",
+  "file": "assets/voice/f24-2-alarmildo.wav",
+  "dur": 2.205
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "A boa notícia: na dor lombar aguda, a maioria melhora bastante em poucas semanas. Ela pode voltar de vez em quando, e isso é normal, mas manter o exercício diminui as recaídas.",
+  "file": "assets/voice/f26-1-pablo.wav",
+  "dur": 10.773
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "E se virar crônica, tem tratamento sim: entender a dor, exercício progressivo, cuidar do sono e do estresse, terapia manual e acompanhamento profissional. O objetivo é voltar a fazer o que você gosta.",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 12.032
+ },
+ {
+  "frame": 28,
+  "who": "pablo",
+  "text": "Resumindo: dor lombar é muito comum, quase nunca é grave e quase sempre melhora. Dor é um alarme, não um sinal de estrago. E movimento é o melhor remédio.",
+  "file": "assets/voice/f28-1-pablo.wav",
+  "dur": 8.896
+ },
+ {
+  "frame": 29,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta qual vai ser o próximo tema!",
+  "file": "assets/voice/f29-1-pablo.wav",
+  "dur": 7.979
+ },
+ {
+  "frame": 29,
+  "who": "vertebra",
+  "text": "E compartilha com aquele amigo que vive travado!",
+  "file": "assets/voice/f29-2-vertebra.wav",
+  "dur": 2.731
+ }
+]
