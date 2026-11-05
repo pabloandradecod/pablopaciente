@@ -1,0 +1,195 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #FFF6E9; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #f06-old { left:120px; top:110px; width:640px; padding:22px 30px; text-align:center; }
+        #f06-old .w { font-size:84px; color:#013E4C; }
+        #f06-old .s { font-size:30px; color:#FF5A4E; margin-top:4px; }
+        #f06-x { left:110px; top:180px; width:660px; height:20px; background:#FF5A4E; border-radius:10px; transform: rotate(-6deg); transform-origin:0 50%; }
+        #f06-new { left:110px; top:560px; padding:20px 34px; font-size:70px; color:#fff; background:#3DD9A4; border:8px solid #013E4C; border-radius:24px; box-shadow:10px 10px 0 #013E4C; transform: rotate(-3deg); }
+        #f06-new small { display:block; font-size:28px; color:#013E4C; }
+        #f06-sel { left:150px; top:420px; padding:10px 22px; font-size:30px; }
+        .f06-cap { font-family:"Nunito"; font-weight:900; font-size:30px; }
+      
+  </style>
+  <div id="root" data-composition-id="f06" data-width="1920" data-height="1080">
+
+    <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <rect y="880" width="1920" height="200" fill="#CFE3DF"/><line x1="0" y1="880" x2="1920" y2="880" stroke="#013E4C" stroke-width="7"/>
+      <g id="f06-fire" opacity="0"><path d="M720 300 Q700 250 726 216 Q734 250 756 236 Q770 282 744 312 Q726 320 720 300Z" fill="#FF5A4E" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/></g>
+      <g id="f06-z1" opacity="0"><g transform="translate(1030,330)">
+        <circle r="170" fill="#fff" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><clipPath id="f06-c1"><circle r="160"/></clipPath><g clip-path="url(#f06-c1)"><path d="M-120 -80 Q0 -84 120 -80" stroke="#D8B98A" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M-120 -60 Q0 -64 120 -60" stroke="#D8B98A" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M-120 -40 Q0 -44 120 -40" stroke="#D8B98A" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M-120 -20 Q0 -24 120 -20" stroke="#D8B98A" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M-120 0 Q0 -4 120 0" stroke="#D8B98A" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M-120 20 Q0 16 120 20" stroke="#D8B98A" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M-120 40 Q0 36 120 40" stroke="#D8B98A" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M-120 60 Q0 56 120 60" stroke="#D8B98A" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M-120 80 Q0 76 120 80" stroke="#D8B98A" stroke-width="9" fill="none" stroke-linecap="round"/></g>
+        <text class="f06-cap" x="0" y="215" text-anchor="middle" fill="#3DD9A4">SAUDÁVEL: alinhado</text></g></g>
+      <g id="f06-z2" opacity="0"><g transform="translate(1480,330)">
+        <circle r="170" fill="#fff" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><clipPath id="f06-c2"><circle r="160"/></clipPath><g clip-path="url(#f06-c2)" id="f06-messg"><path id="f06-mess" d="M-90 -40 Q29.116816632449627 -54.19850707054138 10.995919704437256 116.90205574035645 Q51.65562629699707 7.884793281555176 96.17232322692871 99.67838287353516 Q-127.63209342956543 134.29074615240097 -75.49520492553711 -73.59488725662231 Q147.82803654670715 -119.06079053878784 -30.14323890209198 -112.7391529083252 Q-128.4019511193037 46.89474865794182 110.24350881576538 74.29890632629395 Q72.36710786819458 -117.79750227928162 30.71085512638092 -0.9699440002441406 Q-88.83039951324463 105.92612832784653 -112.08259344100952 72.65582799911499 Q-106.09674453735352 -127.65451580286026 56.28695748746395 57.3090934753418 Q108.96384716033936 85.75753927230835 87.32149600982666 58.20173263549805 Q-139.14062976837158 -43.467420637607574 -90.92878103256226 38.12511205673218 Q-35.07671356201172 -54.15882110595703 75.4483413696289 -44.9066162109375 Q112.33463287353516 15.683326721191406 -77.85350799560547 -9.118645191192627 Q22.217953205108643 -22.917855978012085 -52.43253946304321 81.66386604309082 Q30.2374005317688 -39.61827635765076 56.536386013031006 20.848588943481445 Q-30.160510540008545 19.90719437599182 -68.28680276870728 -99.30017709732056 Q27.385371923446655 6.768050193786621 -11.776762008666992 -49.19940948486328 Q-14.428567886352539 -113.4951639175415 70.50870716571808 -71.43496513366699 Q-113.80451023578644 94.54756200313568 27.00580596923828 28.216552734375 Q129.66327667236328 -67.85327911376953 -5.087547302246094 -25.5560302734375 Q39.476966857910156 48.658790588378906 -69.77611541748047 -73.90868425369263 Q35.200148820877075 -134.9024748802185 -56.38063217513263 66.46626949310303 Q79.89871501922607 -18.33465814590454 -34.539122581481934 2.226848602294922 Q-73.82404804229736 -56.05724573135376 89.30662631988525 -52.14174270629883 Q28.4163236618042 -119.10881280899048 97.67264664173126 44.90767478942871 Q-15.452349185943604 -87.97535061836243 85.14368116855621 -50.840606689453125 Q-83.57391357421875 -12.114993631839752 71.44073247909546 -32.63079643249512 Q-149.68575239181519 -21.295391307212412 -101.83123707771301 117.72547960281372 Q-66.69645309448242 20.531644821166992 24.155559539794922 95.69572448730469 Q66.3273811340332 128.0994701385498 -63.2536506652832 -65.57807922363281 Q-1.3689905405044556 -28.535174131393433 74.41706418991089 1.580057144165039" stroke="#D8B98A" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M-90 -40 Q29.116816632449627 -54.19850707054138 10.995919704437256 116.90205574035645 Q51.65562629699707 7.884793281555176 96.17232322692871 99.67838287353516 Q-127.63209342956543 134.29074615240097 -75.49520492553711 -73.59488725662231 Q147.82803654670715 -119.06079053878784 -30.14323890209198 -112.7391529083252 Q-128.4019511193037 46.89474865794182 110.24350881576538 74.29890632629395 Q72.36710786819458 -117.79750227928162 30.71085512638092 -0.9699440002441406 Q-88.83039951324463 105.92612832784653 -112.08259344100952 72.65582799911499 Q-106.09674453735352 -127.65451580286026 56.28695748746395 57.3090934753418 Q108.96384716033936 85.75753927230835 87.32149600982666 58.20173263549805 Q-139.14062976837158 -43.467420637607574 -90.92878103256226 38.12511205673218 Q-35.07671356201172 -54.15882110595703 75.4483413696289 -44.9066162109375 Q112.33463287353516 15.683326721191406 -77.85350799560547 -9.118645191192627 Q22.217953205108643 -22.917855978012085 -52.43253946304321 81.66386604309082 Q30.2374005317688 -39.61827635765076 56.536386013031006 20.848588943481445 Q-30.160510540008545 19.90719437599182 -68.28680276870728 -99.30017709732056 Q27.385371923446655 6.768050193786621 -11.776762008666992 -49.19940948486328 Q-14.428567886352539 -113.4951639175415 70.50870716571808 -71.43496513366699 Q-113.80451023578644 94.54756200313568 27.00580596923828 28.216552734375 Q129.66327667236328 -67.85327911376953 -5.087547302246094 -25.5560302734375 Q39.476966857910156 48.658790588378906 -69.77611541748047 -73.90868425369263 Q35.200148820877075 -134.9024748802185 -56.38063217513263 66.46626949310303 Q79.89871501922607 -18.33465814590454 -34.539122581481934 2.226848602294922 Q-73.82404804229736 -56.05724573135376 89.30662631988525 -52.14174270629883 Q28.4163236618042 -119.10881280899048 97.67264664173126 44.90767478942871 Q-15.452349185943604 -87.97535061836243 85.14368116855621 -50.840606689453125 Q-83.57391357421875 -12.114993631839752 71.44073247909546 -32.63079643249512 Q-149.68575239181519 -21.295391307212412 -101.83123707771301 117.72547960281372 Q-66.69645309448242 20.531644821166992 24.155559539794922 95.69572448730469 Q66.3273811340332 128.0994701385498 -63.2536506652832 -65.57807922363281 Q-1.3689905405044556 -28.535174131393433 74.41706418991089 1.580057144165039" stroke="#FF5A4E" stroke-width="2.5" fill="none" opacity="0.5"/></g>
+        <text class="f06-cap" x="0" y="215" text-anchor="middle" fill="#FF5A4E">TENDINOPATIA: novelo</text></g></g>
+      <g id="f06-m-wrap" opacity="0"><g transform="translate(1760,860) scale(0.75)"><g id="f06m-root">
+    <rect x="-56" y="-40" width="112" height="40" rx="14" fill="#C9B48E" stroke="#013E4C" stroke-width="7"/>
+    <g id="f06m-coil"><path d="M0 -40 L46 -60 L-46 -84 L46 -108 L-46 -132 L46 -156 L-46 -180 L46 -204 L-46 -228 L0 -250" fill="none" stroke="#013E4C" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -40 L46 -60 L-46 -84 L46 -108 L-46 -132 L46 -156 L-46 -180 L46 -204 L-46 -228 L0 -250" fill="none" stroke="#F2E8D8" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="f06m-top">
+      <g transform="translate(-64,-280)"><g id="f06m-armB"><line x1="0" y1="0" x2="0" y2="44" stroke="#013E4C" stroke-width="26" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="44" stroke="#F2E8D8" stroke-width="12" stroke-linecap="round"/><circle cx="0" cy="48" r="11" fill="#F2E8D8" stroke="#013E4C" stroke-width="5"/></g></g>
+      <g transform="translate(64,-280)"><g id="f06m-armF"><line x1="0" y1="0" x2="0" y2="44" stroke="#013E4C" stroke-width="26" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="44" stroke="#F2E8D8" stroke-width="12" stroke-linecap="round"/><circle cx="0" cy="48" r="11" fill="#F2E8D8" stroke="#013E4C" stroke-width="5"/></g></g>
+      <ellipse cx="0" cy="-292" rx="70" ry="54" fill="#F2E8D8" stroke="#013E4C" stroke-width="7"/>
+      <path d="M-40 -330 L40 -330 M-46 -312 L46 -312" stroke="#D8CBB4" stroke-width="3"/>
+      <g id="f06m-eyes">
+    <g id="f06m-e-normal"><ellipse cx="-22" cy="-300" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-19" cy="-299" r="5.5" fill="#013E4C"/><ellipse cx="22" cy="-300" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="25" cy="-299" r="5.5" fill="#013E4C"/></g>
+    <g id="f06m-e-wide" opacity="0"><ellipse cx="-22" cy="-302" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-20" cy="-302" r="4" fill="#013E4C"/><ellipse cx="22" cy="-302" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="24" cy="-302" r="4" fill="#013E4C"/></g>
+    <g id="f06m-e-pain" opacity="0"><path d="M-31 -308 L-15 -300 L-31 -292" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M31 -308 L15 -300 L31 -292" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f06m-e-happy" opacity="0"><path d="M-31 -297 Q-22 -311 -13 -297" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M13 -297 Q22 -311 31 -297" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f06m-e-closed" opacity="0"><path d="M-31 -298 Q-22 -292 -13 -298" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M13 -298 Q22 -292 31 -298" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+      <g id="f06m-mouths">
+    <g id="f06m-m-smile"><path d="M-14 -271 Q0 -258 14 -272" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f06m-m-open" opacity="0"><path d="M-13 -273 Q0 -270 13 -274 Q10 -254 0 -254 Q-11 -255 -13 -273Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-6 -258 Q0 -263 6 -258" fill="#FF5A4E" /></g>
+    <g id="f06m-m-scream" opacity="0"><ellipse cx="0" cy="-262" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="0" cy="-251" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f06m-m-frown" opacity="0"><path d="M-13 -262 Q0 -274 13 -262" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f06m-m-flat" opacity="0"><path d="M-11 -266 L11 -267" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f06m-m-grin" opacity="0"><path d="M-16 -273 Q0 -269 16 -274 Q12 -252 0 -252 Q-13 -253 -16 -273Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+    </g>
+  </g>
+        <g id="f06-hair" opacity="0"><path d="M-60 -335 Q75.47904849052429 -407.3005962371826 0.6020843982696533 -380.75602412223816 Q-18.775349855422974 -391.745023727417 58.297187089920044 -358.114937543869 Q-27.59914517402649 -404.52685356140137 59.792643785476685 -378.7096297740936 Q-54.337064027786255 -364.66952562332153 -23.89894723892212 -337.46654748916626 Q-61.84012621641159 -397.9254674911499 47.31802940368652 -346.7757320404053 Q8.916373550891876 -367.8352642059326 -47.1563994884491 -365.06236106157303 Q24.27771806716919 -418.3807563781738 61.77424192428589 -347.2561573982239 Q30.803558826446533 -354.5242500305176 48.50310534238815 -351.72237515449524 Q-31.976956129074097 -400.46895027160645 -58.378010988235474 -377.235167324543 Q-24.618220329284668 -367.0547866821289 16.78626537322998 -358.6585855484009 Q9.510960578918457 -419.5560073852539 -7.5736284255981445 -384.129319190979 Q-72.36327648162842 -391.7642617225647 22.538548707962036 -343.1373393535614 Q18.338712751865387 -406.3460350036621 12.83479928970337 -337.56789922714233 Q67.23694115877151 -383.0580234527588 -9.96127724647522 -376.28127694129944" stroke="#8B6B3A" stroke-width="10" fill="none" stroke-linecap="round"/></g></g></g>
+    </svg>
+    <div id="f06-old" class="abs card" style="opacity:0"><div class="w title">TENDINITE</div><div class="s label">"-ite" = inflamação</div></div>
+    <div id="f06-x" class="abs" style="opacity:0"></div>
+    <div id="f06-sel" class="abs card label" style="opacity:0">mudança na <b>estrutura</b> do tendão</div>
+    <div id="f06-new" class="abs title" style="opacity:0"><small>o nome certo é</small>TENDINOPATIA</div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":18.65,"lines":[{"who":"pablo","start":0.6,"end":15.235},{"who":"molao","start":15.635,"end":17.846}],"ant":0.832,"tite":2.152,"infl":4.162,"hoje":4.922,"estr":7.542,"fib":8.942,"des":9.942,"nov":11.642,"nome":14.002,"pat":14.922,"m0":15.635,"m1":17.846,"infla":16.342,"bag":17.832};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        R.pop(tl, "#f06-old", K.ant - 0.1, 0.45);
+        R.pop(tl, "#f06-fire", K.infl - 0.1, 0.35);
+        tl.to("#f06-fire", { y: -10, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, K.infl + 0.3);
+        // Hoje: risca
+        tl.set("#f06-x", { opacity: 1 }, K.hoje);
+        tl.fromTo("#f06-x", { scaleX: 0 }, { scaleX: 1, duration: 0.35, ease: "power2.out" }, K.hoje);
+        tl.to("#f06-old, #f06-fire", { opacity: 0.4, duration: 0.3 }, K.hoje + 0.3);
+        R.pop(tl, "#f06-sel", K.estr - 0.1, 0.4);
+        // fibras: saudável × bagunçado
+        R.pop(tl, "#f06-z1", K.fib - 0.1, 0.45);
+        R.pop(tl, "#f06-z2", K.des - 0.1, 0.45);
+        R.draw(tl, "#f06-mess", K.des, 1.6, "power1.inOut");
+        tl.to("#f06-messg", { rotation: 8, transformOrigin: "50% 50%", duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, K.nov);
+        // nome certo
+        tl.fromTo("#f06-new", { scale: 2, opacity: 0, rotation: -12 }, { scale: 1, opacity: 1, rotation: -3, duration: 0.3, ease: "power4.in" }, K.pat - 0.25);
+        R.shake(tl, "#f06-new", K.pat + 0.1, 0.25, 5);
+        R.fadeOut(tl, "#f06-sel", K.pat - 0.3);
+        // Molão bagunçado
+        tl.set("#f06-m-wrap", { opacity: 1 }, K.m0 - 0.7);
+        tl.fromTo("#f06-m-wrap", { y: 500 }, { y: 0, duration: 0.45, ease: "back.out(1.5)" }, K.m0 - 0.7);
+        R.face(tl, "f06m", 0, { eyes: "wide", mouth: "flat" });
+        R.pose(tl, "f06m", K.m0, 0.3, { armF: -140, armB: 140 }, "back.out(2)");
+        R.face(tl, "f06m", K.infla, { eyes: "normal" });
+        tl.set("#f06-hair", { opacity: 1 }, K.bag - 0.1);
+        tl.fromTo("#f06-hair", { scale: 0.3, svgOrigin: "1760 580" }, { scale: 1, svgOrigin: "1760 580", duration: 0.3, ease: "back.out(3)" }, K.bag - 0.1);
+        R.face(tl, "f06m", K.bag, { eyes: "pain", mouth: "grin" });
+        tl.to("#f06-m-wrap", { rotation: 4, svgOrigin: "1760 860", duration: 0.12, yoyo: true, repeat: 5 }, K.bag);
+      })(tl, K, R);
+      K.lines.filter(l=>l.who==="molao").forEach(l=>R.talk(tl,"f06m",l.start,l.end));
+      tl.set({}, {}, K.dur);
+      window.__timelines["f06"] = tl;
+    })();
+  </script>
+</template>

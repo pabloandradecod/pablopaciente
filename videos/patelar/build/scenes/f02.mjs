@@ -39,7 +39,7 @@ export default {
       <g id="f02-cinema" opacity="0">
         <rect width="1920" height="1080" fill="#1E1A2E"/>
         <rect x="360" y="90" width="1200" height="420" rx="12" fill="#CFE8FF" ${st}/>
-        <g opacity="0.8"><line x1="960" y1="200" x2="960" y2="500" stroke="${C.ink}" stroke-width="8"/><circle cx="820" cy="220" r="30" fill="#fff" ${st}/><text x="960" y="160" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="40" fill="${C.ink}">VÔLEI: A FINAL</text></g>
+        <g id="f02-scr" opacity="0.8"><line x1="960" y1="200" x2="960" y2="500" stroke="${C.ink}" stroke-width="8"/><circle cx="820" cy="220" r="30" fill="#fff" ${st}/><text x="960" y="160" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="40" fill="${C.ink}">VÔLEI: A FINAL</text></g>
         ${[0, 1, 2, 3, 4].map((i) => `<rect x="${200 + i * 320}" y="720" width="260" height="200" rx="40" fill="#8E2F45" ${st}/>`).join("")}
         <rect y="900" width="1920" height="180" fill="#2A2440"/>
       </g>
@@ -142,6 +142,7 @@ export default {
         R.shake(tl, "#f02-m-wrap", K.m0, K.m1 - K.m0, 3);
         tl.to("#f02-bubble", { scale: 0, opacity: 0, svgOrigin: "1460 500", duration: 0.3, ease: "back.in(2)" }, K.m1 + 0.1);
         // só cansaço?
+        tl.to("#f02-scr", { opacity: 0, duration: 0.3 }, K.cans - 0.6);
         R.drop(tl, "#f02-q", K.cans - 0.5, 0.8, -300);
         R.face(tl, j, K.cans, { eyes: "wide", mouth: "flat" });
         R.pose(tl, j, K.cans, 0.4, { torso: 0, shF: -150, elF: -40 }, "back.out(2)");

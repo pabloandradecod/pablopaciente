@@ -1,0 +1,299 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #FFF6E9; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #f19-head { left:110px; top:60px; font-size:66px; }
+        #f19-head span { color:#1E9C72; }
+        #root .f19-ex { top:170px; width:190px; padding:10px 12px; text-align:center; font-size:24px; }
+        #f19-card { left:1330px; top:150px; width:520px; padding:24px 30px; }
+        #f19-card .t { font-size:38px; }
+        #f19-card .row { font-size:28px; margin-top:12px; display:flex; align-items:center; gap:14px; line-height:1.15; }
+        #f19-card .dot { width:22px; height:22px; border-radius:50%; background:#3DD9A4; border:5px solid #013E4C; flex:none; }
+        #f19-stop { left:1330px; top:700px; width:520px; padding:14px 20px; font-size:23px; white-space:nowrap; background:#3DD9A4; color:#013E4C; text-align:center; }
+        #f19-stop b { font-size:30px; display:block; }
+        #f19-tempo { left:110px; top:180px; width:250px; padding:14px; text-align:center; }
+        #f19-tempo .n { font-size:46px; }
+        #f19-load { left:900px; top:380px; width:400px; padding:14px 18px; }
+        #f19-load .l { font-size:24px; }
+        #f19-fib { left:900px; top:630px; width:400px; padding:12px 18px; display:flex; align-items:center; gap:14px; font-size:24px; }
+        #f19-count { left:720px; top:470px; width:110px; height:110px; border-radius:50%; background:#FFC94A; border:7px solid #013E4C; font-size:64px; display:flex; align-items:center; justify-content:center; }
+      
+  </style>
+  <div id="root" data-composition-id="f19" data-width="1920" data-height="1080">
+
+    <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <rect width="1920" height="830" fill="#E7F3F1"/>
+      <rect y="830" width="1920" height="250" fill="#CFE3DF"/><line x1="0" y1="830" x2="1920" y2="830" stroke="#013E4C" stroke-width="7"/>
+      <!-- metrônomo -->
+      <g id="f19-metro" opacity="0">
+        <path d="M170 820 L300 820 L262 600 L208 600 Z" fill="#8B5A2B" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+        <g id="f19-pend"><line x1="235" y1="800" x2="235" y2="610" stroke="#013E4C" stroke-width="8"/><rect x="221" y="660" width="28" height="22" rx="4" fill="#FFC94A" stroke="#013E4C" stroke-width="4"/></g>
+      </g>
+      <g id="f19-j-wrap"><g transform="translate(560,640) scale(1.25)"><g id="f19j-root">
+    <g opacity="1" style="filter: brightness(0.86)"><g transform="translate(-8,0)"><g id="f19j-hipB">
+    <line x1="0" y1="0" x2="0" y2="88" stroke="#013E4C" stroke-width="46" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="88" stroke="#1F3550" stroke-width="32" stroke-linecap="round"/>
+    <g transform="translate(0,88)"><g id="f19j-knB">
+      <line x1="0" y1="0" x2="0" y2="86" stroke="#013E4C" stroke-width="42" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="86" stroke="#C98A5E" stroke-width="28" stroke-linecap="round"/>
+      <g transform="translate(0,90)"><g id="f19j-anB">
+        <path d="M-18 -6 Q-20 14 -8 16 L44 16 Q56 14 52 2 Q46 -10 20 -10 L-8 -14 Q-18 -14 -18 -6Z" fill="#F4F4F4" stroke="#013E4C" stroke-width="6" stroke-linejoin="round"/>
+      </g></g>
+    </g></g>
+  </g></g></g>
+    <g id="f19j-torso">
+      <g opacity="1" style="filter: brightness(0.86)"><g transform="translate(4,-138)"><g id="f19j-shB">
+    <line x1="0" y1="0" x2="0" y2="68" stroke="#013E4C" stroke-width="40" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="68" stroke="#FF8A3D" stroke-width="26" stroke-linecap="round"/>
+    <g transform="translate(0,68)"><g id="f19j-elB">
+      <line x1="0" y1="0" x2="0" y2="62" stroke="#013E4C" stroke-width="36" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="62" stroke="#C98A5E" stroke-width="22" stroke-linecap="round"/>
+      <g transform="translate(0,66)"><g id="f19j-handB"><circle cx="0" cy="0" r="16" fill="#C98A5E" stroke="#013E4C" stroke-width="6"/><path d="M6 -10 Q16 -14 18 -4" fill="none" stroke="#013E4C" stroke-width="4" stroke-linecap="round"/></g></g>
+    </g></g>
+  </g></g></g>
+      <path d="M-44 8 Q-50 -80 -40 -150 Q0 -168 42 -150 Q52 -80 48 8 Z" fill="#FF8A3D" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M-6 -152 L12 -134 L30 -152" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round"/>
+      <text x="4" y="-60" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="64" fill="#fff" stroke="#013E4C" stroke-width="3">7</text>
+      <rect x="-46" y="-8" width="96" height="18" rx="6" fill="#1F3550" stroke="#013E4C" stroke-width="4"/>
+      <g transform="translate(4,-150)"><g id="f19j-neck"><g id="f19j-head">
+    <rect x="-8" y="-22" width="26" height="30" rx="8" fill="#C98A5E" stroke="#013E4C" stroke-width="7"/>
+    <circle cx="6" cy="-75" r="58" fill="#C98A5E" stroke="#013E4C" stroke-width="7"/>
+    <path d="M-54 -84 L-62 -112 L-40 -108 L-44 -140 L-20 -124 L-10 -150 L8 -128 L24 -150 L32 -124 L56 -138 L50 -108 L66 -98 Q40 -116 10 -110 Q-24 -114 -40 -92 Q-46 -80 -50 -66 Z" fill="#1E1A1A" stroke="#013E4C" stroke-width="5" stroke-linejoin="round"/>
+    <ellipse cx="-42" cy="-70" rx="11" ry="15" fill="#C98A5E" stroke="#013E4C" stroke-width="7"/>
+    <path d="M60 -70 Q74 -62 64 -52" fill="#C98A5E" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/>
+    <g id="f19j-eyes">
+    <g id="f19j-e-normal"><ellipse cx="14" cy="-82" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="17" cy="-81" r="5.5" fill="#013E4C"/><ellipse cx="44" cy="-82" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="47" cy="-81" r="5.5" fill="#013E4C"/></g>
+    <g id="f19j-e-wide" opacity="0"><ellipse cx="14" cy="-84" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="16" cy="-84" r="4" fill="#013E4C"/><ellipse cx="44" cy="-84" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="46" cy="-84" r="4" fill="#013E4C"/></g>
+    <g id="f19j-e-pain" opacity="0"><path d="M5 -90 L21 -82 L5 -74" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M53 -90 L37 -82 L53 -74" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f19j-e-happy" opacity="0"><path d="M5 -79 Q14 -93 23 -79" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M35 -79 Q44 -93 53 -79" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f19j-e-closed" opacity="0"><path d="M5 -80 Q14 -74 23 -80" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M35 -80 Q44 -74 53 -80" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+    <path d="M2 -102 L24 -104 M36 -104 L56 -100" stroke="#013E4C" stroke-width="6" stroke-linecap="round"/>
+    <rect x="-56" y="-118" width="122" height="14" rx="6" fill="#fff" stroke="#013E4C" stroke-width="4"/>
+    <g id="f19j-mouths">
+    <g id="f19j-m-smile"><path d="M20 -41 Q34 -28 48 -42" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f19j-m-open" opacity="0"><path d="M21 -43 Q34 -40 47 -44 Q44 -24 34 -24 Q23 -25 21 -43Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 -28 Q34 -33 40 -28" fill="#FF5A4E" /></g>
+    <g id="f19j-m-scream" opacity="0"><ellipse cx="34" cy="-32" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="34" cy="-21" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f19j-m-frown" opacity="0"><path d="M21 -32 Q34 -44 47 -32" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f19j-m-flat" opacity="0"><path d="M23 -36 L45 -37" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f19j-m-grin" opacity="0"><path d="M18 -43 Q34 -39 50 -44 Q46 -22 34 -22 Q21 -23 18 -43Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+  </g></g></g>
+      <g transform="translate(4,-138)"><g id="f19j-shF">
+    <line x1="0" y1="0" x2="0" y2="68" stroke="#013E4C" stroke-width="40" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="68" stroke="#FF8A3D" stroke-width="26" stroke-linecap="round"/>
+    <g transform="translate(0,68)"><g id="f19j-elF">
+      <line x1="0" y1="0" x2="0" y2="62" stroke="#013E4C" stroke-width="36" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="62" stroke="#C98A5E" stroke-width="22" stroke-linecap="round"/>
+      <g transform="translate(0,66)"><g id="f19j-handF"><circle cx="0" cy="0" r="16" fill="#C98A5E" stroke="#013E4C" stroke-width="6"/><path d="M6 -10 Q16 -14 18 -4" fill="none" stroke="#013E4C" stroke-width="4" stroke-linecap="round"/></g></g>
+    </g></g>
+  </g></g>
+    </g>
+    <g transform="translate(8,0)"><g id="f19j-hipF">
+    <line x1="0" y1="0" x2="0" y2="88" stroke="#013E4C" stroke-width="46" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="88" stroke="#1F3550" stroke-width="32" stroke-linecap="round"/>
+    <g transform="translate(0,88)"><g id="f19j-knF">
+      <line x1="0" y1="0" x2="0" y2="86" stroke="#013E4C" stroke-width="42" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="86" stroke="#C98A5E" stroke-width="28" stroke-linecap="round"/>
+      <g transform="translate(0,90)"><g id="f19j-anF">
+        <path d="M-18 -6 Q-20 14 -8 16 L44 16 Q56 14 52 2 Q46 -10 20 -10 L-8 -14 Q-18 -14 -18 -6Z" fill="#F4F4F4" stroke="#013E4C" stroke-width="6" stroke-linejoin="round"/>
+      </g></g>
+    </g></g>
+  </g></g>
+  </g></g></g>
+      <g id="f19-p-wrap" opacity="0"><g transform="translate(790,820) scale(0.75)"><g id="f19p-root">
+    <g transform="translate(-24,-30)"><line x1="0" y1="0" x2="0" y2="24" stroke="#013E4C" stroke-width="26" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="24" stroke="#F7EEDB" stroke-width="12" stroke-linecap="round"/><ellipse cx="4" cy="28" rx="16" ry="8" fill="#013E4C"/></g><g transform="translate(24,-30)"><line x1="0" y1="0" x2="0" y2="24" stroke="#013E4C" stroke-width="26" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="24" stroke="#F7EEDB" stroke-width="12" stroke-linecap="round"/><ellipse cx="6" cy="28" rx="16" ry="8" fill="#013E4C"/></g>
+    <g id="f19p-body">
+      <g transform="translate(-80,-110)"><g id="f19p-armB"><line x1="0" y1="0" x2="0" y2="40" stroke="#013E4C" stroke-width="26" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="40" stroke="#F7EEDB" stroke-width="12" stroke-linecap="round"/><circle cx="0" cy="44" r="11" fill="#F7EEDB" stroke="#013E4C" stroke-width="5"/></g></g>
+      <g transform="translate(80,-110)"><g id="f19p-armF"><line x1="0" y1="0" x2="0" y2="40" stroke="#013E4C" stroke-width="26" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="40" stroke="#F7EEDB" stroke-width="12" stroke-linecap="round"/><circle cx="0" cy="44" r="11" fill="#F7EEDB" stroke="#013E4C" stroke-width="5"/></g></g>
+      <path d="M0 -200 Q86 -196 86 -120 Q86 -50 0 -30 Q-86 -50 -86 -120 Q-86 -196 0 -200Z" fill="#F7EEDB" stroke="#013E4C" stroke-width="7"/>
+      <path d="M0 -184 Q66 -180 68 -120 Q66 -66 0 -48 Q-66 -66 -68 -120 Q-66 -180 0 -184Z" fill="none" stroke="#D8CBB4" stroke-width="5"/>
+      <path d="M-40 -150 L-12 -140 M40 -150 L12 -140" stroke="#013E4C" stroke-width="7" stroke-linecap="round"/>
+      <g id="f19p-eyes">
+    <g id="f19p-e-normal"><ellipse cx="-22" cy="-126" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-19" cy="-125" r="5.5" fill="#013E4C"/><ellipse cx="22" cy="-126" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="25" cy="-125" r="5.5" fill="#013E4C"/></g>
+    <g id="f19p-e-wide" opacity="0"><ellipse cx="-22" cy="-128" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-20" cy="-128" r="4" fill="#013E4C"/><ellipse cx="22" cy="-128" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="24" cy="-128" r="4" fill="#013E4C"/></g>
+    <g id="f19p-e-pain" opacity="0"><path d="M-31 -134 L-15 -126 L-31 -118" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M31 -134 L15 -126 L31 -118" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f19p-e-happy" opacity="0"><path d="M-31 -123 Q-22 -137 -13 -123" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M13 -123 Q22 -137 31 -123" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f19p-e-closed" opacity="0"><path d="M-31 -124 Q-22 -118 -13 -124" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M13 -124 Q22 -118 31 -124" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+      <g id="f19p-mouths">
+    <g id="f19p-m-smile"><path d="M-14 -93 Q0 -80 14 -94" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f19p-m-open" opacity="0"><path d="M-13 -95 Q0 -92 13 -96 Q10 -76 0 -76 Q-11 -77 -13 -95Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-6 -80 Q0 -85 6 -80" fill="#FF5A4E" /></g>
+    <g id="f19p-m-scream" opacity="0"><ellipse cx="0" cy="-84" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="0" cy="-73" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f19p-m-frown" opacity="0"><path d="M-13 -84 Q0 -96 13 -84" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f19p-m-flat" opacity="0"><path d="M-11 -88 L11 -89" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f19p-m-grin" opacity="0"><path d="M-16 -95 Q0 -91 16 -96 Q12 -74 0 -74 Q-13 -75 -16 -95Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+    </g>
+  </g></g></g>
+    </svg>
+    <div id="f19-head" class="abs title">2. <span>FORÇA LENTA E PESADA</span></div>
+    <div id="f19-e0" class="abs card f19-ex" style="left:700px;opacity:0"><svg width="150" height="110" viewBox="0 0 150 110"><rect x="10" y="80" width="130" height="16" rx="6" fill="#8E9AA0" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><path d="M30 80 L60 30 L120 30" fill="none" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" stroke="#5E6B73" stroke-width="10"/><rect x="100" y="14" width="40" height="40" rx="6" fill="#FF5A4E" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="label">Leg press</div></div>
+    <div id="f19-e1" class="abs card f19-ex" style="left:910px;opacity:0"><svg width="150" height="110" viewBox="0 0 150 110"><rect x="20" y="40" width="70" height="20" rx="6" fill="#8E9AA0" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><rect x="20" y="10" width="20" height="50" rx="6" fill="#8E9AA0" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><path d="M90 60 L130 40" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" stroke="#5E6B73" stroke-width="10"/><circle cx="130" cy="40" r="12" fill="#FF5A4E" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><line x1="40" y1="60" x2="40" y2="100" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><line x1="80" y1="60" x2="80" y2="100" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/></svg><div class="label">Extensora</div></div>
+    <div id="f19-e2" class="abs card f19-ex" style="left:1120px;opacity:0"><svg width="150" height="110" viewBox="0 0 150 110"><line x1="20" y1="30" x2="130" y2="30" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" stroke-width="8"/><rect x="8" y="14" width="18" height="34" rx="4" fill="#FF5A4E" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><rect x="124" y="14" width="18" height="34" rx="4" fill="#FF5A4E" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="75" cy="56" r="14" fill="#C98A5E" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><path d="M75 70 L75 90 L60 104 M75 90 L92 104" stroke="#013E4C" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" fill="none"/></svg><div class="label">Agachamento</div></div>
+    <div id="f19-tempo" class="abs card" style="opacity:0"><div class="n title"><span style="color:#1E9C72">3s</span> ↑</div><div class="n title"><span style="color:#FF5A4E">3s</span> ↓</div></div>
+    <div id="f19-count" class="abs title" style="opacity:0"><span id="f19-c0" style="position:absolute;opacity:0">3</span><span id="f19-c1" style="position:absolute;opacity:0">2</span><span id="f19-c2" style="position:absolute;opacity:0">1</span></div>
+    <div id="f19-load" class="abs card" style="opacity:0"><div class="l label">CARGA NAS SEMANAS</div>
+      <svg width="360" height="150" viewBox="0 0 360 150"><line x1="10" y1="140" x2="350" y2="140" stroke="#013E4C" stroke-width="5"/><rect id="f19-l0" x="20" y="120" width="40" height="16" rx="6" fill="#FFC94A" stroke="#013E4C" stroke-width="4"/><rect id="f19-l1" x="75" y="108" width="40" height="28" rx="6" fill="#FFC94A" stroke="#013E4C" stroke-width="4"/><rect id="f19-l2" x="130" y="96" width="40" height="40" rx="6" fill="#FFC94A" stroke="#013E4C" stroke-width="4"/><rect id="f19-l3" x="185" y="84" width="40" height="52" rx="6" fill="#FFC94A" stroke="#013E4C" stroke-width="4"/><rect id="f19-l4" x="240" y="72" width="40" height="64" rx="6" fill="#FFC94A" stroke="#013E4C" stroke-width="4"/><rect id="f19-l5" x="295" y="60" width="40" height="76" rx="6" fill="#FFC94A" stroke="#013E4C" stroke-width="4"/></svg></div>
+    <div id="f19-fib" class="abs card label" style="opacity:0">
+      <svg width="150" height="70" viewBox="0 0 150 70">
+        <g id="f19-mess"><path d="M10 35 Q30 5 50 35 T90 35 Q110 60 130 20 M15 50 Q40 20 70 50 T130 45 M20 20 Q50 60 80 20 T140 30" fill="none" stroke="#FF5A4E" stroke-width="5"/></g>
+        <g id="f19-neat" opacity="0"><path d="M10 18 L140 18 M10 35 L140 35 M10 52 L140 52" stroke="#1E9C72" stroke-width="6" stroke-linecap="round"/></g>
+      </svg><span>o tendão se <b style="color:#1E9C72">reorganiza</b></span></div>
+    <div id="f19-card" class="abs card" style="opacity:0">
+      <div class="t title">Força lenta e pesada</div>
+      <div class="row label"><span class="dot"></span>Leg press, extensora ou agachamento</div>
+      <div class="row label"><span class="dot"></span>3 s pra subir · 3 s pra descer</div>
+      <div class="row label"><span class="dot"></span>3 a 4 séries</div>
+      <div class="row label"><span class="dot"></span>Carga sobe aos poucos, semana a semana</div>
+    </div>
+    <div id="f19-stop" class="abs card label">Dor até 3/10 e normal no dia seguinte:<b>OK</b></div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":17.54,"lines":[{"who":"pablo","start":0.6,"end":13.379},{"who":"patelito","start":13.779,"end":16.34}],"deg":0.789,"forca":1.169,"lenta":1.389,"pes":2.139,"leg":2.209,"cad":3.089,"aga":4.879,"tres":4.949,"sub":6.719,"desc":7.579,"carga":8.369,"aum":8.699,"sem":11.409,"reo":13.389,"p0":13.779,"p1":16.34};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        const j = "f19j";
+        R.setPose(tl, j, 0, { shF: -80, elF: -100, shB: -80, elB: -100 });
+        R.face(tl, j, 0, { eyes: "normal", mouth: "smile" });
+        R.blinks(tl, j, 0.4, K.dur);
+        R.pop(tl, "#f19-card", K.forca - 0.2, 0.45, 0.6);
+        // exercícios entram na fala
+        R.pop(tl, "#f19-e0", K.leg - 0.1, 0.35);
+        R.pop(tl, "#f19-e1", K.cad - 0.1, 0.35);
+        R.pop(tl, "#f19-e2", K.aga - 0.1, 0.35);
+        // metrônomo + tempo 3s/3s
+        tl.set("#f19-metro", { opacity: 1 }, K.lenta - 0.2);
+        tl.fromTo("#f19-metro", { y: 200 }, { y: 0, duration: 0.4, ease: "back.out(1.6)" }, K.lenta - 0.2);
+        tl.fromTo("#f19-pend", { rotation: -22 }, { rotation: 22, svgOrigin: "235 800", duration: 0.75, yoyo: true, repeat: Math.max(3, Math.floor((K.dur - K.lenta) / 0.75) - 1), ease: "sine.inOut" }, K.lenta);
+        R.pop(tl, "#f19-tempo", K.tres - 0.2, 0.4);
+        // agachamento lento: desce 3 s, sobe 3 s (2 reps)
+        let t = K.pes;
+        for (let i = 0; i < 2; i++) {
+          R.pose(tl, j, t, 2.4, { hipF: -80, knF: 90, hipB: -80, knB: 90, torso: 30, neck: -15 }, "sine.inOut");
+          tl.to("#f19-j-wrap", { y: 70, duration: 2.4, ease: "sine.inOut" }, t);
+          R.pose(tl, j, t + 2.6, 2.4, { hipF: 0, knF: 0, hipB: 0, knB: 0, torso: 0, neck: 0 }, "sine.inOut");
+          tl.to("#f19-j-wrap", { y: 0, duration: 2.4, ease: "sine.inOut" }, t + 2.6);
+          t += 5.2;
+        }
+        R.face(tl, j, K.pes + 1, { eyes: "normal", mouth: "flat" });
+        // carga semana a semana
+        R.pop(tl, "#f19-load", K.carga - 0.2, 0.4);
+        for (let i = 0; i < 6; i++) tl.fromTo(`#f19-l${i}`, { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power2.out" }, K.aum + i * 0.12);
+        // tendão se reorganiza
+        R.pop(tl, "#f19-fib", K.reo - 0.6, 0.4);
+        tl.to("#f19-mess", { opacity: 0, duration: 0.35 }, K.reo);
+        tl.to("#f19-neat", { opacity: 1, duration: 0.35 }, K.reo);
+        // Patelito conta 3, 2, 1... sobe! 3, 2, 1... desce!
+        tl.set("#f19-p-wrap", { opacity: 1 }, K.p0 - 0.4);
+        tl.fromTo("#f19-p-wrap", { y: 300 }, { y: 0, duration: 0.35, ease: "back.out(1.6)" }, K.p0 - 0.4);
+        R.face(tl, "f19p", 0, { eyes: "normal", mouth: "smile" });
+        R.setPose(tl, "f19p", 0, { armF: -150, armB: 20 });
+        R.pop(tl, "#f19-count", K.p0 - 0.1, 0.3);
+        const half = (K.p1 - K.p0) / 2;
+        for (let r = 0; r < 2; r++) for (let i = 0; i < 3; i++) {
+          const tt = K.p0 + r * half + (i * half) / 4;
+          tl.set("#f19-c0, #f19-c1, #f19-c2", { opacity: 0 }, tt);
+          tl.set(`#f19-c${i}`, { opacity: 1 }, tt);
+        }
+        tl.to("#f19-count", { opacity: 0, duration: 0.2 }, K.p1);
+        R.face(tl, "f19p", K.p1, { eyes: "happy" });
+      })(tl, K, R);
+      K.lines.filter(l=>l.who==="patelito").forEach(l=>R.talk(tl,"f19p",l.start,l.end));
+      tl.set({}, {}, K.dur);
+      window.__timelines["f19"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,178 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #F7DCD6; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #root .f14-sign { width:250px; height:210px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:10px; background:#fff; border:6px solid #D64534; border-radius:22px; box-shadow:8px 8px 0 #013E4C; }
+        #f14-ce { left:500px; top:66px; font-size:36px; color:#D64534; }
+        #f14-big { left:500px; top:112px; width:1330px; height:240px; display:flex; align-items:center; gap:30px; padding:16px 30px; background:#fff; border:8px solid #D64534; border-radius:26px; box-shadow:10px 10px 0 #013E4C; }
+        #f14-big .a { font-size:40px; line-height:1.15; }
+        #f14-big .b { font-size:46px; color:#D64534; margin-top:8px; }
+        #f14-big .c { font-size:28px; opacity:0.8; }
+        #f14-em { left:500px; top:680px; width:1330px; height:110px; background:#D64534; color:#fff; border:7px solid #013E4C; border-radius:24px; display:flex; align-items:center; justify-content:center; font-size:52px; box-shadow:8px 8px 0 #013E4C; }
+      
+  </style>
+  <div id="root" data-composition-id="f14" data-width="1920" data-height="1080">
+
+    <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <rect x="20" y="20" width="1880" height="1040" rx="30" fill="none" stroke="#D64534" stroke-width="12" opacity="0.5"/>
+      <g id="f14-stop" opacity="0"><g transform="translate(260,300)"><g id="f14-stop-in">
+        <path d="M175.5 72.7 L72.7 175.5 L-72.7 175.5 L-175.5 72.7 L-175.5 -72.7 L-72.7 -175.5 L72.7 -175.5 L175.5 -72.7 Z" fill="#D64534" stroke="#013E4C" stroke-width="10" stroke-linejoin="round"/>
+        <path d="M153.4 63.5 L63.5 153.4 L-63.5 153.4 L-153.4 63.5 L-153.4 -63.5 L-63.5 -153.4 L63.5 -153.4 L153.4 -63.5 Z" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round"/>
+        <text x="0" y="30" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="96" fill="#fff">PARE</text>
+      </g></g></g>
+      <rect id="f14-pole" opacity="0" x="250" y="480" width="20" height="340" fill="#9AA7AD" stroke="#013E4C" stroke-width="6"/>
+    </svg>
+    <div id="f14-ce" class="abs label" style="opacity:0">SINAIS DE ALERTA</div>
+    <div id="f14-big" class="abs" style="opacity:0">
+      <svg width="230" height="200" viewBox="0 0 230 200" style="flex:none">
+        <line x1="10" y1="186" x2="220" y2="186" stroke="#013E4C" stroke-width="7" stroke-linecap="round"/>
+        <g id="f14-fall"><path d="M80 40 L90 110 L110 180" fill="none" stroke="#C98A5E" stroke-width="22" stroke-linecap="round"/><ellipse cx="96" cy="104" rx="16" ry="20" fill="#D9A070" stroke="#013E4C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g id="f14-bone" opacity="0"><path d="M118 86 L140 70 L132 92 L156 84 L140 108 L164 110 L136 118" fill="#FFC94A" stroke="#D64534" stroke-width="5" stroke-linejoin="round"/><text x="130" y="160" font-family="Montserrat" font-weight="900" font-size="26" fill="#D64534">CRACK!</text></g>
+        <path id="f14-x" opacity="0" d="M20 20 L60 60 M60 20 L20 60" stroke="#D64534" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+      <div><div class="a label">Estalo num salto + <b>não consegue esticar</b> a perna</div>
+        <div id="f14-fr" class="b title" style="opacity:0">pode ser RUPTURA DO TENDÃO</div>
+        <div id="f14-id" class="c label" style="opacity:0">avaliação médica urgente</div></div>
+    </div>
+    <div id="f14-s0" class="abs f14-sign" style="left:500px;top:400px;opacity:0">
+        <svg width="90" height="90" viewBox="-48 -62 96 110"><circle r="26" fill="#FF8A7A" stroke="#013E4C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M-10 -44 Q-2 -52 -10 -60 M6 -44 Q14 -52 6 -60 M22 -40 Q30 -48 22 -56" fill="none" stroke="#D64534" stroke-width="5" stroke-linecap="round"/></svg><div class="label" style="font-size:27px;line-height:1.1;text-align:center">Inchado, quente,<br>vermelho + febre</div></div>
+    <div id="f14-s1" class="abs f14-sign" style="left:770px;top:400px;opacity:0">
+        <svg width="90" height="90" viewBox="-48 -62 96 110"><rect x="-24" y="-6" width="48" height="40" rx="8" fill="#FFC94A" stroke="#013E4C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M-14 -6 L-14 -20 Q-14 -38 0 -38 Q14 -38 14 -20 L14 -6" fill="none" stroke="#013E4C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/></svg><div class="label" style="font-size:27px;line-height:1.1;text-align:center">Travamento<br>verdadeiro</div></div>
+    <div id="f14-s2" class="abs f14-sign" style="left:1040px;top:400px;opacity:0">
+        <svg width="90" height="90" viewBox="-48 -62 96 110"><path d="M12 -34 Q-30 -26 -26 8 Q-20 38 16 34 Q-8 22 -6 -4 Q-4 -24 12 -34Z" fill="#FFC94A" stroke="#013E4C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 -14 L30 -14 M26 -18 L26 -10" stroke="#013E4C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="label" style="font-size:27px;line-height:1.1;text-align:center">Dor forte e<br>constante à noite</div></div>
+    <div id="f14-em" class="abs title" style="opacity:0">AVALIAÇÃO MÉDICA URGENTE!</div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":17.95,"lines":[{"who":"pablo","start":0.6,"end":16.749}],"at":0.637,"inch":1.727,"feb":3.907,"queda":4.557,"apoiar":6.867,"frat":8.557,"av":10.367,"rap":11.457,"trav":12.227,"noi":15.087};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        const t0 = Math.max(0, K.at - 0.3);
+        tl.fromTo("#f14-stop", { x: 700, y: 240, opacity: 1 }, { x: 700, y: 240, opacity: 1, duration: 0.01 }, t0);
+        tl.fromTo("#f14-stop-in", { rotation: -25, scale: 0.5, svgOrigin: "0 0" }, { rotation: 0, scale: 1.5, svgOrigin: "0 0", duration: 0.5, ease: "back.out(1.8)" }, t0);
+        tl.to("#f14-stop", { x: 0, y: 0, duration: 0.6, ease: "power3.inOut" }, K.inch - 0.75);
+        tl.to("#f14-stop-in", { scale: 1, svgOrigin: "0 0", duration: 0.6, ease: "power3.inOut" }, K.inch - 0.75);
+        tl.to("#f14-pole", { opacity: 1, duration: 0.3 }, K.inch - 0.2);
+        R.fadeIn(tl, "#f14-ce", K.inch - 0.2, 0.3);
+        // joelho inchado, quente e vermelho com febre
+        R.pop(tl, "#f14-s0", K.inch - 0.1, 0.4, 0.6);
+        tl.to("#f14-s0", { scale: 1.05, duration: 0.2, yoyo: true, repeat: 1 }, K.feb);
+        // destaque: estalo + não conseguir esticar = ruptura do tendão
+        R.pop(tl, "#f14-big", K.queda - 0.1, 0.45, 0.7);
+        R.pop(tl, "#f14-bone", K.queda, 0.3);
+        R.pop(tl, "#f14-x", K.apoiar, 0.3);
+        R.rise(tl, "#f14-fr", K.frat - 0.1, 0.35, 16);
+        tl.to("#f14-big", { scale: 1.03, duration: 0.2, yoyo: true, repeat: 1, ease: "sine.inOut" }, K.frat + 0.3);
+        R.rise(tl, "#f14-id", K.av - 0.1, 0.35, 12);
+        R.pop(tl, "#f14-em", K.rap - 0.2, 0.4, 0.7);
+        tl.to("#f14-em", { scale: 1.05, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, K.rap + 0.3);
+        // travamento e dor noturna
+        R.pop(tl, "#f14-s1", K.trav - 0.2, 0.4, 0.6);
+        R.pop(tl, "#f14-s2", K.noi - 0.2, 0.4, 0.6);
+        tl.to("#f14-stop-in", { scale: 1.08, svgOrigin: "0 0", duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, K.noi + 0.4);
+      })(tl, K, R);
+      
+      tl.set({}, {}, K.dur);
+      window.__timelines["f14"] = tl;
+    })();
+  </script>
+</template>
