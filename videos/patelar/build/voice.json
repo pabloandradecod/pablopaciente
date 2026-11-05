@@ -1,0 +1,261 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Esse é o Juninho, neto do Seu Zé, o cortador do time de vôlei. Pula, pula, pula... e ultimamente sente uma dor bem embaixo da rótula: aparece no começo do treino, melhora quando esquenta e volta com tudo depois. E até no cinema, depois de duas horas sentado com o joelho dobrado, levantar dói!",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 16.619
+ },
+ {
+  "frame": 2,
+  "who": "ze",
+  "text": "Vai, Juninho! Corta!",
+  "file": "assets/voice/f02-2-ze.wav",
+  "dur": 1.382
+ },
+ {
+  "frame": 2,
+  "who": "molao",
+  "text": "Ei, eu sou mola, não sou trampolim infinito!",
+  "file": "assets/voice/f02-3-molao.wav",
+  "dur": 2.695
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Será que é só cansaço? Bora investigar!",
+  "file": "assets/voice/f02-4-pablo.wav",
+  "dur": 2.603
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Hoje o assunto é a tendinopatia patelar, conhecida como joelho do saltador: o que é, como a gente investiga, os exercícios que realmente funcionam e quanto tempo leva pra melhorar.",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 10.944
+ },
+ {
+  "frame": 3,
+  "who": "vertebra",
+  "text": "Joelheira pronta! Bora pro treino!",
+  "file": "assets/voice/f03-2-vertebra.wav",
+  "dur": 1.941
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "Conheça o tendão patelar, o Molão. Ele liga a ponta de baixo da rótula, o nosso Patelito, até a tíbia. Toda a força do músculo da coxa passa por ele. E nos saltos, ele funciona como uma mola: guarda energia na descida e devolve na subida.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 13.781
+ },
+ {
+  "frame": 5,
+  "who": "patelito",
+  "text": "E eu sou o escudo do joelho, prazer!",
+  "file": "assets/voice/f05-2-patelito.wav",
+  "dur": 2.063
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "Antigamente se falava tendinite, como se fosse só inflamação. Hoje a gente sabe que o principal é uma mudança na estrutura do tendão: as fibras ficam mais desorganizadas, tipo um novelo bagunçado. Por isso o nome certo é tendinopatia.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 14.635
+ },
+ {
+  "frame": 6,
+  "who": "molao",
+  "text": "Não tô inflamado, tô bagunçado!",
+  "file": "assets/voice/f06-2-molao.wav",
+  "dur": 2.211
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "O segredo do tendão é a carga. Pouca carga, ele enfraquece. Carga demais, principalmente saltos e aterrissagens repetidos, ou um aumento rápido do treino, ele não dá conta e começa a doer. Ele adora a carga certa, aumentada aos poucos.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 13.739
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "É comum em esportes de salto e mudança de direção: vôlei, basquete, futebol, atletismo. Aparece mais entre os quinze e os trinta anos, principalmente em homens. E pesa: aumento rápido de treino, pouca força na coxa e no quadril e muitos saltos em quadra dura.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 15.552
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "O que se sente: uma dor bem localizada logo abaixo da rótula, que dá pra apontar com um dedo. Ela costuma aparecer no começo do treino, melhorar quando aquece e voltar depois, às vezes pior no dia seguinte. Piora pra pular, agachar, descer escada, e até depois de muito tempo sentado com o joelho dobrado.",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 17.728
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "Modo detetive ligado! E hoje o crime aconteceu na quadra.",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 3.712
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Na conversa: a dor é num ponto só, logo abaixo da rótula? Aparece no começo, melhora e volta depois? Aumentou o treino ou os saltos? E o joelho incha, trava ou falseia? Teve batida ou torção? Essas últimas apontam pra outros problemas.",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 14.165
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "No exame, a palpação logo abaixo da rótula costuma doer. Mas o mais importante é carregar o tendão: agachar numa perna só, de preferência numa prancha inclinada, ou dar um saltinho numa perna. A dor aparece bem no ponto e aumenta conforme aumenta a carga.",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 15.061
+ },
+ {
+  "frame": 12,
+  "who": "juninho",
+  "text": "É aí, doutor! Bem aí!",
+  "file": "assets/voice/f12-2-juninho.wav",
+  "dur": 1.414
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "Os impostores: a dor patelofemoral, que dói em volta e atrás da rótula, mais espalhada. O Osgood-Schlatter, em adolescentes, que dói num caroço mais embaixo, na tíbia. Problemas de menisco e ligamento, que travam, falseiam e incham. E a bursite, com inchaço na frente do joelho.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 16.128
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "Atenção: joelho inchado, quente e vermelho com febre, ou um estalo num salto e depois não conseguir esticar a perna, que pode ser ruptura do tendão, pedem avaliação médica urgente. Travamento verdadeiro e dor forte constante à noite também precisam de avaliação.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 16.149
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "E os exames? O diagnóstico é clínico. Ultrassom ou ressonância ajudam quando há dúvida, suspeita de ruptura ou quando não melhora. E muitos atletas sem dor nenhuma têm tendão alterado no exame: a gente trata a pessoa, não a imagem.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 13.483
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "Hora de mexer! E aqui o tratamento é uma escada de carga. Repouso total não resolve, e injeção de corticoide no tendão não é recomendada. A regra da dor: até três de dez durante o exercício, e voltando ao normal no dia seguinte, pode seguir.",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 14.272
+ },
+ {
+  "frame": 16,
+  "who": "molao",
+  "text": "Nada de me deixar de pijama no sofá!",
+  "file": "assets/voice/f16-2-molao.wav",
+  "dur": 2.548
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "Primeiro passo: ajustar o treino. Não é parar tudo: é diminuir os saltos por um tempo e manter o resto, como técnica, força e o que não dói.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 7.979
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "Degrau um: isometria. Uma cadeirinha na parede, segurando parado de trinta a quarenta e cinco segundos, cinco vezes. Isso costuma até diminuir a dor na hora.",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 9.472
+ },
+ {
+  "frame": 18,
+  "who": "molao",
+  "text": "Ahhh, isso aí é massagem por dentro!",
+  "file": "assets/voice/f18-2-molao.wav",
+  "dur": 2.275
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Degrau dois: força lenta e pesada. Leg press, cadeira extensora ou agachamento, três segundos pra subir e três pra descer, com a carga aumentando aos poucos ao longo das semanas. É aqui que o tendão se reorganiza.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 12.779
+ },
+ {
+  "frame": 19,
+  "who": "patelito",
+  "text": "Três, dois, um... sobe! Três, dois, um... desce!",
+  "file": "assets/voice/f19-2-patelito.wav",
+  "dur": 2.561
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Degrau três: a mola volta a trabalhar. Quando a força estiver boa, entram os saltos: primeiro baixinhos, depois mais altos, depois aterrissagens, sempre aumentando aos poucos.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 10.411
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Degrau quatro: volta ao esporte, também em etapas. Treino sem salto, depois com poucos saltos, depois o treino completo e só então o jogo.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 8.704
+ },
+ {
+  "frame": 21,
+  "who": "ze",
+  "text": "Esse é o meu neto!",
+  "file": "assets/voice/f21-2-ze.wav",
+  "dur": 1.283
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "E ajudam junto: fortalecer quadril e panturrilha, usar uma faixa abaixo da rótula pra aliviar, ondas de choque em alguns casos, e cuidar do sono e da recuperação. Mas nenhum deles substitui a escada da carga.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 12.395
+ },
+ {
+  "frame": 24,
+  "who": "pablo",
+  "text": "E quanto tempo leva? Tendão é paciente: a melhora costuma levar de doze semanas a seis meses, às vezes mais. Pular etapa é o jeito mais rápido de voltar pra estaca zero. Mas com constância, a grande maioria volta a pular sem dor.",
+  "file": "assets/voice/f24-1-pablo.wav",
+  "dur": 13.781
+ },
+ {
+  "frame": 24,
+  "who": "molao",
+  "text": "Devagar e sempre, igual tartaruga... saltadora!",
+  "file": "assets/voice/f24-2-molao.wav",
+  "dur": 3.057
+ },
+ {
+  "frame": 25,
+  "who": "pablo",
+  "text": "Se não melhorar depois de um programa bem feito, a gente reavalia o treino, a técnica e outros fatores. Existem outras opções com o médico, e a cirurgia fica para casos raros.",
+  "file": "assets/voice/f25-1-pablo.wav",
+  "dur": 11.2
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "Resumindo: tendinopatia patelar é um tendão sobrecarregado, não inflamado. Ele não melhora com repouso total, e sim com a carga certa, subindo a escada com paciência.",
+  "file": "assets/voice/f26-1-pablo.wav",
+  "dur": 10.304
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta qual vai ser o próximo tema!",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 7.979
+ },
+ {
+  "frame": 27,
+  "who": "vertebra",
+  "text": "E manda pro seu amigo do vôlei que vive com o joelho enfaixado!",
+  "file": "assets/voice/f27-2-vertebra.wav",
+  "dur": 3.371
+ }
+]
