@@ -1,0 +1,268 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Sábado é dia de pelada, e o Seu Zé não perde uma! Mas depois de um chutaço, veio uma fisgada na parte de dentro da coxa. E nos dias seguintes, uma dor chata na virilha, um formigamento por dentro da coxa e uma coisa esquisita: a perna não queria fechar direito.",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 14.976
+ },
+ {
+  "frame": 2,
+  "who": "turao",
+  "text": "Ei! Eu tô entalado aqui na porta!",
+  "file": "assets/voice/f02-2-turao.wav",
+  "dur": 1.913
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Lesão de virilha? Ou é um nervo pedindo socorro? Bora investigar!",
+  "file": "assets/voice/f02-3-pablo.wav",
+  "dur": 4.011
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Hoje o assunto é a neuralgia obturatória: dor causada pelo nervo obturatório. E o nome tem uma dica: obturar é fechar, tampar. Ele passa por um buraco do osso da pelve que é quase todo fechado.",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 11.499
+ },
+ {
+  "frame": 3,
+  "who": "vertebra",
+  "text": "Um nervo que passa por uma porta fechada? Que mágico!",
+  "file": "assets/voice/f03-2-vertebra.wav",
+  "dur": 2.837
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "Conheça o nervo obturatório, o Turão. Ele nasce das raízes L2, L3 e L4, desce por dentro da pelve e passa por um túnel estreito, o canal obturatório, no topo de um buraco do osso da bacia. Depois chega na parte de dentro da coxa.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 14.485
+ },
+ {
+  "frame": 5,
+  "who": "nervinho",
+  "text": "Esse é meu primo Turão! Ele malha.",
+  "file": "assets/voice/f05-2-nervinho.wav",
+  "dur": 1.871
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "Diferente do Nervinho, o Turão é misto: leva sensibilidade pra pele da parte de dentro da coxa e manda força pros músculos adutores, os que fecham a perna. Sabe o movimento de segurar uma bola entre os joelhos? É ele quem comanda.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 13.568
+ },
+ {
+  "frame": 6,
+  "who": "adutores",
+  "text": "Fecha-perna, fecha-perna, uh!",
+  "file": "assets/voice/f06-2-adutores.wav",
+  "dur": 1.922
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "E onde ele se aperta? Principalmente nesse túnel e logo na saída dele, onde passa entre músculos e uma camada de tecido chamada fáscia. Pode ser pressão de dentro da pelve ou aperto na saída, na coxa.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 12.075
+ },
+ {
+  "frame": 7,
+  "who": "turao",
+  "text": "É apertado, mas eu passo... quando não tem ninguém empurrando!",
+  "file": "assets/voice/f07-2-turao.wav",
+  "dur": 3.588
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "E quem aperta o Turão? Esportes com chute e mudança de direção, como futebol. Cirurgias da pelve e do quadril, como a prótese. O parto, pela posição ou pela pressão da cabeça do bebê. E causas mais raras, como hérnia obturatória, hematoma, endometriose, tumor ou fratura da pelve.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 16.491
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "O que se sente: dor na virilha e na parte de dentro da coxa, que pode descer até perto do joelho. Formigamento ou dormência nessa área. Fraqueza pra fechar a perna, e às vezes a pessoa anda com a perna mais aberta. No atleta, a dor costuma piorar durante ou depois do treino.",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 15.701
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "Modo detetive ligado! E hoje a cena do crime é uma porta apertada.",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 4.245
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Na conversa, as pistas são: a dor é na virilha e na parte de dentro da coxa? Formiga? Teve esporte, cirurgia ou parto recente? Sente a perna fraca pra fechar? E tem dor nas costas? Isso ajuda a separar de um problema na coluna.",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 13.525
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "No exame, eu testo a sensibilidade na parte de dentro da coxa e a força dos adutores: o paciente aperta uma bola entre os joelhos, ou fecha a perna contra a minha mão. No lado afetado, a força pode estar menor.",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 12.587
+ },
+ {
+  "frame": 12,
+  "who": "vertebra",
+  "text": "Aperta! Aperta! Ih, a bola nem sentiu!",
+  "file": "assets/voice/f12-2-vertebra.wav",
+  "dur": 2.261
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "O reflexo dos adutores, com o martelinho na parte de dentro da coxa, pode estar diminuído. E abrir a perna, alongando os adutores, ou apertar fundo na virilha, no ponto do túnel, pode reproduzir a dor.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 11.84
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "E não confunda os primos! O Turão dá sintomas na parte de dentro da coxa e pode deixar a perna fraca pra fechar. O Nervinho, da meralgia, é na parte de fora e nunca dá fraqueza.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 10.581
+ },
+ {
+  "frame": 14,
+  "who": "nervinho",
+  "text": "Cada um no seu lado da coxa!",
+  "file": "assets/voice/f14-2-nervinho.wav",
+  "dur": 1.841
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "Os impostores: a tendinopatia dos adutores, que dói no tendão perto do púbis, sem formigar. A pubalgia do atleta. O quadril, que dói na virilha ao dobrar e girar. A hérnia inguinal, com caroço na virilha. E a coluna, nas raízes L3 e L4, que costuma vir com dor nas costas.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 16.32
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "Atenção: dor na parte de dentro da coxa junto com barriga inchada, vômitos e sem conseguir evacuar pode ser hérnia obturatória com o intestino preso. Isso é emergência! Fraqueza piorando, massa na pelve, perda de peso sem motivo, febre ou histórico de câncer também pedem avaliação médica rápida.",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 17.899
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "E os exames? A suspeita é clínica, mas aqui os exames ajudam bastante: a eletroneuromiografia mostra se os adutores estão recebendo o sinal do nervo, a ressonância avalia a pelve e o quadril, e um bloqueio anestésico guiado por ultrassom pode confirmar o culpado: se a dor some, achamos o Turão.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 16.939
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "Hora de mexer! Regra de ouro: no começo, diminui o que provoca, como chute e arrancada, mas sem parar tudo. E se der choque ou formigar mais, diminui a amplitude.",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 9.6
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Um: aperta a bola. Deitado, joelhos dobrados, bola entre os joelhos: aperta e segura de cinco a dez segundos, dez vezes, com força leve a moderada.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 8.747
+ },
+ {
+  "frame": 19,
+  "who": "adutores",
+  "text": "Fecha-perna, versão leve!",
+  "file": "assets/voice/f19-2-adutores.wav",
+  "dur": 1.795
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Dois: borboleta. Sentado, junta as solas dos pés e deixa os joelhos abrirem devagar. Vinte a trinta segundos, três vezes, sem dor forte.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 8.448
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Três: deslizamento do nervo. Deitado, abre a perna um pouco pro lado, devagar, e volta. Duas séries de dez, bem suave, sem alongar até doer.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 8.597
+ },
+ {
+  "frame": 21,
+  "who": "turao",
+  "text": "Uhul, tô passando pela porta!",
+  "file": "assets/voice/f21-2-turao.wav",
+  "dur": 1.757
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "Quatro: ponte. Glúteo forte ajuda a estabilizar a pelve. Três séries de dez a doze.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 5.248
+ },
+ {
+  "frame": 23,
+  "who": "pablo",
+  "text": "Cinco: prancha lateral com os joelhos apoiados. Segura de quinze a vinte segundos de cada lado. Mais pra frente, o profissional pode evoluir pra versões mais fortes, que trabalham os adutores.",
+  "file": "assets/voice/f23-1-pablo.wav",
+  "dur": 11.499
+ },
+ {
+  "frame": 24,
+  "who": "pablo",
+  "text": "E seis: volta ao esporte em etapas. Primeiro caminhar, depois trotar, correr reto, mudar de direção e, por último, chutar. Pular etapa é pedir pra voltar pro banco!",
+  "file": "assets/voice/f24-1-pablo.wav",
+  "dur": 9.835
+ },
+ {
+  "frame": 24,
+  "who": "vertebra",
+  "text": "Sem pular degrau, Seu Zé!",
+  "file": "assets/voice/f24-2-vertebra.wav",
+  "dur": 1.643
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "A boa notícia: quando aparece depois de cirurgia ou parto, a maioria recupera com o tempo, em semanas a alguns meses. No atleta, o tratamento começa conservador: ajustar o treino, exercícios e terapia manual.",
+  "file": "assets/voice/f26-1-pablo.wav",
+  "dur": 12.693
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "Se não melhorar, o médico pode fazer uma infiltração guiada por ultrassom. E, em casos selecionados, existe a cirurgia pra liberar o nervo, que costuma permitir a volta ao esporte.",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 11.008
+ },
+ {
+  "frame": 28,
+  "who": "pablo",
+  "text": "Resumindo: o Turão comanda o fecha-perna e pode se apertar num túnel da pelve. Investiga bem, trata com calma, e volta pra pelada no tempo certo.",
+  "file": "assets/voice/f28-1-pablo.wav",
+  "dur": 8.725
+ },
+ {
+  "frame": 29,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta o próximo tema!",
+  "file": "assets/voice/f29-1-pablo.wav",
+  "dur": 7.317
+ },
+ {
+  "frame": 29,
+  "who": "vertebra",
+  "text": "Hérnia de disco! Hérnia de disco! Hérnia de disco!",
+  "file": "assets/voice/f29-2-vertebra.wav",
+  "dur": 2.88
+ }
+]
