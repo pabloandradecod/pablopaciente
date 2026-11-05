@@ -1,0 +1,275 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Esse é o Seu Zé. Ele só queria calçar o sapato... e aí — ZÁS! Um choque saiu da lombar, passou pela nádega, desceu pela perna e foi parar no pé.",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 8.128
+ },
+ {
+  "frame": 2,
+  "who": "nervo",
+  "text": "AAAAAI! Tão me apertando aqui!",
+  "file": "assets/voice/f02-2-nervo.wav",
+  "dur": 1.792
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Agora ele tá assim: congelado, com medo até de espirrar. Se você já sentiu uma dor que DESCE pela perna, fica comigo, porque hoje a gente vai entender o que tá acontecendo aí dentro.",
+  "file": "assets/voice/f02-3-pablo.wav",
+  "dur": 10.859
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Eu sou o Dr. Pablo, e hoje o assunto é ciatalgia: o que é, como investigar, os melhores exercícios e as chances de melhora.",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 7.317
+ },
+ {
+  "frame": 3,
+  "who": "vertebra",
+  "text": "E eu vou fazer as perguntas que todo mundo tem vergonha de fazer!",
+  "file": "assets/voice/f03-2-vertebra.wav",
+  "dur": 3.541
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "Ciatalgia é a dor que segue o caminho do nervo ciático. E o detalhe que pouca gente sabe: é um SINTOMA, não um diagnóstico. É a luz do painel do carro: ela acende, mas alguém precisa descobrir o porquê.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 11.883
+ },
+ {
+  "frame": 5,
+  "who": "vertebra",
+  "text": "Então é tipo o alarme, não o ladrão?",
+  "file": "assets/voice/f05-2-vertebra.wav",
+  "dur": 2.176
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "Conheça o nervo ciático: o maior e mais grosso nervo do corpo — tem quase a grossura de um dedo! Ele nasce de várias raízes que saem da coluna, de L4 até S3, se juntam numa espécie de trança, passam pela nádega, descem por trás da coxa e, atrás do joelho, se dividem pra levar sensação e força até o pé.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 18.091
+ },
+ {
+  "frame": 6,
+  "who": "nervo",
+  "text": "Sou praticamente uma celebridade da anatomia.",
+  "file": "assets/voice/f06-2-nervo.wav",
+  "dur": 3.008
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "E quem aperta esse nervo? Em primeiro lugar, disparado: a hérnia de disco, principalmente em L4-L5 e L5-S1. Pensa no disco como um sonho de padaria: apertou demais, o recheio escapa e encosta na raiz. Também pode ser o canal estreitando, a estenose; uma vértebra que escorrega, a espondilolistese; ou o piriforme, um músculo da nádega, abraçando o nervo forte demais. Tumor e infecção existem, mas são raros.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 26.767
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "É mais comum entre os 30 e os 50 anos, em quem passa muito tempo sentado, carrega peso ou fuma. O que se sente: dor que desce abaixo do joelho, formigamento, choque e, às vezes, fraqueza na perna.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 11.925
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "Agora a parte que eu mais gosto: o raciocínio clínico. Modo detetive ligado!",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 4.949
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "Tudo começa na conversa. A dor passa do joelho? Sugere que a raiz do nervo está envolvida. Formiga ou dá choque? Piora ao tossir, espirrar ou ficar sentado? Isso aumenta a pressão no disco. E a pergunta mais importante: a perna perdeu força?",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 14.379
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Agora o exame. O mais famoso é o teste de Lasègue: levanto a perna esticada. Se entre 30 e 70 graus aparece a dor descendo pela perna, é positivo: o nervo esticou e reclamou.",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 11.136
+ },
+ {
+  "frame": 11,
+  "who": "nervo",
+  "text": "Ei, ei, EI! Eu não sou elástico de academia!",
+  "file": "assets/voice/f11-2-nervo.wav",
+  "dur": 2.347
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Pra confirmar, baixo um pouco e puxo o pé pra cima: teste de Bragard.",
+  "file": "assets/voice/f11-3-pablo.wav",
+  "dur": 4.075
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "Se eu levanto a perna boa e dói a perna do lado da dor, é o Lasègue cruzado — uma pista forte de hérnia de disco. Tem também o Slump: sentado, a pessoa curva o tronco, abaixa o queixo e estica o joelho, tensionando o nervo inteiro.",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 13.227
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "Agora o detetive vira cartógrafo: cada raiz cuida de um pedaço da perna. L4: parte de dentro da perna, força pra levantar o pé e reflexo do joelho. L5: peito do pé e dedão, força pra levantar o dedão e andar no calcanhar. S1: lateral e sola do pé, força pra ficar na ponta dos pés e reflexo do tornozelo. Se o Seu Zé não anda no calcanhar e o dedão está dormente... a pista aponta pra L5.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 24.741
+ },
+ {
+  "frame": 13,
+  "who": "vertebra",
+  "text": "Caramba, o corpo tem GPS!",
+  "file": "assets/voice/f13-2-vertebra.wav",
+  "dur": 2.048
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "Cuidado com os impostores! Dor que vem da lombar ou da sacroilíaca costuma parar antes do joelho. O piriforme dói mais na nádega e piora sentado. O quadril dói na virilha. Má circulação dói ao caminhar e passa quando para. E a neuropatia, comum no diabetes, formiga nos dois pés, como uma meia.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 17.109
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "Atenção total. Perda de controle da urina ou das fezes, dormência entre as pernas, a região da sela, ou fraqueza piorando rápido podem ser síndrome da cauda equina. Isso é emergência: hospital, hoje! Febre, perda de peso sem motivo, histórico de câncer ou trauma forte também pedem avaliação médica rápida.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 18.475
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "E a ressonância? Ela não é obrigatória logo no começo. É indicada quando tem bandeira vermelha, fraqueza piorando ou quando não melhora depois de umas seis semanas. Muita gente tem hérnia na imagem e não sente nada!",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 12.693
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "Hora de mexer o corpo! Regra de ouro: se a dor piorar ou descer mais em direção ao pé, para e procura avaliação.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 6.485
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "Um: caminhada leve, de 10 a 20 minutos, duas a três vezes por dia. Repouso absoluto atrasa a melhora. Movimento é remédio!",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 7.552
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Dois: deslizamento do nervo. Sentado, estica o joelho levando a cabeça pra trás; depois dobra o joelho e abaixa a cabeça. Duas séries de dez, devagar. É pro nervo deslizar, não pra doer.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 11.328
+ },
+ {
+  "frame": 19,
+  "who": "nervo",
+  "text": "Ahhh... spa de nervo.",
+  "file": "assets/voice/f19-2-nervo.wav",
+  "dur": 1.451
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Três: extensão da coluna. De bruços, depois apoiado nos cotovelos, progredindo aos poucos. O sinal de que funciona é a dor SUBIR: sair da perna e ficar na lombar. Se descer, esse exercício não é pra você agora.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 12.8
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Quatro: ponte. Barriga pra cima, joelhos dobrados, sobe o quadril e segura dois segundos. Três séries de dez a doze.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 6.912
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "Cinco: perdigueiro. De quatro apoios, estica um braço e a perna oposta sem girar o tronco, como se tivesse um copo d'água nas costas. Segura três a cinco segundos, oito de cada lado.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 10.901
+ },
+ {
+  "frame": 22,
+  "who": "vertebra",
+  "text": "Se derramar, começa de novo!",
+  "file": "assets/voice/f22-2-vertebra.wav",
+  "dur": 1.813
+ },
+ {
+  "frame": 23,
+  "who": "pablo",
+  "text": "Seis: alongamento do piriforme. Deitado, cruza o tornozelo sobre o joelho, fazendo um quatro, e puxa a coxa pro peito. Trinta segundos, três vezes. Bom quando a dor é mais na nádega.",
+  "file": "assets/voice/f23-1-pablo.wav",
+  "dur": 10.88
+ },
+ {
+  "frame": 24,
+  "who": "pablo",
+  "text": "A ordem importa: com dor forte, caminhada e deslizamento. Melhorando, extensão e ponte. Depois, fortalecimento pra não voltar.",
+  "file": "assets/voice/f24-1-pablo.wav",
+  "dur": 8.0
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "A boa notícia: a maioria melhora em seis a doze semanas com tratamento conservador, como quiropraxia, exercício e informação. De cada dez pessoas, cerca de nove não precisam de cirurgia. E muitas hérnias, principalmente as maiores, são reabsorvidas pelo próprio corpo.",
+  "file": "assets/voice/f26-1-pablo.wav",
+  "dur": 16.021
+ },
+ {
+  "frame": 26,
+  "who": "vertebra",
+  "text": "O corpo come a hérnia?!",
+  "file": "assets/voice/f26-2-vertebra.wav",
+  "dur": 1.515
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "Mais ou menos isso!",
+  "file": "assets/voice/f26-3-pablo.wav",
+  "dur": 1.579
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "A cirurgia entra quando tem cauda equina, fraqueza que piora, ou dor que incapacita e não melhora depois de seis a doze semanas de tratamento bem feito.",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 9.323
+ },
+ {
+  "frame": 28,
+  "who": "pablo",
+  "text": "Resumindo: ciatalgia é um sintoma, não um diagnóstico. Uma boa avaliação encontra a causa. E se mexer do jeito certo é o caminho da melhora.",
+  "file": "assets/voice/f28-1-pablo.wav",
+  "dur": 8.384
+ },
+ {
+  "frame": 29,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta qual patologia você quer no próximo!",
+  "file": "assets/voice/f29-1-pablo.wav",
+  "dur": 8.576
+ },
+ {
+  "frame": 29,
+  "who": "vertebra",
+  "text": "Eu voto em hérnia de disco!",
+  "file": "assets/voice/f29-2-vertebra.wav",
+  "dur": 1.685
+ }
+]
