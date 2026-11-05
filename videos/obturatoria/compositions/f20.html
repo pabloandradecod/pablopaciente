@@ -1,0 +1,217 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #FFF6E9; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #f20-head { left:110px; top:70px; font-size:84px; }
+        #f20-head span { color:#3DD9A4; }
+        #f20-card { left:1300px; top:150px; width:520px; padding:26px 32px; }
+        #f20-card .t { font-size:42px; }
+        #f20-card .row { font-size:31px; margin-top:12px; display:flex; align-items:center; gap:14px; line-height:1.1; }
+        #f20-card .dot { width:22px; height:22px; border-radius:50%; border:5px solid #013E4C; flex:none; }
+        #f20-stop { left:1360px; top:690px; width:460px; padding:16px 20px; font-size:27px; white-space:nowrap; background:#FF5A4E; color:#fff; text-align:center; }
+        #f20-stop b { font-size:34px; display:block; }
+        #f20-view { left:120px; top:200px; padding:8px 16px; font-size:26px; }
+        #f20-timer { left:1060px; top:220px; width:190px; height:120px; border-radius:60px; background:#FFC94A; border:7px solid #013E4C; font-size:42px; display:flex; align-items:center; justify-content:center; white-space:nowrap; }
+      
+  </style>
+  <div id="root" data-composition-id="f20" data-width="1920" data-height="1080">
+
+    <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <rect x="0" y="0" width="1920" height="760" fill="#E7F3F1"/>
+      <rect x="0" y="760" width="1920" height="320" fill="#CFE3DF"/>
+      <line x1="0" y1="760" x2="1920" y2="760" stroke="#013E4C" stroke-width="7"/>
+      <ellipse cx="700" cy="800" rx="420" ry="46" fill="#3DD9A4" stroke="#013E4C" stroke-width="7"/>
+      <!-- Seu Zé sentado, visto de frente -->
+      <g id="f20-zw">
+        <g transform="translate(700,640)">
+          <g transform="translate(-40,0)"><g id="f20-legL"><path d="M0 0 L-170 70 L30 150" fill="none" stroke="#013E4C" stroke-width="56" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M0 0 L-170 70 L30 150" fill="none" stroke="#7A5634" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+        <ellipse cx="34" cy="160" rx="24" ry="36" fill="#4A2E1A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-10 34 160)"/></g></g>
+          <g transform="translate(40,0)"><g id="f20-legR"><path d="M0 0 L170 70 L-30 150" fill="none" stroke="#013E4C" stroke-width="56" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M0 0 L170 70 L-30 150" fill="none" stroke="#7A5634" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+        <ellipse cx="-34" cy="160" rx="24" ry="36" fill="#4A2E1A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" transform="rotate(10 -34 160)"/></g></g>
+          <rect x="-95" y="-20" width="190" height="50" rx="22" fill="#7A5634" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="-105" y="-240" width="210" height="240" rx="70" fill="#4A90C2" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M-60 -200 L60 -200 M-80 -150 L80 -150 M-90 -100 L90 -100 M-90 -50 L90 -50" stroke="#fff" stroke-width="4" opacity="0.3"/>
+          <path d="M-100 -200 Q-150 -120 -150 -40 Q-150 0 -120 20" fill="none" stroke="#013E4C" stroke-width="40" stroke-linecap="round"/>
+          <path d="M-100 -200 Q-150 -120 -150 -40 Q-150 0 -120 20" fill="none" stroke="#4A90C2" stroke-width="28" stroke-linecap="round"/>
+          <path d="M100 -200 Q150 -120 150 -40 Q150 0 120 20" fill="none" stroke="#013E4C" stroke-width="40" stroke-linecap="round"/>
+          <path d="M100 -200 Q150 -120 150 -40 Q150 0 120 20" fill="none" stroke="#4A90C2" stroke-width="28" stroke-linecap="round"/>
+          <circle cx="-118" cy="26" r="20" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="118" cy="26" r="20" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <g id="f20-headw"><g transform="translate(0,-310)">
+            <rect x="-22" y="40" width="44" height="34" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="0" cy="0" r="72" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <ellipse cx="-74" cy="6" rx="14" ry="20" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="74" cy="6" rx="14" ry="20" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M-72 -20 Q-80 20 -60 44 M72 -20 Q80 20 60 44" fill="none" stroke="#C9C9C9" stroke-width="14" stroke-linecap="round"/>
+            <path d="M-38 -26 L-14 -24 M14 -24 L38 -26" stroke="#9AA7AD" stroke-width="8" stroke-linecap="round"/>
+            <g id="f20-eo"><circle cx="-26" cy="-4" r="9" fill="#013E4C"/><circle cx="26" cy="-4" r="9" fill="#013E4C"/></g>
+            <g id="f20-ec" opacity="0"><path d="M-36 -4 Q-26 4 -16 -4 M16 -4 Q26 4 36 -4" fill="none" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/></g>
+            <path d="M-34 26 Q0 12 34 26 Q24 36 0 32 Q-24 36 -34 26 Z" fill="#C9C9C9" stroke="#013E4C" stroke-width="5"/>
+            <path d="M-18 44 Q0 56 18 44" fill="none" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+          </g></g>
+        </g>
+      </g>
+      <!-- seta de abrir -->
+      <g id="f20-arr" opacity="0"><path d="M450 640 Q400 690 420 740" fill="none" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="14 10"/><path d="M950 640 Q1000 690 980 740" fill="none" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="14 10"/></g>
+      <!-- borboleta -->
+      <g transform="translate(1060,560)"><g id="f20-bf" opacity="0">
+        <g id="f20-wL"><path d="M0 0 Q-70 -80 -90 -20 Q-96 20 0 0 Z M0 0 Q-60 70 -30 80 Q0 70 0 0 Z" fill="#FFC94A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><circle cx="-50" cy="-28" r="10" fill="#FF5A4E"/></g>
+        <g id="f20-wR"><path d="M0 0 Q70 -80 90 -20 Q96 20 0 0 Z M0 0 Q60 70 30 80 Q0 70 0 0 Z" fill="#FFC94A" stroke="#013E4C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/><circle cx="50" cy="-28" r="10" fill="#FF5A4E"/></g>
+        <rect x="-8" y="-40" width="16" height="100" rx="8" fill="#013E4C"/>
+        <path d="M-4 -40 Q-14 -66 -26 -70 M4 -40 Q14 -66 26 -70" fill="none" stroke="#013E4C" stroke-width="4" stroke-linecap="round"/>
+      </g></g>
+    </svg>
+    <div id="f20-head" class="abs title">2. <span>BORBOLETA</span></div>
+    <div id="f20-view" class="abs card label">visto de frente</div>
+    <div id="f20-timer" class="abs title" style="opacity:0">20-30s</div>
+    <div id="f20-card" class="abs card">
+      <div class="t title">Borboleta</div>
+      <div class="row label" id="f20-r0"><div class="dot" style="background:#3DD9A4"></div>Sentado</div>
+      <div class="row label" id="f20-r1"><div class="dot" style="background:#3DD9A4"></div>Solas dos pés juntas</div>
+      <div class="row label" id="f20-r2"><div class="dot" style="background:#3DD9A4"></div>Joelhos abrem devagar</div>
+      <div class="row label" id="f20-r3"><div class="dot" style="background:#FFC94A"></div><b>20 a 30 s · 3 vezes</b></div>
+      <div class="row label" id="f20-r4"><div class="dot" style="background:#FF5A4E"></div>Sem dor forte</div>
+    </div>
+    <div id="f20-stop" class="abs card label">Choque ou formigou mais?<b>Diminui</b></div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":10.65,"lines":[{"who":"pablo","start":0.6,"end":9.048}],"dois":0.693,"borb":0.923,"sent":1.693,"junta":2.323,"solas":2.813,"joel":4.153,"abr":4.653,"dev":5.133,"vinte":5.923,"tres":8.033,"forte":9.543,"end":9.048};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        R.slideIn(tl, "#f20-head", 0.05, 0.5, -300);
+        R.slideIn(tl, "#f20-card", 0.2, 0.55, 400);
+        R.pop(tl, "#f20-stop", 0.6, 0.4);
+        R.fadeIn(tl, "#f20-view", 0.4, 0.3);
+        // pernas começam mais fechadas (joelhos altos)
+        tl.set("#f20-legL", { rotation: 22, svgOrigin: "0 0" }, 0);
+        tl.set("#f20-legR", { rotation: -22, svgOrigin: "0 0" }, 0);
+        tl.fromTo("#f20-zw", { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "back.out(1.6)" }, K.sent - 0.2);
+        [K.sent, K.solas, K.joel, K.vinte, K.forte].forEach((t, i) => tl.fromTo(`#f20-r${i}`, { opacity: 0.25 }, { opacity: 1, duration: 0.25 }, t - 0.1));
+        // borboleta aparece e bate as asas no ritmo
+        R.pop(tl, "#f20-bf", K.borb, 0.45);
+        tl.fromTo("#f20-wL", { scaleX: 1 }, { scaleX: 0.35, svgOrigin: "0 0", duration: 0.22, yoyo: true, repeat: 5, ease: "sine.inOut" }, K.borb + 0.3);
+        tl.fromTo("#f20-wR", { scaleX: 1 }, { scaleX: 0.35, svgOrigin: "0 0", duration: 0.22, yoyo: true, repeat: 5, ease: "sine.inOut" }, K.borb + 0.3);
+        // os joelhos abrem devagar e voltam (repetições finitas)
+        R.pop(tl, "#f20-arr", K.abr - 0.2, 0.35);
+        let t = K.abr;
+        let n = 0;
+        while (t < K.dur - 1.4 && n < 4) {
+          tl.to("#f20-legL", { rotation: -6, svgOrigin: "0 0", duration: 1.2, ease: "sine.inOut" }, t);
+          tl.to("#f20-legR", { rotation: 6, svgOrigin: "0 0", duration: 1.2, ease: "sine.inOut" }, t);
+          tl.fromTo("#f20-wL", { scaleX: 1 }, { scaleX: 0.4, svgOrigin: "0 0", duration: 0.6, yoyo: true, repeat: 1, ease: "sine.inOut" }, t);
+          tl.fromTo("#f20-wR", { scaleX: 1 }, { scaleX: 0.4, svgOrigin: "0 0", duration: 0.6, yoyo: true, repeat: 1, ease: "sine.inOut" }, t);
+          tl.to("#f20-legL", { rotation: 16, svgOrigin: "0 0", duration: 1.0, ease: "sine.inOut" }, t + 1.5);
+          tl.to("#f20-legR", { rotation: -16, svgOrigin: "0 0", duration: 1.0, ease: "sine.inOut" }, t + 1.5);
+          t += 2.7; n++;
+        }
+        tl.set("#f20-eo", { opacity: 0 }, K.dev); tl.set("#f20-ec", { opacity: 1 }, K.dev);
+        tl.set("#f20-eo", { opacity: 1 }, K.vinte); tl.set("#f20-ec", { opacity: 0 }, K.vinte);
+        R.pop(tl, "#f20-timer", K.vinte - 0.1, 0.4);
+        tl.fromTo("#f20-headw", { rotation: -3 }, { rotation: 3, svgOrigin: "0 -240", duration: 0.8, yoyo: true, repeat: 5, ease: "sine.inOut" }, K.joel);
+      })(tl, K, R);
+      
+      tl.set({}, {}, K.dur);
+      window.__timelines["f20"] = tl;
+    })();
+  </script>
+</template>
