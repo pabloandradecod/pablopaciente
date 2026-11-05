@@ -1,0 +1,275 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "O Seu Zé descobriu o churrasco de domingo. E a calça... ficou apertadinha. Solução dele? Cinto no último furo! Só que, na segunda-feira, começou uma coisa estranha: a lateral da coxa queimando, formigando, dormente, como se tivesse formiga andando por baixo da pele.",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 15.147
+ },
+ {
+  "frame": 2,
+  "who": "cintao",
+  "text": "Daqui ninguém passa!",
+  "file": "assets/voice/f02-2-cintao.wav",
+  "dur": 1.584
+ },
+ {
+  "frame": 2,
+  "who": "nervinho",
+  "text": "Eu só queria passar, gente!",
+  "file": "assets/voice/f02-3-nervinho.wav",
+  "dur": 1.892
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Dor estranha na coxa, mas sem perder força? Bora investigar!",
+  "file": "assets/voice/f02-4-pablo.wav",
+  "dur": 3.776
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Hoje o assunto é a meralgia parestésica. Nome difícil, mas olha só: mero quer dizer coxa, algia é dor, e parestesia é formigamento. Ou seja: dor e formigamento na coxa!",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 10.56
+ },
+ {
+  "frame": 3,
+  "who": "vertebra",
+  "text": "Ah, então o nome já entrega o spoiler!",
+  "file": "assets/voice/f03-2-vertebra.wav",
+  "dur": 2.197
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "Conheça o nervo cutâneo femoral lateral. Ele nasce na coluna lombar, nas raízes L2 e L3, desce por dentro da pelve e sai bem ali, coladinho na ponta do osso do quadril, passando por baixo de um ligamento da virilha. Depois ele se espalha pela pele da lateral da coxa.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 16.128
+ },
+ {
+  "frame": 5,
+  "who": "nervo",
+  "text": "Esse é o meu primo, o Nervinho!",
+  "file": "assets/voice/f05-2-nervo.wav",
+  "dur": 1.707
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "E o detalhe mais importante: ele é um nervo só de sensibilidade. Não manda força pra nenhum músculo. Por isso a meralgia dá queimação, formigamento e dormência na lateral da coxa, mas não deixa a perna fraca.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 12.523
+ },
+ {
+  "frame": 6,
+  "who": "vertebra",
+  "text": "Então a perna continua firme? Ufa!",
+  "file": "assets/voice/f06-2-vertebra.wav",
+  "dur": 2.304
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "O problema é o caminho: ele faz uma curva fechada bem na ponta do quadril e passa por um túnel estreito embaixo do ligamento. Qualquer pressão extra nesse ponto, de fora ou de dentro, aperta o Nervinho.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 11.52
+ },
+ {
+  "frame": 7,
+  "who": "nervinho",
+  "text": "Já é apertado sem ninguém ajudar!",
+  "file": "assets/voice/f07-2-nervinho.wav",
+  "dur": 2.213
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "E quem aperta o Nervinho? Roupa e cinto apertados, cinto de ferramentas, cinto de policial. Ganho de peso e gravidez, que empurram de dentro pra fora. Diabetes, que deixa o nervo mais sensível. E às vezes ficar muito tempo em pé, ou posições e cirurgias que pressionam a virilha.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 15.808
+ },
+ {
+  "frame": 8,
+  "who": "cintao",
+  "text": "Culpado... mas com estilo!",
+  "file": "assets/voice/f08-2-cintao.wav",
+  "dur": 1.752
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "O que se sente: queimação, formigamento, dormência na lateral da coxa, e às vezes até a roupa encostando incomoda. Geralmente é de um lado só, piora depois de muito tempo em pé ou andando, e pode aliviar sentado. É mais comum na meia-idade.",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 14.464
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "Modo detetive ligado! E hoje o suspeito tem fivela.",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 3.456
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Na conversa, eu peço: desenha com o dedo onde formiga. Se for aquela área da lateral da coxa, tipo um bolso de calça, já é uma pista forte. Depois: tem fraqueza? Na meralgia, não. Mudou de roupa, de cinto, ganhou peso? E tem dor nas costas? Isso ajuda a separar da coluna.",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 15.701
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "No exame, eu testo a sensibilidade com toque leve. Dentro da área do Nervinho, a pele sente diferente: mais dormente ou mais sensível. Fora dela, tudo normal. A gente literalmente desenha o mapa na coxa.",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 12.693
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "Depois força e reflexo. Na meralgia, a força pra esticar o joelho e levantar a coxa está normal, e o reflexo do joelho também. Se tiver fraqueza ou reflexo diminuído, a suspeita muda pra coluna ou pra outro nervo.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 13.376
+ },
+ {
+  "frame": 13,
+  "who": "vertebra",
+  "text": "Que chute! Quase acertou o doutor!",
+  "file": "assets/voice/f13-2-vertebra.wav",
+  "dur": 1.941
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "E dois testes simples. Batidinhas logo ao lado da ponta do quadril podem disparar o formigamento na coxa: é o sinal de Tinel. E no teste de compressão pélvica, com o paciente deitado de lado, eu empurro a pelve por uns quarenta e cinco segundos. Isso tira a tensão do ligamento e, se os sintomas aliviam, reforça a suspeita.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 18.731
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "Os impostores: um problema na raiz da coluna, que costuma vir com dor nas costas e fraqueza. O nervo femoral, que deixa o joelho fraco. O próprio quadril, que dói na virilha. A bursite, que dói na lateral do quadril. E a neuropatia do diabetes, que costuma começar nos dois pés.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 15.808
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "E atenção: se aparecer fraqueza, sintomas nas duas pernas piorando, dor forte na barriga ou na pelve, perda de peso sem motivo, febre ou histórico de câncer, aí precisa de avaliação médica pra investigar outras causas.",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 13.568
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "E exame? Na maioria das vezes o diagnóstico é clínico. Quando a história não fecha, o médico pode pedir ultrassom, um bloqueio anestésico de teste, eletroneuromiografia ou imagens da coluna e da pelve.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 12.352
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "Hora de cuidar! E aqui a regra de ouro é diferente: o tratamento número um é tirar a pressão do Nervinho. Exercício ajuda, mas sem forçar: se formigar mais forte, diminui a amplitude.",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 10.795
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Um: liberta o Nervinho! Afrouxa o cinto, evita calça muito justa e, se usa cinto de ferramentas, distribui o peso ou usa suspensório.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 8.213
+ },
+ {
+  "frame": 19,
+  "who": "cintao",
+  "text": "Fui demitido?!",
+  "file": "assets/voice/f19-2-cintao.wav",
+  "dur": 1.222
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Dois: caminhada e controle de peso. Menos pressão de dentro pra fora também ajuda o Nervinho. Aos poucos, com constância.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 7.253
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Três: alongamento da frente do quadril. Um joelho no chão, o outro pé à frente, leva o quadril pra frente com o tronco reto. Trinta segundos, três vezes, sem forçar.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 9.621
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "Quatro: deslizamento do nervo. Deitado de lado, leva a perna de cima um pouco pra trás e volta, devagar. Duas séries de dez, bem suave.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 8.32
+ },
+ {
+  "frame": 22,
+  "who": "nervinho",
+  "text": "Opa, tô deslizando! Que chique!",
+  "file": "assets/voice/f22-2-nervinho.wav",
+  "dur": 1.896
+ },
+ {
+  "frame": 23,
+  "who": "pablo",
+  "text": "Cinco: ponte. Fortalece glúteos e ajuda a postura da pelve. Três séries de dez a doze.",
+  "file": "assets/voice/f23-1-pablo.wav",
+  "dur": 5.483
+ },
+ {
+  "frame": 24,
+  "who": "pablo",
+  "text": "Seis: perdigueiro, pra estabilidade do tronco. Estica braço e perna opostos, sem girar o corpo. Oito de cada lado.",
+  "file": "assets/voice/f24-1-pablo.wav",
+  "dur": 6.805
+ },
+ {
+  "frame": 24,
+  "who": "vertebra",
+  "text": "O copo d'água voltou!",
+  "file": "assets/voice/f24-2-vertebra.wav",
+  "dur": 1.387
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "A boa notícia: a grande maioria melhora com tratamento conservador, em semanas a alguns meses, principalmente quando a causa é retirada. E como é um nervo só de sensibilidade, ele não causa fraqueza. A dormência às vezes demora mais pra sumir, e tudo bem.",
+  "file": "assets/voice/f26-1-pablo.wav",
+  "dur": 15.765
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "Se não melhorar, o médico pode indicar remédios específicos pra dor de nervo ou uma infiltração guiada por ultrassom. Cirurgia é rara, só pra casos que não respondem.",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 10.197
+ },
+ {
+  "frame": 28,
+  "who": "pablo",
+  "text": "Resumindo: meralgia é um nervinho de sensibilidade apertado na virilha. Tira a pressão, cuida do peso, mexe com calma, e a coxa volta ao normal.",
+  "file": "assets/voice/f28-1-pablo.wav",
+  "dur": 8.576
+ },
+ {
+  "frame": 29,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta o próximo tema!",
+  "file": "assets/voice/f29-1-pablo.wav",
+  "dur": 7.317
+ },
+ {
+  "frame": 29,
+  "who": "vertebra",
+  "text": "E a hérnia de disco, gente? Tô esperando!",
+  "file": "assets/voice/f29-2-vertebra.wav",
+  "dur": 2.432
+ }
+]
