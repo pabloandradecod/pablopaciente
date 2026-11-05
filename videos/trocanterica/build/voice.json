@@ -1,0 +1,296 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Essa é a Dona Cida, esposa do Seu Zé. E quem não está dormindo agora é ela! Deita de um lado: dói a lateral do quadril. Vira pro outro: a perna de cima cai e... dói também! E de dia, subir escada e levantar da cadeira virou um sacrifício.",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 13.611
+ },
+ {
+  "frame": 2,
+  "who": "cida",
+  "text": "Zé! Acorda! Eu acho que tô com bursite!",
+  "file": "assets/voice/f02-2-cida.wav",
+  "dur": 2.462
+ },
+ {
+  "frame": 2,
+  "who": "glutinho",
+  "text": "Bursite nada... quem tá sofrendo aqui sou eu!",
+  "file": "assets/voice/f02-3-glutinho.wav",
+  "dur": 2.952
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Será que é bursite mesmo? Vamos investigar!",
+  "file": "assets/voice/f02-4-pablo.wav",
+  "dur": 2.816
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Hoje o assunto é a famosa bursite trocantérica. E já vou contar um segredo: hoje a gente chama de síndrome dolorosa do trocânter maior, porque na maioria das vezes a bursa nem é a principal culpada.",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 12.288
+ },
+ {
+  "frame": 3,
+  "who": "vertebra",
+  "text": "Nome novo, comprido... e com plot twist!",
+  "file": "assets/voice/f03-2-vertebra.wav",
+  "dur": 2.453
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "Sabe aquele ossinho que você sente na lateral do quadril? É o trocânter maior. Nele se prendem os tendões dos glúteos médio e mínimo, o nosso Glutinho. Entre eles e o osso existem as bursas, almofadinhas cheias de líquido, como a Bursinha. E por cima de tudo passa uma faixa grossa, a banda iliotibial: a Dona Faixa.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 18.091
+ },
+ {
+  "frame": 5,
+  "who": "bursinha",
+  "text": "Eu sou só uma almofadinha, gente!",
+  "file": "assets/voice/f05-2-bursinha.wav",
+  "dur": 2.039
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "E o plot twist: quando a gente olha no ultrassom ou na ressonância, na maioria das pessoas o problema principal está nos tendões dos glúteos, uma tendinopatia. A bursa pode até inflamar junto, mas geralmente é coadjuvante.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 13.461
+ },
+ {
+  "frame": 6,
+  "who": "bursinha",
+  "text": "Eu falei que era inocente!",
+  "file": "assets/voice/f06-2-bursinha.wav",
+  "dur": 1.573
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "E o que machuca o Glutinho? Duas coisas. A compressão: quando a perna cruza a linha do corpo, a Dona Faixa aperta o tendão contra o osso. Cruzar as pernas, ficar em pé apoiado num lado só, dormir com a perna de cima caída. E a sobrecarga: aumentar de repente caminhada, escada ou corrida.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 16.619
+ },
+ {
+  "frame": 7,
+  "who": "faixa",
+  "text": "Eu só tô fazendo meu trabalho... de apertar!",
+  "file": "assets/voice/f07-2-faixa.wav",
+  "dur": 2.674
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "É bem mais comum em mulheres, principalmente entre os quarenta e os sessenta anos, quando as mudanças hormonais da menopausa também afetam os tendões. Também aparece com sobrepeso, em quem aumentou a atividade de repente, em corredores e em quem tem dor lombar ou artrose no joelho.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 16.469
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "O que se sente: dor na lateral do quadril, que pode descer pela lateral da coxa até perto do joelho. Piora deitado de lado, subindo escada, levantando da cadeira, ficando muito tempo em pé, cruzando as pernas ou caminhando mais longe. E geralmente não formiga.",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 14.848
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "Modo detetive ligado! E a suspeita de hoje é uma faixa muito apertadinha.",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 4.843
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Na conversa: dói pra dormir de lado? A pessoa aponta com o dedo bem a lateral do quadril? Escada e cadeira pioram? Formiga ou desce abaixo do joelho? E mudou alguma coisa na rotina ou na atividade?",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 11.733
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "No exame, a palpação do trocânter costuma ser bem dolorida. E um dos melhores testes é o do flamingo: ficar em pé numa perna só por trinta segundos. Se a dor na lateral do quadril aparecer, é uma pista forte.",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 12.117
+ },
+ {
+  "frame": 12,
+  "who": "cida",
+  "text": "Flamingo eu não sou, doutor!",
+  "file": "assets/voice/f12-2-cida.wav",
+  "dur": 1.881
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "Também testo posições que apertam o tendão, como cruzar a perna dobrada pra dentro, e a força dos glúteos. E faço o exame neurológico, que costuma ser normal.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 9.493
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "Os impostores: a artrose do quadril, que dói mais na virilha. A coluna lombar, que costuma vir com dor nas costas e formigamento. A meralgia, do nosso amigo Nervinho, que formiga na lateral da coxa, mas não dói no ossinho. E a ruptura do tendão, com fraqueza importante e manqueira.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 15.445
+ },
+ {
+  "frame": 14,
+  "who": "nervinho",
+  "text": "Ei, essa área é minha... mas a dor não é minha!",
+  "file": "assets/voice/f14-2-nervinho.wav",
+  "dur": 2.598
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "Atenção: depois de uma queda, dor forte e sem conseguir apoiar a perna pode ser fratura do fêmur, principalmente em idosos. Febre, vermelhidão e calor no local, perda de peso sem motivo, histórico de câncer ou dor forte à noite que não melhora pedem avaliação médica rápida.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 16.384
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "E os exames? Na maioria das vezes, o diagnóstico é clínico. Ultrassom ou ressonância entram quando há dúvida, suspeita de ruptura do tendão ou quando não melhora com o tratamento.",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 10.624
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "Hora de mexer! E um mito pra derrubar: aquele alongamento cruzando a perna pra esticar a lateral do quadril costuma piorar, porque aumenta a compressão. A regra aqui é: dor leve durante o exercício pode, desde que passe até o dia seguinte.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 13.504
+ },
+ {
+  "frame": 17,
+  "who": "faixa",
+  "text": "Ei, me esticar só me deixa mais apertada!",
+  "file": "assets/voice/f17-2-faixa.wav",
+  "dur": 2.593
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "Um: tirar a compressão. Não cruzar as pernas, ficar em pé com o peso nas duas pernas, dormir com um travesseiro entre os joelhos e evitar cadeiras muito baixas.",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 9.6
+ },
+ {
+  "frame": 18,
+  "who": "glutinho",
+  "text": "Ufa! Espaço pra respirar!",
+  "file": "assets/voice/f18-2-glutinho.wav",
+  "dur": 1.747
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Dois: isometria. Deitada, com uma faixa nos joelhos, empurra os joelhos pra fora e segura, sem mexer. De trinta a quarenta e cinco segundos, cinco vezes. Isso costuma até aliviar a dor.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 11.136
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Três: ponte. Sobe o quadril, segura dois segundos e desce devagar. Três séries de dez a doze.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 5.653
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Quatro: sentar e levantar da cadeira, com os joelhos alinhados, sem deixar eles caírem pra dentro. Comece com uma cadeira mais alta. Três séries de oito a dez.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 9.579
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "Cinco: subir um degrau baixo, devagar, mantendo o quadril nivelado, sem deixar a pelve cair pro lado. Três séries de oito a dez de cada perna.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 8.384
+ },
+ {
+  "frame": 22,
+  "who": "vertebra",
+  "text": "Nível perfeito, Dona Cida!",
+  "file": "assets/voice/f22-2-vertebra.wav",
+  "dur": 1.728
+ },
+ {
+  "frame": 23,
+  "who": "pablo",
+  "text": "Seis: equilíbrio numa perna só, com a mão na parede no começo. Vinte a trinta segundos, três vezes. Aquele teste do flamingo vira treino!",
+  "file": "assets/voice/f23-1-pablo.wav",
+  "dur": 8.128
+ },
+ {
+  "frame": 23,
+  "who": "cida",
+  "text": "Agora sim, flamingo profissional!",
+  "file": "assets/voice/f23-2-cida.wav",
+  "dur": 2.054
+ },
+ {
+  "frame": 24,
+  "who": "pablo",
+  "text": "E a infiltração? Ela pode aliviar rápido, mas o efeito tende a passar. Os estudos mostram que educação e exercício dão um resultado melhor, tanto em dois meses quanto em um ano.",
+  "file": "assets/voice/f24-1-pablo.wav",
+  "dur": 10.603
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "A boa notícia: sem tratar, essa dor pode durar meses. Mas com educação e exercício bem feitos, a maioria melhora de forma clara em oito a doze semanas, e continua melhorando depois disso.",
+  "file": "assets/voice/f26-1-pablo.wav",
+  "dur": 11.733
+ },
+ {
+  "frame": 26,
+  "who": "glutinho",
+  "text": "Olha o shape! Agora ninguém me esmaga!",
+  "file": "assets/voice/f26-2-glutinho.wav",
+  "dur": 2.393
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "Se não melhorar, existem opções como ondas de choque ou infiltração, com o médico. E a cirurgia fica para casos raros, como ruptura do tendão que não responde ao tratamento.",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 10.496
+ },
+ {
+  "frame": 28,
+  "who": "pablo",
+  "text": "Resumindo: a famosa bursite quase sempre é um problema dos tendões dos glúteos. Menos compressão, mais força, e a lateral do quadril volta a deixar você dormir em paz.",
+  "file": "assets/voice/f28-1-pablo.wav",
+  "dur": 10.283
+ },
+ {
+  "frame": 28,
+  "who": "cida",
+  "text": "Zzz... pode roncar agora, Zé.",
+  "file": "assets/voice/f28-2-cida.wav",
+  "dur": 2.311
+ },
+ {
+  "frame": 29,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta qual vai ser o próximo tema!",
+  "file": "assets/voice/f29-1-pablo.wav",
+  "dur": 7.979
+ },
+ {
+  "frame": 29,
+  "who": "vertebra",
+  "text": "E manda pra sua tia que dorme abraçada no travesseiro!",
+  "file": "assets/voice/f29-2-vertebra.wav",
+  "dur": 2.965
+ }
+]
