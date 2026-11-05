@@ -1,0 +1,282 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Lembra do Seu Zé? Ele melhorou da ciatalgia, voltou a se mexer... e virou motorista de aplicativo! Dez horas por dia sentado, com uma carteira gorda no bolso de trás. Aí, no fim do dia, ele desce do carro e... AI! Uma dor funda, bem no meio da nádega.",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 14.059
+ },
+ {
+  "frame": 2,
+  "who": "piriforme",
+  "text": "Calma, amigão! Eu só tô dando um abracinho!",
+  "file": "assets/voice/f02-2-piriforme.wav",
+  "dur": 2.569
+ },
+ {
+  "frame": 2,
+  "who": "nervo",
+  "text": "Abracinho?! Você tá me esmagando!",
+  "file": "assets/voice/f02-3-nervo.wav",
+  "dur": 2.005
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "E agora? É a ciatalgia voltando? Ou é outra coisa? Bora investigar!",
+  "file": "assets/voice/f02-4-pablo.wav",
+  "dur": 4.16
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Hoje o assunto é a síndrome do piriforme: o que é, como diferenciar de uma hérnia, os melhores exercícios e as chances de melhora.",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 7.552
+ },
+ {
+  "frame": 3,
+  "who": "vertebra",
+  "text": "Piri... o quê? Parece nome de pássaro!",
+  "file": "assets/voice/f03-2-vertebra.wav",
+  "dur": 2.048
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "O piriforme é um músculo pequeno, lá no fundo da nádega. O nome vem de pera: ele tem formato de pera! Sai do sacro, a base da coluna, e vai até o topo do fêmur. A função dele? Girar a coxa pra fora e estabilizar o quadril quando você anda.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 14.08
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "E aqui está o problema: o nervo ciático passa coladinho, logo embaixo do piriforme. E em algumas pessoas, o nervo passa até por dentro do músculo! Se o piriforme fica tenso, inchado ou irritado, ele aperta o vizinho.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 12.757
+ },
+ {
+  "frame": 6,
+  "who": "nervo",
+  "text": "Eu não escolhi esse vizinho!",
+  "file": "assets/voice/f06-2-nervo.wav",
+  "dur": 1.771
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "Atenção: a síndrome do piriforme é bem menos comum do que a internet faz parecer. As estimativas vão de menos de 1% até cerca de 6% das dores ciáticas. Por isso ela é um diagnóstico de exclusão: primeiro a gente descarta a coluna.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 14.293
+ },
+ {
+  "frame": 7,
+  "who": "vertebra",
+  "text": "Ou seja, a culpa nem sempre é minha!",
+  "file": "assets/voice/f07-2-vertebra.wav",
+  "dur": 2.069
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "E o que irrita o piriforme? Ficar sentado por horas, principalmente em superfície dura ou com a carteira no bolso de trás. Sobrecarga, em quem corre, pedala ou agacha muito. Uma queda sentado, de bunda no chão. E aquela variação anatômica do nervo, que deixa o caminho mais apertado.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 16.128
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "O que se sente: uma dor funda na nádega, que piora depois de um tempo sentado, ao levantar da cadeira ou ao cruzar a perna. Às vezes desce por trás da coxa. É mais comum em mulheres e em adultos de meia-idade.",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 12.544
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "Modo detetive ligado! O suspeito de hoje: o piriforme.",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 3.627
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Na conversa, as pistas são: dói mais na nádega do que na lombar? Piora sentado ou ao levantar da cadeira? E repare: se tossir e espirrar não piora, e não tem perda de força nem de sensibilidade, a coluna fica menos suspeita e o piriforme sobe no ranking.",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 14.827
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "No exame, primeiro a palpação: apertando bem no ponto entre o sacro e o topo do fêmur, a dor do paciente aparece. É a famosa: \"É AÍ, doutor!\"",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 8.256
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "O teste mais usado é o FAIR: flexão, adução e rotação interna do quadril. O paciente deitado de lado, eu dobro o quadril e o joelho e levo a perna pra dentro. Isso estica o piriforme. Se reproduz a dor na nádega, o teste é positivo.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 14.4
+ },
+ {
+  "frame": 13,
+  "who": "nervo",
+  "text": "Ele me apertou de novo!",
+  "file": "assets/voice/f13-2-nervo.wav",
+  "dur": 1.6
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "Tem mais: no teste de Freiberg, com a perna esticada, eu giro o quadril pra dentro. No teste de Pace, sentado, o paciente empurra os joelhos pra fora contra a minha mão. Dor na nádega nesses testes reforça a suspeita.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 12.8
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "Agora o duelo: piriforme contra hérnia de disco. No piriforme, a dor é mais na nádega; na hérnia, costuma descer abaixo do joelho. Tosse e espirro pioram a hérnia, não o piriforme. O teste de Lasègue costuma ser bem positivo na hérnia e fraco no piriforme. E na hérnia pode ter perda de força, de sensibilidade ou de reflexo; no piriforme, geralmente não.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 20.181
+ },
+ {
+  "frame": 15,
+  "who": "vertebra",
+  "text": "Ding ding ding! Luta técnica!",
+  "file": "assets/voice/f15-2-vertebra.wav",
+  "dur": 1.792
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "E ainda tem outros impostores: a articulação sacroilíaca, a bursite na lateral do quadril, o tendão dos isquiotibiais, que dói bem no osso de sentar, e o próprio quadril, que costuma doer na virilha.",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 11.669
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "E as bandeiras vermelhas continuam valendo: perda de controle da urina ou das fezes, dormência na região da sela, fraqueza piorando, febre, perda de peso sem motivo ou histórico de câncer. Aí não é piriforme: é avaliação médica urgente.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 14.059
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "E exame? O diagnóstico é clínico: conversa e exame físico. A ressonância serve principalmente pra descartar a coluna quando há suspeita de hérnia ou sinais neurológicos.",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 10.453
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Hora de mexer! Regra de ouro: alongamento é desconforto leve, não dor forte. Se formigar mais, para.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 6.101
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Um: alongamento em quatro. Deitado, cruza o tornozelo sobre o joelho e puxa a coxa em direção ao peito. Trinta segundos, três vezes de cada lado.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 8.96
+ },
+ {
+  "frame": 20,
+  "who": "nervo",
+  "text": "Finalmente, espaço pessoal!",
+  "file": "assets/voice/f20-2-nervo.wav",
+  "dur": 1.941
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Dois: joelho ao ombro oposto. Deitado, puxa o joelho na diagonal, em direção ao ombro do outro lado. Trinta segundos, três vezes.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 7.829
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "Três: liberação com bolinha. Senta sobre uma bolinha de tênis e rola devagar na nádega, de um a dois minutos. Desconforto pode; dor forte, não.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 8.597
+ },
+ {
+  "frame": 22,
+  "who": "piriforme",
+  "text": "Ai, que massagem boa...",
+  "file": "assets/voice/f22-2-piriforme.wav",
+  "dur": 1.622
+ },
+ {
+  "frame": 23,
+  "who": "pablo",
+  "text": "Quatro: a concha. Deitado de lado, joelhos dobrados, abre o joelho de cima sem girar o quadril. Três séries de doze a quinze. Fortalece os glúteos que ajudam o piriforme.",
+  "file": "assets/voice/f23-1-pablo.wav",
+  "dur": 10.261
+ },
+ {
+  "frame": 23,
+  "who": "vertebra",
+  "text": "Abre e fecha, que nem ostra!",
+  "file": "assets/voice/f23-2-vertebra.wav",
+  "dur": 1.707
+ },
+ {
+  "frame": 24,
+  "who": "pablo",
+  "text": "Cinco: ponte. Sobe o quadril, segura dois segundos e desce devagar. Três séries de dez a doze.",
+  "file": "assets/voice/f24-1-pablo.wav",
+  "dur": 5.696
+ },
+ {
+  "frame": 25,
+  "who": "pablo",
+  "text": "E o seis é hábito: tira a carteira do bolso de trás e, a cada trinta, quarenta minutos sentado, levanta e anda um pouco. Pro Seu Zé, cada parada pra abastecer vale uma voltinha!",
+  "file": "assets/voice/f25-1-pablo.wav",
+  "dur": 10.389
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "A boa notícia: a grande maioria melhora com tratamento conservador em algumas semanas: alongamento, fortalecimento, terapia manual e mudança de hábitos. O piriforme relaxa, solta o nervo, e os dois fazem as pazes.",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 13.525
+ },
+ {
+  "frame": 27,
+  "who": "piriforme",
+  "text": "Desculpa, amigão. Agora só abraço com permissão!",
+  "file": "assets/voice/f27-2-piriforme.wav",
+  "dur": 3.152
+ },
+ {
+  "frame": 28,
+  "who": "pablo",
+  "text": "Se não melhorar, o médico pode indicar uma infiltração guiada por imagem. A cirurgia é rara, só pra casos que não respondem a nenhum tratamento.",
+  "file": "assets/voice/f28-1-pablo.wav",
+  "dur": 8.768
+ },
+ {
+  "frame": 29,
+  "who": "pablo",
+  "text": "Resumindo: o piriforme pode apertar o ciático, mas antes a gente descarta a coluna. E com alongamento, fortalecimento e menos tempo sentado, a nádega agradece.",
+  "file": "assets/voice/f29-1-pablo.wav",
+  "dur": 10.389
+ },
+ {
+  "frame": 30,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta qual vai ser o próximo!",
+  "file": "assets/voice/f30-1-pablo.wav",
+  "dur": 7.68
+ },
+ {
+  "frame": 30,
+  "who": "vertebra",
+  "text": "Agora é a vez da hérnia de disco!",
+  "file": "assets/voice/f30-2-vertebra.wav",
+  "dur": 2.048
+ }
+]
