@@ -1,0 +1,6062 @@
+[
+  {
+    "text": "Lembra",
+    "start": 0.05,
+    "end": 0.41,
+    "id": "w0"
+  },
+  {
+    "text": "da",
+    "start": 0.46,
+    "end": 0.57,
+    "id": "w1"
+  },
+  {
+    "text": "dona",
+    "start": 0.61,
+    "end": 0.89,
+    "id": "w2"
+  },
+  {
+    "text": "Sida?",
+    "start": 0.89,
+    "end": 1.23,
+    "id": "w3"
+  },
+  {
+    "text": "Melhorou",
+    "start": 1.54,
+    "end": 1.9,
+    "id": "w4"
+  },
+  {
+    "text": "do",
+    "start": 1.9,
+    "end": 2.01,
+    "id": "w5"
+  },
+  {
+    "text": "quadril,",
+    "start": 2.01,
+    "end": 2.57,
+    "id": "w6"
+  },
+  {
+    "text": "se",
+    "start": 2.57,
+    "end": 2.68,
+    "id": "w7"
+  },
+  {
+    "text": "empolgou",
+    "start": 2.68,
+    "end": 3.16,
+    "id": "w8"
+  },
+  {
+    "text": "e",
+    "start": 3.16,
+    "end": 3.21,
+    "id": "w9"
+  },
+  {
+    "text": "se",
+    "start": 3.21,
+    "end": 3.32,
+    "id": "w10"
+  },
+  {
+    "text": "inscreveu",
+    "start": 3.32,
+    "end": 3.84,
+    "id": "w11"
+  },
+  {
+    "text": "numa",
+    "start": 3.84,
+    "end": 4.07,
+    "id": "w12"
+  },
+  {
+    "text": "corrida",
+    "start": 4.18,
+    "end": 4.5,
+    "id": "w13"
+  },
+  {
+    "text": "de",
+    "start": 4.5,
+    "end": 4.58,
+    "id": "w14"
+  },
+  {
+    "text": "dez",
+    "start": 4.63,
+    "end": 4.8,
+    "id": "w15"
+  },
+  {
+    "text": "quilômetros.",
+    "start": 4.8,
+    "end": 5.8,
+    "id": "w16"
+  },
+  {
+    "text": "Mas",
+    "start": 5.8,
+    "end": 6.12,
+    "id": "w17"
+  },
+  {
+    "text": "nos",
+    "start": 6.12,
+    "end": 6.18,
+    "id": "w18"
+  },
+  {
+    "text": "treinos,",
+    "start": 6.18,
+    "end": 6.6,
+    "id": "w19"
+  },
+  {
+    "text": "sempre",
+    "start": 6.7,
+    "end": 7.04,
+    "id": "w20"
+  },
+  {
+    "text": "perto",
+    "start": 7.04,
+    "end": 7.33,
+    "id": "w21"
+  },
+  {
+    "text": "do",
+    "start": 7.33,
+    "end": 7.44,
+    "id": "w22"
+  },
+  {
+    "text": "terceiro",
+    "start": 7.44,
+    "end": 7.9,
+    "id": "w23"
+  },
+  {
+    "text": "quilômetro,",
+    "start": 7.9,
+    "end": 8.64,
+    "id": "w24"
+  },
+  {
+    "text": "começa",
+    "start": 8.64,
+    "end": 9.05,
+    "id": "w25"
+  },
+  {
+    "text": "uma",
+    "start": 9.05,
+    "end": 9.26,
+    "id": "w26"
+  },
+  {
+    "text": "dor",
+    "start": 9.26,
+    "end": 9.39,
+    "id": "w27"
+  },
+  {
+    "text": "na",
+    "start": 9.53,
+    "end": 9.61,
+    "id": "w28"
+  },
+  {
+    "text": "lateral",
+    "start": 9.61,
+    "end": 10.04,
+    "id": "w29"
+  },
+  {
+    "text": "do",
+    "start": 10.06,
+    "end": 10.19,
+    "id": "w30"
+  },
+  {
+    "text": "joelho,",
+    "start": 10.19,
+    "end": 10.7,
+    "id": "w31"
+  },
+  {
+    "text": "que",
+    "start": 10.7,
+    "end": 10.71,
+    "id": "w32"
+  },
+  {
+    "text": "vai",
+    "start": 11.02,
+    "end": 11.09,
+    "id": "w33"
+  },
+  {
+    "text": "piorando",
+    "start": 11.09,
+    "end": 11.61,
+    "id": "w34"
+  },
+  {
+    "text": "até",
+    "start": 11.61,
+    "end": 11.8,
+    "id": "w35"
+  },
+  {
+    "text": "ela",
+    "start": 11.8,
+    "end": 11.98,
+    "id": "w36"
+  },
+  {
+    "text": "ter",
+    "start": 11.99,
+    "end": 12.18,
+    "id": "w37"
+  },
+  {
+    "text": "que",
+    "start": 12.18,
+    "end": 12.37,
+    "id": "w38"
+  },
+  {
+    "text": "parar.",
+    "start": 12.37,
+    "end": 12.96,
+    "id": "w39"
+  },
+  {
+    "text": "Edescer",
+    "start": 12.96,
+    "end": 13.42,
+    "id": "w40"
+  },
+  {
+    "text": "a",
+    "start": 13.42,
+    "end": 13.48,
+    "id": "w41"
+  },
+  {
+    "text": "ladeira",
+    "start": 13.48,
+    "end": 13.94,
+    "id": "w42"
+  },
+  {
+    "text": "de",
+    "start": 13.94,
+    "end": 14.07,
+    "id": "w43"
+  },
+  {
+    "text": "casa",
+    "start": 14.07,
+    "end": 14.4,
+    "id": "w44"
+  },
+  {
+    "text": "virou",
+    "start": 14.45,
+    "end": 14.73,
+    "id": "w45"
+  },
+  {
+    "text": "um",
+    "start": 14.73,
+    "end": 14.83,
+    "id": "w46"
+  },
+  {
+    "text": "drama.",
+    "start": 14.86,
+    "end": 15.4,
+    "id": "w47"
+  },
+  {
+    "text": "Sida,",
+    "start": 15.45,
+    "end": 16.16,
+    "id": "w48"
+  },
+  {
+    "text": "vai",
+    "start": 16.16,
+    "end": 16.55,
+    "id": "w49"
+  },
+  {
+    "text": "devagar.",
+    "start": 16.55,
+    "end": 17.6,
+    "id": "w50"
+  },
+  {
+    "text": "Ai,",
+    "start": 17.65,
+    "end": 17.94,
+    "id": "w51"
+  },
+  {
+    "text": "ai,",
+    "start": 17.94,
+    "end": 18.28,
+    "id": "w52"
+  },
+  {
+    "text": "ai,",
+    "start": 18.28,
+    "end": 18.62,
+    "id": "w53"
+  },
+  {
+    "text": "ela",
+    "start": 18.62,
+    "end": 18.82,
+    "id": "w54"
+  },
+  {
+    "text": "de",
+    "start": 18.82,
+    "end": 19.14,
+    "id": "w55"
+  },
+  {
+    "text": "novo",
+    "start": 19.14,
+    "end": 19.4,
+    "id": "w56"
+  },
+  {
+    "text": "me",
+    "start": 19.4,
+    "end": 19.54,
+    "id": "w57"
+  },
+  {
+    "text": "apertando.",
+    "start": 19.58,
+    "end": 20.74,
+    "id": "w58"
+  },
+  {
+    "text": "Oi,",
+    "start": 20.79,
+    "end": 21.22,
+    "id": "w59"
+  },
+  {
+    "text": "Sumida,",
+    "start": 21.22,
+    "end": 21.97,
+    "id": "w60"
+  },
+  {
+    "text": "agora",
+    "start": 22.28,
+    "end": 22.76,
+    "id": "w61"
+  },
+  {
+    "text": "é",
+    "start": 22.86,
+    "end": 22.9,
+    "id": "w62"
+  },
+  {
+    "text": "o",
+    "start": 22.9,
+    "end": 23.02,
+    "id": "w63"
+  },
+  {
+    "text": "trabalho",
+    "start": 23.02,
+    "end": 23.98,
+    "id": "w64"
+  },
+  {
+    "text": "no",
+    "start": 23.98,
+    "end": 24.22,
+    "id": "w65"
+  },
+  {
+    "text": "joelho.",
+    "start": 24.22,
+    "end": 25.34,
+    "id": "w66"
+  },
+  {
+    "text": "Será",
+    "start": 25.39,
+    "end": 25.58,
+    "id": "w67"
+  },
+  {
+    "text": "que",
+    "start": 25.58,
+    "end": 25.75,
+    "id": "w68"
+  },
+  {
+    "text": "é",
+    "start": 25.75,
+    "end": 25.82,
+    "id": "w69"
+  },
+  {
+    "text": "o",
+    "start": 25.82,
+    "end": 25.87,
+    "id": "w70"
+  },
+  {
+    "text": "joelho",
+    "start": 25.88,
+    "end": 26.24,
+    "id": "w71"
+  },
+  {
+    "text": "estragando?",
+    "start": 26.24,
+    "end": 27.02,
+    "id": "w72"
+  },
+  {
+    "text": "Bora",
+    "start": 27.02,
+    "end": 27.26,
+    "id": "w73"
+  },
+  {
+    "text": "investigar.",
+    "start": 27.26,
+    "end": 28.08,
+    "id": "w74"
+  },
+  {
+    "text": "Hoje,",
+    "start": 28.13,
+    "end": 28.6,
+    "id": "w75"
+  },
+  {
+    "text": "o",
+    "start": 28.6,
+    "end": 28.65,
+    "id": "w76"
+  },
+  {
+    "text": "assunto",
+    "start": 28.69,
+    "end": 29.26,
+    "id": "w77"
+  },
+  {
+    "text": "é",
+    "start": 29.26,
+    "end": 29.31,
+    "id": "w78"
+  },
+  {
+    "text": "a",
+    "start": 29.4,
+    "end": 29.49,
+    "id": "w79"
+  },
+  {
+    "text": "síndrome",
+    "start": 29.62,
+    "end": 30.09,
+    "id": "w80"
+  },
+  {
+    "text": "do",
+    "start": 30.2,
+    "end": 30.32,
+    "id": "w81"
+  },
+  {
+    "text": "trato",
+    "start": 30.35,
+    "end": 30.78,
+    "id": "w82"
+  },
+  {
+    "text": "iliotibial,",
+    "start": 30.78,
+    "end": 31.92,
+    "id": "w83"
+  },
+  {
+    "text": "a",
+    "start": 31.92,
+    "end": 31.99,
+    "id": "w84"
+  },
+  {
+    "text": "causa",
+    "start": 31.99,
+    "end": 32.34,
+    "id": "w85"
+  },
+  {
+    "text": "mais",
+    "start": 32.34,
+    "end": 32.61,
+    "id": "w86"
+  },
+  {
+    "text": "comum",
+    "start": 32.62,
+    "end": 32.89,
+    "id": "w87"
+  },
+  {
+    "text": "de",
+    "start": 32.99,
+    "end": 33.11,
+    "id": "w88"
+  },
+  {
+    "text": "dor",
+    "start": 33.11,
+    "end": 33.32,
+    "id": "w89"
+  },
+  {
+    "text": "na",
+    "start": 33.32,
+    "end": 33.47,
+    "id": "w90"
+  },
+  {
+    "text": "lateral",
+    "start": 33.47,
+    "end": 33.64,
+    "id": "w91"
+  },
+  {
+    "text": "do",
+    "start": 33.99,
+    "end": 34,
+    "id": "w92"
+  },
+  {
+    "text": "joelho",
+    "start": 34,
+    "end": 34.41,
+    "id": "w93"
+  },
+  {
+    "text": "em",
+    "start": 34.47,
+    "end": 34.58,
+    "id": "w94"
+  },
+  {
+    "text": "corredores.",
+    "start": 34.58,
+    "end": 35.62,
+    "id": "w95"
+  },
+  {
+    "text": "O",
+    "start": 35.62,
+    "end": 35.79,
+    "id": "w96"
+  },
+  {
+    "text": "que",
+    "start": 35.79,
+    "end": 35.96,
+    "id": "w97"
+  },
+  {
+    "text": "é",
+    "start": 35.96,
+    "end": 36.03,
+    "id": "w98"
+  },
+  {
+    "text": "como",
+    "start": 36.03,
+    "end": 36.31,
+    "id": "w99"
+  },
+  {
+    "text": "investigar",
+    "start": 36.31,
+    "end": 37.02,
+    "id": "w100"
+  },
+  {
+    "text": "os",
+    "start": 37.02,
+    "end": 37.16,
+    "id": "w101"
+  },
+  {
+    "text": "exercícios",
+    "start": 37.16,
+    "end": 37.88,
+    "id": "w102"
+  },
+  {
+    "text": "certos",
+    "start": 37.88,
+    "end": 38.36,
+    "id": "w103"
+  },
+  {
+    "text": "e",
+    "start": 38.36,
+    "end": 38.42,
+    "id": "w104"
+  },
+  {
+    "text": "quanto",
+    "start": 38.42,
+    "end": 38.82,
+    "id": "w105"
+  },
+  {
+    "text": "tempo",
+    "start": 38.82,
+    "end": 39.15,
+    "id": "w106"
+  },
+  {
+    "text": "leva",
+    "start": 39.15,
+    "end": 39.41,
+    "id": "w107"
+  },
+  {
+    "text": "para",
+    "start": 39.41,
+    "end": 39.66,
+    "id": "w108"
+  },
+  {
+    "text": "voltar",
+    "start": 39.75,
+    "end": 40.07,
+    "id": "w109"
+  },
+  {
+    "text": "a",
+    "start": 40.07,
+    "end": 40.11,
+    "id": "w110"
+  },
+  {
+    "text": "correr.",
+    "start": 40.13,
+    "end": 40.7,
+    "id": "w111"
+  },
+  {
+    "text": "Número",
+    "start": 40.75,
+    "end": 41.2,
+    "id": "w112"
+  },
+  {
+    "text": "de",
+    "start": 41.2,
+    "end": 41.37,
+    "id": "w113"
+  },
+  {
+    "text": "peito",
+    "start": 41.37,
+    "end": 41.78,
+    "id": "w114"
+  },
+  {
+    "text": "no",
+    "start": 41.8,
+    "end": 41.92,
+    "id": "w115"
+  },
+  {
+    "text": "lugar,",
+    "start": 42.24,
+    "end": 42.58,
+    "id": "w116"
+  },
+  {
+    "text": "bora",
+    "start": 42.58,
+    "end": 42.91,
+    "id": "w117"
+  },
+  {
+    "text": "para",
+    "start": 42.92,
+    "end": 43.27,
+    "id": "w118"
+  },
+  {
+    "text": "largada.",
+    "start": 43.27,
+    "end": 43.96,
+    "id": "w119"
+  },
+  {
+    "text": "O",
+    "start": 44.01,
+    "end": 44.04,
+    "id": "w120"
+  },
+  {
+    "text": "trato",
+    "start": 44.04,
+    "end": 44.44,
+    "id": "w121"
+  },
+  {
+    "text": "iliotibial",
+    "start": 44.44,
+    "end": 45.18,
+    "id": "w122"
+  },
+  {
+    "text": "é",
+    "start": 45.18,
+    "end": 45.5,
+    "id": "w123"
+  },
+  {
+    "text": "uma",
+    "start": 45.5,
+    "end": 45.56,
+    "id": "w124"
+  },
+  {
+    "text": "faixa",
+    "start": 45.56,
+    "end": 45.96,
+    "id": "w125"
+  },
+  {
+    "text": "grossa",
+    "start": 45.96,
+    "end": 46.43,
+    "id": "w126"
+  },
+  {
+    "text": "e",
+    "start": 46.44,
+    "end": 46.52,
+    "id": "w127"
+  },
+  {
+    "text": "muito",
+    "start": 46.52,
+    "end": 46.92,
+    "id": "w128"
+  },
+  {
+    "text": "resistente",
+    "start": 46.92,
+    "end": 47.72,
+    "id": "w129"
+  },
+  {
+    "text": "que",
+    "start": 47.72,
+    "end": 47.96,
+    "id": "w130"
+  },
+  {
+    "text": "nasce",
+    "start": 47.96,
+    "end": 48.36,
+    "id": "w131"
+  },
+  {
+    "text": "no",
+    "start": 48.36,
+    "end": 48.52,
+    "id": "w132"
+  },
+  {
+    "text": "quadril,",
+    "start": 48.52,
+    "end": 49.2,
+    "id": "w133"
+  },
+  {
+    "text": "recebe",
+    "start": 49.27,
+    "end": 49.66,
+    "id": "w134"
+  },
+  {
+    "text": "força",
+    "start": 49.87,
+    "end": 50.12,
+    "id": "w135"
+  },
+  {
+    "text": "de",
+    "start": 50.17,
+    "end": 50.27,
+    "id": "w136"
+  },
+  {
+    "text": "dois",
+    "start": 50.27,
+    "end": 50.55,
+    "id": "w137"
+  },
+  {
+    "text": "músculos",
+    "start": 50.58,
+    "end": 51.16,
+    "id": "w138"
+  },
+  {
+    "text": "e",
+    "start": 51.17,
+    "end": 51.24,
+    "id": "w139"
+  },
+  {
+    "text": "desce",
+    "start": 51.24,
+    "end": 51.61,
+    "id": "w140"
+  },
+  {
+    "text": "pela",
+    "start": 51.66,
+    "end": 51.91,
+    "id": "w141"
+  },
+  {
+    "text": "lateral",
+    "start": 51.91,
+    "end": 52.44,
+    "id": "w142"
+  },
+  {
+    "text": "da",
+    "start": 52.44,
+    "end": 52.59,
+    "id": "w143"
+  },
+  {
+    "text": "coxa",
+    "start": 52.59,
+    "end": 52.88,
+    "id": "w144"
+  },
+  {
+    "text": "até",
+    "start": 52.96,
+    "end": 53.1,
+    "id": "w145"
+  },
+  {
+    "text": "a",
+    "start": 53.1,
+    "end": 53.18,
+    "id": "w146"
+  },
+  {
+    "text": "tíbia,",
+    "start": 53.18,
+    "end": 53.69,
+    "id": "w147"
+  },
+  {
+    "text": "logo",
+    "start": 53.69,
+    "end": 53.98,
+    "id": "w148"
+  },
+  {
+    "text": "abaixo",
+    "start": 53.99,
+    "end": 54.39,
+    "id": "w149"
+  },
+  {
+    "text": "do",
+    "start": 54.45,
+    "end": 54.58,
+    "id": "w150"
+  },
+  {
+    "text": "joelho.",
+    "start": 54.58,
+    "end": 55.36,
+    "id": "w151"
+  },
+  {
+    "text": "Isso",
+    "start": 55.44,
+    "end": 55.64,
+    "id": "w152"
+  },
+  {
+    "text": "mesmo",
+    "start": 55.69,
+    "end": 56.13,
+    "id": "w153"
+  },
+  {
+    "text": "é",
+    "start": 56.13,
+    "end": 56.21,
+    "id": "w154"
+  },
+  {
+    "text": "a",
+    "start": 56.25,
+    "end": 56.33,
+    "id": "w155"
+  },
+  {
+    "text": "nossa",
+    "start": 56.33,
+    "end": 56.81,
+    "id": "w156"
+  },
+  {
+    "text": "velha",
+    "start": 56.81,
+    "end": 57.3,
+    "id": "w157"
+  },
+  {
+    "text": "conhecida,",
+    "start": 57.3,
+    "end": 58.37,
+    "id": "w158"
+  },
+  {
+    "text": "a",
+    "start": 58.37,
+    "end": 58.4,
+    "id": "w159"
+  },
+  {
+    "text": "dona",
+    "start": 58.48,
+    "end": 58.86,
+    "id": "w160"
+  },
+  {
+    "text": "Faixa.",
+    "start": 58.86,
+    "end": 59.71,
+    "id": "w161"
+  },
+  {
+    "text": "Do",
+    "start": 59.77,
+    "end": 59.94,
+    "id": "w162"
+  },
+  {
+    "text": "quadril",
+    "start": 59.94,
+    "end": 60.69,
+    "id": "w163"
+  },
+  {
+    "text": "ao",
+    "start": 60.69,
+    "end": 60.91,
+    "id": "w164"
+  },
+  {
+    "text": "joelho",
+    "start": 60.91,
+    "end": 61.55,
+    "id": "w165"
+  },
+  {
+    "text": "sempre",
+    "start": 61.55,
+    "end": 62.19,
+    "id": "w166"
+  },
+  {
+    "text": "presente.",
+    "start": 62.2,
+    "end": 63.36,
+    "id": "w167"
+  },
+  {
+    "text": "Durante",
+    "start": 63.41,
+    "end": 63.73,
+    "id": "w168"
+  },
+  {
+    "text": "muito",
+    "start": 63.73,
+    "end": 64,
+    "id": "w169"
+  },
+  {
+    "text": "tempo",
+    "start": 64,
+    "end": 64.27,
+    "id": "w170"
+  },
+  {
+    "text": "se",
+    "start": 64.27,
+    "end": 64.38,
+    "id": "w171"
+  },
+  {
+    "text": "falou",
+    "start": 64.38,
+    "end": 64.58,
+    "id": "w172"
+  },
+  {
+    "text": "que",
+    "start": 64.58,
+    "end": 64.74,
+    "id": "w173"
+  },
+  {
+    "text": "a",
+    "start": 64.74,
+    "end": 64.9,
+    "id": "w174"
+  },
+  {
+    "text": "faixa",
+    "start": 64.9,
+    "end": 65.13,
+    "id": "w175"
+  },
+  {
+    "text": "ficava",
+    "start": 65.13,
+    "end": 65.38,
+    "id": "w176"
+  },
+  {
+    "text": "esfregando",
+    "start": 65.48,
+    "end": 65.97,
+    "id": "w177"
+  },
+  {
+    "text": "no",
+    "start": 65.98,
+    "end": 66.09,
+    "id": "w178"
+  },
+  {
+    "text": "osso,",
+    "start": 66.09,
+    "end": 66.35,
+    "id": "w179"
+  },
+  {
+    "text": "para",
+    "start": 66.42,
+    "end": 66.61,
+    "id": "w180"
+  },
+  {
+    "text": "frente",
+    "start": 66.61,
+    "end": 66.93,
+    "id": "w181"
+  },
+  {
+    "text": "e",
+    "start": 66.94,
+    "end": 66.99,
+    "id": "w182"
+  },
+  {
+    "text": "para",
+    "start": 66.99,
+    "end": 67.32,
+    "id": "w183"
+  },
+  {
+    "text": "trás.",
+    "start": 67.32,
+    "end": 68.17,
+    "id": "w184"
+  },
+  {
+    "text": "Hoje",
+    "start": 68.25,
+    "end": 68.45,
+    "id": "w185"
+  },
+  {
+    "text": "a",
+    "start": 68.45,
+    "end": 68.49,
+    "id": "w186"
+  },
+  {
+    "text": "explicação",
+    "start": 68.51,
+    "end": 69.13,
+    "id": "w187"
+  },
+  {
+    "text": "mais",
+    "start": 69.13,
+    "end": 69.39,
+    "id": "w188"
+  },
+  {
+    "text": "aceita",
+    "start": 69.39,
+    "end": 69.77,
+    "id": "w189"
+  },
+  {
+    "text": "é",
+    "start": 69.77,
+    "end": 69.83,
+    "id": "w190"
+  },
+  {
+    "text": "outra.",
+    "start": 69.83,
+    "end": 70.39,
+    "id": "w191"
+  },
+  {
+    "text": "Embaixo",
+    "start": 70.4,
+    "end": 70.8,
+    "id": "w192"
+  },
+  {
+    "text": "da",
+    "start": 70.8,
+    "end": 70.92,
+    "id": "w193"
+  },
+  {
+    "text": "faixa",
+    "start": 70.92,
+    "end": 71.2,
+    "id": "w194"
+  },
+  {
+    "text": "existe",
+    "start": 71.26,
+    "end": 71.54,
+    "id": "w195"
+  },
+  {
+    "text": "uma",
+    "start": 71.56,
+    "end": 71.69,
+    "id": "w196"
+  },
+  {
+    "text": "almofadinha",
+    "start": 71.76,
+    "end": 72.44,
+    "id": "w197"
+  },
+  {
+    "text": "de",
+    "start": 72.44,
+    "end": 72.56,
+    "id": "w198"
+  },
+  {
+    "text": "gordura",
+    "start": 72.61,
+    "end": 73.03,
+    "id": "w199"
+  },
+  {
+    "text": "muito",
+    "start": 73.03,
+    "end": 73.35,
+    "id": "w200"
+  },
+  {
+    "text": "sensível,",
+    "start": 73.35,
+    "end": 74.03,
+    "id": "w201"
+  },
+  {
+    "text": "a",
+    "start": 74.03,
+    "end": 74.1,
+    "id": "w202"
+  },
+  {
+    "text": "gordurinha.",
+    "start": 74.1,
+    "end": 75,
+    "id": "w203"
+  },
+  {
+    "text": "Quando",
+    "start": 75,
+    "end": 75.32,
+    "id": "w204"
+  },
+  {
+    "text": "o",
+    "start": 75.32,
+    "end": 75.4,
+    "id": "w205"
+  },
+  {
+    "text": "joelho",
+    "start": 75.4,
+    "end": 75.67,
+    "id": "w206"
+  },
+  {
+    "text": "está",
+    "start": 75.67,
+    "end": 75.88,
+    "id": "w207"
+  },
+  {
+    "text": "dobrado",
+    "start": 75.88,
+    "end": 76.24,
+    "id": "w208"
+  },
+  {
+    "text": "uns",
+    "start": 76.29,
+    "end": 76.41,
+    "id": "w209"
+  },
+  {
+    "text": "20,",
+    "start": 76.41,
+    "end": 76.83,
+    "id": "w210"
+  },
+  {
+    "text": "30",
+    "start": 76.83,
+    "end": 77.15,
+    "id": "w211"
+  },
+  {
+    "text": "graus,",
+    "start": 77.15,
+    "end": 77.6,
+    "id": "w212"
+  },
+  {
+    "text": "a",
+    "start": 77.65,
+    "end": 77.66,
+    "id": "w213"
+  },
+  {
+    "text": "faixa",
+    "start": 77.66,
+    "end": 77.99,
+    "id": "w214"
+  },
+  {
+    "text": "aperta",
+    "start": 77.99,
+    "end": 78.39,
+    "id": "w215"
+  },
+  {
+    "text": "essa",
+    "start": 78.39,
+    "end": 78.65,
+    "id": "w216"
+  },
+  {
+    "text": "almofadinha",
+    "start": 78.65,
+    "end": 79.38,
+    "id": "w217"
+  },
+  {
+    "text": "contra",
+    "start": 79.38,
+    "end": 79.79,
+    "id": "w218"
+  },
+  {
+    "text": "um",
+    "start": 79.79,
+    "end": 79.92,
+    "id": "w219"
+  },
+  {
+    "text": "calombo",
+    "start": 79.92,
+    "end": 80.36,
+    "id": "w220"
+  },
+  {
+    "text": "do",
+    "start": 80.44,
+    "end": 80.51,
+    "id": "w221"
+  },
+  {
+    "text": "osso",
+    "start": 80.51,
+    "end": 80.77,
+    "id": "w222"
+  },
+  {
+    "text": "da",
+    "start": 80.77,
+    "end": 80.9,
+    "id": "w223"
+  },
+  {
+    "text": "coxa.",
+    "start": 80.9,
+    "end": 81.52,
+    "id": "w224"
+  },
+  {
+    "text": "Erepetir",
+    "start": 81.52,
+    "end": 82.07,
+    "id": "w225"
+  },
+  {
+    "text": "isso",
+    "start": 82.07,
+    "end": 82.35,
+    "id": "w226"
+  },
+  {
+    "text": "milhares",
+    "start": 82.35,
+    "end": 82.84,
+    "id": "w227"
+  },
+  {
+    "text": "de",
+    "start": 82.97,
+    "end": 83.17,
+    "id": "w228"
+  },
+  {
+    "text": "vezes",
+    "start": 83.17,
+    "end": 83.79,
+    "id": "w229"
+  },
+  {
+    "text": "irrita.",
+    "start": 83.79,
+    "end": 84.92,
+    "id": "w230"
+  },
+  {
+    "text": "Eu",
+    "start": 84.97,
+    "end": 85.04,
+    "id": "w231"
+  },
+  {
+    "text": "sou",
+    "start": 85.04,
+    "end": 85.21,
+    "id": "w232"
+  },
+  {
+    "text": "cheia",
+    "start": 85.22,
+    "end": 85.49,
+    "id": "w233"
+  },
+  {
+    "text": "de",
+    "start": 85.53,
+    "end": 85.64,
+    "id": "w234"
+  },
+  {
+    "text": "nervinhos,",
+    "start": 85.64,
+    "end": 86.28,
+    "id": "w235"
+  },
+  {
+    "text": "sou",
+    "start": 86.46,
+    "end": 86.5,
+    "id": "w236"
+  },
+  {
+    "text": "sensível",
+    "start": 86.5,
+    "end": 86.93,
+    "id": "w237"
+  },
+  {
+    "text": "mesmo.",
+    "start": 87.04,
+    "end": 87.56,
+    "id": "w238"
+  },
+  {
+    "text": "Eporque",
+    "start": 87.61,
+    "end": 88.12,
+    "id": "w239"
+  },
+  {
+    "text": "na",
+    "start": 88.12,
+    "end": 88.28,
+    "id": "w240"
+  },
+  {
+    "text": "corrida,",
+    "start": 88.28,
+    "end": 89,
+    "id": "w241"
+  },
+  {
+    "text": "porque",
+    "start": 89.1,
+    "end": 89.48,
+    "id": "w242"
+  },
+  {
+    "text": "a",
+    "start": 89.48,
+    "end": 89.56,
+    "id": "w243"
+  },
+  {
+    "text": "cada",
+    "start": 89.56,
+    "end": 89.88,
+    "id": "w244"
+  },
+  {
+    "text": "passada",
+    "start": 89.88,
+    "end": 90.44,
+    "id": "w245"
+  },
+  {
+    "text": "quando",
+    "start": 90.44,
+    "end": 90.9,
+    "id": "w246"
+  },
+  {
+    "text": "o",
+    "start": 90.91,
+    "end": 91,
+    "id": "w247"
+  },
+  {
+    "text": "pé",
+    "start": 91,
+    "end": 91.16,
+    "id": "w248"
+  },
+  {
+    "text": "toca",
+    "start": 91.16,
+    "end": 91.48,
+    "id": "w249"
+  },
+  {
+    "text": "o",
+    "start": 91.48,
+    "end": 91.56,
+    "id": "w250"
+  },
+  {
+    "text": "chão,",
+    "start": 91.56,
+    "end": 92.1,
+    "id": "w251"
+  },
+  {
+    "text": "o",
+    "start": 92.12,
+    "end": 92.18,
+    "id": "w252"
+  },
+  {
+    "text": "joelho",
+    "start": 92.18,
+    "end": 92.54,
+    "id": "w253"
+  },
+  {
+    "text": "passa",
+    "start": 92.54,
+    "end": 92.8,
+    "id": "w254"
+  },
+  {
+    "text": "exatamente",
+    "start": 92.93,
+    "end": 93.62,
+    "id": "w255"
+  },
+  {
+    "text": "pela",
+    "start": 93.62,
+    "end": 93.91,
+    "id": "w256"
+  },
+  {
+    "text": "zona",
+    "start": 93.91,
+    "end": 94.1,
+    "id": "w257"
+  },
+  {
+    "text": "de",
+    "start": 94.1,
+    "end": 94.42,
+    "id": "w258"
+  },
+  {
+    "text": "aperto.",
+    "start": 94.42,
+    "end": 95.04,
+    "id": "w259"
+  },
+  {
+    "text": "Em",
+    "start": 95.04,
+    "end": 95.19,
+    "id": "w260"
+  },
+  {
+    "text": "uma",
+    "start": 95.19,
+    "end": 95.41,
+    "id": "w261"
+  },
+  {
+    "text": "corrida",
+    "start": 95.41,
+    "end": 95.87,
+    "id": "w262"
+  },
+  {
+    "text": "são",
+    "start": 95.94,
+    "end": 96.15,
+    "id": "w263"
+  },
+  {
+    "text": "milhares",
+    "start": 96.15,
+    "end": 96.74,
+    "id": "w264"
+  },
+  {
+    "text": "de",
+    "start": 96.74,
+    "end": 96.89,
+    "id": "w265"
+  },
+  {
+    "text": "passadas.",
+    "start": 96.89,
+    "end": 97.69,
+    "id": "w266"
+  },
+  {
+    "text": "Decidas,",
+    "start": 97.79,
+    "end": 98.72,
+    "id": "w267"
+  },
+  {
+    "text": "passadas",
+    "start": 98.79,
+    "end": 98.88,
+    "id": "w268"
+  },
+  {
+    "text": "longas,",
+    "start": 98.93,
+    "end": 99.4,
+    "id": "w269"
+  },
+  {
+    "text": "aumento",
+    "start": 99.4,
+    "end": 99.86,
+    "id": "w270"
+  },
+  {
+    "text": "rápido",
+    "start": 99.86,
+    "end": 100.1,
+    "id": "w271"
+  },
+  {
+    "text": "da",
+    "start": 100.1,
+    "end": 100.42,
+    "id": "w272"
+  },
+  {
+    "text": "quilometragem",
+    "start": 100.42,
+    "end": 101.23,
+    "id": "w273"
+  },
+  {
+    "text": "e",
+    "start": 101.23,
+    "end": 101.29,
+    "id": "w274"
+  },
+  {
+    "text": "correr",
+    "start": 101.29,
+    "end": 101.64,
+    "id": "w275"
+  },
+  {
+    "text": "sempre",
+    "start": 101.72,
+    "end": 102.09,
+    "id": "w276"
+  },
+  {
+    "text": "no",
+    "start": 102.09,
+    "end": 102.22,
+    "id": "w277"
+  },
+  {
+    "text": "mesmo",
+    "start": 102.22,
+    "end": 102.54,
+    "id": "w278"
+  },
+  {
+    "text": "lado",
+    "start": 102.55,
+    "end": 102.81,
+    "id": "w279"
+  },
+  {
+    "text": "da",
+    "start": 102.81,
+    "end": 102.94,
+    "id": "w280"
+  },
+  {
+    "text": "rua",
+    "start": 102.94,
+    "end": 103.14,
+    "id": "w281"
+  },
+  {
+    "text": "inclinada",
+    "start": 103.14,
+    "end": 103.84,
+    "id": "w282"
+  },
+  {
+    "text": "pioram",
+    "start": 103.89,
+    "end": 104.75,
+    "id": "w283"
+  },
+  {
+    "text": "tudo.",
+    "start": 104.75,
+    "end": 105.84,
+    "id": "w284"
+  },
+  {
+    "text": "É",
+    "start": 105.89,
+    "end": 105.9,
+    "id": "w285"
+  },
+  {
+    "text": "muito",
+    "start": 105.9,
+    "end": 106.22,
+    "id": "w286"
+  },
+  {
+    "text": "comum",
+    "start": 106.22,
+    "end": 106.54,
+    "id": "w287"
+  },
+  {
+    "text": "em",
+    "start": 106.54,
+    "end": 106.66,
+    "id": "w288"
+  },
+  {
+    "text": "corredores,",
+    "start": 106.66,
+    "end": 107.41,
+    "id": "w289"
+  },
+  {
+    "text": "mas",
+    "start": 107.41,
+    "end": 107.6,
+    "id": "w290"
+  },
+  {
+    "text": "também",
+    "start": 107.6,
+    "end": 107.98,
+    "id": "w291"
+  },
+  {
+    "text": "aparece",
+    "start": 107.98,
+    "end": 108.43,
+    "id": "w292"
+  },
+  {
+    "text": "enciclistas",
+    "start": 108.43,
+    "end": 109.11,
+    "id": "w293"
+  },
+  {
+    "text": "em",
+    "start": 109.11,
+    "end": 109.23,
+    "id": "w294"
+  },
+  {
+    "text": "quem",
+    "start": 109.23,
+    "end": 109.48,
+    "id": "w295"
+  },
+  {
+    "text": "faz",
+    "start": 109.48,
+    "end": 109.67,
+    "id": "w296"
+  },
+  {
+    "text": "trilha",
+    "start": 109.67,
+    "end": 110.04,
+    "id": "w297"
+  },
+  {
+    "text": "e",
+    "start": 110.04,
+    "end": 110.24,
+    "id": "w298"
+  },
+  {
+    "text": "em",
+    "start": 110.24,
+    "end": 110.4,
+    "id": "w299"
+  },
+  {
+    "text": "marchas",
+    "start": 110.45,
+    "end": 110.88,
+    "id": "w300"
+  },
+  {
+    "text": "longas.",
+    "start": 110.88,
+    "end": 111.48,
+    "id": "w301"
+  },
+  {
+    "text": "Epesa,",
+    "start": 111.48,
+    "end": 111.96,
+    "id": "w302"
+  },
+  {
+    "text": "quadril",
+    "start": 111.96,
+    "end": 112.41,
+    "id": "w303"
+  },
+  {
+    "text": "fraco,",
+    "start": 112.52,
+    "end": 112.9,
+    "id": "w304"
+  },
+  {
+    "text": "joelho",
+    "start": 112.92,
+    "end": 113.31,
+    "id": "w305"
+  },
+  {
+    "text": "que",
+    "start": 113.31,
+    "end": 113.52,
+    "id": "w306"
+  },
+  {
+    "text": "cai",
+    "start": 113.52,
+    "end": 113.73,
+    "id": "w307"
+  },
+  {
+    "text": "para",
+    "start": 113.73,
+    "end": 114.01,
+    "id": "w308"
+  },
+  {
+    "text": "dentro",
+    "start": 114.01,
+    "end": 114.43,
+    "id": "w309"
+  },
+  {
+    "text": "na",
+    "start": 114.43,
+    "end": 114.47,
+    "id": "w310"
+  },
+  {
+    "text": "passada",
+    "start": 114.56,
+    "end": 115.03,
+    "id": "w311"
+  },
+  {
+    "text": "e",
+    "start": 115.05,
+    "end": 115.12,
+    "id": "w312"
+  },
+  {
+    "text": "aumenta",
+    "start": 115.12,
+    "end": 115.6,
+    "id": "w313"
+  },
+  {
+    "text": "o",
+    "start": 115.6,
+    "end": 115.64,
+    "id": "w314"
+  },
+  {
+    "text": "brusco",
+    "start": 115.85,
+    "end": 116.49,
+    "id": "w315"
+  },
+  {
+    "text": "do",
+    "start": 116.49,
+    "end": 116.72,
+    "id": "w316"
+  },
+  {
+    "text": "treino.",
+    "start": 116.72,
+    "end": 117.8,
+    "id": "w317"
+  },
+  {
+    "text": "O",
+    "start": 117.85,
+    "end": 117.86,
+    "id": "w318"
+  },
+  {
+    "text": "que",
+    "start": 117.86,
+    "end": 118.04,
+    "id": "w319"
+  },
+  {
+    "text": "se",
+    "start": 118.04,
+    "end": 118.15,
+    "id": "w320"
+  },
+  {
+    "text": "sente,",
+    "start": 118.15,
+    "end": 118.58,
+    "id": "w321"
+  },
+  {
+    "text": "dor",
+    "start": 118.58,
+    "end": 118.75,
+    "id": "w322"
+  },
+  {
+    "text": "na",
+    "start": 118.75,
+    "end": 118.87,
+    "id": "w323"
+  },
+  {
+    "text": "lateral",
+    "start": 118.87,
+    "end": 119.02,
+    "id": "w324"
+  },
+  {
+    "text": "do",
+    "start": 119.34,
+    "end": 119.42,
+    "id": "w325"
+  },
+  {
+    "text": "joelho,",
+    "start": 119.42,
+    "end": 119.82,
+    "id": "w326"
+  },
+  {
+    "text": "que",
+    "start": 119.92,
+    "end": 120.08,
+    "id": "w327"
+  },
+  {
+    "text": "costuma",
+    "start": 120.08,
+    "end": 120.5,
+    "id": "w328"
+  },
+  {
+    "text": "aparecer",
+    "start": 120.5,
+    "end": 120.99,
+    "id": "w329"
+  },
+  {
+    "text": "sempre",
+    "start": 120.99,
+    "end": 121.29,
+    "id": "w330"
+  },
+  {
+    "text": "no",
+    "start": 121.36,
+    "end": 121.46,
+    "id": "w331"
+  },
+  {
+    "text": "mesmo",
+    "start": 121.47,
+    "end": 121.77,
+    "id": "w332"
+  },
+  {
+    "text": "ponto",
+    "start": 121.77,
+    "end": 122.16,
+    "id": "w333"
+  },
+  {
+    "text": "da",
+    "start": 122.21,
+    "end": 122.29,
+    "id": "w334"
+  },
+  {
+    "text": "corrida,",
+    "start": 122.29,
+    "end": 122.89,
+    "id": "w335"
+  },
+  {
+    "text": "tipo",
+    "start": 122.89,
+    "end": 123.16,
+    "id": "w336"
+  },
+  {
+    "text": "no",
+    "start": 123.16,
+    "end": 123.29,
+    "id": "w337"
+  },
+  {
+    "text": "terceiro",
+    "start": 123.29,
+    "end": 123.83,
+    "id": "w338"
+  },
+  {
+    "text": "quilômetro,",
+    "start": 123.83,
+    "end": 124.63,
+    "id": "w339"
+  },
+  {
+    "text": "e",
+    "start": 124.63,
+    "end": 124.69,
+    "id": "w340"
+  },
+  {
+    "text": "vai",
+    "start": 124.69,
+    "end": 124.89,
+    "id": "w341"
+  },
+  {
+    "text": "piorando",
+    "start": 124.89,
+    "end": 125.43,
+    "id": "w342"
+  },
+  {
+    "text": "até",
+    "start": 125.43,
+    "end": 125.63,
+    "id": "w343"
+  },
+  {
+    "text": "obrigar",
+    "start": 125.63,
+    "end": 126.1,
+    "id": "w344"
+  },
+  {
+    "text": "a",
+    "start": 126.1,
+    "end": 126.16,
+    "id": "w345"
+  },
+  {
+    "text": "parar.",
+    "start": 126.16,
+    "end": 126.79,
+    "id": "w346"
+  },
+  {
+    "text": "Em",
+    "start": 126.8,
+    "end": 126.97,
+    "id": "w347"
+  },
+  {
+    "text": "repouso",
+    "start": 126.97,
+    "end": 127.4,
+    "id": "w348"
+  },
+  {
+    "text": "melhora,",
+    "start": 127.65,
+    "end": 128.24,
+    "id": "w349"
+  },
+  {
+    "text": "descer",
+    "start": 128.24,
+    "end": 128.65,
+    "id": "w350"
+  },
+  {
+    "text": "escada",
+    "start": 128.65,
+    "end": 129.08,
+    "id": "w351"
+  },
+  {
+    "text": "e",
+    "start": 129.14,
+    "end": 129.15,
+    "id": "w352"
+  },
+  {
+    "text": "ladeira",
+    "start": 129.15,
+    "end": 129.61,
+    "id": "w353"
+  },
+  {
+    "text": "dói",
+    "start": 129.72,
+    "end": 129.84,
+    "id": "w354"
+  },
+  {
+    "text": "e",
+    "start": 129.87,
+    "end": 129.92,
+    "id": "w355"
+  },
+  {
+    "text": "muita",
+    "start": 129.92,
+    "end": 130.28,
+    "id": "w356"
+  },
+  {
+    "text": "gente",
+    "start": 130.28,
+    "end": 130.59,
+    "id": "w357"
+  },
+  {
+    "text": "passa",
+    "start": 130.66,
+    "end": 131,
+    "id": "w358"
+  },
+  {
+    "text": "a",
+    "start": 131,
+    "end": 131.07,
+    "id": "w359"
+  },
+  {
+    "text": "andar",
+    "start": 131.07,
+    "end": 131.43,
+    "id": "w360"
+  },
+  {
+    "text": "com",
+    "start": 131.43,
+    "end": 131.64,
+    "id": "w361"
+  },
+  {
+    "text": "a",
+    "start": 131.64,
+    "end": 131.67,
+    "id": "w362"
+  },
+  {
+    "text": "perna",
+    "start": 131.78,
+    "end": 132.06,
+    "id": "w363"
+  },
+  {
+    "text": "esticada",
+    "start": 132.06,
+    "end": 132.8,
+    "id": "w364"
+  },
+  {
+    "text": "para",
+    "start": 132.8,
+    "end": 132.84,
+    "id": "w365"
+  },
+  {
+    "text": "fugir",
+    "start": 133.01,
+    "end": 133.72,
+    "id": "w366"
+  },
+  {
+    "text": "da",
+    "start": 133.72,
+    "end": 134.01,
+    "id": "w367"
+  },
+  {
+    "text": "dor.",
+    "start": 134.01,
+    "end": 134.96,
+    "id": "w368"
+  },
+  {
+    "text": "Modo",
+    "start": 135.01,
+    "end": 135.37,
+    "id": "w369"
+  },
+  {
+    "text": "detetive",
+    "start": 135.37,
+    "end": 136.16,
+    "id": "w370"
+  },
+  {
+    "text": "ligado",
+    "start": 136.5,
+    "end": 136.82,
+    "id": "w371"
+  },
+  {
+    "text": "e",
+    "start": 136.82,
+    "end": 136.9,
+    "id": "w372"
+  },
+  {
+    "text": "a",
+    "start": 136.94,
+    "end": 136.98,
+    "id": "w373"
+  },
+  {
+    "text": "suspeita",
+    "start": 137.08,
+    "end": 137.85,
+    "id": "w374"
+  },
+  {
+    "text": "é",
+    "start": 137.85,
+    "end": 137.94,
+    "id": "w375"
+  },
+  {
+    "text": "reincidente,",
+    "start": 138.02,
+    "end": 139.31,
+    "id": "w376"
+  },
+  {
+    "text": "ela",
+    "start": 139.31,
+    "end": 139.61,
+    "id": "w377"
+  },
+  {
+    "text": "de",
+    "start": 139.62,
+    "end": 139.77,
+    "id": "w378"
+  },
+  {
+    "text": "novo.",
+    "start": 139.87,
+    "end": 140.52,
+    "id": "w379"
+  },
+  {
+    "text": "Reincidente",
+    "start": 140.73,
+    "end": 141.68,
+    "id": "w380"
+  },
+  {
+    "text": "não",
+    "start": 141.68,
+    "end": 141.9,
+    "id": "w381"
+  },
+  {
+    "text": "experiente.",
+    "start": 142.22,
+    "end": 143.15,
+    "id": "w382"
+  },
+  {
+    "text": "Na",
+    "start": 143.21,
+    "end": 143.29,
+    "id": "w383"
+  },
+  {
+    "text": "conversa,",
+    "start": 143.29,
+    "end": 143.92,
+    "id": "w384"
+  },
+  {
+    "text": "a",
+    "start": 143.92,
+    "end": 143.98,
+    "id": "w385"
+  },
+  {
+    "text": "dor",
+    "start": 143.98,
+    "end": 144.17,
+    "id": "w386"
+  },
+  {
+    "text": "na",
+    "start": 144.17,
+    "end": 144.29,
+    "id": "w387"
+  },
+  {
+    "text": "lateral",
+    "start": 144.29,
+    "end": 144.75,
+    "id": "w388"
+  },
+  {
+    "text": "do",
+    "start": 144.75,
+    "end": 144.88,
+    "id": "w389"
+  },
+  {
+    "text": "joelho",
+    "start": 144.88,
+    "end": 145.18,
+    "id": "w390"
+  },
+  {
+    "text": "aparece",
+    "start": 145.28,
+    "end": 145.7,
+    "id": "w391"
+  },
+  {
+    "text": "sempre",
+    "start": 145.7,
+    "end": 146.08,
+    "id": "w392"
+  },
+  {
+    "text": "no",
+    "start": 146.08,
+    "end": 146.15,
+    "id": "w393"
+  },
+  {
+    "text": "mesmo",
+    "start": 146.22,
+    "end": 146.53,
+    "id": "w394"
+  },
+  {
+    "text": "ponto",
+    "start": 146.53,
+    "end": 146.84,
+    "id": "w395"
+  },
+  {
+    "text": "da",
+    "start": 146.89,
+    "end": 146.98,
+    "id": "w396"
+  },
+  {
+    "text": "corrida,",
+    "start": 146.98,
+    "end": 147.54,
+    "id": "w397"
+  },
+  {
+    "text": "aumentou",
+    "start": 147.54,
+    "end": 148.16,
+    "id": "w398"
+  },
+  {
+    "text": "o",
+    "start": 148.21,
+    "end": 148.23,
+    "id": "w399"
+  },
+  {
+    "text": "treino",
+    "start": 148.23,
+    "end": 148.69,
+    "id": "w400"
+  },
+  {
+    "text": "ou",
+    "start": 148.69,
+    "end": 148.84,
+    "id": "w401"
+  },
+  {
+    "text": "as",
+    "start": 148.84,
+    "end": 148.99,
+    "id": "w402"
+  },
+  {
+    "text": "decidas,",
+    "start": 148.99,
+    "end": 149.67,
+    "id": "w403"
+  },
+  {
+    "text": "e",
+    "start": 149.7,
+    "end": 149.74,
+    "id": "w404"
+  },
+  {
+    "text": "o",
+    "start": 149.74,
+    "end": 149.81,
+    "id": "w405"
+  },
+  {
+    "text": "joelho",
+    "start": 149.81,
+    "end": 150.18,
+    "id": "w406"
+  },
+  {
+    "text": "em",
+    "start": 150.28,
+    "end": 150.4,
+    "id": "w407"
+  },
+  {
+    "text": "show",
+    "start": 150.43,
+    "end": 150.71,
+    "id": "w408"
+  },
+  {
+    "text": "travou",
+    "start": 150.71,
+    "end": 151.15,
+    "id": "w409"
+  },
+  {
+    "text": "ao",
+    "start": 151.22,
+    "end": 151.31,
+    "id": "w410"
+  },
+  {
+    "text": "torceu,",
+    "start": 151.31,
+    "end": 151.92,
+    "id": "w411"
+  },
+  {
+    "text": "a",
+    "start": 151.92,
+    "end": 151.99,
+    "id": "w412"
+  },
+  {
+    "text": "dor",
+    "start": 151.99,
+    "end": 152.22,
+    "id": "w413"
+  },
+  {
+    "text": "é",
+    "start": 152.22,
+    "end": 152.23,
+    "id": "w414"
+  },
+  {
+    "text": "na",
+    "start": 152.34,
+    "end": 152.43,
+    "id": "w415"
+  },
+  {
+    "text": "frente",
+    "start": 152.49,
+    "end": 152.9,
+    "id": "w416"
+  },
+  {
+    "text": "da",
+    "start": 152.9,
+    "end": 152.97,
+    "id": "w417"
+  },
+  {
+    "text": "rótula,",
+    "start": 153.07,
+    "end": 153.72,
+    "id": "w418"
+  },
+  {
+    "text": "essas",
+    "start": 153.97,
+    "end": 154.33,
+    "id": "w419"
+  },
+  {
+    "text": "últimas",
+    "start": 154.33,
+    "end": 154.91,
+    "id": "w420"
+  },
+  {
+    "text": "apontam",
+    "start": 154.91,
+    "end": 155.48,
+    "id": "w421"
+  },
+  {
+    "text": "para",
+    "start": 155.48,
+    "end": 155.81,
+    "id": "w422"
+  },
+  {
+    "text": "outros",
+    "start": 155.81,
+    "end": 156.31,
+    "id": "w423"
+  },
+  {
+    "text": "problemas.",
+    "start": 156.31,
+    "end": 157.36,
+    "id": "w424"
+  },
+  {
+    "text": "No",
+    "start": 157.41,
+    "end": 157.49,
+    "id": "w425"
+  },
+  {
+    "text": "exame,",
+    "start": 157.49,
+    "end": 157.93,
+    "id": "w426"
+  },
+  {
+    "text": "a",
+    "start": 157.97,
+    "end": 158.01,
+    "id": "w427"
+  },
+  {
+    "text": "palpação",
+    "start": 158.01,
+    "end": 158.54,
+    "id": "w428"
+  },
+  {
+    "text": "logo",
+    "start": 158.54,
+    "end": 158.58,
+    "id": "w429"
+  },
+  {
+    "text": "acima",
+    "start": 158.9,
+    "end": 159.14,
+    "id": "w430"
+  },
+  {
+    "text": "da",
+    "start": 159.14,
+    "end": 159.27,
+    "id": "w431"
+  },
+  {
+    "text": "linha",
+    "start": 159.27,
+    "end": 159.59,
+    "id": "w432"
+  },
+  {
+    "text": "do",
+    "start": 159.63,
+    "end": 159.74,
+    "id": "w433"
+  },
+  {
+    "text": "joelho",
+    "start": 159.74,
+    "end": 160.12,
+    "id": "w434"
+  },
+  {
+    "text": "do",
+    "start": 160.2,
+    "end": 160.26,
+    "id": "w435"
+  },
+  {
+    "text": "lado",
+    "start": 160.26,
+    "end": 160.53,
+    "id": "w436"
+  },
+  {
+    "text": "de",
+    "start": 160.53,
+    "end": 160.66,
+    "id": "w437"
+  },
+  {
+    "text": "fora",
+    "start": 160.66,
+    "end": 160.93,
+    "id": "w438"
+  },
+  {
+    "text": "costuma",
+    "start": 160.93,
+    "end": 161.4,
+    "id": "w439"
+  },
+  {
+    "text": "doer.",
+    "start": 161.4,
+    "end": 162.08,
+    "id": "w440"
+  },
+  {
+    "text": "No",
+    "start": 162.08,
+    "end": 162.16,
+    "id": "w441"
+  },
+  {
+    "text": "teste",
+    "start": 162.21,
+    "end": 162.49,
+    "id": "w442"
+  },
+  {
+    "text": "de",
+    "start": 162.49,
+    "end": 162.59,
+    "id": "w443"
+  },
+  {
+    "text": "noble,",
+    "start": 162.62,
+    "end": 163.08,
+    "id": "w444"
+  },
+  {
+    "text": "eu",
+    "start": 163.08,
+    "end": 163.2,
+    "id": "w445"
+  },
+  {
+    "text": "aperto",
+    "start": 163.2,
+    "end": 163.6,
+    "id": "w446"
+  },
+  {
+    "text": "esse",
+    "start": 163.7,
+    "end": 163.86,
+    "id": "w447"
+  },
+  {
+    "text": "ponto",
+    "start": 163.86,
+    "end": 164.17,
+    "id": "w448"
+  },
+  {
+    "text": "enquanto",
+    "start": 164.28,
+    "end": 164.72,
+    "id": "w449"
+  },
+  {
+    "text": "dobro",
+    "start": 164.72,
+    "end": 165.05,
+    "id": "w450"
+  },
+  {
+    "text": "e",
+    "start": 165.05,
+    "end": 165.11,
+    "id": "w451"
+  },
+  {
+    "text": "estico",
+    "start": 165.11,
+    "end": 165.5,
+    "id": "w452"
+  },
+  {
+    "text": "o",
+    "start": 165.5,
+    "end": 165.57,
+    "id": "w453"
+  },
+  {
+    "text": "joelho,",
+    "start": 165.57,
+    "end": 166.09,
+    "id": "w454"
+  },
+  {
+    "text": "perto",
+    "start": 166.09,
+    "end": 166.42,
+    "id": "w455"
+  },
+  {
+    "text": "dos",
+    "start": 166.42,
+    "end": 166.62,
+    "id": "w456"
+  },
+  {
+    "text": "30",
+    "start": 166.62,
+    "end": 166.97,
+    "id": "w457"
+  },
+  {
+    "text": "graus,",
+    "start": 167.07,
+    "end": 167.57,
+    "id": "w458"
+  },
+  {
+    "text": "a",
+    "start": 167.65,
+    "end": 167.66,
+    "id": "w459"
+  },
+  {
+    "text": "dor",
+    "start": 167.66,
+    "end": 167.86,
+    "id": "w460"
+  },
+  {
+    "text": "aparece,",
+    "start": 167.86,
+    "end": 168.47,
+    "id": "w461"
+  },
+  {
+    "text": "e",
+    "start": 168.47,
+    "end": 168.53,
+    "id": "w462"
+  },
+  {
+    "text": "o",
+    "start": 168.53,
+    "end": 168.59,
+    "id": "w463"
+  },
+  {
+    "text": "agachamento",
+    "start": 168.59,
+    "end": 169.33,
+    "id": "w464"
+  },
+  {
+    "text": "numa",
+    "start": 169.33,
+    "end": 169.6,
+    "id": "w465"
+  },
+  {
+    "text": "perna",
+    "start": 169.6,
+    "end": 169.93,
+    "id": "w466"
+  },
+  {
+    "text": "só",
+    "start": 169.93,
+    "end": 170.06,
+    "id": "w467"
+  },
+  {
+    "text": "mostra",
+    "start": 170.06,
+    "end": 170.47,
+    "id": "w468"
+  },
+  {
+    "text": "se",
+    "start": 170.47,
+    "end": 170.59,
+    "id": "w469"
+  },
+  {
+    "text": "o",
+    "start": 170.59,
+    "end": 170.66,
+    "id": "w470"
+  },
+  {
+    "text": "joelho",
+    "start": 170.66,
+    "end": 171.05,
+    "id": "w471"
+  },
+  {
+    "text": "cai",
+    "start": 171.05,
+    "end": 171.25,
+    "id": "w472"
+  },
+  {
+    "text": "pra",
+    "start": 171.25,
+    "end": 171.45,
+    "id": "w473"
+  },
+  {
+    "text": "dentro.",
+    "start": 171.45,
+    "end": 172.2,
+    "id": "w474"
+  },
+  {
+    "text": "Aí,",
+    "start": 172.25,
+    "end": 172.68,
+    "id": "w475"
+  },
+  {
+    "text": "doutor,",
+    "start": 172.68,
+    "end": 173.43,
+    "id": "w476"
+  },
+  {
+    "text": "bem",
+    "start": 173.74,
+    "end": 174.02,
+    "id": "w477"
+  },
+  {
+    "text": "nesse",
+    "start": 174.02,
+    "end": 174.63,
+    "id": "w478"
+  },
+  {
+    "text": "calombinho.",
+    "start": 174.63,
+    "end": 176.27,
+    "id": "w479"
+  },
+  {
+    "text": "Os",
+    "start": 176.33,
+    "end": 176.41,
+    "id": "w480"
+  },
+  {
+    "text": "impostores,",
+    "start": 176.41,
+    "end": 177.21,
+    "id": "w481"
+  },
+  {
+    "text": "o",
+    "start": 177.21,
+    "end": 177.28,
+    "id": "w482"
+  },
+  {
+    "text": "menisco",
+    "start": 177.28,
+    "end": 177.5,
+    "id": "w483"
+  },
+  {
+    "text": "lateral",
+    "start": 177.82,
+    "end": 178.23,
+    "id": "w484"
+  },
+  {
+    "text": "que",
+    "start": 178.26,
+    "end": 178.43,
+    "id": "w485"
+  },
+  {
+    "text": "dói",
+    "start": 178.43,
+    "end": 178.62,
+    "id": "w486"
+  },
+  {
+    "text": "bem",
+    "start": 178.62,
+    "end": 178.82,
+    "id": "w487"
+  },
+  {
+    "text": "na",
+    "start": 178.82,
+    "end": 178.95,
+    "id": "w488"
+  },
+  {
+    "text": "linha",
+    "start": 178.95,
+    "end": 179.28,
+    "id": "w489"
+  },
+  {
+    "text": "do",
+    "start": 179.34,
+    "end": 179.42,
+    "id": "w490"
+  },
+  {
+    "text": "joelho,",
+    "start": 179.42,
+    "end": 179.94,
+    "id": "w491"
+  },
+  {
+    "text": "trava",
+    "start": 179.94,
+    "end": 180.28,
+    "id": "w492"
+  },
+  {
+    "text": "e",
+    "start": 180.28,
+    "end": 180.34,
+    "id": "w493"
+  },
+  {
+    "text": "incha,",
+    "start": 180.34,
+    "end": 180.96,
+    "id": "w494"
+  },
+  {
+    "text": "o",
+    "start": 180.96,
+    "end": 181,
+    "id": "w495"
+  },
+  {
+    "text": "ligamento",
+    "start": 181.05,
+    "end": 181.55,
+    "id": "w496"
+  },
+  {
+    "text": "lateral",
+    "start": 181.61,
+    "end": 182.07,
+    "id": "w497"
+  },
+  {
+    "text": "depois",
+    "start": 182.07,
+    "end": 182.22,
+    "id": "w498"
+  },
+  {
+    "text": "de",
+    "start": 182.54,
+    "end": 182.62,
+    "id": "w499"
+  },
+  {
+    "text": "uma",
+    "start": 182.62,
+    "end": 182.82,
+    "id": "w500"
+  },
+  {
+    "text": "torção,",
+    "start": 182.82,
+    "end": 183.35,
+    "id": "w501"
+  },
+  {
+    "text": "a",
+    "start": 183.35,
+    "end": 183.41,
+    "id": "w502"
+  },
+  {
+    "text": "dor",
+    "start": 183.41,
+    "end": 183.61,
+    "id": "w503"
+  },
+  {
+    "text": "patelofemoral",
+    "start": 183.61,
+    "end": 184.47,
+    "id": "w504"
+  },
+  {
+    "text": "na",
+    "start": 184.47,
+    "end": 184.6,
+    "id": "w505"
+  },
+  {
+    "text": "frente",
+    "start": 184.6,
+    "end": 185.01,
+    "id": "w506"
+  },
+  {
+    "text": "da",
+    "start": 185.01,
+    "end": 185.07,
+    "id": "w507"
+  },
+  {
+    "text": "rótula,",
+    "start": 185.16,
+    "end": 185.8,
+    "id": "w508"
+  },
+  {
+    "text": "um",
+    "start": 185.85,
+    "end": 185.93,
+    "id": "w509"
+  },
+  {
+    "text": "tendão",
+    "start": 185.93,
+    "end": 186.33,
+    "id": "w510"
+  },
+  {
+    "text": "atrás",
+    "start": 186.33,
+    "end": 186.66,
+    "id": "w511"
+  },
+  {
+    "text": "e",
+    "start": 186.66,
+    "end": 186.72,
+    "id": "w512"
+  },
+  {
+    "text": "do",
+    "start": 186.72,
+    "end": 186.84,
+    "id": "w513"
+  },
+  {
+    "text": "lado",
+    "start": 186.84,
+    "end": 187.02,
+    "id": "w514"
+  },
+  {
+    "text": "do",
+    "start": 187.02,
+    "end": 187.34,
+    "id": "w515"
+  },
+  {
+    "text": "joelho,",
+    "start": 187.34,
+    "end": 187.74,
+    "id": "w516"
+  },
+  {
+    "text": "e",
+    "start": 187.78,
+    "end": 187.82,
+    "id": "w517"
+  },
+  {
+    "text": "a",
+    "start": 187.82,
+    "end": 187.92,
+    "id": "w518"
+  },
+  {
+    "text": "fratura",
+    "start": 187.92,
+    "end": 188.35,
+    "id": "w519"
+  },
+  {
+    "text": "por",
+    "start": 188.35,
+    "end": 188.55,
+    "id": "w520"
+  },
+  {
+    "text": "estresse",
+    "start": 188.55,
+    "end": 189.08,
+    "id": "w521"
+  },
+  {
+    "text": "que",
+    "start": 189.08,
+    "end": 189.28,
+    "id": "w522"
+  },
+  {
+    "text": "dói",
+    "start": 189.28,
+    "end": 189.46,
+    "id": "w523"
+  },
+  {
+    "text": "até",
+    "start": 189.47,
+    "end": 189.66,
+    "id": "w524"
+  },
+  {
+    "text": "em",
+    "start": 189.67,
+    "end": 189.8,
+    "id": "w525"
+  },
+  {
+    "text": "repouso.",
+    "start": 189.8,
+    "end": 190.6,
+    "id": "w526"
+  },
+  {
+    "text": "Ei,",
+    "start": 190.65,
+    "end": 191.1,
+    "id": "w527"
+  },
+  {
+    "text": "dessa",
+    "start": 191.1,
+    "end": 191.73,
+    "id": "w528"
+  },
+  {
+    "text": "vez",
+    "start": 191.73,
+    "end": 191.82,
+    "id": "w529"
+  },
+  {
+    "text": "eu",
+    "start": 192.14,
+    "end": 192.37,
+    "id": "w530"
+  },
+  {
+    "text": "sou",
+    "start": 192.37,
+    "end": 192.75,
+    "id": "w531"
+  },
+  {
+    "text": "inocente,",
+    "start": 192.75,
+    "end": 194.01,
+    "id": "w532"
+  },
+  {
+    "text": "tá?",
+    "start": 194.01,
+    "end": 194.67,
+    "id": "w533"
+  },
+  {
+    "text": "Atenção,",
+    "start": 194.77,
+    "end": 195.25,
+    "id": "w534"
+  },
+  {
+    "text": "joelho",
+    "start": 195.26,
+    "end": 195.62,
+    "id": "w535"
+  },
+  {
+    "text": "muito",
+    "start": 195.62,
+    "end": 195.92,
+    "id": "w536"
+  },
+  {
+    "text": "inchado,",
+    "start": 195.92,
+    "end": 196.46,
+    "id": "w537"
+  },
+  {
+    "text": "travamento",
+    "start": 196.46,
+    "end": 197.06,
+    "id": "w538"
+  },
+  {
+    "text": "verdadeiro,",
+    "start": 197.06,
+    "end": 197.84,
+    "id": "w539"
+  },
+  {
+    "text": "falsei-o",
+    "start": 197.84,
+    "end": 198.36,
+    "id": "w540"
+  },
+  {
+    "text": "depois",
+    "start": 198.36,
+    "end": 198.76,
+    "id": "w541"
+  },
+  {
+    "text": "de",
+    "start": 198.76,
+    "end": 198.79,
+    "id": "w542"
+  },
+  {
+    "text": "uma",
+    "start": 198.88,
+    "end": 199.09,
+    "id": "w543"
+  },
+  {
+    "text": "torção,",
+    "start": 199.09,
+    "end": 199.68,
+    "id": "w544"
+  },
+  {
+    "text": "febre",
+    "start": 199.73,
+    "end": 200.03,
+    "id": "w545"
+  },
+  {
+    "text": "com",
+    "start": 200.03,
+    "end": 200.24,
+    "id": "w546"
+  },
+  {
+    "text": "o",
+    "start": 200.24,
+    "end": 200.31,
+    "id": "w547"
+  },
+  {
+    "text": "joelho",
+    "start": 200.31,
+    "end": 200.72,
+    "id": "w548"
+  },
+  {
+    "text": "quente",
+    "start": 200.72,
+    "end": 200.9,
+    "id": "w549"
+  },
+  {
+    "text": "e",
+    "start": 200.9,
+    "end": 201.22,
+    "id": "w550"
+  },
+  {
+    "text": "vermelho,",
+    "start": 201.22,
+    "end": 201.91,
+    "id": "w551"
+  },
+  {
+    "text": "dor",
+    "start": 201.95,
+    "end": 202.13,
+    "id": "w552"
+  },
+  {
+    "text": "forte",
+    "start": 202.13,
+    "end": 202.44,
+    "id": "w553"
+  },
+  {
+    "text": "em",
+    "start": 202.52,
+    "end": 202.62,
+    "id": "w554"
+  },
+  {
+    "text": "repouso,",
+    "start": 202.62,
+    "end": 203.28,
+    "id": "w555"
+  },
+  {
+    "text": "ou",
+    "start": 203.28,
+    "end": 203.36,
+    "id": "w556"
+  },
+  {
+    "text": "não",
+    "start": 203.41,
+    "end": 203.54,
+    "id": "w557"
+  },
+  {
+    "text": "conseguir",
+    "start": 203.54,
+    "end": 204.04,
+    "id": "w558"
+  },
+  {
+    "text": "apoiar",
+    "start": 204.04,
+    "end": 204.49,
+    "id": "w559"
+  },
+  {
+    "text": "a",
+    "start": 204.61,
+    "end": 204.62,
+    "id": "w560"
+  },
+  {
+    "text": "perna",
+    "start": 204.62,
+    "end": 204.95,
+    "id": "w561"
+  },
+  {
+    "text": "peda",
+    "start": 204.95,
+    "end": 205.21,
+    "id": "w562"
+  },
+  {
+    "text": "em",
+    "start": 205.21,
+    "end": 205.34,
+    "id": "w563"
+  },
+  {
+    "text": "avaliação",
+    "start": 205.34,
+    "end": 205.79,
+    "id": "w564"
+  },
+  {
+    "text": "médica.",
+    "start": 206.1,
+    "end": 206.56,
+    "id": "w565"
+  },
+  {
+    "text": "Eos",
+    "start": 206.61,
+    "end": 206.8,
+    "id": "w566"
+  },
+  {
+    "text": "exames,",
+    "start": 206.8,
+    "end": 207.45,
+    "id": "w567"
+  },
+  {
+    "text": "o",
+    "start": 207.45,
+    "end": 207.53,
+    "id": "w568"
+  },
+  {
+    "text": "diagnóstico",
+    "start": 207.53,
+    "end": 208.42,
+    "id": "w569"
+  },
+  {
+    "text": "é",
+    "start": 208.42,
+    "end": 208.49,
+    "id": "w570"
+  },
+  {
+    "text": "clínico,",
+    "start": 208.5,
+    "end": 209.22,
+    "id": "w571"
+  },
+  {
+    "text": "ressonância",
+    "start": 209.22,
+    "end": 210.05,
+    "id": "w572"
+  },
+  {
+    "text": "ou",
+    "start": 210.12,
+    "end": 210.24,
+    "id": "w573"
+  },
+  {
+    "text": "ultrassom",
+    "start": 210.29,
+    "end": 210.99,
+    "id": "w574"
+  },
+  {
+    "text": "ficam",
+    "start": 210.99,
+    "end": 211.37,
+    "id": "w575"
+  },
+  {
+    "text": "pra",
+    "start": 211.47,
+    "end": 211.63,
+    "id": "w576"
+  },
+  {
+    "text": "quando",
+    "start": 211.63,
+    "end": 212.12,
+    "id": "w577"
+  },
+  {
+    "text": "a",
+    "start": 212.18,
+    "end": 212.35,
+    "id": "w578"
+  },
+  {
+    "text": "dúvida,",
+    "start": 212.47,
+    "end": 212.92,
+    "id": "w579"
+  },
+  {
+    "text": "suspeita",
+    "start": 212.92,
+    "end": 213.44,
+    "id": "w580"
+  },
+  {
+    "text": "de",
+    "start": 213.49,
+    "end": 213.61,
+    "id": "w581"
+  },
+  {
+    "text": "menisco",
+    "start": 213.61,
+    "end": 214.22,
+    "id": "w582"
+  },
+  {
+    "text": "ou",
+    "start": 214.22,
+    "end": 214.37,
+    "id": "w583"
+  },
+  {
+    "text": "ligamento,",
+    "start": 214.39,
+    "end": 215.34,
+    "id": "w584"
+  },
+  {
+    "text": "ou",
+    "start": 215.34,
+    "end": 215.45,
+    "id": "w585"
+  },
+  {
+    "text": "quando",
+    "start": 215.56,
+    "end": 216.04,
+    "id": "w586"
+  },
+  {
+    "text": "não",
+    "start": 216.04,
+    "end": 216.3,
+    "id": "w587"
+  },
+  {
+    "text": "melhora",
+    "start": 216.3,
+    "end": 216.91,
+    "id": "w588"
+  },
+  {
+    "text": "com",
+    "start": 216.91,
+    "end": 217.16,
+    "id": "w589"
+  },
+  {
+    "text": "o",
+    "start": 217.17,
+    "end": 217.25,
+    "id": "w590"
+  },
+  {
+    "text": "tratamento.",
+    "start": 217.25,
+    "end": 218.48,
+    "id": "w591"
+  },
+  {
+    "text": "Para",
+    "start": 218.53,
+    "end": 218.74,
+    "id": "w592"
+  },
+  {
+    "text": "de",
+    "start": 218.74,
+    "end": 218.87,
+    "id": "w593"
+  },
+  {
+    "text": "mexer",
+    "start": 218.87,
+    "end": 219.19,
+    "id": "w594"
+  },
+  {
+    "text": "e",
+    "start": 219.19,
+    "end": 219.25,
+    "id": "w595"
+  },
+  {
+    "text": "um",
+    "start": 219.25,
+    "end": 219.38,
+    "id": "w596"
+  },
+  {
+    "text": "mito",
+    "start": 219.38,
+    "end": 219.63,
+    "id": "w597"
+  },
+  {
+    "text": "importante,",
+    "start": 219.63,
+    "end": 220.41,
+    "id": "w598"
+  },
+  {
+    "text": "você",
+    "start": 220.41,
+    "end": 220.67,
+    "id": "w599"
+  },
+  {
+    "text": "não",
+    "start": 220.67,
+    "end": 220.86,
+    "id": "w600"
+  },
+  {
+    "text": "consegue",
+    "start": 220.86,
+    "end": 221.38,
+    "id": "w601"
+  },
+  {
+    "text": "esticar",
+    "start": 221.38,
+    "end": 221.82,
+    "id": "w602"
+  },
+  {
+    "text": "o",
+    "start": 221.82,
+    "end": 221.89,
+    "id": "w603"
+  },
+  {
+    "text": "trato",
+    "start": 221.89,
+    "end": 222.2,
+    "id": "w604"
+  },
+  {
+    "text": "iliotibial,",
+    "start": 222.21,
+    "end": 223.04,
+    "id": "w605"
+  },
+  {
+    "text": "ele",
+    "start": 223.09,
+    "end": 223.23,
+    "id": "w606"
+  },
+  {
+    "text": "é",
+    "start": 223.23,
+    "end": 223.29,
+    "id": "w607"
+  },
+  {
+    "text": "mais",
+    "start": 223.29,
+    "end": 223.54,
+    "id": "w608"
+  },
+  {
+    "text": "duro",
+    "start": 223.54,
+    "end": 223.78,
+    "id": "w609"
+  },
+  {
+    "text": "que",
+    "start": 223.78,
+    "end": 223.97,
+    "id": "w610"
+  },
+  {
+    "text": "corda",
+    "start": 223.97,
+    "end": 224.26,
+    "id": "w611"
+  },
+  {
+    "text": "de",
+    "start": 224.26,
+    "end": 224.58,
+    "id": "w612"
+  },
+  {
+    "text": "navio,",
+    "start": 224.58,
+    "end": 224.82,
+    "id": "w613"
+  },
+  {
+    "text": "o",
+    "start": 224.83,
+    "end": 224.89,
+    "id": "w614"
+  },
+  {
+    "text": "rolinho",
+    "start": 224.89,
+    "end": 225.32,
+    "id": "w615"
+  },
+  {
+    "text": "de",
+    "start": 225.32,
+    "end": 225.44,
+    "id": "w616"
+  },
+  {
+    "text": "espuma",
+    "start": 225.44,
+    "end": 225.8,
+    "id": "w617"
+  },
+  {
+    "text": "pode",
+    "start": 225.88,
+    "end": 226.03,
+    "id": "w618"
+  },
+  {
+    "text": "até",
+    "start": 226.1,
+    "end": 226.26,
+    "id": "w619"
+  },
+  {
+    "text": "aliviar",
+    "start": 226.26,
+    "end": 226.69,
+    "id": "w620"
+  },
+  {
+    "text": "a",
+    "start": 226.69,
+    "end": 226.72,
+    "id": "w621"
+  },
+  {
+    "text": "sensação,",
+    "start": 226.77,
+    "end": 227.52,
+    "id": "w622"
+  },
+  {
+    "text": "mas",
+    "start": 227.52,
+    "end": 227.57,
+    "id": "w623"
+  },
+  {
+    "text": "não",
+    "start": 227.57,
+    "end": 227.81,
+    "id": "w624"
+  },
+  {
+    "text": "estica",
+    "start": 227.81,
+    "end": 228.39,
+    "id": "w625"
+  },
+  {
+    "text": "a",
+    "start": 228.39,
+    "end": 228.47,
+    "id": "w626"
+  },
+  {
+    "text": "faixa,",
+    "start": 228.47,
+    "end": 229.15,
+    "id": "w627"
+  },
+  {
+    "text": "o",
+    "start": 229.15,
+    "end": 229.24,
+    "id": "w628"
+  },
+  {
+    "text": "foco",
+    "start": 229.24,
+    "end": 229.54,
+    "id": "w629"
+  },
+  {
+    "text": "é",
+    "start": 229.64,
+    "end": 229.71,
+    "id": "w630"
+  },
+  {
+    "text": "outro,",
+    "start": 229.71,
+    "end": 230.38,
+    "id": "w631"
+  },
+  {
+    "text": "carga,",
+    "start": 230.38,
+    "end": 231.01,
+    "id": "w632"
+  },
+  {
+    "text": "passada",
+    "start": 231.08,
+    "end": 231.72,
+    "id": "w633"
+  },
+  {
+    "text": "e",
+    "start": 231.72,
+    "end": 231.79,
+    "id": "w634"
+  },
+  {
+    "text": "quadril",
+    "start": 231.85,
+    "end": 232.48,
+    "id": "w635"
+  },
+  {
+    "text": "forte.",
+    "start": 232.48,
+    "end": 233.08,
+    "id": "w636"
+  },
+  {
+    "text": "Pode",
+    "start": 233.41,
+    "end": 233.77,
+    "id": "w637"
+  },
+  {
+    "text": "puxar",
+    "start": 233.79,
+    "end": 234.29,
+    "id": "w638"
+  },
+  {
+    "text": "a",
+    "start": 234.31,
+    "end": 234.4,
+    "id": "w639"
+  },
+  {
+    "text": "vontade,",
+    "start": 234.41,
+    "end": 235.37,
+    "id": "w640"
+  },
+  {
+    "text": "eu",
+    "start": 235.37,
+    "end": 235.57,
+    "id": "w641"
+  },
+  {
+    "text": "não",
+    "start": 235.58,
+    "end": 235.9,
+    "id": "w642"
+  },
+  {
+    "text": "estico.",
+    "start": 235.9,
+    "end": 236.7,
+    "id": "w643"
+  },
+  {
+    "text": "Um",
+    "start": 236.77,
+    "end": 236.85,
+    "id": "w644"
+  },
+  {
+    "text": "ajustar",
+    "start": 236.85,
+    "end": 237.29,
+    "id": "w645"
+  },
+  {
+    "text": "o",
+    "start": 237.33,
+    "end": 237.37,
+    "id": "w646"
+  },
+  {
+    "text": "treino,",
+    "start": 237.37,
+    "end": 237.9,
+    "id": "w647"
+  },
+  {
+    "text": "diminuir",
+    "start": 237.9,
+    "end": 238.43,
+    "id": "w648"
+  },
+  {
+    "text": "a",
+    "start": 238.43,
+    "end": 238.49,
+    "id": "w649"
+  },
+  {
+    "text": "distância",
+    "start": 238.49,
+    "end": 239.09,
+    "id": "w650"
+  },
+  {
+    "text": "e",
+    "start": 239.09,
+    "end": 239.15,
+    "id": "w651"
+  },
+  {
+    "text": "as",
+    "start": 239.15,
+    "end": 239.28,
+    "id": "w652"
+  },
+  {
+    "text": "descidas,",
+    "start": 239.28,
+    "end": 239.95,
+    "id": "w653"
+  },
+  {
+    "text": "correr",
+    "start": 239.95,
+    "end": 240.35,
+    "id": "w654"
+  },
+  {
+    "text": "até",
+    "start": 240.35,
+    "end": 240.55,
+    "id": "w655"
+  },
+  {
+    "text": "um",
+    "start": 240.55,
+    "end": 240.68,
+    "id": "w656"
+  },
+  {
+    "text": "pouco",
+    "start": 240.68,
+    "end": 240.99,
+    "id": "w657"
+  },
+  {
+    "text": "antes",
+    "start": 241.05,
+    "end": 241.48,
+    "id": "w658"
+  },
+  {
+    "text": "da",
+    "start": 241.53,
+    "end": 241.63,
+    "id": "w659"
+  },
+  {
+    "text": "dor",
+    "start": 241.63,
+    "end": 241.86,
+    "id": "w660"
+  },
+  {
+    "text": "aparecer",
+    "start": 241.86,
+    "end": 242.48,
+    "id": "w661"
+  },
+  {
+    "text": "em",
+    "start": 242.48,
+    "end": 242.63,
+    "id": "w662"
+  },
+  {
+    "text": "dias",
+    "start": 242.63,
+    "end": 242.7,
+    "id": "w663"
+  },
+  {
+    "text": "alternados",
+    "start": 243.02,
+    "end": 243.7,
+    "id": "w664"
+  },
+  {
+    "text": "e",
+    "start": 243.71,
+    "end": 243.77,
+    "id": "w665"
+  },
+  {
+    "text": "manter",
+    "start": 243.77,
+    "end": 244.24,
+    "id": "w666"
+  },
+  {
+    "text": "o",
+    "start": 244.24,
+    "end": 244.32,
+    "id": "w667"
+  },
+  {
+    "text": "condicionamento",
+    "start": 244.32,
+    "end": 245.46,
+    "id": "w668"
+  },
+  {
+    "text": "com",
+    "start": 245.46,
+    "end": 245.69,
+    "id": "w669"
+  },
+  {
+    "text": "natação",
+    "start": 245.69,
+    "end": 246.23,
+    "id": "w670"
+  },
+  {
+    "text": "ou",
+    "start": 246.23,
+    "end": 246.29,
+    "id": "w671"
+  },
+  {
+    "text": "outra",
+    "start": 246.39,
+    "end": 246.72,
+    "id": "w672"
+  },
+  {
+    "text": "atividade",
+    "start": 246.86,
+    "end": 247.52,
+    "id": "w673"
+  },
+  {
+    "text": "que",
+    "start": 247.57,
+    "end": 248.02,
+    "id": "w674"
+  },
+  {
+    "text": "não",
+    "start": 248.02,
+    "end": 248.52,
+    "id": "w675"
+  },
+  {
+    "text": "doa.",
+    "start": 248.52,
+    "end": 249.52,
+    "id": "w676"
+  },
+  {
+    "text": "Dois",
+    "start": 249.57,
+    "end": 249.81,
+    "id": "w677"
+  },
+  {
+    "text": "passos",
+    "start": 249.82,
+    "end": 250.27,
+    "id": "w678"
+  },
+  {
+    "text": "um",
+    "start": 250.27,
+    "end": 250.42,
+    "id": "w679"
+  },
+  {
+    "text": "pouco",
+    "start": 250.42,
+    "end": 250.72,
+    "id": "w680"
+  },
+  {
+    "text": "mais",
+    "start": 251.06,
+    "end": 251.1,
+    "id": "w681"
+  },
+  {
+    "text": "curtos",
+    "start": 251.1,
+    "end": 251.53,
+    "id": "w682"
+  },
+  {
+    "text": "e",
+    "start": 251.53,
+    "end": 251.64,
+    "id": "w683"
+  },
+  {
+    "text": "mais",
+    "start": 251.64,
+    "end": 251.92,
+    "id": "w684"
+  },
+  {
+    "text": "rápidos,",
+    "start": 251.92,
+    "end": 252.59,
+    "id": "w685"
+  },
+  {
+    "text": "aumentar",
+    "start": 252.59,
+    "end": 253.18,
+    "id": "w686"
+  },
+  {
+    "text": "a",
+    "start": 253.19,
+    "end": 253.26,
+    "id": "w687"
+  },
+  {
+    "text": "cadência",
+    "start": 253.26,
+    "end": 253.79,
+    "id": "w688"
+  },
+  {
+    "text": "em",
+    "start": 253.85,
+    "end": 254,
+    "id": "w689"
+  },
+  {
+    "text": "5",
+    "start": 254,
+    "end": 254.22,
+    "id": "w690"
+  },
+  {
+    "text": "a",
+    "start": 254.22,
+    "end": 254.29,
+    "id": "w691"
+  },
+  {
+    "text": "10%",
+    "start": 254.29,
+    "end": 254.76,
+    "id": "w692"
+  },
+  {
+    "text": "diminui",
+    "start": 254.91,
+    "end": 255.32,
+    "id": "w693"
+  },
+  {
+    "text": "a",
+    "start": 255.32,
+    "end": 255.45,
+    "id": "w694"
+  },
+  {
+    "text": "carga",
+    "start": 255.45,
+    "end": 255.89,
+    "id": "w695"
+  },
+  {
+    "text": "no",
+    "start": 255.89,
+    "end": 256.08,
+    "id": "w696"
+  },
+  {
+    "text": "joelho,",
+    "start": 256.08,
+    "end": 256.84,
+    "id": "w697"
+  },
+  {
+    "text": "um",
+    "start": 256.94,
+    "end": 257.03,
+    "id": "w698"
+  },
+  {
+    "text": "metrônomo",
+    "start": 257.03,
+    "end": 257.88,
+    "id": "w699"
+  },
+  {
+    "text": "no",
+    "start": 257.9,
+    "end": 258.08,
+    "id": "w700"
+  },
+  {
+    "text": "celular",
+    "start": 258.08,
+    "end": 258.74,
+    "id": "w701"
+  },
+  {
+    "text": "ajuda.",
+    "start": 258.76,
+    "end": 259.64,
+    "id": "w702"
+  },
+  {
+    "text": "Pacinho",
+    "start": 259.69,
+    "end": 260.3,
+    "id": "w703"
+  },
+  {
+    "text": "curto,",
+    "start": 260.3,
+    "end": 260.86,
+    "id": "w704"
+  },
+  {
+    "text": "agora",
+    "start": 261.18,
+    "end": 261.44,
+    "id": "w705"
+  },
+  {
+    "text": "sim",
+    "start": 261.44,
+    "end": 261.65,
+    "id": "w706"
+  },
+  {
+    "text": "dá",
+    "start": 261.76,
+    "end": 261.9,
+    "id": "w707"
+  },
+  {
+    "text": "pra",
+    "start": 261.91,
+    "end": 262.19,
+    "id": "w708"
+  },
+  {
+    "text": "respirar.",
+    "start": 262.19,
+    "end": 263.08,
+    "id": "w709"
+  },
+  {
+    "text": "Três",
+    "start": 263.13,
+    "end": 263.34,
+    "id": "w710"
+  },
+  {
+    "text": "prancha",
+    "start": 263.34,
+    "end": 263.8,
+    "id": "w711"
+  },
+  {
+    "text": "lateral,",
+    "start": 263.8,
+    "end": 264.31,
+    "id": "w712"
+  },
+  {
+    "text": "começando",
+    "start": 264.62,
+    "end": 265,
+    "id": "w713"
+  },
+  {
+    "text": "com",
+    "start": 265,
+    "end": 265.1,
+    "id": "w714"
+  },
+  {
+    "text": "os",
+    "start": 265.2,
+    "end": 265.32,
+    "id": "w715"
+  },
+  {
+    "text": "joelhos",
+    "start": 265.35,
+    "end": 265.79,
+    "id": "w716"
+  },
+  {
+    "text": "no",
+    "start": 265.79,
+    "end": 265.84,
+    "id": "w717"
+  },
+  {
+    "text": "chão",
+    "start": 265.92,
+    "end": 266.18,
+    "id": "w718"
+  },
+  {
+    "text": "e",
+    "start": 266.18,
+    "end": 266.24,
+    "id": "w719"
+  },
+  {
+    "text": "evoluindo",
+    "start": 266.24,
+    "end": 266.84,
+    "id": "w720"
+  },
+  {
+    "text": "pra",
+    "start": 266.84,
+    "end": 267.04,
+    "id": "w721"
+  },
+  {
+    "text": "perna",
+    "start": 267.04,
+    "end": 267.35,
+    "id": "w722"
+  },
+  {
+    "text": "esticada,",
+    "start": 267.41,
+    "end": 268.16,
+    "id": "w723"
+  },
+  {
+    "text": "de",
+    "start": 268.21,
+    "end": 268.36,
+    "id": "w724"
+  },
+  {
+    "text": "20",
+    "start": 268.36,
+    "end": 268.95,
+    "id": "w725"
+  },
+  {
+    "text": "a",
+    "start": 268.96,
+    "end": 269.06,
+    "id": "w726"
+  },
+  {
+    "text": "40",
+    "start": 269.06,
+    "end": 269.36,
+    "id": "w727"
+  },
+  {
+    "text": "segundos",
+    "start": 269.7,
+    "end": 270.45,
+    "id": "w728"
+  },
+  {
+    "text": "3",
+    "start": 270.46,
+    "end": 270.76,
+    "id": "w729"
+  },
+  {
+    "text": "vezes",
+    "start": 270.76,
+    "end": 271.26,
+    "id": "w730"
+  },
+  {
+    "text": "de",
+    "start": 271.26,
+    "end": 271.46,
+    "id": "w731"
+  },
+  {
+    "text": "cada",
+    "start": 271.46,
+    "end": 271.83,
+    "id": "w732"
+  },
+  {
+    "text": "lado.",
+    "start": 271.88,
+    "end": 272.6,
+    "id": "w733"
+  },
+  {
+    "text": "Quatro",
+    "start": 272.65,
+    "end": 272.95,
+    "id": "w734"
+  },
+  {
+    "text": "abdução",
+    "start": 272.95,
+    "end": 273.38,
+    "id": "w735"
+  },
+  {
+    "text": "deitada",
+    "start": 273.38,
+    "end": 273.8,
+    "id": "w736"
+  },
+  {
+    "text": "de",
+    "start": 273.8,
+    "end": 273.83,
+    "id": "w737"
+  },
+  {
+    "text": "lado,",
+    "start": 274.14,
+    "end": 274.29,
+    "id": "w738"
+  },
+  {
+    "text": "levanta",
+    "start": 274.29,
+    "end": 274.72,
+    "id": "w739"
+  },
+  {
+    "text": "a",
+    "start": 274.72,
+    "end": 274.78,
+    "id": "w740"
+  },
+  {
+    "text": "perna",
+    "start": 274.78,
+    "end": 275.07,
+    "id": "w741"
+  },
+  {
+    "text": "de",
+    "start": 275.08,
+    "end": 275.2,
+    "id": "w742"
+  },
+  {
+    "text": "cima",
+    "start": 275.2,
+    "end": 275.45,
+    "id": "w743"
+  },
+  {
+    "text": "esticada",
+    "start": 275.45,
+    "end": 275.93,
+    "id": "w744"
+  },
+  {
+    "text": "um",
+    "start": 275.93,
+    "end": 276.05,
+    "id": "w745"
+  },
+  {
+    "text": "pouquinho",
+    "start": 276.05,
+    "end": 276.61,
+    "id": "w746"
+  },
+  {
+    "text": "pra",
+    "start": 276.61,
+    "end": 276.87,
+    "id": "w747"
+  },
+  {
+    "text": "trás",
+    "start": 276.97,
+    "end": 277.3,
+    "id": "w748"
+  },
+  {
+    "text": "sem",
+    "start": 277.3,
+    "end": 277.58,
+    "id": "w749"
+  },
+  {
+    "text": "girar",
+    "start": 277.58,
+    "end": 278.05,
+    "id": "w750"
+  },
+  {
+    "text": "o",
+    "start": 278.05,
+    "end": 278.14,
+    "id": "w751"
+  },
+  {
+    "text": "quadril,",
+    "start": 278.46,
+    "end": 278.93,
+    "id": "w752"
+  },
+  {
+    "text": "três",
+    "start": 279.04,
+    "end": 279.37,
+    "id": "w753"
+  },
+  {
+    "text": "séries",
+    "start": 279.37,
+    "end": 279.92,
+    "id": "w754"
+  },
+  {
+    "text": "de",
+    "start": 279.98,
+    "end": 280.13,
+    "id": "w755"
+  },
+  {
+    "text": "12",
+    "start": 280.13,
+    "end": 280.7,
+    "id": "w756"
+  },
+  {
+    "text": "a",
+    "start": 280.7,
+    "end": 280.78,
+    "id": "w757"
+  },
+  {
+    "text": "15",
+    "start": 280.78,
+    "end": 281.36,
+    "id": "w758"
+  },
+  {
+    "text": "devagar.",
+    "start": 281.36,
+    "end": 282.16,
+    "id": "w759"
+  },
+  {
+    "text": "Olha",
+    "start": 282.41,
+    "end": 282.77,
+    "id": "w760"
+  },
+  {
+    "text": "o",
+    "start": 282.79,
+    "end": 282.89,
+    "id": "w761"
+  },
+  {
+    "text": "glúteo",
+    "start": 282.89,
+    "end": 283.52,
+    "id": "w762"
+  },
+  {
+    "text": "acordando.",
+    "start": 283.52,
+    "end": 284.88,
+    "id": "w763"
+  },
+  {
+    "text": "Cinco",
+    "start": 284.93,
+    "end": 285.17,
+    "id": "w764"
+  },
+  {
+    "text": "descida",
+    "start": 285.19,
+    "end": 285.62,
+    "id": "w765"
+  },
+  {
+    "text": "controlada",
+    "start": 285.62,
+    "end": 286.11,
+    "id": "w766"
+  },
+  {
+    "text": "do",
+    "start": 286.11,
+    "end": 286.42,
+    "id": "w767"
+  },
+  {
+    "text": "degrau,",
+    "start": 286.42,
+    "end": 286.82,
+    "id": "w768"
+  },
+  {
+    "text": "em",
+    "start": 286.86,
+    "end": 286.9,
+    "id": "w769"
+  },
+  {
+    "text": "cima",
+    "start": 287,
+    "end": 287.22,
+    "id": "w770"
+  },
+  {
+    "text": "de",
+    "start": 287.22,
+    "end": 287.34,
+    "id": "w771"
+  },
+  {
+    "text": "um",
+    "start": 287.34,
+    "end": 287.46,
+    "id": "w772"
+  },
+  {
+    "text": "degrau",
+    "start": 287.46,
+    "end": 287.83,
+    "id": "w773"
+  },
+  {
+    "text": "baixo,",
+    "start": 287.83,
+    "end": 288.26,
+    "id": "w774"
+  },
+  {
+    "text": "desce",
+    "start": 288.26,
+    "end": 288.56,
+    "id": "w775"
+  },
+  {
+    "text": "a",
+    "start": 288.61,
+    "end": 288.63,
+    "id": "w776"
+  },
+  {
+    "text": "outra",
+    "start": 288.63,
+    "end": 288.94,
+    "id": "w777"
+  },
+  {
+    "text": "perna",
+    "start": 288.94,
+    "end": 289.38,
+    "id": "w778"
+  },
+  {
+    "text": "devagar",
+    "start": 289.38,
+    "end": 289.92,
+    "id": "w779"
+  },
+  {
+    "text": "em",
+    "start": 289.97,
+    "end": 290.06,
+    "id": "w780"
+  },
+  {
+    "text": "três",
+    "start": 290.06,
+    "end": 290.33,
+    "id": "w781"
+  },
+  {
+    "text": "segundos,",
+    "start": 290.33,
+    "end": 291.04,
+    "id": "w782"
+  },
+  {
+    "text": "mantendo",
+    "start": 291.04,
+    "end": 291.6,
+    "id": "w783"
+  },
+  {
+    "text": "o",
+    "start": 291.6,
+    "end": 291.67,
+    "id": "w784"
+  },
+  {
+    "text": "joelho",
+    "start": 291.67,
+    "end": 292.09,
+    "id": "w785"
+  },
+  {
+    "text": "alinhado",
+    "start": 292.09,
+    "end": 292.65,
+    "id": "w786"
+  },
+  {
+    "text": "com",
+    "start": 292.65,
+    "end": 292.86,
+    "id": "w787"
+  },
+  {
+    "text": "o",
+    "start": 292.86,
+    "end": 292.91,
+    "id": "w788"
+  },
+  {
+    "text": "pé",
+    "start": 292.98,
+    "end": 293.07,
+    "id": "w789"
+  },
+  {
+    "text": "sem",
+    "start": 293.07,
+    "end": 293.26,
+    "id": "w790"
+  },
+  {
+    "text": "deixar",
+    "start": 293.28,
+    "end": 293.7,
+    "id": "w791"
+  },
+  {
+    "text": "cair",
+    "start": 293.7,
+    "end": 293.98,
+    "id": "w792"
+  },
+  {
+    "text": "pra",
+    "start": 293.98,
+    "end": 294.19,
+    "id": "w793"
+  },
+  {
+    "text": "dentro,",
+    "start": 294.19,
+    "end": 294.73,
+    "id": "w794"
+  },
+  {
+    "text": "três",
+    "start": 294.83,
+    "end": 295.08,
+    "id": "w795"
+  },
+  {
+    "text": "séries",
+    "start": 295.13,
+    "end": 295.84,
+    "id": "w796"
+  },
+  {
+    "text": "de",
+    "start": 295.84,
+    "end": 296.09,
+    "id": "w797"
+  },
+  {
+    "text": "8",
+    "start": 296.09,
+    "end": 296.3,
+    "id": "w798"
+  },
+  {
+    "text": "a",
+    "start": 296.3,
+    "end": 296.62,
+    "id": "w799"
+  },
+  {
+    "text": "10.",
+    "start": 296.62,
+    "end": 297.8,
+    "id": "w800"
+  },
+  {
+    "text": "Seis",
+    "start": 297.85,
+    "end": 298.04,
+    "id": "w801"
+  },
+  {
+    "text": "agachamento",
+    "start": 298.04,
+    "end": 298.71,
+    "id": "w802"
+  },
+  {
+    "text": "parcial",
+    "start": 298.71,
+    "end": 299.02,
+    "id": "w803"
+  },
+  {
+    "text": "numa",
+    "start": 299.34,
+    "end": 299.4,
+    "id": "w804"
+  },
+  {
+    "text": "perna",
+    "start": 299.4,
+    "end": 299.71,
+    "id": "w805"
+  },
+  {
+    "text": "só,",
+    "start": 299.71,
+    "end": 299.95,
+    "id": "w806"
+  },
+  {
+    "text": "com",
+    "start": 299.95,
+    "end": 300.14,
+    "id": "w807"
+  },
+  {
+    "text": "a",
+    "start": 300.14,
+    "end": 300.2,
+    "id": "w808"
+  },
+  {
+    "text": "mão",
+    "start": 300.2,
+    "end": 300.39,
+    "id": "w809"
+  },
+  {
+    "text": "na",
+    "start": 300.39,
+    "end": 300.51,
+    "id": "w810"
+  },
+  {
+    "text": "parede",
+    "start": 300.51,
+    "end": 300.88,
+    "id": "w811"
+  },
+  {
+    "text": "no",
+    "start": 300.88,
+    "end": 301,
+    "id": "w812"
+  },
+  {
+    "text": "começo,",
+    "start": 301,
+    "end": 301.48,
+    "id": "w813"
+  },
+  {
+    "text": "olhando",
+    "start": 301.53,
+    "end": 302.04,
+    "id": "w814"
+  },
+  {
+    "text": "no",
+    "start": 302.04,
+    "end": 302.07,
+    "id": "w815"
+  },
+  {
+    "text": "espelho",
+    "start": 302.13,
+    "end": 302.56,
+    "id": "w816"
+  },
+  {
+    "text": "se",
+    "start": 302.61,
+    "end": 302.75,
+    "id": "w817"
+  },
+  {
+    "text": "o",
+    "start": 302.75,
+    "end": 302.84,
+    "id": "w818"
+  },
+  {
+    "text": "joelho",
+    "start": 302.84,
+    "end": 303.41,
+    "id": "w819"
+  },
+  {
+    "text": "fica",
+    "start": 303.41,
+    "end": 303.75,
+    "id": "w820"
+  },
+  {
+    "text": "alinhado,",
+    "start": 303.75,
+    "end": 304.75,
+    "id": "w821"
+  },
+  {
+    "text": "três",
+    "start": 304.75,
+    "end": 305.13,
+    "id": "w822"
+  },
+  {
+    "text": "séries",
+    "start": 305.13,
+    "end": 305.7,
+    "id": "w823"
+  },
+  {
+    "text": "de",
+    "start": 305.7,
+    "end": 305.89,
+    "id": "w824"
+  },
+  {
+    "text": "8",
+    "start": 305.89,
+    "end": 306.18,
+    "id": "w825"
+  },
+  {
+    "text": "de",
+    "start": 306.18,
+    "end": 306.37,
+    "id": "w826"
+  },
+  {
+    "text": "cada",
+    "start": 306.37,
+    "end": 306.75,
+    "id": "w827"
+  },
+  {
+    "text": "lado.",
+    "start": 306.75,
+    "end": 307.52,
+    "id": "w828"
+  },
+  {
+    "text": "Eajudam",
+    "start": 307.57,
+    "end": 307.95,
+    "id": "w829"
+  },
+  {
+    "text": "o",
+    "start": 307.98,
+    "end": 308.03,
+    "id": "w830"
+  },
+  {
+    "text": "rolinho",
+    "start": 308.03,
+    "end": 308.47,
+    "id": "w831"
+  },
+  {
+    "text": "ou",
+    "start": 308.47,
+    "end": 308.61,
+    "id": "w832"
+  },
+  {
+    "text": "massagem",
+    "start": 308.61,
+    "end": 309.13,
+    "id": "w833"
+  },
+  {
+    "text": "pra",
+    "start": 309.13,
+    "end": 309.32,
+    "id": "w834"
+  },
+  {
+    "text": "aliviar,",
+    "start": 309.33,
+    "end": 309.91,
+    "id": "w835"
+  },
+  {
+    "text": "gelo",
+    "start": 309.91,
+    "end": 310.17,
+    "id": "w836"
+  },
+  {
+    "text": "depois",
+    "start": 310.17,
+    "end": 310.52,
+    "id": "w837"
+  },
+  {
+    "text": "do",
+    "start": 310.58,
+    "end": 310.69,
+    "id": "w838"
+  },
+  {
+    "text": "treino",
+    "start": 310.69,
+    "end": 311.01,
+    "id": "w839"
+  },
+  {
+    "text": "na",
+    "start": 311.08,
+    "end": 311.2,
+    "id": "w840"
+  },
+  {
+    "text": "fase",
+    "start": 311.25,
+    "end": 311.47,
+    "id": "w841"
+  },
+  {
+    "text": "de",
+    "start": 311.47,
+    "end": 311.59,
+    "id": "w842"
+  },
+  {
+    "text": "crise,",
+    "start": 311.7,
+    "end": 312.05,
+    "id": "w843"
+  },
+  {
+    "text": "tênis",
+    "start": 312.06,
+    "end": 312.52,
+    "id": "w844"
+  },
+  {
+    "text": "em",
+    "start": 312.57,
+    "end": 312.66,
+    "id": "w845"
+  },
+  {
+    "text": "bom",
+    "start": 312.66,
+    "end": 312.87,
+    "id": "w846"
+  },
+  {
+    "text": "estado,",
+    "start": 312.87,
+    "end": 313.44,
+    "id": "w847"
+  },
+  {
+    "text": "infiltração",
+    "start": 313.44,
+    "end": 314.23,
+    "id": "w848"
+  },
+  {
+    "text": "fica",
+    "start": 314.23,
+    "end": 314.52,
+    "id": "w849"
+  },
+  {
+    "text": "pra",
+    "start": 314.52,
+    "end": 314.72,
+    "id": "w850"
+  },
+  {
+    "text": "casos",
+    "start": 314.73,
+    "end": 315.09,
+    "id": "w851"
+  },
+  {
+    "text": "persistentes,",
+    "start": 315.09,
+    "end": 316.09,
+    "id": "w852"
+  },
+  {
+    "text": "com",
+    "start": 316.1,
+    "end": 316.31,
+    "id": "w853"
+  },
+  {
+    "text": "o",
+    "start": 316.31,
+    "end": 316.38,
+    "id": "w854"
+  },
+  {
+    "text": "médico,",
+    "start": 316.38,
+    "end": 316.95,
+    "id": "w855"
+  },
+  {
+    "text": "mas",
+    "start": 316.95,
+    "end": 317.15,
+    "id": "w856"
+  },
+  {
+    "text": "o",
+    "start": 317.16,
+    "end": 317.23,
+    "id": "w857"
+  },
+  {
+    "text": "principal",
+    "start": 317.23,
+    "end": 318,
+    "id": "w858"
+  },
+  {
+    "text": "é",
+    "start": 318.05,
+    "end": 318.11,
+    "id": "w859"
+  },
+  {
+    "text": "carga,",
+    "start": 318.11,
+    "end": 318.9,
+    "id": "w860"
+  },
+  {
+    "text": "passada",
+    "start": 318.9,
+    "end": 319.7,
+    "id": "w861"
+  },
+  {
+    "text": "e",
+    "start": 319.7,
+    "end": 319.8,
+    "id": "w862"
+  },
+  {
+    "text": "força.",
+    "start": 319.81,
+    "end": 320.76,
+    "id": "w863"
+  },
+  {
+    "text": "A",
+    "start": 320.81,
+    "end": 320.83,
+    "id": "w864"
+  },
+  {
+    "text": "boa",
+    "start": 320.83,
+    "end": 321.05,
+    "id": "w865"
+  },
+  {
+    "text": "notícia,",
+    "start": 321.05,
+    "end": 321.69,
+    "id": "w866"
+  },
+  {
+    "text": "a",
+    "start": 321.69,
+    "end": 321.77,
+    "id": "w867"
+  },
+  {
+    "text": "maioria",
+    "start": 321.77,
+    "end": 321.96,
+    "id": "w868"
+  },
+  {
+    "text": "melhora",
+    "start": 322.3,
+    "end": 322.77,
+    "id": "w869"
+  },
+  {
+    "text": "em",
+    "start": 322.88,
+    "end": 322.93,
+    "id": "w870"
+  },
+  {
+    "text": "4",
+    "start": 322.93,
+    "end": 323.15,
+    "id": "w871"
+  },
+  {
+    "text": "a",
+    "start": 323.15,
+    "end": 323.22,
+    "id": "w872"
+  },
+  {
+    "text": "8",
+    "start": 323.22,
+    "end": 323.44,
+    "id": "w873"
+  },
+  {
+    "text": "semanas",
+    "start": 323.44,
+    "end": 323.95,
+    "id": "w874"
+  },
+  {
+    "text": "de",
+    "start": 323.95,
+    "end": 324.09,
+    "id": "w875"
+  },
+  {
+    "text": "tratamento",
+    "start": 324.09,
+    "end": 324.82,
+    "id": "w876"
+  },
+  {
+    "text": "bem",
+    "start": 324.82,
+    "end": 325.03,
+    "id": "w877"
+  },
+  {
+    "text": "feito.",
+    "start": 325.09,
+    "end": 325.72,
+    "id": "w878"
+  },
+  {
+    "text": "A",
+    "start": 325.77,
+    "end": 325.79,
+    "id": "w879"
+  },
+  {
+    "text": "volta",
+    "start": 325.79,
+    "end": 326.13,
+    "id": "w880"
+  },
+  {
+    "text": "é",
+    "start": 326.13,
+    "end": 326.21,
+    "id": "w881"
+  },
+  {
+    "text": "em",
+    "start": 326.21,
+    "end": 326.35,
+    "id": "w882"
+  },
+  {
+    "text": "etapas,",
+    "start": 326.35,
+    "end": 326.91,
+    "id": "w883"
+  },
+  {
+    "text": "primeiro",
+    "start": 327.26,
+    "end": 327.47,
+    "id": "w884"
+  },
+  {
+    "text": "correr",
+    "start": 327.47,
+    "end": 327.89,
+    "id": "w885"
+  },
+  {
+    "text": "no",
+    "start": 327.89,
+    "end": 328.02,
+    "id": "w886"
+  },
+  {
+    "text": "plano,",
+    "start": 328.02,
+    "end": 328.48,
+    "id": "w887"
+  },
+  {
+    "text": "dias",
+    "start": 328.56,
+    "end": 328.8,
+    "id": "w888"
+  },
+  {
+    "text": "alternados,",
+    "start": 328.8,
+    "end": 329.64,
+    "id": "w889"
+  },
+  {
+    "text": "depois",
+    "start": 329.64,
+    "end": 330.06,
+    "id": "w890"
+  },
+  {
+    "text": "aumentar",
+    "start": 330.06,
+    "end": 330.53,
+    "id": "w891"
+  },
+  {
+    "text": "a",
+    "start": 330.63,
+    "end": 330.69,
+    "id": "w892"
+  },
+  {
+    "text": "distância,",
+    "start": 330.69,
+    "end": 331.44,
+    "id": "w893"
+  },
+  {
+    "text": "só",
+    "start": 331.49,
+    "end": 331.63,
+    "id": "w894"
+  },
+  {
+    "text": "então",
+    "start": 331.63,
+    "end": 332.1,
+    "id": "w895"
+  },
+  {
+    "text": "as",
+    "start": 332.1,
+    "end": 332.29,
+    "id": "w896"
+  },
+  {
+    "text": "descidas",
+    "start": 332.29,
+    "end": 333.05,
+    "id": "w897"
+  },
+  {
+    "text": "e",
+    "start": 333.05,
+    "end": 333.14,
+    "id": "w898"
+  },
+  {
+    "text": "por",
+    "start": 333.14,
+    "end": 333.38,
+    "id": "w899"
+  },
+  {
+    "text": "último",
+    "start": 333.42,
+    "end": 333.99,
+    "id": "w900"
+  },
+  {
+    "text": "a",
+    "start": 333.99,
+    "end": 334.08,
+    "id": "w901"
+  },
+  {
+    "text": "velocidade.",
+    "start": 334.08,
+    "end": 335.36,
+    "id": "w902"
+  },
+  {
+    "text": "Essa",
+    "start": 335.41,
+    "end": 335.75,
+    "id": "w903"
+  },
+  {
+    "text": "é",
+    "start": 335.75,
+    "end": 335.84,
+    "id": "w904"
+  },
+  {
+    "text": "a",
+    "start": 335.84,
+    "end": 335.92,
+    "id": "w905"
+  },
+  {
+    "text": "minha",
+    "start": 335.92,
+    "end": 336.41,
+    "id": "w906"
+  },
+  {
+    "text": "sida,",
+    "start": 336.41,
+    "end": 336.99,
+    "id": "w907"
+  },
+  {
+    "text": "10",
+    "start": 336.99,
+    "end": 337.57,
+    "id": "w908"
+  },
+  {
+    "text": "quilômetros.",
+    "start": 337.58,
+    "end": 338.76,
+    "id": "w909"
+  },
+  {
+    "text": "Se",
+    "start": 338.81,
+    "end": 338.9,
+    "id": "w910"
+  },
+  {
+    "text": "não",
+    "start": 338.9,
+    "end": 339.11,
+    "id": "w911"
+  },
+  {
+    "text": "melhorar,",
+    "start": 339.11,
+    "end": 339.83,
+    "id": "w912"
+  },
+  {
+    "text": "a",
+    "start": 339.83,
+    "end": 339.91,
+    "id": "w913"
+  },
+  {
+    "text": "gente",
+    "start": 339.91,
+    "end": 339.98,
+    "id": "w914"
+  },
+  {
+    "text": "reavalia",
+    "start": 340.3,
+    "end": 340.77,
+    "id": "w915"
+  },
+  {
+    "text": "a",
+    "start": 340.88,
+    "end": 340.92,
+    "id": "w916"
+  },
+  {
+    "text": "passada,",
+    "start": 340.92,
+    "end": 341.52,
+    "id": "w917"
+  },
+  {
+    "text": "o",
+    "start": 341.6,
+    "end": 341.64,
+    "id": "w918"
+  },
+  {
+    "text": "treino",
+    "start": 341.64,
+    "end": 342.08,
+    "id": "w919"
+  },
+  {
+    "text": "e",
+    "start": 342.08,
+    "end": 342.15,
+    "id": "w920"
+  },
+  {
+    "text": "outros",
+    "start": 342.15,
+    "end": 342.59,
+    "id": "w921"
+  },
+  {
+    "text": "fatores.",
+    "start": 342.59,
+    "end": 343.44,
+    "id": "w922"
+  },
+  {
+    "text": "A",
+    "start": 343.49,
+    "end": 343.52,
+    "id": "w923"
+  },
+  {
+    "text": "infiltração",
+    "start": 343.52,
+    "end": 344.45,
+    "id": "w924"
+  },
+  {
+    "text": "pode",
+    "start": 344.45,
+    "end": 344.66,
+    "id": "w925"
+  },
+  {
+    "text": "ajudar",
+    "start": 344.98,
+    "end": 345.3,
+    "id": "w926"
+  },
+  {
+    "text": "em",
+    "start": 345.3,
+    "end": 345.45,
+    "id": "w927"
+  },
+  {
+    "text": "alguns",
+    "start": 345.56,
+    "end": 345.98,
+    "id": "w928"
+  },
+  {
+    "text": "casos,",
+    "start": 345.98,
+    "end": 346.58,
+    "id": "w929"
+  },
+  {
+    "text": "com",
+    "start": 346.58,
+    "end": 346.83,
+    "id": "w930"
+  },
+  {
+    "text": "o",
+    "start": 346.83,
+    "end": 346.91,
+    "id": "w931"
+  },
+  {
+    "text": "médico",
+    "start": 346.91,
+    "end": 347.42,
+    "id": "w932"
+  },
+  {
+    "text": "e",
+    "start": 347.42,
+    "end": 347.5,
+    "id": "w933"
+  },
+  {
+    "text": "a",
+    "start": 347.5,
+    "end": 347.51,
+    "id": "w934"
+  },
+  {
+    "text": "cirurgia",
+    "start": 347.62,
+    "end": 348.25,
+    "id": "w935"
+  },
+  {
+    "text": "é",
+    "start": 348.25,
+    "end": 348.35,
+    "id": "w936"
+  },
+  {
+    "text": "rara.",
+    "start": 348.35,
+    "end": 349,
+    "id": "w937"
+  },
+  {
+    "text": "Resumindo,",
+    "start": 349.09,
+    "end": 349.72,
+    "id": "w938"
+  },
+  {
+    "text": "a",
+    "start": 349.72,
+    "end": 349.78,
+    "id": "w939"
+  },
+  {
+    "text": "síndrome",
+    "start": 349.78,
+    "end": 350.24,
+    "id": "w940"
+  },
+  {
+    "text": "do",
+    "start": 350.24,
+    "end": 350.27,
+    "id": "w941"
+  },
+  {
+    "text": "trato",
+    "start": 350.51,
+    "end": 350.7,
+    "id": "w942"
+  },
+  {
+    "text": "iliotibial",
+    "start": 350.7,
+    "end": 351.32,
+    "id": "w943"
+  },
+  {
+    "text": "é",
+    "start": 351.32,
+    "end": 351.38,
+    "id": "w944"
+  },
+  {
+    "text": "uma",
+    "start": 351.38,
+    "end": 351.57,
+    "id": "w945"
+  },
+  {
+    "text": "faixa",
+    "start": 351.57,
+    "end": 351.8,
+    "id": "w946"
+  },
+  {
+    "text": "apertando",
+    "start": 351.88,
+    "end": 352.44,
+    "id": "w947"
+  },
+  {
+    "text": "um",
+    "start": 352.44,
+    "end": 352.53,
+    "id": "w948"
+  },
+  {
+    "text": "tecido",
+    "start": 352.6,
+    "end": 352.93,
+    "id": "w949"
+  },
+  {
+    "text": "sensível",
+    "start": 352.93,
+    "end": 353.55,
+    "id": "w950"
+  },
+  {
+    "text": "na",
+    "start": 353.61,
+    "end": 353.71,
+    "id": "w951"
+  },
+  {
+    "text": "lateral",
+    "start": 353.71,
+    "end": 354.24,
+    "id": "w952"
+  },
+  {
+    "text": "do",
+    "start": 354.24,
+    "end": 354.39,
+    "id": "w953"
+  },
+  {
+    "text": "joelho.",
+    "start": 354.39,
+    "end": 355.08,
+    "id": "w954"
+  },
+  {
+    "text": "Não",
+    "start": 355.13,
+    "end": 355.31,
+    "id": "w955"
+  },
+  {
+    "text": "adianta",
+    "start": 355.31,
+    "end": 355.83,
+    "id": "w956"
+  },
+  {
+    "text": "tentar",
+    "start": 355.83,
+    "end": 356.26,
+    "id": "w957"
+  },
+  {
+    "text": "esticar.",
+    "start": 356.26,
+    "end": 357.08,
+    "id": "w958"
+  },
+  {
+    "text": "Ajuste",
+    "start": 357.13,
+    "end": 357.61,
+    "id": "w959"
+  },
+  {
+    "text": "a",
+    "start": 357.62,
+    "end": 357.71,
+    "id": "w960"
+  },
+  {
+    "text": "carga,",
+    "start": 357.71,
+    "end": 358.3,
+    "id": "w961"
+  },
+  {
+    "text": "encurte",
+    "start": 358.62,
+    "end": 358.98,
+    "id": "w962"
+  },
+  {
+    "text": "a",
+    "start": 358.98,
+    "end": 359.07,
+    "id": "w963"
+  },
+  {
+    "text": "passada",
+    "start": 359.07,
+    "end": 359.69,
+    "id": "w964"
+  },
+  {
+    "text": "e",
+    "start": 359.7,
+    "end": 359.79,
+    "id": "w965"
+  },
+  {
+    "text": "fortaleça",
+    "start": 359.79,
+    "end": 360.57,
+    "id": "w966"
+  },
+  {
+    "text": "o",
+    "start": 360.64,
+    "end": 360.69,
+    "id": "w967"
+  },
+  {
+    "text": "quadril.",
+    "start": 360.69,
+    "end": 361.68,
+    "id": "w968"
+  },
+  {
+    "text": "Tá",
+    "start": 361.73,
+    "end": 361.87,
+    "id": "w969"
+  },
+  {
+    "text": "bom",
+    "start": 361.87,
+    "end": 362.16,
+    "id": "w970"
+  },
+  {
+    "text": "gordurinha,",
+    "start": 362.16,
+    "end": 363.32,
+    "id": "w971"
+  },
+  {
+    "text": "agora",
+    "start": 363.32,
+    "end": 363.81,
+    "id": "w972"
+  },
+  {
+    "text": "sou",
+    "start": 363.81,
+    "end": 364.1,
+    "id": "w973"
+  },
+  {
+    "text": "perto",
+    "start": 364.1,
+    "end": 364.59,
+    "id": "w974"
+  },
+  {
+    "text": "de",
+    "start": 364.59,
+    "end": 364.78,
+    "id": "w975"
+  },
+  {
+    "text": "mão.",
+    "start": 364.78,
+    "end": 365.44,
+    "id": "w976"
+  },
+  {
+    "text": "Lembrando,",
+    "start": 365.49,
+    "end": 366.21,
+    "id": "w977"
+  },
+  {
+    "text": "esse",
+    "start": 366.21,
+    "end": 366.48,
+    "id": "w978"
+  },
+  {
+    "text": "vídeo",
+    "start": 366.48,
+    "end": 366.66,
+    "id": "w979"
+  },
+  {
+    "text": "é",
+    "start": 366.66,
+    "end": 366.98,
+    "id": "w980"
+  },
+  {
+    "text": "educativo",
+    "start": 366.98,
+    "end": 367.45,
+    "id": "w981"
+  },
+  {
+    "text": "e",
+    "start": 367.56,
+    "end": 367.61,
+    "id": "w982"
+  },
+  {
+    "text": "não",
+    "start": 367.61,
+    "end": 367.82,
+    "id": "w983"
+  },
+  {
+    "text": "substitui",
+    "start": 367.82,
+    "end": 368.44,
+    "id": "w984"
+  },
+  {
+    "text": "uma",
+    "start": 368.5,
+    "end": 368.66,
+    "id": "w985"
+  },
+  {
+    "text": "avaliação.",
+    "start": 368.66,
+    "end": 369.51,
+    "id": "w986"
+  },
+  {
+    "text": "Se",
+    "start": 369.57,
+    "end": 369.65,
+    "id": "w987"
+  },
+  {
+    "text": "inscreve,",
+    "start": 369.65,
+    "end": 370.31,
+    "id": "w988"
+  },
+  {
+    "text": "ativa",
+    "start": 370.32,
+    "end": 370.65,
+    "id": "w989"
+  },
+  {
+    "text": "o",
+    "start": 370.65,
+    "end": 370.71,
+    "id": "w990"
+  },
+  {
+    "text": "sininho",
+    "start": 370.71,
+    "end": 371.18,
+    "id": "w991"
+  },
+  {
+    "text": "e",
+    "start": 371.18,
+    "end": 371.24,
+    "id": "w992"
+  },
+  {
+    "text": "comenta",
+    "start": 371.24,
+    "end": 371.71,
+    "id": "w993"
+  },
+  {
+    "text": "qual",
+    "start": 371.71,
+    "end": 371.98,
+    "id": "w994"
+  },
+  {
+    "text": "vai",
+    "start": 371.98,
+    "end": 372.18,
+    "id": "w995"
+  },
+  {
+    "text": "ser",
+    "start": 372.18,
+    "end": 372.38,
+    "id": "w996"
+  },
+  {
+    "text": "o",
+    "start": 372.38,
+    "end": 372.44,
+    "id": "w997"
+  },
+  {
+    "text": "próximo",
+    "start": 372.44,
+    "end": 372.92,
+    "id": "w998"
+  },
+  {
+    "text": "tema.",
+    "start": 372.92,
+    "end": 374.44,
+    "id": "w999"
+  },
+  {
+    "text": "Emarca",
+    "start": 374.49,
+    "end": 374.81,
+    "id": "w1000"
+  },
+  {
+    "text": "aquele",
+    "start": 374.81,
+    "end": 375.19,
+    "id": "w1001"
+  },
+  {
+    "text": "amigo",
+    "start": 375.19,
+    "end": 375.49,
+    "id": "w1002"
+  },
+  {
+    "text": "que",
+    "start": 375.49,
+    "end": 375.66,
+    "id": "w1003"
+  },
+  {
+    "text": "se",
+    "start": 375.66,
+    "end": 375.98,
+    "id": "w1004"
+  },
+  {
+    "text": "inscreveu",
+    "start": 375.98,
+    "end": 376.37,
+    "id": "w1005"
+  },
+  {
+    "text": "na",
+    "start": 376.37,
+    "end": 376.45,
+    "id": "w1006"
+  },
+  {
+    "text": "maratona",
+    "start": 376.56,
+    "end": 376.99,
+    "id": "w1007"
+  },
+  {
+    "text": "sem",
+    "start": 376.99,
+    "end": 377.18,
+    "id": "w1008"
+  },
+  {
+    "text": "treinar.",
+    "start": 377.18,
+    "end": 377.68,
+    "id": "w1009"
+  }
+]
