@@ -1,0 +1,222 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #FFF6E9; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #f20-head { left:110px; top:70px; font-size:72px; }
+        #f20-head span { color:#3DD9A4; }
+        #f20-card { left:1300px; top:140px; width:520px; padding:24px 30px; }
+        #f20-card .t { font-size:40px; line-height:1.05; }
+        #f20-card .row { font-size:30px; margin-top:12px; display:flex; align-items:center; gap:14px; line-height:1.1; }
+        #f20-card .dot { width:22px; height:22px; border-radius:50%; border:5px solid #013E4C; flex:none; }
+        #f20-stop { left:110px; top:190px; width:460px; padding:14px 20px; font-size:27px; white-space:nowrap; background:#FF5A4E; color:#fff; text-align:center; }
+        #f20-stop b { font-size:34px; display:block; }
+        #f20-view { left:110px; top:320px; padding:8px 16px; font-size:24px; }
+        #f20-cnt { left:140px; top:400px; width:150px; height:150px; border-radius:50%; background:#FFC94A; border:7px solid #013E4C; font-size:40px; display:flex; align-items:center; justify-content:center; text-align:center; line-height:1; }
+        #f20-back { left:880px; top:330px; padding:8px 18px; font-size:28px; }
+        #f20-nogir { left:300px; top:830px; padding:8px 18px; font-size:28px; }
+      
+  </style>
+  <div id="root" data-composition-id="f20" data-width="1920" data-height="1080">
+
+    <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <rect width="1920" height="760" fill="#E7F3F1"/>
+      <rect y="760" width="1920" height="320" fill="#CFE3DF"/>
+      <line x1="0" y1="760" x2="1920" y2="760" stroke="#013E4C" stroke-width="7"/>
+      <rect x="220" y="736" width="1020" height="34" rx="16" fill="#3DD9A4" stroke="#013E4C" stroke-width="7"/>
+      <!-- Dona Cida deitada de lado (vista de frente) -->
+      <g id="f20-cida">
+        <line x1="720" y1="690" x2="1180" y2="706" stroke="#013E4C" stroke-width="54" stroke-linecap="round"/><line x1="720" y1="690" x2="1180" y2="706" stroke="#3E5A8A" stroke-width="40" stroke-linecap="round"/>
+        <ellipse cx="1190" cy="712" rx="34" ry="18" fill="#8E2F45" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M330 690 Q330 640 400 632 L700 640 Q760 650 760 690 Q760 728 700 732 L400 736 Q330 734 330 690Z" fill="#B07ED8" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <line x1="420" y1="650" x2="520" y2="600" stroke="#013E4C" stroke-width="36" stroke-linecap="round"/><line x1="420" y1="650" x2="520" y2="600" stroke="#B07ED8" stroke-width="22" stroke-linecap="round"/>
+        <circle cx="530" cy="596" r="16" fill="#E3A47E" stroke="#013E4C" stroke-width="5"/>
+        <circle cx="290" cy="670" r="58" fill="#E3A47E" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="250" cy="626" r="26" fill="#5A3A2A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M240 650 Q260 610 300 616 Q330 622 340 650" fill="#5A3A2A" stroke="#013E4C" stroke-width="5"/>
+        <g id="f20-eyes"><circle cx="300" cy="676" r="6" fill="#013E4C"/><circle cx="322" cy="676" r="6" fill="#013E4C"/></g>
+        <path d="M296 700 Q310 708 324 700" stroke="#013E4C" stroke-width="5" fill="none"/>
+        <g id="f20-glute" opacity="0"><ellipse cx="720" cy="660" rx="70" ry="44" fill="#FFC94A" opacity="0.6"/></g>
+        <g id="f20-leg"><line x1="720" y1="668" x2="1170" y2="676" stroke="#013E4C" stroke-width="54" stroke-linecap="round"/><line x1="720" y1="668" x2="1170" y2="676" stroke="#4F6FA6" stroke-width="40" stroke-linecap="round"/><ellipse cx="1180" cy="680" rx="34" ry="18" fill="#8E2F45" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/></g>
+        <line id="f20-pelvis" x1="700" y1="610" x2="700" y2="740" stroke="#3DD9A4" stroke-width="6" stroke-dasharray="10 8" opacity="0"/>
+      </g>
+      <path id="f20-arc" d="M1140 640 Q1180 520 1080 430" fill="none" stroke="#FF5A4E" stroke-width="7" stroke-dasharray="12 10" opacity="0"/>
+      <g id="f20-v-wrap" opacity="0"><g transform="translate(1640,830) scale(0.85)"><g id="f20v-root">
+    <g transform="translate(-22,-44)"><g id="f20v-legB"><line x1="0" y1="0" x2="0" y2="40" stroke="#013E4C" stroke-width="28" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="40" stroke="#F7EEDB" stroke-width="14" stroke-linecap="round"/><ellipse cx="4" cy="44" rx="18" ry="9" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/></g></g>
+    <g transform="translate(22,-44)"><g id="f20v-legF"><line x1="0" y1="0" x2="0" y2="40" stroke="#013E4C" stroke-width="28" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="40" stroke="#F7EEDB" stroke-width="14" stroke-linecap="round"/><ellipse cx="6" cy="44" rx="18" ry="9" fill="#FF5A4E" stroke="#013E4C" stroke-width="5"/></g></g>
+    <g id="f20v-body">
+      <path d="M-14 -150 L-6 -232 Q0 -246 6 -232 L14 -150 Z" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M-92 -168 Q-104 -176 -96 -190 Q-86 -200 -72 -190 L-30 -168 M92 -168 Q104 -176 96 -190 Q86 -200 72 -190 L30 -168" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M-56 -150 Q-60 -196 0 -202 Q60 -196 56 -150 Z" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      <ellipse cx="0" cy="-168" rx="20" ry="15" fill="#FFF6E9" stroke="#013E4C" stroke-width="5"/>
+      <g transform="translate(-74,-96)"><g id="f20v-armB"><line x1="0" y1="0" x2="0" y2="44" stroke="#013E4C" stroke-width="27" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="44" stroke="#F7EEDB" stroke-width="13" stroke-linecap="round"/><circle cx="0" cy="48" r="11" fill="#F7EEDB" stroke="#013E4C" stroke-width="5"/></g></g>
+      <g transform="translate(74,-96)"><g id="f20v-armF"><line x1="0" y1="0" x2="0" y2="44" stroke="#013E4C" stroke-width="27" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="44" stroke="#F7EEDB" stroke-width="13" stroke-linecap="round"/><circle cx="0" cy="48" r="11" fill="#F7EEDB" stroke="#013E4C" stroke-width="5"/></g></g>
+      <rect x="-80" y="-152" width="160" height="112" rx="34" fill="#F7EEDB" stroke="#013E4C" stroke-width="7"/>
+      <ellipse cx="0" cy="-146" rx="70" ry="13" fill="#9CD3E6" stroke="#013E4C" stroke-width="5"/>
+      <ellipse cx="-46" cy="-70" rx="12" ry="7" fill="#FF5A4E" opacity="0.35"/><ellipse cx="46" cy="-70" rx="12" ry="7" fill="#FF5A4E" opacity="0.35"/>
+      <g id="f20v-eyes">
+    <g id="f20v-e-normal"><ellipse cx="-22" cy="-104" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-19" cy="-103" r="5.5" fill="#013E4C"/><ellipse cx="22" cy="-104" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="25" cy="-103" r="5.5" fill="#013E4C"/></g>
+    <g id="f20v-e-wide" opacity="0"><ellipse cx="-22" cy="-106" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-20" cy="-106" r="4" fill="#013E4C"/><ellipse cx="22" cy="-106" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="24" cy="-106" r="4" fill="#013E4C"/></g>
+    <g id="f20v-e-pain" opacity="0"><path d="M-31 -112 L-15 -104 L-31 -96" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M31 -112 L15 -104 L31 -96" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f20v-e-happy" opacity="0"><path d="M-31 -101 Q-22 -115 -13 -101" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M13 -101 Q22 -115 31 -101" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f20v-e-closed" opacity="0"><path d="M-31 -102 Q-22 -96 -13 -102" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M13 -102 Q22 -96 31 -102" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+      <g id="f20v-mouths">
+    <g id="f20v-m-smile"><path d="M-14 -73 Q0 -60 14 -74" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f20v-m-open" opacity="0"><path d="M-13 -75 Q0 -72 13 -76 Q10 -56 0 -56 Q-11 -57 -13 -75Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-6 -60 Q0 -65 6 -60" fill="#FF5A4E" /></g>
+    <g id="f20v-m-scream" opacity="0"><ellipse cx="0" cy="-64" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="0" cy="-53" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f20v-m-frown" opacity="0"><path d="M-13 -64 Q0 -76 13 -64" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f20v-m-flat" opacity="0"><path d="M-11 -68 L11 -69" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f20v-m-grin" opacity="0"><path d="M-16 -75 Q0 -71 16 -76 Q12 -54 0 -54 Q-13 -55 -16 -75Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+    </g>
+  </g></g></g>
+    </svg>
+    <div id="f20-head" class="abs title">4. <span>ABDUÇÃO DE LADO</span></div>
+    <div id="f20-view" class="abs card label" style="opacity:0">deitada de lado · vista de frente</div>
+    <div id="f20-cnt" class="abs title" style="opacity:0">x 12</div>
+    <div id="f20-back" class="abs card label" style="opacity:0">um pouquinho pra trás</div>
+    <div id="f20-nogir" class="abs card label" style="opacity:0">quadril parado, sem girar</div>
+    <div id="f20-card" class="abs card">
+      <div class="t title">Abdução deitada de lado</div>
+      <div class="row label" id="f20-r0"><div class="dot" style="background:#3DD9A4"></div>Perna de cima esticada</div>
+      <div class="row label" id="f20-r1"><div class="dot" style="background:#3DD9A4"></div>Um pouco pra trás</div>
+      <div class="row label" id="f20-r2"><div class="dot" style="background:#3DD9A4"></div>Sem girar o quadril</div>
+      <div class="row label" id="f20-r3"><div class="dot" style="background:#FFC94A"></div><b>3 x 12 a 15 · devagar</b></div>
+    </div>
+    <div id="f20-stop" class="abs card label">Doeu na lateral do joelho?<b>Diminui</b></div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":12.39,"lines":[{"who":"pablo","start":0.6,"end":9.539},{"who":"vertebra","start":9.939,"end":11.39}],"quat":1.028,"abd":1.328,"deit":1.758,"lev":2.668,"estic":3.828,"tras":5.348,"gir":5.958,"tres":7.418,"doze":8.508,"dev":9.738,"v0":9.939,"v1":11.39,"reps":[2.668,4.168,5.668,7.168,8.668,10.168]};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        R.slideIn(tl, "#f20-head", 0.05, 0.5, -300);
+        R.slideIn(tl, "#f20-card", 0.2, 0.55, 400);
+        R.pop(tl, "#f20-stop", 0.6, 0.4);
+        R.fadeIn(tl, "#f20-view", K.deit - 0.1, 0.3);
+        [K.estic, K.tras, K.gir, K.tres].forEach((t, i) => tl.fromTo(`#f20-r${i}`, { opacity: 0.25 }, { opacity: 1, duration: 0.25 }, t));
+        // repetições lentas: perna sobe (gira em torno do quadril) e desce
+        K.reps.forEach((t) => {
+          tl.to("#f20-leg", { rotation: -24, svgOrigin: "720 668", duration: 0.7, ease: "sine.inOut" }, t);
+          tl.to("#f20-glute", { opacity: 1, duration: 0.3 }, t + 0.3);
+          tl.to("#f20-leg", { rotation: 0, svgOrigin: "720 668", duration: 0.7, ease: "sine.inOut" }, t + 0.75);
+          tl.to("#f20-glute", { opacity: 0.2, duration: 0.3 }, t + 1.0);
+        });
+        tl.set("#f20-arc", { opacity: 1 }, K.lev);
+        R.draw(tl, "#f20-arc", K.lev, 0.6);
+        R.pop(tl, "#f20-back", K.tras - 0.1, 0.35);
+        tl.set("#f20-pelvis", { opacity: 1 }, K.gir - 0.1);
+        R.pop(tl, "#f20-nogir", K.gir - 0.1, 0.35);
+        R.pop(tl, "#f20-cnt", K.doze - 0.1, 0.35);
+        // Vértebra: glúteo acordando
+        tl.set("#f20-v-wrap", { opacity: 1 }, K.v0 - 0.5);
+        tl.fromTo("#f20-v-wrap", { y: 300 }, { y: 0, duration: 0.45, ease: "back.out(1.5)" }, K.v0 - 0.5);
+        R.face(tl, "f20v", K.v0 - 0.5, { eyes: "happy" });
+        R.pose(tl, "f20v", K.v0, 0.3, { armF: -150, armB: 150 }, "back.out(2)");
+        tl.to("#f20-glute", { opacity: 1, scale: 1.2, svgOrigin: "720 660", duration: 0.3, yoyo: true, repeat: 3 }, K.v0);
+      })(tl, K, R);
+      K.lines.filter(l=>l.who==="vertebra").forEach(l=>R.talk(tl,"f20v",l.start,l.end));
+      tl.set({}, {}, K.dur);
+      window.__timelines["f20"] = tl;
+    })();
+  </script>
+</template>
