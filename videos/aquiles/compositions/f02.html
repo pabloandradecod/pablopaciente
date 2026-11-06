@@ -213,9 +213,10 @@
     <g id="f02a-m-grin" opacity="0"><path d="M-16 -205 Q0 -201 16 -206 Q12 -184 0 -184 Q-13 -185 -16 -205Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
   </g>
     <g id="f02a-helmet">
+      <path d="M-34 -350 Q-44 -432 0 -440 Q44 -432 34 -350 Z" fill="#D94A3D" stroke="#013E4C" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M-18 -356 L-22 -420 M0 -356 L0 -432 M18 -356 L22 -420" stroke="#A8352B" stroke-width="4"/>
       <path d="M-70 -262 Q-76 -350 0 -356 Q76 -350 70 -262 L50 -262 L50 -282 Q0 -296 -50 -282 L-50 -262 Z" fill="#F2B53A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
-      <path d="M-40 -350 Q0 -440 40 -350 Q20 -380 0 -384 Q-20 -380 -40 -350Z" fill="#D94A3D" stroke="#013E4C" stroke-width="5" stroke-linejoin="round"/>
-      <path d="M-24 -356 L-24 -400 M-8 -360 L-8 -414 M8 -360 L8 -414 M24 -356 L24 -400" stroke="#A8352B" stroke-width="4"/>
+      
       <path d="M-56 -300 Q0 -316 56 -300" stroke="#C98A1E" stroke-width="5" fill="none"/>
     </g>
     <g transform="translate(58,-250)"><g id="f02a-armF"><line x1="0" y1="0" x2="0" y2="56" stroke="#013E4C" stroke-width="30" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="56" stroke="#F2E8D8" stroke-width="16" stroke-linecap="round"/><circle cx="0" cy="60" r="13" fill="#F2E8D8" stroke="#013E4C" stroke-width="5"/></g></g>
@@ -333,7 +334,7 @@
   };
   return R;
 })();
-      const K = {"dur":26.89,"lines":[{"who":"pablo","start":0.6,"end":17.155},{"who":"cida","start":17.555,"end":19.937},{"who":"aquiles","start":20.337,"end":22.449},{"who":"pablo","start":22.849,"end":26.092}],"hist":1.19,"cida":3.12,"des":5.31,"corr":6.18,"lad":7.85,"dist":9.04,"manha":10.94,"ping":12.62,"dor":13.11,"atras":13.81,"esq":17.06,"c0":17.555,"c1":19.937,"a0":20.337,"a1":22.448999999999998,"p3":22.848999999999997,"romp":24.25,"inv":26.34};
+      const K = {"dur":26.89,"lines":[{"who":"pablo","start":0.6,"end":17.155},{"who":"cida","start":17.555,"end":19.937},{"who":"aquiles","start":20.337,"end":22.449},{"who":"pablo","start":22.849,"end":26.092}],"hist":1.25,"cida":3.12,"des":5.31,"corr":6.18,"lad":7.85,"dist":9.04,"manha":10.94,"ping":12.69,"dor":13.27,"atras":14,"esq":16.45,"c0":17.555,"c1":19.937,"a0":20.337,"a1":22.448999999999998,"p3":22.848999999999997,"romp":23.799,"inv":25.139};
       const tl = gsap.timeline({ paused: true });
       (function (tl, K, R) {
         const p = "f02p", c = "f02c";
@@ -397,18 +398,18 @@
         tl.to("#f02-room", { opacity: 0, duration: 0.3 }, K.c0 - 0.4);
         tl.to("#f02-park", { opacity: 1, duration: 0.3 }, K.c0 - 0.4);
         tl.set("#f02-p-wrap", { x: 0 }, K.c0 - 0.3);
-        tl.to("#f02-pain", { opacity: 0, duration: 0.1 }, K.c0 - 0.4);
+        tl.set("#f02-pain", { opacity: 0 }, K.c0 - 0.1);
         tl.to("#f02-c-wrap", { x: 0, opacity: 1, duration: 0.45, ease: "back.out(1.4)" }, K.c0 - 0.4);
         R.pose(tl, c, K.c0, 0.3, { shF: -100, elF: -10, shB: 30, elB: -90 }, "back.out(2)");
         R.face(tl, p, K.c0, { eyes: "wide", mouth: "flat" });
         // bolha: Aquiles segurando o calcanhar
         R.pop(tl, "#f02-bubble", K.a0 - 0.45, 0.45, 0.3);
-        R.setPose(tl, "f02a", 0, { armF: 30, armB: -30 });
+        R.setPose(tl, "f02a", 0, { armF: -20, armB: 20 });
         R.face(tl, "f02a", K.a0 - 0.45, { eyes: "pain", mouth: "frown" });
         tl.set("#f02a-tear", { opacity: 1 }, K.a0 - 0.45);
         tl.to("#f02a-heel path", { fill: "#FF8A80", duration: 0.2 }, K.a0 - 0.2);
-        R.pose(tl, "f02a", K.a0, 0.3, { armF: 150, armB: -150 }, "back.out(1.6)");
-        R.pose(tl, "f02a", K.a0 + 1.1, 0.3, { armF: 20, armB: -20 });
+        R.pose(tl, "f02a", K.a0, 0.3, { armF: -150, armB: 150 }, "back.out(1.6)");
+        R.pose(tl, "f02a", K.a0 + 1.1, 0.3, { armF: -50, armB: 50 });
         R.shake(tl, "#f02-a-wrap", K.a0 + 1.2, Math.max(0.3, K.a1 - K.a0 - 1.2), 4);
         tl.to("#f02-bubble", { scale: 0, opacity: 0, svgOrigin: "1460 470", duration: 0.3, ease: "back.in(2)" }, K.a1 + 0.1);
         // rompeu?

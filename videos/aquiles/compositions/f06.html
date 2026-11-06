@@ -1,0 +1,227 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #FFF6E9; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #f06-h { left:90px; top:60px; padding:12px 24px; font-size:44px; }
+        #f06-h span { color:#FF5A4E; }
+        #f06-meter { left:1200px; top:80px; width:620px; padding:18px 22px; text-align:center; }
+        #f06-meter .t { font-size:30px; } #f06-meter .n { font-size:64px; color:#FF5A4E; line-height:1.1; }
+      
+  </style>
+  <div id="root" data-composition-id="f06" data-width="1920" data-height="1080">
+
+    <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <rect width="1920" height="1080" fill="#FFF6E9"/>
+      <rect y="870" width="1920" height="210" fill="#CFE3DF"/><line x1="0" y1="870" x2="1920" y2="870" stroke="#013E4C" stroke-width="7"/>
+      <!-- linhas dos rótulos -->
+      <g id="f06-lines" stroke="#013E4C" stroke-width="4" stroke-dasharray="10 8" fill="none">
+        <path id="f06-ln0" d="M470 290 L600 270" opacity="0"/><path id="f06-ln1" d="M470 470 L640 520" opacity="0"/>
+        <path id="f06-ln2" d="M470 650 L690 680" opacity="0"/><path id="f06-ln3" d="M470 830 L700 830" opacity="0"/>
+      </g>
+      <!-- perna (canela + panturrilha + tendão) -->
+      <g id="f06-shank"><g>
+        <path d="M760 90 L900 90 Q912 420 862 770 L700 790 Q636 610 600 430 Q560 260 640 90 Z" fill="#E9B48C" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" opacity="0.55"/>
+        <path id="f06-sol" d="M650 360 Q600 520 676 650 Q730 610 736 400 Z" fill="#C24E43" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <path id="f06-gas" d="M640 110 Q540 270 604 440 Q648 486 696 440 Q726 270 706 110 Z" fill="#E0675A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M610 200 Q600 300 630 400 M680 160 Q690 280 670 420" stroke="#B9473E" stroke-width="5" fill="none" opacity="0.7"/>
+        <path id="f06-ten" d="M664 460 Q686 620 686 800 L730 800 Q728 620 712 450 Z" fill="#F2E8D8" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <path d="M684 520 L696 790 M700 520 L710 790" stroke="#D8CBB4" stroke-width="3"/>
+        <g id="f06-tglow" opacity="0"><path d="M664 460 Q686 620 686 800 L730 800 Q728 620 712 450 Z" fill="none" stroke="#FFC94A" stroke-width="16" opacity="0.8"/></g>
+      </g></g>
+      <!-- pé (gira em torno da ponta do pé) -->
+      <g id="f06-foot">
+        <path d="M680 780 L860 760 Q990 790 1040 862 L690 866 Q664 830 680 780 Z" fill="#E9B48C" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" opacity="0.55"/>
+        <path id="f06-calc" d="M672 800 Q668 864 720 866 L770 866 Q790 826 760 800 Z" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+      </g>
+      <g transform="translate(1210,450)"><g id="f06-kbs"><g id="f06-kb0" opacity="0" transform="translate(30,120)"><path d="M-22 -30 Q0 -58 22 -30" fill="none" stroke="#013E4C" stroke-width="9"/><circle cx="0" cy="0" r="38" fill="#4A4A4A" stroke="#013E4C" stroke-width="6"/><text x="0" y="10" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="26" fill="#fff">1x</text></g><g id="f06-kb1" opacity="0" transform="translate(150,120)"><path d="M-22 -30 Q0 -58 22 -30" fill="none" stroke="#013E4C" stroke-width="9"/><circle cx="0" cy="0" r="38" fill="#4A4A4A" stroke="#013E4C" stroke-width="6"/><text x="0" y="10" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="26" fill="#fff">1x</text></g><g id="f06-kb2" opacity="0" transform="translate(270,120)"><path d="M-22 -30 Q0 -58 22 -30" fill="none" stroke="#013E4C" stroke-width="9"/><circle cx="0" cy="0" r="38" fill="#4A4A4A" stroke="#013E4C" stroke-width="6"/><text x="0" y="10" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="26" fill="#fff">1x</text></g><g id="f06-kb3" opacity="0" transform="translate(390,120)"><path d="M-22 -30 Q0 -58 22 -30" fill="none" stroke="#013E4C" stroke-width="9"/><circle cx="0" cy="0" r="38" fill="#4A4A4A" stroke="#013E4C" stroke-width="6"/><text x="0" y="10" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="26" fill="#fff">1x</text></g><g id="f06-kb4" opacity="0" transform="translate(30,30)"><path d="M-22 -30 Q0 -58 22 -30" fill="none" stroke="#013E4C" stroke-width="9"/><circle cx="0" cy="0" r="38" fill="#4A4A4A" stroke="#013E4C" stroke-width="6"/><text x="0" y="10" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="26" fill="#fff">1x</text></g><g id="f06-kb5" opacity="0" transform="translate(150,30)"><path d="M-22 -30 Q0 -58 22 -30" fill="none" stroke="#013E4C" stroke-width="9"/><circle cx="0" cy="0" r="38" fill="#4A4A4A" stroke="#013E4C" stroke-width="6"/><text x="0" y="10" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="26" fill="#fff">1x</text></g><g id="f06-kb6" opacity="0" transform="translate(270,30)"><path d="M-22 -30 Q0 -58 22 -30" fill="none" stroke="#013E4C" stroke-width="9"/><circle cx="0" cy="0" r="38" fill="#4A4A4A" stroke="#013E4C" stroke-width="6"/><text x="0" y="10" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="26" fill="#fff">1x</text></g><g id="f06-kb7" opacity="0" transform="translate(390,30)"><path d="M-22 -30 Q0 -58 22 -30" fill="none" stroke="#013E4C" stroke-width="9"/><circle cx="0" cy="0" r="38" fill="#4A4A4A" stroke="#013E4C" stroke-width="6"/><text x="0" y="10" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="26" fill="#fff">1x</text></g></g></g>
+      <g id="f06-a-wrap" opacity="0"><g transform="translate(1600,960) scale(0.95)"><g id="f06a-root"><g id="f06a-body">
+    <g id="f06a-cape"><path d="M-58 -270 Q-120 -150 -96 -20 L-30 -40 L-10 -10 L40 -36 L96 -20 Q120 -150 58 -270 Z" fill="#D94A3D" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M-70 -200 Q-80 -120 -66 -50 M66 -200 Q80 -120 66 -50" stroke="#A8352B" stroke-width="5" fill="none"/>
+      <g id="f06a-tear" opacity="0"><path d="M60 -120 L96 -96 L74 -84 L100 -60 L70 -50 L96 -20 L40 -36 Z" fill="#FFF6E9" stroke="#013E4C" stroke-width="5" stroke-linejoin="round"/></g></g>
+    <g transform="translate(-58,-250)"><g id="f06a-armB"><line x1="0" y1="0" x2="0" y2="56" stroke="#013E4C" stroke-width="30" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="56" stroke="#F2E8D8" stroke-width="16" stroke-linecap="round"/><circle cx="0" cy="60" r="13" fill="#F2E8D8" stroke="#013E4C" stroke-width="5"/></g></g>
+    <path d="M-62 -300 Q-66 -200 -26 -150 L-22 -70 Q-44 -40 -60 0 L60 0 Q44 -40 22 -70 L26 -150 Q66 -200 62 -300 Q0 -330 -62 -300Z" fill="#F2E8D8" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M-12 -150 L-10 -64 M2 -152 L2 -62 M14 -150 L12 -64" stroke="#D8CBB4" stroke-width="3"/>
+    <g id="f06a-bulge" opacity="0"><ellipse cx="0" cy="-112" rx="38" ry="30" fill="#FFB3A0" stroke="#013E4C" stroke-width="5"/></g>
+    <g id="f06a-heel"><path d="M-60 0 Q-64 -34 -30 -40 L30 -40 Q64 -34 60 0 Z" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/></g>
+    <g id="f06a-eyes">
+    <g id="f06a-e-normal"><ellipse cx="-22" cy="-236" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-19" cy="-235" r="5.5" fill="#013E4C"/><ellipse cx="22" cy="-236" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="25" cy="-235" r="5.5" fill="#013E4C"/></g>
+    <g id="f06a-e-wide" opacity="0"><ellipse cx="-22" cy="-238" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-20" cy="-238" r="4" fill="#013E4C"/><ellipse cx="22" cy="-238" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="24" cy="-238" r="4" fill="#013E4C"/></g>
+    <g id="f06a-e-pain" opacity="0"><path d="M-31 -244 L-15 -236 L-31 -228" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M31 -244 L15 -236 L31 -228" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f06a-e-happy" opacity="0"><path d="M-31 -233 Q-22 -247 -13 -233" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M13 -233 Q22 -247 31 -233" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f06a-e-closed" opacity="0"><path d="M-31 -234 Q-22 -228 -13 -234" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M13 -234 Q22 -228 31 -234" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+    <g id="f06a-mouths">
+    <g id="f06a-m-smile"><path d="M-14 -203 Q0 -190 14 -204" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f06a-m-open" opacity="0"><path d="M-13 -205 Q0 -202 13 -206 Q10 -186 0 -186 Q-11 -187 -13 -205Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-6 -190 Q0 -195 6 -190" fill="#FF5A4E" /></g>
+    <g id="f06a-m-scream" opacity="0"><ellipse cx="0" cy="-194" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="0" cy="-183" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f06a-m-frown" opacity="0"><path d="M-13 -194 Q0 -206 13 -194" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f06a-m-flat" opacity="0"><path d="M-11 -198 L11 -199" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f06a-m-grin" opacity="0"><path d="M-16 -205 Q0 -201 16 -206 Q12 -184 0 -184 Q-13 -185 -16 -205Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+    <g id="f06a-helmet">
+      <path d="M-34 -350 Q-44 -432 0 -440 Q44 -432 34 -350 Z" fill="#D94A3D" stroke="#013E4C" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M-18 -356 L-22 -420 M0 -356 L0 -432 M18 -356 L22 -420" stroke="#A8352B" stroke-width="4"/>
+      <path d="M-70 -262 Q-76 -350 0 -356 Q76 -350 70 -262 L50 -262 L50 -282 Q0 -296 -50 -282 L-50 -262 Z" fill="#F2B53A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      
+      <path d="M-56 -300 Q0 -316 56 -300" stroke="#C98A1E" stroke-width="5" fill="none"/>
+    </g>
+    <g transform="translate(58,-250)"><g id="f06a-armF"><line x1="0" y1="0" x2="0" y2="56" stroke="#013E4C" stroke-width="30" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="56" stroke="#F2E8D8" stroke-width="16" stroke-linecap="round"/><circle cx="0" cy="60" r="13" fill="#F2E8D8" stroke="#013E4C" stroke-width="5"/></g></g>
+  </g></g></g></g>
+    </svg>
+    <div id="f06-h" class="abs card title" style="opacity:0">O tendão <span>mais forte</span> do corpo</div>
+    <div id="f06-l0" class="abs card label" style="left:90px;top:250px;width:380px;padding:10px 16px;font-size:30px;text-align:center;color:#B9473E;opacity:0">GASTROCNÊMIO</div>
+    <div id="f06-l1" class="abs card label" style="left:90px;top:430px;width:380px;padding:10px 16px;font-size:30px;text-align:center;color:#B9473E;opacity:0">SÓLEO</div>
+    <div id="f06-l2" class="abs card label" style="left:90px;top:610px;width:380px;padding:10px 16px;font-size:30px;text-align:center;color:#013E4C;opacity:0">TENDÃO DE AQUILES</div>
+    <div id="f06-l3" class="abs card label" style="left:90px;top:790px;width:380px;padding:10px 16px;font-size:30px;text-align:center;color:#013E4C;opacity:0">CALCÂNEO (calcanhar)</div>
+    <div id="f06-meter" class="abs card" style="opacity:0"><div class="t label">na corrida, a cada passada:</div><div class="n title">6 a 8x</div><div class="t label">o peso do corpo!</div></div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":16.09,"lines":[{"who":"pablo","start":0.6,"end":11.928},{"who":"aquiles","start":12.328,"end":15.287}],"forte":2.62,"junta":3.93,"mus":4.32,"pant":4.89,"prende":5.81,"calc":6.38,"corr":7.47,"seis":8.98,"oito":9.32,"peso":9.9,"pass":11.05,"a0":12.328,"a1":15.286999999999999,"herc":14.103};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        tl.fromTo("#f06-shank, #f06-foot", { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.1);
+        R.pop(tl, "#f06-h", K.forte - 0.3, 0.45);
+        tl.set("#f06-tglow", { opacity: 1 }, K.forte);
+        tl.fromTo("#f06-tglow", { opacity: 0.2 }, { opacity: 1, duration: 0.3, yoyo: true, repeat: 5 }, K.forte);
+        // rótulos
+        R.slideIn(tl, "#f06-l0", K.mus, 0.45, -200); tl.set("#f06-ln0", { opacity: 1 }, K.mus + 0.2);
+        R.slideIn(tl, "#f06-l1", K.pant, 0.45, -200); tl.set("#f06-ln1", { opacity: 1 }, K.pant + 0.2);
+        R.slideIn(tl, "#f06-l2", K.junta, 0.45, -200); tl.set("#f06-ln2", { opacity: 1 }, K.junta + 0.2);
+        R.slideIn(tl, "#f06-l3", K.calc - 0.2, 0.45, -200); tl.set("#f06-ln3", { opacity: 1 }, K.calc);
+        tl.fromTo("#f06-gas, #f06-sol", { fill: "#E0675A" }, { fill: "#FF8A6E", duration: 0.25, yoyo: true, repeat: 3 }, K.pant);
+        // corrida: panturrilha contrai, calcanhar sobe (pé gira na ponta), 3 vezes
+        for (let i = 0; i < 3; i++) {
+          const t = K.corr + i * 0.9;
+          tl.to("#f06-foot", { rotation: 18, svgOrigin: "1040 864", duration: 0.35, ease: "power2.out" }, t);
+          tl.to("#f06-shank", { x: 14, y: -86, duration: 0.35, ease: "power2.out" }, t);
+          tl.to("#f06-gas", { scaleY: 0.9, scaleX: 1.08, svgOrigin: "660 280", duration: 0.35, ease: "power2.out" }, t);
+          tl.to("#f06-foot", { rotation: 0, svgOrigin: "1040 864", duration: 0.35, ease: "power2.in" }, t + 0.45);
+          tl.to("#f06-shank", { x: 0, y: 0, duration: 0.35, ease: "power2.in" }, t + 0.45);
+          tl.to("#f06-gas", { scaleY: 1, scaleX: 1, svgOrigin: "660 280", duration: 0.35, ease: "power2.in" }, t + 0.45);
+        }
+        // medidor: pesos se empilham
+        R.pop(tl, "#f06-meter", K.seis - 0.3, 0.45);
+        for (let i = 0; i < 8; i++) {
+          const t = (i < 6 ? K.seis : K.oito) + (i < 6 ? i * 0.08 : (i - 6) * 0.1);
+          tl.set(`#f06-kb${i}`, { opacity: 1 }, t);
+          tl.fromTo(`#f06-kb${i}`, { y: -200 }, { y: 0, duration: 0.3, ease: "bounce.out" }, t);
+        }
+        // Aquiles se exibe
+        const a = "f06a";
+        R.setPose(tl, a, 0, { armF: -20, armB: 20 });
+        R.face(tl, a, 0, { eyes: "happy", mouth: "grin" });
+        tl.to("#f06-l0, #f06-l1, #f06-l2, #f06-l3, #f06-lines path", { opacity: 0, duration: 0.3 }, K.a0 - 0.8);
+        tl.to("#f06-kbs", { opacity: 0, duration: 0.3 }, K.a0 - 0.8);
+        tl.set("#f06-a-wrap", { opacity: 1 }, K.a0 - 0.6);
+        tl.fromTo("#f06-a-wrap", { y: 520 }, { y: 0, duration: 0.5, ease: "back.out(1.5)" }, K.a0 - 0.6);
+        R.pose(tl, a, K.a0, 0.3, { armF: -140, armB: 140 }, "back.out(2)");
+        R.pose(tl, a, K.herc - 0.2, 0.25, { armF: -170, armB: 170 }, "back.out(2)");
+        tl.to("#f06a-body", { scaleX: 1.08, scaleY: 1.04, svgOrigin: "0 0", duration: 0.2, yoyo: true, repeat: 3 }, K.herc);
+        R.blinks(tl, a, K.a0 - 0.6, K.dur, "happy");
+      })(tl, K, R);
+      K.lines.filter(l=>l.who==="aquiles").forEach(l=>R.talk(tl,"f06a",l.start,l.end));
+      tl.set({}, {}, K.dur);
+      window.__timelines["f06"] = tl;
+    })();
+  </script>
+</template>

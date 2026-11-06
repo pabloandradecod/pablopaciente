@@ -7,3 +7,4 @@ build/transcribe.log
 build/__pycache__/
 *.mp4
 node_modules/
+build/pc/
