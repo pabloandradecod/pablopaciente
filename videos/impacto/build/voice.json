@@ -1,0 +1,310 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "O Seu Zé resolveu pintar o teto da sala sozinho. Três dias de braço lá em cima... e agora, toda vez que levanta o braço, vem uma dor do lado do ombro, que desce até o meio do braço. À noite, deitado em cima desse lado, dói. E até pegar a carteira no bolso de trás virou um desafio.",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 16.235
+ },
+ {
+  "frame": 2,
+  "who": "cida",
+  "text": "Eu falei pra chamar o pintor, Zé!",
+  "file": "assets/voice/f02-2-cida.wav",
+  "dur": 2.077
+ },
+ {
+  "frame": 2,
+  "who": "supra",
+  "text": "Tá apertado aqui embaixo, gente!",
+  "file": "assets/voice/f02-3-supra.wav",
+  "dur": 1.995
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Será que rompeu alguma coisa no ombro? Bora investigar!",
+  "file": "assets/voice/f02-4-pablo.wav",
+  "dur": 3.392
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Hoje o assunto é a síndrome do impacto do ombro: a causa mais comum de dor no ombro. Vamos ver o que é de verdade, como investigar, os exercícios que funcionam e quanto tempo leva pra melhorar.",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 11.221
+ },
+ {
+  "frame": 3,
+  "who": "vertebra",
+  "text": "Ombro? Eu nem tenho ombro... mas quero saber!",
+  "file": "assets/voice/f03-2-vertebra.wav",
+  "dur": 2.453
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "O ombro é uma bola grande num pratinho pequeno. Quem segura essa bola no lugar é o manguito rotador: quatro músculos que abraçam a articulação. Um deles, o supraespinhal, passa por baixo de um telhadinho de osso chamado acrômio, com uma bursa no meio pra deslizar.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 15.147
+ },
+ {
+  "frame": 5,
+  "who": "acromio",
+  "text": "O telhado aqui sou eu. E não mexam no meu espaço!",
+  "file": "assets/voice/f05-2-acromio.wav",
+  "dur": 3.103
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "Por muito tempo se pensou que o problema era o osso do telhado raspando no tendão quando a gente levanta o braço. Daí o nome impacto. Por isso se fazia muita cirurgia pra raspar esse osso.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 11.051
+ },
+ {
+  "frame": 6,
+  "who": "acromio",
+  "text": "Sempre sobra pra mim!",
+  "file": "assets/voice/f06-2-acromio.wav",
+  "dur": 1.609
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "Só que estudos compararam a cirurgia de raspar o osso com uma cirurgia de mentirinha, e o resultado foi parecido! Hoje a gente entende que, na maioria das vezes, o problema é o tendão do manguito sobrecarregado, às vezes com a bursa irritada junto. O nome mais moderno é dor subacromial.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 16.789
+ },
+ {
+  "frame": 7,
+  "who": "bursinha",
+  "text": "Oi, gente! Agora eu moro no ombro!",
+  "file": "assets/voice/f07-2-bursinha.wav",
+  "dur": 1.866
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "Acontece quando a carga passa da capacidade do tendão. Muito trabalho com o braço acima da cabeça, como pintar um teto, nadar, jogar vôlei, ou aumentar de repente o treino na academia. Somando isso a um manguito fraco, o tendão reclama.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 13.952
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "É mais comum depois dos quarenta, em quem trabalha ou treina com o braço lá em cima, e em quem tem diabetes ou fuma. A dor fica do lado do ombro e pode descer até o meio do braço, mas normalmente não passa do cotovelo. Piora ao levantar o braço, ao deitar em cima do ombro e ao levar a mão pra trás.",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 17.493
+ },
+ {
+  "frame": 9,
+  "who": "ze",
+  "text": "Pintor, sessenta e poucos... sou eu!",
+  "file": "assets/voice/f09-2-ze.wav",
+  "dur": 2.348
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "Modo detetive ligado! E o suspeito número um dessa vez é um rolo de tinta.",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 4.672
+ },
+ {
+  "frame": 10,
+  "who": "vertebra",
+  "text": "Eu sabia que esse rolo tinha cara de culpado!",
+  "file": "assets/voice/f10-2-vertebra.wav",
+  "dur": 2.496
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Na conversa: dói ao levantar o braço? Dói à noite, deitado desse lado? Começou depois de um esforço com o braço pra cima? Teve uma queda com perda de força de repente? E a dor passa do cotovelo, com formigamento ou dor no pescoço?",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 13.653
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "No exame, o clássico é o arco doloroso: levantando o braço de lado, dói no meio do caminho e alivia lá em cima. Alguns testes que apertam esse espaço também reproduzem a dor. E o teste de força mostra se o tendão dói mas aguenta, ou se está fraco de verdade.",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 15.595
+ },
+ {
+  "frame": 12,
+  "who": "ze",
+  "text": "Ai! Bem aí no meio, doutor!",
+  "file": "assets/voice/f12-2-ze.wav",
+  "dur": 1.846
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "Se depois de uma queda o braço perde a força de repente, e não consegue segurar o braço no alto, pode ser rotura do manguito, e isso precisa de avaliação rápida. No caso do Seu Zé, dói, mas a força está boa.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 12.395
+ },
+ {
+  "frame": 13,
+  "who": "supra",
+  "text": "Ufa! Tô cansado, mas inteiro!",
+  "file": "assets/voice/f13-2-supra.wav",
+  "dur": 1.842
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "Os impostores: o ombro congelado, que trava até quando outra pessoa tenta mexer. A artrose do ombro. A tendinite calcária, com uma dor fortíssima de repente. A articulação bem em cima do ombro. E o pescoço, quando a dor desce abaixo do cotovelo com formigamento.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 15.296
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "Atenção: dor no ombro com aperto no peito, falta de ar ou suor frio pode ser o coração, e é emergência. Queda com perda de força ou ombro deformado, ombro quente com febre, dor forte à noite que não melhora com nada, ou perda de peso sem explicação pedem avaliação médica rápida.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 16.491
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "E os exames? O diagnóstico é clínico. Ultrassom ou ressonância entram na suspeita de rotura, na dúvida ou quando não melhora. E acima dos sessenta, muita gente sem nenhuma dor já tem alteração no manguito no exame.",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 12.523
+ },
+ {
+  "frame": 16,
+  "who": "acromio",
+  "text": "E a culpa era minha, né?",
+  "file": "assets/voice/f16-2-acromio.wav",
+  "dur": 1.736
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "Hora de mexer! Repouso total e tipoia deixam o ombro mais fraco e mais duro. A regra: dor até três de dez no exercício, e passando até o dia seguinte, pode seguir.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 9.92
+ },
+ {
+  "frame": 17,
+  "who": "supra",
+  "text": "Tendão parado enferruja!",
+  "file": "assets/voice/f17-2-supra.wav",
+  "dur": 1.718
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "Primeiro: ajustar a carga. Diminuir por um tempo o trabalho com o braço acima da cabeça, usar um cabo maior no rolo e fazer pausas. Pra dormir, abraçar um travesseiro ajuda o ombro a descansar.",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 11.541
+ },
+ {
+  "frame": 18,
+  "who": "cida",
+  "text": "Deixa que o resto do teto eu termino!",
+  "file": "assets/voice/f18-2-cida.wav",
+  "dur": 2.252
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Degrau um: isometria. Cotovelo dobrado, empurra a mão contra a parede, como se fosse girar o braço pra fora, e segura trinta segundos, cinco vezes. Costuma até aliviar a dor.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 10.624
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Degrau dois: rotação externa com elástico. Toalhinha embaixo do braço, cotovelo colado no corpo, e gira o antebraço pra fora devagar. Esse exercício fortalece justamente o manguito.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 11.029
+ },
+ {
+  "frame": 20,
+  "who": "supra",
+  "text": "Isso! Tô ficando forte!",
+  "file": "assets/voice/f20-2-supra.wav",
+  "dur": 1.487
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Degrau três: elevação dos braços na diagonal, com o polegar pra cima, até a altura do ombro, segurando uma garrafinha. E a remada com elástico, aproximando as escápulas. Escápula forte ajuda o ombro a trabalhar com mais espaço.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 13.504
+ },
+ {
+  "frame": 21,
+  "who": "acromio",
+  "text": "Agora sim, todo mundo cabe aqui embaixo!",
+  "file": "assets/voice/f21-2-acromio.wav",
+  "dur": 2.633
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "Degrau quatro: com a força melhorando, a gente volta a levar o braço lá em cima, primeiro sem peso, depois com carga, até voltar a pintar, nadar ou jogar, aumentando aos poucos.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 10.667
+ },
+ {
+  "frame": 23,
+  "who": "pablo",
+  "text": "E a infiltração? Pode aliviar por algumas semanas e ajudar a fazer os exercícios, com indicação médica. Já a cirurgia de descompressão, na maioria dos casos, não traz resultado melhor do que um bom programa de exercícios.",
+  "file": "assets/voice/f23-1-pablo.wav",
+  "dur": 13.163
+ },
+ {
+  "frame": 25,
+  "who": "pablo",
+  "text": "Quanto tempo leva? A maioria melhora bastante entre seis e doze semanas de exercício bem feito. Alguns casos levam até seis meses. Constância é tudo.",
+  "file": "assets/voice/f25-1-pablo.wav",
+  "dur": 9.323
+ },
+ {
+  "frame": 25,
+  "who": "supra",
+  "text": "Espaço livre e tendão forte!",
+  "file": "assets/voice/f25-2-supra.wav",
+  "dur": 1.996
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "Se não melhorar, a gente reavalia o diagnóstico e pensa em exame e infiltração, com o médico. A cirurgia fica para casos selecionados, como uma rotura grande.",
+  "file": "assets/voice/f26-1-pablo.wav",
+  "dur": 9.941
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "Resumindo: a síndrome do impacto é, na maioria das vezes, um tendão do ombro sobrecarregado. Ajusta a carga, fortalece o manguito e a escápula, tem paciência, e o braço volta lá pra cima sem dor.",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 11.648
+ },
+ {
+  "frame": 27,
+  "who": "ze",
+  "text": "Teto pintado e ombro novo!",
+  "file": "assets/voice/f27-2-ze.wav",
+  "dur": 2.01
+ },
+ {
+  "frame": 28,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta qual vai ser o próximo tema!",
+  "file": "assets/voice/f28-1-pablo.wav",
+  "dur": 7.979
+ },
+ {
+  "frame": 28,
+  "who": "vertebra",
+  "text": "E manda pro seu tio que pinta a casa inteira num fim de semana!",
+  "file": "assets/voice/f28-2-vertebra.wav",
+  "dur": 3.371
+ }
+]
