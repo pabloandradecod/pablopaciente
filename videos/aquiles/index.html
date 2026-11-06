@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Tendinopatia de Aquiles — Dr. Pablo Andrade | Quiropraxia</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #FFF6E9; }
+      #bg { position: absolute; inset: 0; background: #FFF6E9; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="33.89" data-width="1920" data-height="1080">
+      <div id="bg"></div>
+      <div id="f01" data-composition-id="f01" data-composition-src="compositions/f01.html" data-start="0.000" data-duration="7" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:1"></div>
+      <div id="f02" data-composition-id="f02" data-composition-src="compositions/f02.html" data-start="7.000" data-duration="26.89" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:1"></div>
+      <div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" data-duration="33.89" data-track-index="2" data-track-kind="captions" data-width="1920" data-height="1080" style="z-index:5"></div>
+      <audio id="sfx-f01-1" class="clip" src="assets/sfx/whoosh.mp3" data-start="0.350" data-duration="0.575" data-track-index="4" data-volume="0.55"></audio>
+      <audio id="sfx-f01-2" class="clip" src="assets/sfx/pop.mp3" data-start="1.620" data-duration="0.720" data-track-index="4" data-volume="0.7"></audio>
+      <audio id="sfx-f01-3" class="clip" src="assets/sfx/typing.mp3" data-start="2.000" data-duration="1.000" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="sfx-f01-4" class="clip" src="assets/sfx/impact-bass-1.mp3" data-start="3.200" data-duration="2.116" data-track-index="4" data-volume="0.6"></audio>
+      <audio id="sfx-f01-5" class="clip" src="assets/sfx/sparkle.mp3" data-start="4.000" data-duration="1.802" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="vo-f02-1" class="clip" src="assets/voice/f02-1-pablo.wav" data-start="7.600" data-duration="16.555" data-track-index="3" data-volume="1"></audio>
+      <audio id="sfx-f02-1" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="9.820" data-duration="0.575" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="sfx-f02-2" class="clip" src="assets/sfx/pop.mp3" data-start="12.310" data-duration="0.720" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="sfx-f02-3" class="clip" src="assets/sfx/whoosh.mp3" data-start="12.880" data-duration="0.575" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="sfx-f02-4" class="clip" src="assets/sfx/riser.mp3" data-start="13.780" data-duration="2.000" data-track-index="4" data-volume="0.25"></audio>
+      <audio id="sfx-f02-5" class="clip" src="assets/sfx/pop.mp3" data-start="14.750" data-duration="0.720" data-track-index="5" data-volume="0.35"></audio>
+      <audio id="sfx-f02-6" class="clip" src="assets/sfx/whoosh.mp3" data-start="17.590" data-duration="0.575" data-track-index="4" data-volume="0.35"></audio>
+      <audio id="sfx-f02-7" class="clip" src="assets/sfx/click-soft.mp3" data-start="19.720" data-duration="0.366" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="sfx-f02-9" class="clip" src="assets/sfx/glitch-1.mp3" data-start="20.110" data-duration="2.638" data-track-index="4" data-volume="0.3"></audio>
+      <audio id="sfx-f02-8" class="clip" src="assets/sfx/click-soft.mp3" data-start="20.520" data-duration="0.366" data-track-index="5" data-volume="0.4"></audio>
+      <audio id="sfx-f02-10" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="24.155" data-duration="0.575" data-track-index="4" data-volume="0.4"></audio>
+      <audio id="vo-f02-2" class="clip" src="assets/voice/f02-2-cida.wav" data-start="24.555" data-duration="2.382" data-track-index="3" data-volume="1"></audio>
+      <audio id="sfx-f02-11" class="clip" src="assets/sfx/whoosh-short.mp3" data-start="26.887" data-duration="0.575" data-track-index="4" data-volume="0.45"></audio>
+      <audio id="vo-f02-3" class="clip" src="assets/voice/f02-3-aquiles.wav" data-start="27.337" data-duration="2.112" data-track-index="3" data-volume="1"></audio>
+      <audio id="vo-f02-4" class="clip" src="assets/voice/f02-4-pablo.wav" data-start="29.849" data-duration="3.243" data-track-index="3" data-volume="1"></audio>
+      <audio id="sfx-f02-12" class="clip" src="assets/sfx/impact-bass-1.mp3" data-start="31.150" data-duration="2.116" data-track-index="4" data-volume="0.35"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

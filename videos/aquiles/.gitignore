@@ -1,0 +1,9 @@
+.hyperframes/
+renders/
+build/all_voice.wav
+build/sil.wav
+build/concat.txt
+build/transcribe.log
+build/__pycache__/
+*.mp4
+node_modules/

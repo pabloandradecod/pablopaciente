@@ -1,0 +1,289 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Dessa vez a história é minha. Depois que a Dona Cida completou os dez quilômetros, ela me desafiou. Comecei a correr todo dia, subi ladeira, aumentei a distância rapidinho... E agora, de manhã, os primeiros passos são de pinguim: dor e rigidez atrás do tornozelo, que melhoram depois que o pé esquenta.",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 16.555
+ },
+ {
+  "frame": 2,
+  "who": "cida",
+  "text": "Duvido você correr comigo, doutor!",
+  "file": "assets/voice/f02-2-cida.wav",
+  "dur": 2.382
+ },
+ {
+  "frame": 2,
+  "who": "aquiles",
+  "text": "Eu sou um herói... mas tenho limites!",
+  "file": "assets/voice/f02-3-aquiles.wav",
+  "dur": 2.112
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Será que o doutor rompeu o tendão? Bora investigar!",
+  "file": "assets/voice/f02-4-pablo.wav",
+  "dur": 3.243
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Hoje o assunto é a tendinopatia do tendão de Aquiles: o que é, como a gente investiga, os exercícios que funcionam e quanto tempo leva pra melhorar. E sim, médico também vira paciente!",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 11.115
+ },
+ {
+  "frame": 3,
+  "who": "vertebra",
+  "text": "Hoje quem atende sou eu! Senta aí, doutor!",
+  "file": "assets/voice/f03-2-vertebra.wav",
+  "dur": 2.325
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "O nome vem da mitologia grega: o herói Aquiles foi mergulhado num rio mágico que o deixou invencível, mas a mãe segurava ele pelo calcanhar, e ali ficou o seu ponto fraco. Por isso o tendão do calcanhar ganhou esse nome.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 12.651
+ },
+ {
+  "frame": 5,
+  "who": "aquiles",
+  "text": "Herói invencível... menos aqui embaixo!",
+  "file": "assets/voice/f05-2-aquiles.wav",
+  "dur": 2.53
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "O tendão de Aquiles é o tendão mais forte do corpo. Ele junta os músculos da panturrilha e se prende no calcanhar. Na corrida, ele aguenta até seis a oito vezes o peso do corpo a cada passada.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 11.328
+ },
+ {
+  "frame": 6,
+  "who": "aquiles",
+  "text": "Seis a oito vezes! Pode me chamar de Hércules!",
+  "file": "assets/voice/f06-2-aquiles.wav",
+  "dur": 2.959
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "Existem dois tipos principais. A do meio do tendão, uns dois a seis centímetros acima do calcanhar, que é a mais comum. E a da inserção, bem onde o tendão se prende no osso. Guarda essa diferença, porque ela muda os exercícios.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 13.483
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "E igual ao tendão patelar, aqui o problema principal não é inflamação: é o tendão sobrecarregado, com as fibras desorganizadas e às vezes mais grosso. Acontece quando a carga sobe rápido demais, como foi o meu caso: mais distância, ladeira, tudo de uma vez.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 15.125
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "É comum em corredores, entre os trinta e os sessenta anos, mais em homens, e com sobrepeso, diabetes e panturrilha fraca. E um detalhe importante: alguns remédios, como certos antibióticos do grupo das quinolonas e os corticoides, aumentam o risco de problema no tendão.",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 16.213
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "Modo detetive ligado! E dessa vez a detetive é a Vértebra.",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 3.947
+ },
+ {
+  "frame": 10,
+  "who": "vertebra",
+  "text": "Elementar, meu caro doutor!",
+  "file": "assets/voice/f10-2-vertebra.wav",
+  "dur": 1.685
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Na conversa: dói e fica rígido nos primeiros passos da manhã? Melhora quando esquenta e volta depois? Aumentou o treino ou as ladeiras? Teve um estalo, como se alguém chutasse atrás da perna? E tomou algum antibiótico ou corticoide recentemente?",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 14.443
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "No exame, apalpar o tendão mostra o ponto dolorido e, às vezes, mais grosso. Depois, o teste da ponta do pé numa perna só: quantas vezes consegue subir, comparando com o outro lado. E um saltinho numa perna mostra como o tendão aguenta carga.",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 14.229
+ },
+ {
+  "frame": 12,
+  "who": "vertebra",
+  "text": "Doze de um lado, vinte e cinco do outro... anotado!",
+  "file": "assets/voice/f12-2-vertebra.wav",
+  "dur": 2.88
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "E um teste que não pode faltar: o teste de Thompson. Com a pessoa deitada de barriga pra baixo, a gente aperta a panturrilha. Se o pé mexe, o tendão está inteiro. Se o pé não mexe, pode ser ruptura, e isso precisa de avaliação urgente.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 13.717
+ },
+ {
+  "frame": 13,
+  "who": "aquiles",
+  "text": "Ufa! Estou inteiro, só cansado!",
+  "file": "assets/voice/f13-2-aquiles.wav",
+  "dur": 2.114
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "Os impostores: a bursite entre o tendão e o osso do calcanhar. A fascite plantar, que dói na sola do pé. Em crianças, a doença de Sever, no crescimento do calcanhar. A fratura por estresse do calcâneo. E um nervo da lateral do pé, que dá formigamento.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 14.549
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "Atenção: um estalo de repente, com sensação de chute atrás da perna e dificuldade de ficar na ponta do pé, pode ser ruptura. Dor que começou depois de tomar certos antibióticos, inchaço quente e vermelho com febre, ou dor em várias articulações juntas pedem avaliação médica rápida.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 17.493
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "E os exames? O diagnóstico é clínico. Ultrassom ou ressonância entram na suspeita de ruptura, na dúvida ou quando não melhora. E lembra: tendão alterado no exame, sem dor, é comum.",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 10.709
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "Hora de mexer! Repouso total não resolve, só alongar também não, e injeção de corticoide no tendão não é recomendada. A regra: dor até três de dez no exercício, e a rigidez da manhã seguinte não pode piorar.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 12.693
+ },
+ {
+  "frame": 17,
+  "who": "aquiles",
+  "text": "Herói não fica de pijama no sofá!",
+  "file": "assets/voice/f17-2-aquiles.wav",
+  "dur": 2.326
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "Primeiro passo: ajustar o treino. Diminuir a distância e tirar as ladeiras por um tempo, mantendo o condicionamento com bicicleta ou natação.",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 8.768
+ },
+ {
+  "frame": 18,
+  "who": "cida",
+  "text": "Agora quem espera é você, doutor!",
+  "file": "assets/voice/f18-2-cida.wav",
+  "dur": 2.092
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Degrau um: isometria. Sobe na ponta dos pés até a metade e segura, apoiado na parede, de trinta a quarenta e cinco segundos, cinco vezes. Costuma até aliviar a dor.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 10.069
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Degrau dois: força lenta e pesada. Elevação de calcanhar em pé, com o joelho esticado, e sentado, com peso nos joelhos, que trabalha o outro músculo da panturrilha. Três segundos pra subir, três pra descer, aumentando a carga aos poucos.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 13.995
+ },
+ {
+  "frame": 20,
+  "who": "aquiles",
+  "text": "Isso! Agora sim eu tô ficando forte!",
+  "file": "assets/voice/f20-2-aquiles.wav",
+  "dur": 2.342
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Lembra dos dois tipos? Na tendinopatia do meio do tendão, pode fazer no degrau, descendo o calcanhar. Mas na da inserção, faz no chão, sem descer abaixo do nível, porque isso aperta o tendão contra o osso. Um pequeno salto no calçado pode aliviar no começo.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 15.168
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "Degrau três: quando a força estiver boa, entram os saltinhos, pular corda baixinho, e só então a corrida leve, sempre aumentando aos poucos.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 8.32
+ },
+ {
+  "frame": 23,
+  "who": "pablo",
+  "text": "E o degrau quatro é a volta à corrida em etapas: caminhada, trote intercalado, corrida no plano, mais distância e por último as ladeiras.",
+  "file": "assets/voice/f23-1-pablo.wav",
+  "dur": 8.085
+ },
+ {
+  "frame": 23,
+  "who": "ze",
+  "text": "Vai, doutor! A Cida tá na frente!",
+  "file": "assets/voice/f23-2-ze.wav",
+  "dur": 2.162
+ },
+ {
+  "frame": 25,
+  "who": "pablo",
+  "text": "Quanto tempo leva? Tendão é paciente: de doze semanas a seis meses, às vezes mais, e a da inserção costuma demorar um pouco mais. Mas com o exercício certo e constância, a grande maioria volta a correr sem dor.",
+  "file": "assets/voice/f25-1-pablo.wav",
+  "dur": 12.843
+ },
+ {
+  "frame": 25,
+  "who": "aquiles",
+  "text": "Capa costurada, herói de volta!",
+  "file": "assets/voice/f25-2-aquiles.wav",
+  "dur": 2.19
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "Se não melhorar depois de um programa bem feito, a gente reavalia o treino, o calçado e o tipo. Ondas de choque podem ajudar, e a cirurgia é rara.",
+  "file": "assets/voice/f26-1-pablo.wav",
+  "dur": 9.131
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "Resumindo: o tendão de Aquiles é fortíssimo, mas precisa de carga certa. Ajusta o treino, faz a escada da panturrilha com paciência, e o calcanhar de Aquiles deixa de ser o seu ponto fraco.",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 11.285
+ },
+ {
+  "frame": 27,
+  "who": "vertebra",
+  "text": "Toma seu jaleco de volta, doutor. Foi divertido!",
+  "file": "assets/voice/f27-2-vertebra.wav",
+  "dur": 2.773
+ },
+ {
+  "frame": 28,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta qual vai ser o próximo tema!",
+  "file": "assets/voice/f28-1-pablo.wav",
+  "dur": 7.979
+ },
+ {
+  "frame": 28,
+  "who": "vertebra",
+  "text": "E marca aquele amigo que começou a correr ontem e já quer fazer maratona!",
+  "file": "assets/voice/f28-2-vertebra.wav",
+  "dur": 4.011
+ }
+]
