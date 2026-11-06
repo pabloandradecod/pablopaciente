@@ -1,0 +1,282 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "A Dona Cida voltou do mercado e o Seu Zé ficou com a missão de levar as sacolas lá pra cima. Degrau por degrau, começou uma dor na parte de dentro do joelho, um pouquinho abaixo da dobra. E à noite, deitado de lado, quando um joelho encosta no outro... dói também!",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 14.827
+ },
+ {
+  "frame": 2,
+  "who": "cida",
+  "text": "Leva lá pra cima, Zé!",
+  "file": "assets/voice/f02-2-cida.wav",
+  "dur": 1.562
+ },
+ {
+  "frame": 2,
+  "who": "gansa",
+  "text": "Quá! Quem pisou no meu pé?!",
+  "file": "assets/voice/f02-3-gansa.wav",
+  "dur": 1.527
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Será que é a artrose do joelho piorando? Bora investigar!",
+  "file": "assets/voice/f02-4-pablo.wav",
+  "dur": 3.435
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Hoje o assunto é a pata de ganso: a tendinopatia e a bursite da pata de ganso. Nome engraçado, mas é coisa séria e muito comum. Vamos ver o que é, como investigar, os exercícios e as chances de melhora.",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 11.819
+ },
+ {
+  "frame": 3,
+  "who": "vertebra",
+  "text": "Pata de ganso? Achei que era receita!",
+  "file": "assets/voice/f03-2-vertebra.wav",
+  "dur": 2.155
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "Na parte de dentro do joelho, três tendões descem de músculos diferentes da coxa e se prendem juntinhos na tíbia, um pouco abaixo da articulação. O desenho que eles formam parece um pé de ganso! São o sartório, o grácil e o semitendinoso. Pra lembrar: sempre gosto de sorvete.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 16.171
+ },
+ {
+  "frame": 5,
+  "who": "gansa",
+  "text": "Quá! Eu sou a inspiração!",
+  "file": "assets/voice/f05-2-gansa.wav",
+  "dur": 1.568
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "E embaixo desses tendões existe uma bursa, uma almofadinha que ajuda eles a deslizarem. O problema pode estar nos tendões, a tendinopatia, ou na bursa, a bursite. E muitas vezes os dois andam juntos.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 12.373
+ },
+ {
+  "frame": 6,
+  "who": "bursinha",
+  "text": "Oi, gente! Agora eu moro no joelho!",
+  "file": "assets/voice/f06-2-bursinha.wav",
+  "dur": 1.957
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "O que irrita? Sobrecarga, como muita escada, ladeira ou um aumento rápido de caminhada ou corrida. O joelho que cai pra dentro, que estica esses tendões a cada passo. E a compressão, como dormir de lado com um joelho apertando o outro.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 13.227
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "É bem comum em quem tem artrose no joelho, principalmente mulheres e pessoas acima dos quarenta anos. Sobrepeso e diabetes aumentam o risco, e corredores também podem ter.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 10.773
+ },
+ {
+  "frame": 8,
+  "who": "ze",
+  "text": "Check, check, check... virei bingo!",
+  "file": "assets/voice/f08-2-ze.wav",
+  "dur": 2.209
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "O que se sente: dor na parte de dentro do joelho, um pouco abaixo da dobra. Piora pra subir escada, levantar da cadeira e à noite, com um joelho encostando no outro. Às vezes aparece um inchacinho bem no ponto.",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 12.16
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "Modo detetive ligado! E a pista principal dessa vez é uma pegada.",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 4.373
+ },
+ {
+  "frame": 10,
+  "who": "gansa",
+  "text": "Não fui eu! Foi o meu pé!",
+  "file": "assets/voice/f10-2-gansa.wav",
+  "dur": 1.364
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Na conversa: a pessoa aponta um ponto abaixo da dobra, do lado de dentro? Piora na escada e ao levantar? Dói à noite com os joelhos encostados? E o joelho travou, falseou ou inchou muito? Já tem diagnóstico de artrose?",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 12.715
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "No exame, a palpação é chave: o ponto da pata de ganso dói bem mais do que a linha da articulação. Também testo a força dos músculos de trás da coxa e vejo se o joelho cai pra dentro ao agachar.",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 11.755
+ },
+ {
+  "frame": 12,
+  "who": "ze",
+  "text": "É aí, doutor! Esse ponto aí!",
+  "file": "assets/voice/f12-2-ze.wav",
+  "dur": 1.819
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "Os impostores: a artrose, que dói mais na linha da articulação, com rigidez de manhã. O menisco, que trava e falseia. O ligamento do lado de dentro, depois de uma torção. Problemas no osso, que doem até em repouso. E o cisto de Baker, que incha atrás do joelho.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 14.912
+ },
+ {
+  "frame": 13,
+  "who": "patelito",
+  "text": "Dessa vez também não sou eu, viu?",
+  "file": "assets/voice/f13-2-patelito.wav",
+  "dur": 1.969
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "Atenção: joelho quente, vermelho e muito inchado com febre. Batata da perna inchada, quente e dolorida, que pode ser trombose. Trauma sem conseguir apoiar a perna, ou dor forte à noite que não melhora. Tudo isso pede avaliação médica rápida.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 14.229
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "E os exames? O diagnóstico é clínico. Ultrassom ou ressonância ajudam quando há dúvida, suspeita de menisco ou de problema no osso, ou quando não melhora.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 8.853
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "Hora de mexer! Repouso total não resolve. A regra: dor até três de dez durante o exercício, e voltando ao normal no dia seguinte, pode seguir.",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 8.597
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "Um: tirar a compressão e ajustar a carga. Travesseiro entre os joelhos pra dormir, menos viagens na escada com sacolas mais leves, caminhada no plano e gelo por quinze minutos nas crises.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 11.285
+ },
+ {
+  "frame": 17,
+  "who": "cida",
+  "text": "Olha só, o mesmo truque do meu quadril!",
+  "file": "assets/voice/f17-2-cida.wav",
+  "dur": 2.386
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "Dois: isometria da coxa. Sentado, com uma toalha enrolada embaixo do joelho, aperta o joelho pra baixo e segura dez segundos. Dez vezes.",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 8.661
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Três: ponte. Glúteos fortes ajudam a segurar o joelho no lugar. Três séries de dez a doze.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 5.696
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Quatro: a concha. Deitado de lado, abre o joelho de cima sem girar o quadril. Isso fortalece o glúteo e ajuda o joelho a não cair pra dentro.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 8.533
+ },
+ {
+  "frame": 20,
+  "who": "gansa",
+  "text": "Isso! Abre a asa!",
+  "file": "assets/voice/f20-2-gansa.wav",
+  "dur": 1.291
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Cinco: sentar e levantar, com os joelhos apontando pra frente, sem cair pra dentro. Começa com uma cadeira mais alta. Três séries de oito a dez.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 8.853
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "Seis: fortalecer devagar os músculos de trás da coxa, que puxam esses tendões, e subir um degrau baixo com o joelho alinhado. Carga leve, aumentando aos poucos.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 9.621
+ },
+ {
+  "frame": 23,
+  "who": "pablo",
+  "text": "E ajudam: perder peso quando necessário, tratar a artrose junto, controlar o diabetes. A infiltração pode ser usada em alguns casos, com o médico. Mas o principal é tirar a compressão e fortalecer.",
+  "file": "assets/voice/f23-1-pablo.wav",
+  "dur": 11.989
+ },
+ {
+  "frame": 25,
+  "who": "pablo",
+  "text": "A boa notícia: a maioria melhora em seis a doze semanas com tratamento conservador. Quando tem artrose junto, pode levar um pouco mais, e por isso cuidar do joelho como um todo faz diferença.",
+  "file": "assets/voice/f25-1-pablo.wav",
+  "dur": 11.861
+ },
+ {
+  "frame": 25,
+  "who": "ze",
+  "text": "Agora sobe sacola, sobe neto, sobe tudo!",
+  "file": "assets/voice/f25-2-ze.wav",
+  "dur": 2.816
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "Se não melhorar, a gente reavalia o diagnóstico e a artrose. A infiltração pode ajudar, com o médico, e a cirurgia é muito rara.",
+  "file": "assets/voice/f26-1-pablo.wav",
+  "dur": 7.893
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "Resumindo: a pata de ganso são três tendões e uma bursa na parte de dentro do joelho. Tira a compressão, ajusta a carga, fortalece, e cuida do joelho como um todo.",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 9.643
+ },
+ {
+  "frame": 27,
+  "who": "cida",
+  "text": "Agora é casal do travesseiro, Zé!",
+  "file": "assets/voice/f27-2-cida.wav",
+  "dur": 2.12
+ },
+ {
+  "frame": 28,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta qual vai ser o próximo tema!",
+  "file": "assets/voice/f28-1-pablo.wav",
+  "dur": 7.979
+ },
+ {
+  "frame": 28,
+  "who": "vertebra",
+  "text": "E manda pro seu tio que sobe escada com dez sacolas de uma vez!",
+  "file": "assets/voice/f28-2-vertebra.wav",
+  "dur": 3.499
+ }
+]
