@@ -47,8 +47,8 @@ export default {
       <!-- Seu Zé -->
       <g id="f02-z-wrap"><g transform="translate(700,700) scale(1.2)">${human("f02z", "ze")}
         <g id="f02-roller" opacity="0"><rect x="-8" y="-420" width="12" height="150" rx="5" fill="#8B5A2B" stroke="${C.ink}" stroke-width="4"/><rect x="-60" y="-446" width="116" height="34" rx="14" fill="#8FD3C6" stroke="${C.ink}" stroke-width="5"/></g>
-        <g id="f02-pain" opacity="0"><circle cx="24" cy="-128" r="28" fill="${C.pain}" opacity="0.4"/><circle cx="24" cy="-128" r="12" fill="${C.pain}" stroke="#fff" stroke-width="4"/></g>
-        <path id="f02-streak" d="M30 -110 L34 -60" stroke="${C.pain}" stroke-width="10" stroke-linecap="round" opacity="0"/>
+        <g id="f02-pain" opacity="0"><circle cx="6" cy="-112" r="28" fill="${C.pain}" opacity="0.4"/><circle cx="6" cy="-112" r="12" fill="${C.pain}" stroke="#fff" stroke-width="4"/></g>
+        <path id="f02-streak" d="M8 -96 L10 -46" stroke="${C.pain}" stroke-width="10" stroke-linecap="round" opacity="0"/>
         <rect id="f02-wallet" x="-64" y="-20" width="34" height="26" rx="4" fill="#6B3E1E" stroke="${C.ink}" stroke-width="4" opacity="0"/>
       </g></g>
       <!-- Dona Cida -->
@@ -61,7 +61,7 @@ export default {
           <rect x="1130" y="190" width="620" height="620" fill="#FFE4DC"/>
           <circle cx="1440" cy="900" r="230" fill="${C.bone}" ${st}/>
           <text x="1440" y="760" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="26" fill="${C.ink}">ÚMERO</text>
-          <g transform="translate(1440,470) scale(0.95)">${acromio("f02a")}</g>
+          <g transform="translate(1440,420) scale(0.95)">${acromio("f02a")}</g>
           <g transform="translate(1600,690) scale(0.42)">${bursinha("f02b")}</g>
           <g id="f02-s-wrap"><g transform="translate(1420,690) scale(0.72)">${supra("f02s")}</g></g>
         </g>
@@ -100,7 +100,7 @@ export default {
         tl.fromTo("#f02-pain circle", { scale: 0.6, transformOrigin: "50% 50%" }, { scale: 1.3, duration: 0.25, yoyo: true, repeat: 5 }, K.dor);
         R.face(tl, z, K.dor, { eyes: "pain", mouth: "frown" });
         R.pose(tl, z, K.dor + 0.3, 0.3, { shF: 10, elF: -10 });
-        tl.fromTo("#f02-streak", { opacity: 0, attr: { d: "M30 -110 L30 -110" } }, { opacity: 0.85, attr: { d: "M30 -110 L34 -60" }, duration: 0.5, ease: "power2.out" }, K.desce);
+        tl.fromTo("#f02-streak", { opacity: 0, attr: { d: "M8 -96 L8 -96" } }, { opacity: 0.85, attr: { d: "M8 -96 L10 -46" }, duration: 0.5, ease: "power2.out" }, K.desce);
         // noite
         tl.to("#f02-room, #f02-z-wrap", { opacity: 0, duration: 0.3 }, K.noite - 0.25);
         tl.to("#f02-night", { opacity: 1, duration: 0.3 }, K.noite - 0.25);
