@@ -1,0 +1,324 @@
+[
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "A Dona Cida entrou na musculação. Na primeira semana, elevação lateral com halter leve. Na segunda, o peso dobrou. Na terceira, mais ainda! Em casa, roupa no varal alto todo dia. E agora, pra guardar o pote na prateleira de cima, o braço dói e parece que perde a força no meio do caminho.",
+  "file": "assets/voice/f02-1-pablo.wav",
+  "dur": 17.003
+ },
+ {
+  "frame": 2,
+  "who": "ze",
+  "text": "Agora é a sua vez, Cida!",
+  "file": "assets/voice/f02-2-ze.wav",
+  "dur": 1.647
+ },
+ {
+  "frame": 2,
+  "who": "supra",
+  "text": "Eu sou pequeno, mas carrego o ombro nas costas!",
+  "file": "assets/voice/f02-3-supra.wav",
+  "dur": 2.698
+ },
+ {
+  "frame": 2,
+  "who": "pablo",
+  "text": "Será que rompeu o tendão? Bora investigar!",
+  "file": "assets/voice/f02-4-pablo.wav",
+  "dur": 2.688
+ },
+ {
+  "frame": 3,
+  "who": "pablo",
+  "text": "Hoje o assunto é a tendinopatia do supraespinhal, o tendão do manguito que mais sofre no ombro. Lembra do episódio da síndrome do impacto? É da mesma família, mas hoje a gente vai dar um zoom nesse tendão.",
+  "file": "assets/voice/f03-1-pablo.wav",
+  "dur": 12.053
+ },
+ {
+  "frame": 3,
+  "who": "vertebra",
+  "text": "O Supra de novo? Esse aí é famoso!",
+  "file": "assets/voice/f03-2-vertebra.wav",
+  "dur": 2.112
+ },
+ {
+  "frame": 5,
+  "who": "pablo",
+  "text": "O supraespinhal é um músculo que nasce em cima da escápula, passa por baixo do acrômio e se prende no topo do úmero. Ele é um dos quatro músculos do manguito rotador, e o tendão dele é o que mais tem problema no ombro.",
+  "file": "assets/voice/f05-1-pablo.wav",
+  "dur": 12.395
+ },
+ {
+  "frame": 5,
+  "who": "acromio",
+  "text": "Passa aqui embaixo, mas com licença, viu?",
+  "file": "assets/voice/f05-2-acromio.wav",
+  "dur": 2.582
+ },
+ {
+  "frame": 6,
+  "who": "pablo",
+  "text": "O trabalho dele é gigante: ajudar a começar a levantar o braço e, principalmente, manter a bola do ombro centralizada enquanto o deltoide, o músculo grandão, puxa o braço pra cima. É uma dupla! Se o supraespinhal cansa, a bola perde o controle.",
+  "file": "assets/voice/f06-1-pablo.wav",
+  "dur": 14.187
+ },
+ {
+  "frame": 6,
+  "who": "deltoidao",
+  "text": "Eu levanto, ele segura. Mas a foto é minha!",
+  "file": "assets/voice/f06-2-deltoidao.wav",
+  "dur": 2.739
+ },
+ {
+  "frame": 7,
+  "who": "pablo",
+  "text": "Perto de onde ele se prende no osso existe uma área com menos circulação, chamada de zona crítica. Por isso, com o passar dos anos, esse trecho do tendão vai ficando mais desgastado. É natural, como cabelo branco por dentro.",
+  "file": "assets/voice/f07-1-pablo.wav",
+  "dur": 13.077
+ },
+ {
+  "frame": 7,
+  "who": "supra",
+  "text": "Cabelo branco? Eu prefiro dizer experiência!",
+  "file": "assets/voice/f07-2-supra.wav",
+  "dur": 2.694
+ },
+ {
+  "frame": 8,
+  "who": "pablo",
+  "text": "Pensa numa escadinha. O tendão sadio, quando sobrecarregado, fica dolorido e inchado. Com o tempo, pode ir se desgastando, ter um rasguinho parcial e, às vezes, romper por completo. A boa notícia: no começo da escada dá pra voltar, e mesmo rotura parcial muitas vezes nem dói.",
+  "file": "assets/voice/f08-1-pablo.wav",
+  "dur": 16.469
+ },
+ {
+  "frame": 9,
+  "who": "pablo",
+  "text": "E tem um caso especial: às vezes se forma um depósito de cálcio dentro do tendão, a tendinite calcária. Quando o corpo resolve dissolver essa pedrinha, a dor pode ser fortíssima, mas costuma passar.",
+  "file": "assets/voice/f09-1-pablo.wav",
+  "dur": 12.117
+ },
+ {
+  "frame": 9,
+  "who": "pedrinha",
+  "text": "Eu só vim de visita... mas faço barulho!",
+  "file": "assets/voice/f09-2-pedrinha.wav",
+  "dur": 2.161
+ },
+ {
+  "frame": 10,
+  "who": "pablo",
+  "text": "É mais comum depois dos quarenta, em quem trabalha com o braço lá em cima, em quem aumenta o peso rápido demais na academia, e em quem tem diabetes, fuma ou tem colesterol alto, que atrapalham a circulação do tendão.",
+  "file": "assets/voice/f10-1-pablo.wav",
+  "dur": 13.013
+ },
+ {
+  "frame": 10,
+  "who": "cida",
+  "text": "Academia e varal... sou eu, duas vezes!",
+  "file": "assets/voice/f10-2-cida.wav",
+  "dur": 2.321
+ },
+ {
+  "frame": 11,
+  "who": "pablo",
+  "text": "Modo detetive ligado! O suspeito dessa vez é um halter que cresceu rápido demais.",
+  "file": "assets/voice/f11-1-pablo.wav",
+  "dur": 5.12
+ },
+ {
+  "frame": 11,
+  "who": "vertebra",
+  "text": "Esse halter aí tava malhando escondido!",
+  "file": "assets/voice/f11-2-vertebra.wav",
+  "dur": 2.197
+ },
+ {
+  "frame": 12,
+  "who": "pablo",
+  "text": "Na conversa: dói do lado do ombro ao levantar o braço? Parece fraco no meio do caminho? Dói à noite? Teve uma queda ou um estalo com perda de força de repente? Ou uma dor fortíssima que começou do nada?",
+  "file": "assets/voice/f12-1-pablo.wav",
+  "dur": 11.883
+ },
+ {
+  "frame": 13,
+  "who": "pablo",
+  "text": "No exame, o teste da lata: braços pra frente na diagonal, polegar pra cima, e eu empurro pra baixo. Se dói mas segura, é a cara da tendinopatia. Se o braço despenca sem força, a gente investiga rotura. O arco doloroso e a força pra girar o braço pra fora completam a investigação.",
+  "file": "assets/voice/f13-1-pablo.wav",
+  "dur": 17.259
+ },
+ {
+  "frame": 13,
+  "who": "cida",
+  "text": "Dói, doutor, mas eu seguro!",
+  "file": "assets/voice/f13-2-cida.wav",
+  "dur": 1.776
+ },
+ {
+  "frame": 14,
+  "who": "pablo",
+  "text": "Rompeu ou não rompeu? Se a rotura vem depois de uma queda, com perda de força de repente, principalmente em quem é mais jovem e ativo, precisa de avaliação rápida, porque às vezes a cirurgia é indicada cedo. Já as roturas por desgaste, sem trauma, muitas vezes vão bem com exercício.",
+  "file": "assets/voice/f14-1-pablo.wav",
+  "dur": 16.512
+ },
+ {
+  "frame": 14,
+  "who": "supra",
+  "text": "Tô com um arranhão, mas trabalhando!",
+  "file": "assets/voice/f14-2-supra.wav",
+  "dur": 1.947
+ },
+ {
+  "frame": 15,
+  "who": "pablo",
+  "text": "Os impostores: o ombro congelado, o pescoço, quando a dor desce com formigamento, a artrose e o tendão do bíceps, que dói na frente do ombro. E atenção: dor no ombro com aperto no peito pode ser o coração. Queda com o braço que não sobe, febre ou perda de peso sem explicação pedem avaliação médica rápida.",
+  "file": "assets/voice/f15-1-pablo.wav",
+  "dur": 17.792
+ },
+ {
+  "frame": 16,
+  "who": "pablo",
+  "text": "E os exames? O diagnóstico é clínico, mas o ultrassom é ótimo pra ver esse tendão, e o raio-X mostra a pedrinha de cálcio. Só que, acima dos sessenta, muita gente sem nenhuma dor já tem rasguinho no supraespinhal. Então o exame sempre vem junto com o exame físico.",
+  "file": "assets/voice/f16-1-pablo.wav",
+  "dur": 15.424
+ },
+ {
+  "frame": 16,
+  "who": "pedrinha",
+  "text": "Saí bem na foto?",
+  "file": "assets/voice/f16-2-pedrinha.wav",
+  "dur": 1.165
+ },
+ {
+  "frame": 17,
+  "who": "pablo",
+  "text": "Hora de mexer! Tendão gosta de carga, na medida certa. A regra de sempre: dor até três de dez no exercício, e passando até o dia seguinte, pode seguir.",
+  "file": "assets/voice/f17-1-pablo.wav",
+  "dur": 9.365
+ },
+ {
+  "frame": 17,
+  "who": "supra",
+  "text": "Me dá trabalho, mas na medida!",
+  "file": "assets/voice/f17-2-supra.wav",
+  "dur": 1.896
+ },
+ {
+  "frame": 18,
+  "who": "pablo",
+  "text": "Primeiro: ajustar a carga. Tirar por um tempo o peso que irritou, abaixar o varal e usar um banquinho pra prateleira alta. O resto do treino continua.",
+  "file": "assets/voice/f18-1-pablo.wav",
+  "dur": 8.725
+ },
+ {
+  "frame": 18,
+  "who": "ze",
+  "text": "Pausa não é parada, Cida!",
+  "file": "assets/voice/f18-2-ze.wav",
+  "dur": 1.661
+ },
+ {
+  "frame": 19,
+  "who": "pablo",
+  "text": "Degrau um: isometria. De lado pra parede, empurra a mão contra ela como se fosse abrir o braço, sem mexer. Segura trinta segundos, cinco vezes.",
+  "file": "assets/voice/f19-1-pablo.wav",
+  "dur": 8.533
+ },
+ {
+  "frame": 20,
+  "who": "pablo",
+  "text": "Degrau dois: a elevação da lata cheia. Braços na diagonal, polegar pra cima, até a altura do ombro, subindo e descendo devagar. É o exercício queridinho do supraespinhal.",
+  "file": "assets/voice/f20-1-pablo.wav",
+  "dur": 10.24
+ },
+ {
+  "frame": 20,
+  "who": "supra",
+  "text": "Esse é o meu exercício favorito!",
+  "file": "assets/voice/f20-2-supra.wav",
+  "dur": 1.85
+ },
+ {
+  "frame": 21,
+  "who": "pablo",
+  "text": "Degrau três: rotação externa deitada de lado, com peso leve, e remada com elástico pra fortalecer a escápula. Assim o supraespinhal ganha ajuda dos vizinhos.",
+  "file": "assets/voice/f21-1-pablo.wav",
+  "dur": 9.707
+ },
+ {
+  "frame": 21,
+  "who": "deltoidao",
+  "text": "Agora sim, dupla equilibrada!",
+  "file": "assets/voice/f21-2-deltoidao.wav",
+  "dur": 1.926
+ },
+ {
+  "frame": 22,
+  "who": "pablo",
+  "text": "Degrau quatro: aumentar a carga aos poucos. Tendão adora carga pesada e lenta: oito a doze repetições, devagar, aumentando o peso de semana em semana.",
+  "file": "assets/voice/f22-1-pablo.wav",
+  "dur": 9.387
+ },
+ {
+  "frame": 23,
+  "who": "pablo",
+  "text": "E o degrau cinco é voltar pra cima: varal, prateleira e o treino de ombro na academia, sempre progredindo aos poucos.",
+  "file": "assets/voice/f23-1-pablo.wav",
+  "dur": 7.061
+ },
+ {
+  "frame": 23,
+  "who": "cida",
+  "text": "Pote guardado, roupa estendida!",
+  "file": "assets/voice/f23-2-cida.wav",
+  "dur": 2.151
+ },
+ {
+  "frame": 25,
+  "who": "pablo",
+  "text": "Quanto tempo? A tendinopatia costuma melhorar em três a seis meses de exercício bem feito. Rotura parcial muitas vezes vai bem com o mesmo tratamento. E na tendinite calcária, a crise é forte, mas costuma passar, e os casos teimosos têm opções com o médico.",
+  "file": "assets/voice/f25-1-pablo.wav",
+  "dur": 16.171
+ },
+ {
+  "frame": 25,
+  "who": "supra",
+  "text": "Pequeno, mas forte de novo!",
+  "file": "assets/voice/f25-2-supra.wav",
+  "dur": 1.769
+ },
+ {
+  "frame": 26,
+  "who": "pablo",
+  "text": "E a cirurgia? Ela entra principalmente na rotura depois de um trauma em quem é ativo, ou quando um bom tratamento não funcionou. Na maioria dos casos, o caminho é o exercício.",
+  "file": "assets/voice/f26-1-pablo.wav",
+  "dur": 10.368
+ },
+ {
+  "frame": 27,
+  "who": "pablo",
+  "text": "Resumindo: o supraespinhal é um tendão pequeno com um trabalho gigante. Ajusta a carga, fortalece com paciência, aumenta o peso aos poucos, e o braço volta lá pra cima sem dor.",
+  "file": "assets/voice/f27-1-pablo.wav",
+  "dur": 10.581
+ },
+ {
+  "frame": 27,
+  "who": "cida",
+  "text": "E agora o peso sobe devagar!",
+  "file": "assets/voice/f27-2-cida.wav",
+  "dur": 1.959
+ },
+ {
+  "frame": 28,
+  "who": "pablo",
+  "text": "Lembrando: esse vídeo é educativo e não substitui uma avaliação. Se inscreve, ativa o sininho e comenta qual vai ser o próximo tema!",
+  "file": "assets/voice/f28-1-pablo.wav",
+  "dur": 7.979
+ },
+ {
+  "frame": 28,
+  "who": "vertebra",
+  "text": "E manda pra aquela amiga que dobrou o peso na segunda semana de academia!",
+  "file": "assets/voice/f28-2-vertebra.wav",
+  "dur": 4.096
+ }
+]
