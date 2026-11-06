@@ -1,0 +1,345 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #FFF6E9; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #f18-head { left:110px; top:240px; font-size:66px; }
+        #f18-head span { color:#1E9C72; }
+        #f18-tips { left:110px; top:350px; width:470px; padding:18px 24px; }
+        #f18-tips .row { font-size:30px; margin:8px 0; display:flex; align-items:center; gap:14px; opacity:0; }
+        #f18-tips .dot { width:22px; height:22px; border-radius:50%; background:#3DD9A4; border:5px solid #013E4C; flex:none; }
+        #f18-clock { left:1480px; top:560px; width:330px; padding:16px; text-align:center; }
+        #f18-clock .t { font-size:28px; margin-top:6px; }
+        #f18-pausa { left:820px; top:60px; padding:8px 22px; font-size:46px; color:#fff; background:#FF5A4E; border:6px solid #013E4C; border-radius:14px; transform:rotate(-3deg); }
+        #f18-sleep { left:1240px; top:250px; width:560px; padding:16px 20px; font-size:32px; text-align:center; }
+        #f18-bal { left:520px; top:290px; width:520px; padding:16px 22px; font-size:38px; text-align:center; }
+      
+  </style>
+  <div id="root" data-composition-id="f18" data-width="1920" data-height="1080">
+
+    <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <g id="f18-room">
+        <rect width="1920" height="1080" fill="#E7F3F1"/>
+        <rect width="1920" height="200" fill="#D9D2C4"/>
+        <rect id="f18-paint" width="960" height="200" fill="#8FD3C6"/>
+        <line x1="0" y1="200" x2="1920" y2="200" stroke="#013E4C" stroke-width="7"/>
+        <rect y="880" width="1920" height="200" fill="#CFE3DF"/><line x1="0" y1="880" x2="1920" y2="880" stroke="#013E4C" stroke-width="7"/>
+        <g transform="translate(1700,880)"><rect x="-40" y="-60" width="80" height="60" rx="8" fill="#7FB3D5" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/><rect x="-46" y="-70" width="92" height="14" rx="6" fill="#5C8FB5" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/></g>
+      </g>
+      <g id="f18-z-wrap"><g transform="translate(900,700) scale(1.2)"><g id="f18z-root">
+    <g opacity="1" style="filter: brightness(0.86)"><g transform="translate(-8,0)"><g id="f18z-hipB">
+    <line x1="0" y1="0" x2="0" y2="88" stroke="#013E4C" stroke-width="46" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="88" stroke="#7A5634" stroke-width="32" stroke-linecap="round"/>
+    <g transform="translate(0,88)"><g id="f18z-knB">
+      <line x1="0" y1="0" x2="0" y2="86" stroke="#013E4C" stroke-width="42" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="86" stroke="#7A5634" stroke-width="28" stroke-linecap="round"/>
+      <g transform="translate(0,90)"><g id="f18z-anB">
+        <path d="M-18 -6 Q-20 14 -8 16 L44 16 Q56 14 52 2 Q46 -10 20 -10 L-8 -14 Q-18 -14 -18 -6Z" fill="#4A2E1A" stroke="#013E4C" stroke-width="6" stroke-linejoin="round"/>
+      </g></g>
+    </g></g>
+  </g></g></g>
+    <g id="f18z-torso">
+      <g opacity="1" style="filter: brightness(0.86)"><g transform="translate(4,-138)"><g id="f18z-shB">
+    <line x1="0" y1="0" x2="0" y2="68" stroke="#013E4C" stroke-width="40" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="68" stroke="#4A90C2" stroke-width="26" stroke-linecap="round"/>
+    <g transform="translate(0,68)"><g id="f18z-elB">
+      <line x1="0" y1="0" x2="0" y2="62" stroke="#013E4C" stroke-width="36" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="62" stroke="#F2C59A" stroke-width="22" stroke-linecap="round"/>
+      <g transform="translate(0,66)"><g id="f18z-handB"><circle cx="0" cy="0" r="16" fill="#F2C59A" stroke="#013E4C" stroke-width="6"/><path d="M6 -10 Q16 -14 18 -4" fill="none" stroke="#013E4C" stroke-width="4" stroke-linecap="round"/></g></g>
+    </g></g>
+  </g></g></g>
+      <path d="M-44 8 Q-52 -80 -40 -150 Q0 -172 42 -150 Q70 -70 55.6 8 Z" fill="#4A90C2" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M-30 -120 L40 -120 M-36 -80 L62 -80 M-40 -40 L64 -40" stroke="#fff" stroke-width="4" opacity="0.35"/>
+    <path d="M-6 -150 L12 -130 L30 -150" fill="none" stroke="#013E4C" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="-46" y="-6" width="103.6" height="16" rx="6" fill="#3B2A1C" stroke="#013E4C" stroke-width="4"/>
+      <g transform="translate(4,-150)"><g id="f18z-neck"><g id="f18z-head">
+    <rect x="-8" y="-22" width="26" height="30" rx="8" fill="#F2C59A" stroke="#013E4C" stroke-width="7"/>
+    <circle cx="6" cy="-75" r="60" fill="#F2C59A" stroke="#013E4C" stroke-width="7"/>
+    <ellipse cx="-44" cy="-70" rx="12" ry="16" fill="#F2C59A" stroke="#013E4C" stroke-width="7"/>
+    <path d="M-56 -86 Q-62 -54 -40 -36 Q-46 -60 -34 -84 Z" fill="#C9C9C9" stroke="#013E4C" stroke-width="4"/>
+    <path d="M-10 -128 Q4 -140 22 -132" stroke="#013E4C" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M62 -70 Q80 -60 66 -50" fill="#F2C59A" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/>
+    <g id="f18z-eyes">
+    <g id="f18z-e-normal"><ellipse cx="14" cy="-82" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="17" cy="-81" r="5.5" fill="#013E4C"/><ellipse cx="44" cy="-82" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="47" cy="-81" r="5.5" fill="#013E4C"/></g>
+    <g id="f18z-e-wide" opacity="0"><ellipse cx="14" cy="-84" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="16" cy="-84" r="4" fill="#013E4C"/><ellipse cx="44" cy="-84" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="46" cy="-84" r="4" fill="#013E4C"/></g>
+    <g id="f18z-e-pain" opacity="0"><path d="M5 -90 L21 -82 L5 -74" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M53 -90 L37 -82 L53 -74" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f18z-e-happy" opacity="0"><path d="M5 -79 Q14 -93 23 -79" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M35 -79 Q44 -93 53 -79" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f18z-e-closed" opacity="0"><path d="M5 -80 Q14 -74 23 -80" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M35 -80 Q44 -74 53 -80" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+    <path d="M2 -100 L24 -98 M36 -98 L56 -101" stroke="#9AA7AD" stroke-width="7" stroke-linecap="round"/>
+    <g id="f18z-mouths">
+    <g id="f18z-m-smile"><path d="M20 -37 Q34 -24 48 -38" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f18z-m-open" opacity="0"><path d="M21 -39 Q34 -36 47 -40 Q44 -20 34 -20 Q23 -21 21 -39Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 -24 Q34 -29 40 -24" fill="#FF5A4E" /></g>
+    <g id="f18z-m-scream" opacity="0"><ellipse cx="34" cy="-28" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="34" cy="-17" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f18z-m-frown" opacity="0"><path d="M21 -28 Q34 -40 47 -28" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f18z-m-flat" opacity="0"><path d="M23 -32 L45 -33" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f18z-m-grin" opacity="0"><path d="M18 -39 Q34 -35 50 -40 Q46 -18 34 -18 Q21 -19 18 -39Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+    <path d="M14 -50 Q34 -60 58 -50 Q52 -40 36 -44 Q20 -40 14 -50Z" fill="#C9C9C9" stroke="#013E4C" stroke-width="4" stroke-linejoin="round"/>
+  </g></g></g>
+      <g transform="translate(4,-138)"><g id="f18z-shF">
+    <line x1="0" y1="0" x2="0" y2="68" stroke="#013E4C" stroke-width="40" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="68" stroke="#4A90C2" stroke-width="26" stroke-linecap="round"/>
+    <g transform="translate(0,68)"><g id="f18z-elF">
+      <line x1="0" y1="0" x2="0" y2="62" stroke="#013E4C" stroke-width="36" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="62" stroke="#F2C59A" stroke-width="22" stroke-linecap="round"/>
+      <g transform="translate(0,66)"><g id="f18z-handF"><circle cx="0" cy="0" r="16" fill="#F2C59A" stroke="#013E4C" stroke-width="6"/><path d="M6 -10 Q16 -14 18 -4" fill="none" stroke="#013E4C" stroke-width="4" stroke-linecap="round"/></g></g>
+    </g></g>
+  </g></g>
+    </g>
+    <g transform="translate(8,0)"><g id="f18z-hipF">
+    <line x1="0" y1="0" x2="0" y2="88" stroke="#013E4C" stroke-width="46" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="88" stroke="#7A5634" stroke-width="32" stroke-linecap="round"/>
+    <g transform="translate(0,88)"><g id="f18z-knF">
+      <line x1="0" y1="0" x2="0" y2="86" stroke="#013E4C" stroke-width="42" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="86" stroke="#7A5634" stroke-width="28" stroke-linecap="round"/>
+      <g transform="translate(0,90)"><g id="f18z-anF">
+        <path d="M-18 -6 Q-20 14 -8 16 L44 16 Q56 14 52 2 Q46 -10 20 -10 L-8 -14 Q-18 -14 -18 -6Z" fill="#4A2E1A" stroke="#013E4C" stroke-width="6" stroke-linejoin="round"/>
+      </g></g>
+    </g></g>
+  </g></g>
+  </g><g id="f18-roll" opacity="0"><line x1="71" y1="-254" x2="171" y2="-427.2" stroke="#8B5A2B" stroke-width="12" stroke-linecap="round"/><line x1="71" y1="-254" x2="171" y2="-427.2" stroke="#013E4C" stroke-width="3" opacity="0.4"/><rect x="111" y="-449.2" width="120" height="36" rx="14" fill="#8FD3C6" stroke="#013E4C" stroke-width="5"/></g></g></g>
+      <g id="f18-c-wrap" opacity="0"><g transform="translate(1250,700) scale(1.2)"><g id="f18c-root">
+    <g opacity="1" style="filter: brightness(0.86)"><g transform="translate(-8,0)"><g id="f18c-hipB">
+    <line x1="0" y1="0" x2="0" y2="88" stroke="#013E4C" stroke-width="46" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="88" stroke="#3E5A8A" stroke-width="32" stroke-linecap="round"/>
+    <g transform="translate(0,88)"><g id="f18c-knB">
+      <line x1="0" y1="0" x2="0" y2="86" stroke="#013E4C" stroke-width="42" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="86" stroke="#3E5A8A" stroke-width="28" stroke-linecap="round"/>
+      <g transform="translate(0,90)"><g id="f18c-anB">
+        <path d="M-18 -6 Q-20 14 -8 16 L44 16 Q56 14 52 2 Q46 -10 20 -10 L-8 -14 Q-18 -14 -18 -6Z" fill="#8E2F45" stroke="#013E4C" stroke-width="6" stroke-linejoin="round"/>
+      </g></g>
+    </g></g>
+  </g></g></g>
+    <g id="f18c-torso">
+      <g opacity="1" style="filter: brightness(0.86)"><g transform="translate(4,-138)"><g id="f18c-shB">
+    <line x1="0" y1="0" x2="0" y2="68" stroke="#013E4C" stroke-width="40" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="68" stroke="#B07ED8" stroke-width="26" stroke-linecap="round"/>
+    <g transform="translate(0,68)"><g id="f18c-elB">
+      <line x1="0" y1="0" x2="0" y2="62" stroke="#013E4C" stroke-width="36" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="62" stroke="#E3A47E" stroke-width="22" stroke-linecap="round"/>
+      <g transform="translate(0,66)"><g id="f18c-handB"><circle cx="0" cy="0" r="16" fill="#E3A47E" stroke="#013E4C" stroke-width="6"/><path d="M6 -10 Q16 -14 18 -4" fill="none" stroke="#013E4C" stroke-width="4" stroke-linecap="round"/></g></g>
+    </g></g>
+  </g></g></g>
+      <path d="M-46 8 Q-52 -80 -40 -150 Q0 -170 42 -150 Q60 -80 52.4 8 Z" fill="#B07ED8" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M-8 -152 Q12 -128 32 -152" fill="none" stroke="#013E4C" stroke-width="4"/>
+      <circle cx="-2" cy="-140" r="4" fill="#fff" stroke="#013E4C" stroke-width="2"/><circle cx="6" cy="-133.69586345460286" r="4" fill="#fff" stroke="#013E4C" stroke-width="2"/><circle cx="14" cy="-130.00255838175096" r="4" fill="#fff" stroke="#013E4C" stroke-width="2"/><circle cx="22" cy="-129.94722091669308" r="4" fill="#fff" stroke="#013E4C" stroke-width="2"/><circle cx="30" cy="-132.35024486056548" r="4" fill="#fff" stroke="#013E4C" stroke-width="2"/>
+      <path d="M-40 -60 L50.4 -60" stroke="#fff" stroke-width="3" opacity="0.4"/>
+      <g transform="translate(4,-150)"><g id="f18c-neck"><g id="f18c-head">
+    <rect x="-8" y="-22" width="26" height="30" rx="8" fill="#E3A47E" stroke="#013E4C" stroke-width="7"/>
+    <circle cx="-44" cy="-128" r="30" fill="#5A3A2A" stroke="#013E4C" stroke-width="7"/>
+    <path d="M-52 -140 Q-40 -150 -30 -136" stroke="#9A8A80" stroke-width="5" fill="none"/>
+    <circle cx="6" cy="-75" r="60" fill="#E3A47E" stroke="#013E4C" stroke-width="7"/>
+    <path d="M-56 -78 Q-60 -140 6 -140 Q62 -138 66 -100 Q40 -118 10 -114 Q-20 -116 -34 -96 Q-40 -60 -46 -40 Q-60 -56 -56 -78Z" fill="#5A3A2A" stroke="#013E4C" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M-20 -128 Q0 -138 20 -130" stroke="#9A8A80" stroke-width="5" fill="none"/>
+    <ellipse cx="-36" cy="-66" rx="11" ry="15" fill="#E3A47E" stroke="#013E4C" stroke-width="7"/>
+    <circle cx="-36" cy="-44" r="7" fill="#FFC94A" stroke="#013E4C" stroke-width="3"/>
+    <path d="M62 -70 Q76 -62 66 -52" fill="#E3A47E" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/>
+    <g id="f18c-eyes">
+    <g id="f18c-e-normal"><ellipse cx="14" cy="-82" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="17" cy="-81" r="5.5" fill="#013E4C"/><ellipse cx="44" cy="-82" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="47" cy="-81" r="5.5" fill="#013E4C"/></g>
+    <g id="f18c-e-wide" opacity="0"><ellipse cx="14" cy="-84" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="16" cy="-84" r="4" fill="#013E4C"/><ellipse cx="44" cy="-84" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="46" cy="-84" r="4" fill="#013E4C"/></g>
+    <g id="f18c-e-pain" opacity="0"><path d="M5 -90 L21 -82 L5 -74" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M53 -90 L37 -82 L53 -74" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f18c-e-happy" opacity="0"><path d="M5 -79 Q14 -93 23 -79" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M35 -79 Q44 -93 53 -79" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f18c-e-closed" opacity="0"><path d="M5 -80 Q14 -74 23 -80" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M35 -80 Q44 -74 53 -80" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+    <path d="M6 -94 L2 -100 M14 -96 L12 -103 M38 -96 L36 -103 M46 -94 L48 -101" stroke="#013E4C" stroke-width="3" stroke-linecap="round"/>
+    <path d="M2 -104 L24 -107 M36 -107 L56 -103" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/>
+    <ellipse cx="14" cy="-58" rx="9" ry="5" fill="#FF5A4E" opacity="0.3"/><ellipse cx="54" cy="-58" rx="7" ry="5" fill="#FF5A4E" opacity="0.3"/>
+    <g id="f18c-mouths">
+    <g id="f18c-m-smile"><path d="M20 -39 Q34 -26 48 -40" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f18c-m-open" opacity="0"><path d="M21 -41 Q34 -38 47 -42 Q44 -22 34 -22 Q23 -23 21 -41Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 -26 Q34 -31 40 -26" fill="#FF5A4E" /></g>
+    <g id="f18c-m-scream" opacity="0"><ellipse cx="34" cy="-30" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="34" cy="-19" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f18c-m-frown" opacity="0"><path d="M21 -30 Q34 -42 47 -30" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f18c-m-flat" opacity="0"><path d="M23 -34 L45 -35" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f18c-m-grin" opacity="0"><path d="M18 -41 Q34 -37 50 -42 Q46 -20 34 -20 Q21 -21 18 -41Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+  </g></g></g>
+      <g transform="translate(4,-138)"><g id="f18c-shF">
+    <line x1="0" y1="0" x2="0" y2="68" stroke="#013E4C" stroke-width="40" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="68" stroke="#B07ED8" stroke-width="26" stroke-linecap="round"/>
+    <g transform="translate(0,68)"><g id="f18c-elF">
+      <line x1="0" y1="0" x2="0" y2="62" stroke="#013E4C" stroke-width="36" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="62" stroke="#E3A47E" stroke-width="22" stroke-linecap="round"/>
+      <g transform="translate(0,66)"><g id="f18c-handF"><circle cx="0" cy="0" r="16" fill="#E3A47E" stroke="#013E4C" stroke-width="6"/><path d="M6 -10 Q16 -14 18 -4" fill="none" stroke="#013E4C" stroke-width="4" stroke-linecap="round"/></g></g>
+    </g></g>
+  </g></g>
+    </g>
+    <g transform="translate(8,0)"><g id="f18c-hipF">
+    <line x1="0" y1="0" x2="0" y2="88" stroke="#013E4C" stroke-width="46" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="88" stroke="#3E5A8A" stroke-width="32" stroke-linecap="round"/>
+    <g transform="translate(0,88)"><g id="f18c-knF">
+      <line x1="0" y1="0" x2="0" y2="86" stroke="#013E4C" stroke-width="42" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="86" stroke="#3E5A8A" stroke-width="28" stroke-linecap="round"/>
+      <g transform="translate(0,90)"><g id="f18c-anF">
+        <path d="M-18 -6 Q-20 14 -8 16 L44 16 Q56 14 52 2 Q46 -10 20 -10 L-8 -14 Q-18 -14 -18 -6Z" fill="#8E2F45" stroke="#013E4C" stroke-width="6" stroke-linejoin="round"/>
+      </g></g>
+    </g></g>
+  </g></g>
+  </g><g id="f18-croll" opacity="0"><line x1="50" y1="-264" x2="108.14000000000001" y2="-423.79999999999995" stroke="#8B5A2B" stroke-width="12" stroke-linecap="round"/><line x1="50" y1="-264" x2="108.14000000000001" y2="-423.79999999999995" stroke="#013E4C" stroke-width="3" opacity="0.4"/><rect x="48.140000000000015" y="-445.79999999999995" width="120" height="36" rx="14" fill="#8FD3C6" stroke="#013E4C" stroke-width="5"/></g></g></g>
+      <!-- noite: Seu Zé abraçado no travesseiro -->
+      <g id="f18-night" opacity="0">
+        <rect width="1920" height="1080" fill="#2E3E66"/>
+        <circle cx="1600" cy="160" r="70" fill="#FFF3B8" stroke="#013E4C" stroke-width="6"/><circle cx="1630" cy="140" r="60" fill="#2E3E66"/>
+        <rect x="320" y="640" width="1000" height="80" rx="20" fill="#fff" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/><rect x="320" y="712" width="1000" height="44" rx="12" fill="#8B5A2B" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+        <rect x="340" y="560" width="160" height="90" rx="34" fill="#BFE6EE" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+        <g><circle cx="440" cy="570" r="50" fill="#F2C59A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/><path d="M414 568 Q426 576 438 568" stroke="#013E4C" stroke-width="4" fill="none"/><path d="M422 592 Q440 600 458 592" stroke="#C9C9C9" stroke-width="10" stroke-linecap="round"/></g>
+        <path d="M480 600 Q900 540 1320 620 L1320 660 L480 660 Z" fill="#7FB3D5" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+        <g id="f18-hug"><rect x="520" y="520" width="170" height="90" rx="36" fill="#FFE7A3" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M500 560 Q560 530 640 560 Q660 572 640 586" fill="none" stroke="#013E4C" stroke-width="44" stroke-linecap="round"/>
+          <path d="M500 560 Q560 530 640 560 Q660 572 640 586" fill="none" stroke="#5C8FB5" stroke-width="30" stroke-linecap="round"/>
+          <circle cx="640" cy="588" r="18" fill="#F2C59A" stroke="#013E4C" stroke-width="5"/></g>
+        <text id="f18-zzz" x="520" y="430" font-family="Montserrat" font-weight="900" font-size="60" fill="#fff" opacity="0">z z z</text>
+        <rect y="880" width="1920" height="200" fill="#3D4F7A"/>
+      </g>
+    </svg>
+    <div id="f18-pausa" class="abs title" style="opacity:0">PAUSA</div>
+    <div id="f18-head" class="abs title" style="opacity:0">Passo 1: <span>ajustar a carga</span></div>
+    <div id="f18-tips" class="abs card" style="opacity:0">
+      <div class="row label" id="f18-t0"><span class="dot"></span>menos braço acima da cabeça</div>
+      <div class="row label" id="f18-t1"><span class="dot"></span>rolo de cabo comprido</div>
+      <div class="row label" id="f18-t2"><span class="dot"></span>pausas no trabalho</div>
+    </div>
+    <div id="f18-clock" class="abs card" style="opacity:0">
+      <svg width="140" height="140" viewBox="-70 -70 140 140"><circle r="60" fill="#fff" stroke="#013E4C" stroke-width="7"/><path d="M0 0 L0 -60 A60 60 0 0 1 52 -30 Z" fill="#3DD9A4" opacity="0.6"/><line id="f18-hand" x1="0" y1="0" x2="0" y2="-44" stroke="#013E4C" stroke-width="7" stroke-linecap="round"/><circle r="7" fill="#013E4C"/></svg>
+      <div class="t label">pausas a cada <b style="color:#1E9C72">20 min</b></div>
+    </div>
+    <div id="f18-sleep" class="abs card label" style="opacity:0">abraçar um travesseiro: o ombro <b style="color:#1E9C72">descansa</b></div>
+    <div id="f18-bal" class="abs card label" style="opacity:0">Deixa que o resto do teto <b style="color:#8E6CD8">eu termino!</b></div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":16.19,"lines":[{"who":"pablo","start":0.6,"end":12.141},{"who":"cida","start":12.541,"end":14.793}],"prim":0.66,"ajust":1.27,"dimin":2.45,"cab":5.28,"cabo":6.16,"pausas":7.8,"dormir":8.88,"abr":9.36,"trav":9.9,"desc":11.29,"c0":12.541,"c1":14.793};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        const z = "f18z", c = "f18c";
+        R.setPose(tl, z, 0, { shF: 10, elF: -10, shB: 10, elB: -10 });
+        R.face(tl, z, 0, { eyes: "normal", mouth: "smile" });
+        R.blinks(tl, z, 0.4, K.dormir);
+        R.rise(tl, "#f18-head", K.prim - 0.2, 0.45, 30);
+        R.pop(tl, "#f18-pausa", K.ajust, 0.4);
+        R.pop(tl, "#f18-tips", K.dimin - 0.3, 0.4, 0.7);
+        R.rise(tl, "#f18-t0", K.dimin, 0.3, 14);
+        // rolo de cabo comprido: braço bem mais baixo
+        R.rise(tl, "#f18-t1", K.cabo - 0.2, 0.3, 14);
+        R.pose(tl, z, K.cabo - 0.1, 0.4, { shF: -150, elF: 0 }, "power2.out");
+        tl.to("#f18-roll", { opacity: 1, duration: 0.2 }, K.cabo + 0.2);
+        for (let i = 0; i < 3; i++) tl.to("#f18-z-wrap", { x: i % 2 ? 0 : 160, duration: 0.5, ease: "sine.inOut" }, K.cabo + 0.4 + i * 0.5);
+        // pausas
+        R.rise(tl, "#f18-t2", K.pausas - 0.2, 0.3, 14);
+        R.pop(tl, "#f18-clock", K.pausas - 0.1, 0.4);
+        tl.fromTo("#f18-hand", { rotation: 0, svgOrigin: "0 0" }, { rotation: 120, svgOrigin: "0 0", duration: 1, ease: "power2.inOut" }, K.pausas + 0.2);
+        tl.to("#f18-roll", { opacity: 0, duration: 0.2 }, K.pausas + 0.8);
+        R.pose(tl, z, K.pausas + 0.8, 0.4, { shF: 10, elF: -10 });
+        R.face(tl, z, K.pausas + 1, { eyes: "happy", mouth: "smile" });
+        // noite: abraçado no travesseiro
+        tl.to("#f18-room, #f18-z-wrap, #f18-head, #f18-tips, #f18-clock, #f18-pausa", { opacity: 0, duration: 0.3 }, K.dormir - 0.3);
+        tl.to("#f18-night", { opacity: 1, duration: 0.3 }, K.dormir - 0.3);
+        tl.fromTo("#f18-hug", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(2)" }, K.abr);
+        R.pop(tl, "#f18-sleep", K.trav - 0.1, 0.4);
+        tl.to("#f18-zzz", { opacity: 1, duration: 0.3 }, K.desc - 0.2);
+        tl.to("#f18-zzz", { y: -30, duration: 1.4, ease: "sine.inOut" }, K.desc - 0.2);
+        // Dona Cida termina o teto
+        tl.to("#f18-night, #f18-sleep", { opacity: 0, duration: 0.3 }, K.c0 - 0.5);
+        tl.to("#f18-room, #f18-pausa", { opacity: 1, duration: 0.3 }, K.c0 - 0.5);
+        tl.set("#f18-z-wrap", { x: -500 }, K.c0 - 0.5);
+        tl.to("#f18-z-wrap", { opacity: 1, duration: 0.3 }, K.c0 - 0.5);
+        R.fadeOut(tl, "#f18-pausa", K.c0 + 0.2);
+        R.setPose(tl, c, 0, { shF: -160, elF: 0, shB: 10, elB: -20 });
+        R.face(tl, c, 0, { eyes: "happy", mouth: "grin" });
+        tl.set("#f18-croll", { opacity: 1 }, 0);
+        tl.set("#f18-c-wrap", { opacity: 1 }, K.c0 - 0.5);
+        tl.fromTo("#f18-c-wrap", { x: 500 }, { x: 0, duration: 0.5, ease: "back.out(1.3)" }, K.c0 - 0.5);
+        R.pop(tl, "#f18-bal", K.c0, 0.4);
+        tl.to("#f18-paint", { attr: { width: 1920 }, duration: Math.max(1.2, K.c1 - K.c0 + 0.6), ease: "none" }, K.c0);
+        const n = Math.max(2, Math.floor((K.c1 - K.c0 + 0.6) / 0.5));
+        for (let i = 0; i < n; i++) tl.to("#f18-c-wrap", { x: i % 2 ? 0 : 220, duration: 0.48, ease: "sine.inOut" }, K.c0 + i * 0.5);
+        R.face(tl, z, K.c0, { eyes: "wide", mouth: "smile" });
+      })(tl, K, R);
+      K.lines.filter(l=>l.who==="cida").forEach(l=>R.talk(tl,"f18c",l.start,l.end));
+      tl.set({}, {}, K.dur);
+      window.__timelines["f18"] = tl;
+    })();
+  </script>
+</template>
