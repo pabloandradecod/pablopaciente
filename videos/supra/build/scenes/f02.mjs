@@ -81,7 +81,6 @@ export default {
         R.setPose(tl, c, 0, { shF: 10, elF: -10, shB: 10, elB: -10 });
         R.face(tl, c, 0, { eyes: "happy", mouth: "grin" });
         R.blinks(tl, c, 0.4, K.doi, "happy");
-        tl.set("#f02-shirt, #f02-pot", { opacity: 0 }, 0);
         tl.set("#f02-dbF, #f02-dbB", { scale: 0.8, svgOrigin: "0 0" }, 0);
         R.pop(tl, "#f02-tag", K.musc - 0.1, 0.4);
         // elevações: sobe e desce o braço com o halter

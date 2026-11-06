@@ -1,0 +1,244 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #FFF6E9; font-family: "Nunito", sans-serif; color: #013E4C; }
+    #root svg { overflow: visible; }
+    #root .abs { position: absolute; }
+    #root .title { font-family: "Montserrat", sans-serif; font-weight: 900; letter-spacing: -0.01em; }
+    #root .label { font-family: "Nunito", sans-serif; font-weight: 900; }
+    #root .card { background: #fff; border: 7px solid #013E4C; border-radius: 28px; box-shadow: 10px 10px 0 #013E4C; }
+    
+        #f05-h { left:90px; top:50px; font-size:62px; }
+        #f05-h span { color:#FF5A4E; }
+        #root .f05-t { padding:8px 18px; font-size:28px; }
+        #f05-mr { left:1300px; top:620px; width:540px; padding:18px 22px; text-align:center; }
+        #f05-mr .a { font-size:30px; } #f05-mr .b { font-size:44px; color:#FF5A4E; line-height:1.05; margin-top:4px; }
+        #f05-top { left:1300px; top:820px; width:540px; padding:12px 18px; text-align:center; font-size:30px; background:#FFC94A; }
+      
+  </style>
+  <div id="root" data-composition-id="f05" data-width="1920" data-height="1080">
+
+    <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+      <rect width="1920" height="1080" fill="#FFF1E6"/>
+      <g id="f05-anat">
+        <!-- escápula vista de trás -->
+        <path d="M380 300 L900 330 Q960 360 930 430 L520 900 Q470 930 440 880 L330 380 Q320 310 380 300Z" fill="#EADFC8" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <!-- músculo na fossa (acima da espinha) -->
+        <path id="f05-mus" d="M370 330 L880 350 Q900 380 870 400 L420 470 Q370 440 370 330Z" fill="#E0675A" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" opacity="0"/>
+        <path id="f05-musl" d="M420 360 L840 370 M420 400 L820 385 M440 440 L800 400" stroke="#B9473E" stroke-width="5" opacity="0"/>
+        <!-- espinha da escápula -->
+        <path d="M400 490 Q650 430 960 360" stroke="#013E4C" stroke-width="40" fill="none" stroke-linecap="round"/>
+        <path d="M400 490 Q650 430 960 360" stroke="#F7EEDB" stroke-width="26" fill="none" stroke-linecap="round"/>
+        <!-- úmero -->
+        <path d="M1110 520 L1060 960 L1200 960 L1220 520 Z" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="1150" cy="440" r="110" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <text x="1150" y="470" text-anchor="middle" font-family="Montserrat" font-weight="900" font-size="26" fill="#013E4C">ÚMERO</text>
+      </g>
+      <!-- trajeto do tendão -->
+      <path id="f05-path" d="M600 400 Q860 380 1000 330 Q1100 300 1150 334" fill="none" stroke="#3DD9A4" stroke-width="14" stroke-dasharray="26 18" stroke-linecap="round" opacity="0"/>
+      <g id="f05-a-wrap" opacity="0"><g transform="translate(1010,250) scale(0.72)"><g id="f05a-root">
+    <g transform="translate(-60,-50)"><line x1="0" y1="0" x2="0" y2="40" stroke="#013E4C" stroke-width="30" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="40" stroke="#F7EEDB" stroke-width="16" stroke-linecap="round"/><ellipse cx="4" cy="44" rx="20" ry="9" fill="#013E4C"/></g><g transform="translate(60,-50)"><line x1="0" y1="0" x2="0" y2="40" stroke="#013E4C" stroke-width="30" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="40" stroke="#F7EEDB" stroke-width="16" stroke-linecap="round"/><ellipse cx="6" cy="44" rx="20" ry="9" fill="#013E4C"/></g>
+    <g id="f05a-body">
+      <g transform="translate(-150,-120)"><g id="f05a-armB"><line x1="0" y1="0" x2="0" y2="48" stroke="#013E4C" stroke-width="28" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="48" stroke="#F7EEDB" stroke-width="14" stroke-linecap="round"/><circle cx="0" cy="52" r="12" fill="#F7EEDB" stroke="#013E4C" stroke-width="5"/></g></g>
+      <g transform="translate(150,-120)"><g id="f05a-armF"><line x1="0" y1="0" x2="0" y2="48" stroke="#013E4C" stroke-width="28" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="48" stroke="#F7EEDB" stroke-width="14" stroke-linecap="round"/><circle cx="0" cy="52" r="12" fill="#F7EEDB" stroke="#013E4C" stroke-width="5"/></g></g>
+      <path d="M-170 -110 Q-160 -196 0 -200 Q160 -196 170 -110 Q150 -84 120 -96 Q60 -60 0 -56 Q-60 -60 -120 -96 Q-150 -84 -170 -110Z" fill="#F7EEDB" stroke="#013E4C" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M-120 -170 Q-60 -186 0 -186 M60 -184 Q110 -176 140 -160" stroke="#D8CBB4" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <g id="f05a-eyes">
+    <g id="f05a-e-normal"><ellipse cx="-26" cy="-136" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-23" cy="-135" r="5.5" fill="#013E4C"/><ellipse cx="26" cy="-136" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="29" cy="-135" r="5.5" fill="#013E4C"/></g>
+    <g id="f05a-e-wide" opacity="0"><ellipse cx="-26" cy="-138" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-24" cy="-138" r="4" fill="#013E4C"/><ellipse cx="26" cy="-138" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="28" cy="-138" r="4" fill="#013E4C"/></g>
+    <g id="f05a-e-pain" opacity="0"><path d="M-35 -144 L-19 -136 L-35 -128" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M35 -144 L19 -136 L35 -128" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f05a-e-happy" opacity="0"><path d="M-35 -133 Q-26 -147 -17 -133" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M17 -133 Q26 -147 35 -133" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f05a-e-closed" opacity="0"><path d="M-35 -134 Q-26 -128 -17 -134" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M17 -134 Q26 -128 35 -134" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+      <g id="f05a-brows"><path d="M-52 -168 L-10 -156 M52 -168 L10 -156" stroke="#013E4C" stroke-width="10" stroke-linecap="round"/></g>
+      <g id="f05a-mouths">
+    <g id="f05a-m-smile"><path d="M-14 -89 Q0 -76 14 -90" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f05a-m-open" opacity="0"><path d="M-13 -91 Q0 -88 13 -92 Q10 -72 0 -72 Q-11 -73 -13 -91Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-6 -76 Q0 -81 6 -76" fill="#FF5A4E" /></g>
+    <g id="f05a-m-scream" opacity="0"><ellipse cx="0" cy="-80" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="0" cy="-69" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f05a-m-frown" opacity="0"><path d="M-13 -80 Q0 -92 13 -80" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f05a-m-flat" opacity="0"><path d="M-11 -84 L11 -85" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f05a-m-grin" opacity="0"><path d="M-16 -91 Q0 -87 16 -92 Q12 -70 0 -70 Q-13 -71 -16 -91Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+      <path d="M-40 -104 Q-20 -118 0 -106 Q20 -118 40 -104 Q24 -94 0 -100 Q-24 -94 -40 -104Z" fill="#8A8A8A" stroke="#013E4C" stroke-width="4" stroke-linejoin="round"/>
+    </g>
+  </g></g></g>
+      <g id="f05-s-wrap" opacity="0"><g transform="translate(1150,334) scale(0.4)"><g id="f05s-root">
+    <g transform="translate(-20,-30)"><line x1="0" y1="0" x2="0" y2="24" stroke="#013E4C" stroke-width="28" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="24" stroke="#F2E8D8" stroke-width="14" stroke-linecap="round"/><ellipse cx="4" cy="28" rx="18" ry="8" fill="#013E4C"/></g><g transform="translate(20,-30)"><line x1="0" y1="0" x2="0" y2="24" stroke="#013E4C" stroke-width="28" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="24" stroke="#F2E8D8" stroke-width="14" stroke-linecap="round"/><ellipse cx="6" cy="28" rx="18" ry="8" fill="#013E4C"/></g>
+    <g id="f05s-body">
+      <g transform="translate(-46,-190)"><g id="f05s-armB"><line x1="0" y1="0" x2="0" y2="54" stroke="#013E4C" stroke-width="29" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="54" stroke="#F2E8D8" stroke-width="15" stroke-linecap="round"/><circle cx="0" cy="58" r="13" fill="#F2E8D8" stroke="#013E4C" stroke-width="5"/></g></g>
+      <rect x="-44" y="-300" width="88" height="276" rx="40" fill="#F2E8D8" stroke="#013E4C" stroke-width="7"/>
+      <path d="M-40 -130 Q0 -148 40 -130" stroke="#D8CBB4" stroke-width="4" fill="none"/><path d="M-40 -110 Q0 -128 40 -110" stroke="#D8CBB4" stroke-width="4" fill="none"/><path d="M-40 -90 Q0 -108 40 -90" stroke="#D8CBB4" stroke-width="4" fill="none"/><path d="M-40 -70 Q0 -88 40 -70" stroke="#D8CBB4" stroke-width="4" fill="none"/><path d="M-40 -50 Q0 -68 40 -50" stroke="#D8CBB4" stroke-width="4" fill="none"/><path d="M-40 -30 Q0 -48 40 -30" stroke="#D8CBB4" stroke-width="4" fill="none"/>
+      <g id="f05s-fray" opacity="0"><path d="M-30 -40 Q-52 -70 -24 -104" stroke="#C9B48E" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M-12 -40 Q10 -70 -18 -104" stroke="#C9B48E" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M8 -40 Q-14 -70 14 -104" stroke="#C9B48E" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M26 -40 Q48 -70 20 -104" stroke="#C9B48E" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+      <rect x="-46" y="-276" width="92" height="20" rx="8" fill="#E0675A" stroke="#013E4C" stroke-width="5"/>
+      <path d="M44 -268 L70 -282 L66 -256 Z" fill="#E0675A" stroke="#013E4C" stroke-width="4" stroke-linejoin="round"/>
+      <g id="f05s-eyes">
+    <g id="f05s-e-normal"><ellipse cx="-18" cy="-228" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-15" cy="-227" r="5.5" fill="#013E4C"/><ellipse cx="18" cy="-228" rx="9" ry="12" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="21" cy="-227" r="5.5" fill="#013E4C"/></g>
+    <g id="f05s-e-wide" opacity="0"><ellipse cx="-18" cy="-230" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="-16" cy="-230" r="4" fill="#013E4C"/><ellipse cx="18" cy="-230" rx="12" ry="16" fill="#fff" stroke="#013E4C" stroke-width="4"/><circle cx="20" cy="-230" r="4" fill="#013E4C"/></g>
+    <g id="f05s-e-pain" opacity="0"><path d="M-27 -236 L-11 -228 L-27 -220" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M27 -236 L11 -228 L27 -220" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f05s-e-happy" opacity="0"><path d="M-27 -225 Q-18 -239 -9 -225" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M9 -225 Q18 -239 27 -225" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+    <g id="f05s-e-closed" opacity="0"><path d="M-27 -226 Q-18 -220 -9 -226" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M9 -226 Q18 -220 27 -226" stroke="#013E4C" stroke-width="5" stroke-linecap="round" fill="none"/></g>
+  </g>
+      <g id="f05s-mouths">
+    <g id="f05s-m-smile"><path d="M-14 -195 Q0 -182 14 -196" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f05s-m-open" opacity="0"><path d="M-13 -197 Q0 -194 13 -198 Q10 -178 0 -178 Q-11 -179 -13 -197Z" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M-6 -182 Q0 -187 6 -182" fill="#FF5A4E" /></g>
+    <g id="f05s-m-scream" opacity="0"><ellipse cx="0" cy="-186" rx="13" ry="19" fill="#7A1E2B" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/><ellipse cx="0" cy="-175" rx="7" ry="5" fill="#FF5A4E"/></g>
+    <g id="f05s-m-frown" opacity="0"><path d="M-13 -186 Q0 -198 13 -186" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f05s-m-flat" opacity="0"><path d="M-11 -190 L11 -191" fill="none" stroke="#013E4C" stroke-width="5" stroke-linecap="round"/></g>
+    <g id="f05s-m-grin" opacity="0"><path d="M-16 -197 Q0 -193 16 -198 Q12 -176 0 -176 Q-13 -177 -16 -197Z" fill="#fff" stroke="#013E4C" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+  </g>
+      <g id="f05s-sweat" opacity="0"><path d="M-54 -250 Q-62 -236 -54 -230 Q-46 -236 -54 -250Z" fill="#7FC8F8" stroke="#013E4C" stroke-width="3"/><path d="M58 -228 Q50 -214 58 -208 Q66 -214 58 -228Z" fill="#7FC8F8" stroke="#013E4C" stroke-width="3"/></g>
+      <g transform="translate(46,-190)"><g id="f05s-armF"><line x1="0" y1="0" x2="0" y2="54" stroke="#013E4C" stroke-width="29" stroke-linecap="round"/><line x1="0" y1="0" x2="0" y2="54" stroke="#F2E8D8" stroke-width="15" stroke-linecap="round"/><circle cx="0" cy="58" r="13" fill="#F2E8D8" stroke="#013E4C" stroke-width="5"/></g></g>
+    </g>
+  </g></g></g>
+      <g id="f05-ins" opacity="0"><circle cx="1150" cy="334" r="26" fill="none" stroke="#FF5A4E" stroke-width="6"/></g>
+    </svg>
+    <div id="f05-h" class="abs title" style="opacity:0">Quem é o <span>supraespinhal</span>?</div>
+    <div id="f05-te" class="abs card label f05-t" style="left:640px;top:790px;opacity:0">ESCÁPULA (vista de trás)</div>
+    <div id="f05-tm" class="abs card label f05-t" style="left:250px;top:200px;opacity:0">MÚSCULO SUPRAESPINHAL</div>
+    <div id="f05-ta" class="abs card label f05-t" style="left:1170px;top:130px;opacity:0">ACRÔMIO</div>
+    <div id="f05-tu" class="abs card label f05-t" style="left:1260px;top:420px;opacity:0">topo do úmero</div>
+    <div id="f05-mr" class="abs card" style="opacity:0"><div class="a label">1 dos 4 músculos do</div><div class="b title">MANGUITO ROTADOR</div></div>
+    <div id="f05-top" class="abs card label" style="opacity:0">o tendão que <b style="color:#FF5A4E">mais tem problema</b> no ombro</div>
+  </div>
+  <script>
+    (function () {
+      const R = (function runtime() {
+  const R = {};
+  // semente determinística
+  R.rand = (seed) => { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); };
+  const J = (id, j) => `#${id}-${j}`;
+  // pose: {joint: graus}. Juntas: root, torso, neck, shB, elB, shF, elF, hipB, knB, anB, hipF, knF, anF, handB, handF
+  R.pose = (tl, id, t, d, angles, ease = "power2.inOut") => {
+    let k = 0;
+    for (const j in angles) {
+      const lead = j === "neck" ? 0 : j.startsWith("el") || j.startsWith("kn") || j.startsWith("an") ? 0.05 : 0.025;
+      tl.to(J(id, j), { rotation: angles[j], svgOrigin: "0 0", duration: d, ease }, t + lead * (k++ % 3));
+    }
+  };
+  R.setPose = (tl, id, t, angles) => { for (const j in angles) tl.set(J(id, j), { rotation: angles[j], svgOrigin: "0 0" }, t); };
+  // translação do root (em unidades do SVG do personagem)
+  R.move = (tl, id, t, d, x, y, ease = "power2.inOut") => tl.to(J(id, "root"), { x, y, duration: d, ease }, t);
+  const EYES = ["normal", "wide", "pain", "happy", "closed"];
+  const MOUTHS = ["smile", "open", "scream", "frown", "flat", "grin"];
+  R.face = (tl, id, t, { eyes, mouth } = {}) => {
+    if (eyes) EYES.forEach((e) => tl.set(J(id, "e-" + e), { opacity: e === eyes ? 1 : 0 }, t));
+    if (mouth) MOUTHS.forEach((m) => tl.set(J(id, "m-" + m), { opacity: m === mouth ? 1 : 0 }, t));
+  };
+  // fala: alterna boca aberta / fechada de forma determinística
+  R.talk = (tl, id, t0, t1, rest = "smile", open = "open") => {
+    const r = R.rand(Math.floor(t0 * 1000) + id.length * 7);
+    let t = t0, on = true;
+    while (t < t1 - 0.06) {
+      R.face(tl, id, t, { mouth: on ? open : rest });
+      t += on ? 0.1 + r() * 0.08 : 0.07 + r() * 0.07;
+      on = !on;
+    }
+    R.face(tl, id, t1, { mouth: rest });
+  };
+  // piscadas automáticas entre t0 e t1
+  R.blinks = (tl, id, t0, t1, base = "normal") => {
+    const r = R.rand(Math.floor(t0 * 77) + 3);
+    let t = t0 + 0.8 + r() * 1.5;
+    while (t < t1 - 0.3) {
+      tl.set(J(id, "e-" + base), { opacity: 0 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 1 }, t);
+      tl.set(J(id, "e-closed"), { opacity: 0 }, t + 0.12);
+      tl.set(J(id, "e-" + base), { opacity: 1 }, t + 0.12);
+      t += 2.2 + r() * 2.6;
+    }
+  };
+  // respiração / balanço idle
+  R.idle = (tl, id, t0, t1, amp = 2) => {
+    const n = Math.max(1, Math.floor((t1 - t0) / 1.6));
+    tl.to(J(id, "torso"), { rotation: `+=${amp}`, svgOrigin: "0 0", duration: (t1 - t0) / (n * 2), ease: "sine.inOut", yoyo: true, repeat: n * 2 - 1 }, t0);
+  };
+  // gesticular enquanto fala (braço da frente)
+  R.gesture = (tl, id, t0, t1, seed = 1) => {
+    const r = R.rand(seed * 31 + Math.floor(t0 * 10));
+    let t = t0;
+    while (t < t1 - 0.8) {
+      const d = 0.5 + r() * 0.5;
+      R.pose(tl, id, t, d * 0.8, { shF: -40 - r() * 70, elF: -30 - r() * 60 }, "back.out(1.6)");
+      t += d + 0.4 + r() * 0.8;
+    }
+    R.pose(tl, id, Math.max(t0, t1 - 0.5), 0.45, { shF: -10, elF: -20 });
+  };
+  // entradas
+  R.pop = (tl, sel, t, d = 0.45, from = 0) => tl.fromTo(sel, { scale: from, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: d, ease: "back.out(2.2)" }, t);
+  R.rise = (tl, sel, t, d = 0.5, y = 40) => tl.fromTo(sel, { y, opacity: 0 }, { y: 0, opacity: 1, duration: d, ease: "power3.out" }, t);
+  R.drop = (tl, sel, t, d = 0.7, y = -500) => tl.fromTo(sel, { y, opacity: 1 }, { y: 0, duration: d, ease: "bounce.out" }, t);
+  R.slideIn = (tl, sel, t, d = 0.55, x = 300) => tl.fromTo(sel, { x, opacity: 0 }, { x: 0, opacity: 1, duration: d, ease: "back.out(1.4)" }, t);
+  R.fadeOut = (tl, sel, t, d = 0.3) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+  R.fadeIn = (tl, sel, t, d = 0.35) => tl.fromTo(sel, { opacity: 0 }, { opacity: 1, duration: d, ease: "power2.out" }, t);
+  // tremedeira (dor/choque) com fim definido
+  R.shake = (tl, sel, t, d = 0.6, amp = 8) => {
+    const n = Math.max(2, Math.round(d / 0.05));
+    const r = R.rand(Math.floor(t * 100) + 9);
+    for (let i = 0; i < n; i++) tl.to(sel, { x: (r() - 0.5) * 2 * amp, y: (r() - 0.5) * 2 * amp, duration: 0.05, ease: "none" }, t + i * 0.05);
+    tl.to(sel, { x: 0, y: 0, duration: 0.05 }, t + n * 0.05);
+  };
+  // squash & stretch ao pousar
+  R.squash = (tl, sel, t, origin = "50% 100%") => {
+    tl.to(sel, { scaleX: 1.18, scaleY: 0.82, transformOrigin: origin, duration: 0.09, ease: "power2.out" }, t);
+    tl.to(sel, { scaleX: 0.94, scaleY: 1.08, duration: 0.12, ease: "power2.inOut" }, t + 0.09);
+    tl.to(sel, { scaleX: 1, scaleY: 1, duration: 0.18, ease: "power2.out" }, t + 0.21);
+  };
+  // caminho do nervo: morph entre "d"s com mesma estrutura
+  R.nerveTo = (tl, id, t, d, path, ease = "power2.inOut") => {
+    ["out", "fill", "shine"].forEach((p) => tl.to(`#${id}-${p}`, { attr: { d: path }, duration: d, ease }, t));
+  };
+  // desenha um traço (stroke) ao longo do tempo
+  R.draw = (tl, sel, t, d = 0.8, ease = "power2.inOut") => {
+    document.querySelectorAll(sel).forEach((el) => {
+      const L = el.getTotalLength ? el.getTotalLength() : 1000;
+      tl.fromTo(el, { attr: { "stroke-dasharray": `${L} ${L}`, "stroke-dashoffset": L } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease }, t);
+    });
+  };
+  return R;
+})();
+      const K = {"dur":16.78,"lines":[{"who":"pablo","start":0.6,"end":12.995},{"who":"acromio","start":13.395,"end":15.977}],"nasce":2.32,"esc":3.24,"passa":3.9,"acr":4.81,"prende":5.56,"umero":6.77,"quatro":8.03,"mang":9.09,"tendao":10.19,"probl":11.8,"a0":13.395,"a1":15.977,"lic":15.175,"viu":15.695};
+      const tl = gsap.timeline({ paused: true });
+      (function (tl, K, R) {
+        R.rise(tl, "#f05-h", 0.1, 0.5);
+        tl.fromTo("#f05-anat", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.1);
+        R.pop(tl, "#f05-te", K.esc - 0.2, 0.4);
+        // músculo nasce na valetinha
+        tl.to("#f05-mus, #f05-musl", { opacity: 1, duration: 0.4 }, K.nasce - 0.1);
+        tl.fromTo("#f05-mus", { scaleX: 0.2, svgOrigin: "370 400" }, { scaleX: 1, svgOrigin: "370 400", duration: 0.6, ease: "power2.out" }, K.nasce - 0.1);
+        R.pop(tl, "#f05-tm", K.nasce + 0.3, 0.4);
+        // passa por baixo do acrômio
+        tl.set("#f05-a-wrap", { opacity: 1 }, K.passa - 0.2);
+        R.drop(tl, "#f05-a-wrap", K.passa - 0.2, 0.6, -400);
+        R.face(tl, "f05a", K.passa, { eyes: "normal", mouth: "frown" });
+        tl.set("#f05-path", { opacity: 1 }, K.passa);
+        R.draw(tl, "#f05-path", K.passa, Math.max(0.8, K.prende - K.passa));
+        R.pop(tl, "#f05-ta", K.acr - 0.1, 0.4);
+        // prende no topo do úmero: o Supra aparece
+        tl.set("#f05-s-wrap, #f05-ins", { opacity: 1 }, K.prende);
+        tl.fromTo("#f05-s-wrap", { scale: 0, svgOrigin: "1150 334" }, { scale: 1, svgOrigin: "1150 334", duration: 0.45, ease: "back.out(2)" }, K.prende);
+        tl.fromTo("#f05-ins circle", { scale: 0.6, svgOrigin: "1150 334" }, { scale: 1.4, svgOrigin: "1150 334", duration: 0.3, yoyo: true, repeat: 3 }, K.prende);
+        R.pop(tl, "#f05-tu", K.umero - 0.1, 0.4);
+        R.setPose(tl, "f05s", 0, { armF: -20, armB: 20 });
+        R.face(tl, "f05s", K.prende, { eyes: "happy", mouth: "grin" });
+        R.pose(tl, "f05s", K.umero, 0.3, { armF: -150 }, "back.out(2)");
+        R.pose(tl, "f05s", K.umero + 0.8, 0.3, { armF: -20 });
+        // manguito
+        R.pop(tl, "#f05-mr", K.quatro - 0.1, 0.45);
+        R.pop(tl, "#f05-top", K.probl - 0.2, 0.4);
+        R.face(tl, "f05s", K.probl, { eyes: "wide", mouth: "flat" });
+        tl.set("#f05s-sweat", { opacity: 1 }, K.probl);
+        // fala do Acrômio
+        tl.to("#f05-te, #f05-tm, #f05-ta, #f05-tu", { opacity: 0, duration: 0.3 }, K.a0 - 0.3);
+        R.pose(tl, "f05a", K.a0, 0.3, { armF: -100, armB: 100 }, "back.out(2)");
+        tl.to("#f05a-brows", { y: 8, duration: 0.2 }, K.lic - 0.2);
+        R.pose(tl, "f05a", K.lic, 0.3, { armF: -40, armB: 40 });
+        tl.to("#f05-a-wrap", { y: -14, duration: 0.12, yoyo: true, repeat: 3 }, K.viu);
+        R.face(tl, "f05s", K.lic, { eyes: "normal", mouth: "smile" });
+        R.pose(tl, "f05s", K.lic, 0.3, { armB: 120 }, "back.out(2)");
+      })(tl, K, R);
+      K.lines.filter(l=>l.who==="acromio").forEach(l=>R.talk(tl,"f05a",l.start,l.end));
+K.lines.filter(l=>l.who==="supra").forEach(l=>R.talk(tl,"f05s",l.start,l.end));
+      tl.set({}, {}, K.dur);
+      window.__timelines["f05"] = tl;
+    })();
+  </script>
+</template>
