@@ -1,6 +1,7 @@
 # Dor Lombar: textos para o YouTube
 
 Vídeo: `videos/lombar/renders/lombar-previa.mp4` (6:44)
+Publicado: https://youtu.be/zekNvDLphzA (08/11/2026)
 Thumbnail: `videos/lombar/youtube/thumbnail.png` (1280x720)
 
 ---
