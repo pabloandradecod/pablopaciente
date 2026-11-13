@@ -21,10 +21,8 @@ export default function AnexarFotos({ fotos, setFotos }) {
     for (const arq of arquivos.slice(0, Math.max(livres, 0))) {
       try {
         const f = await reduzirFoto(arq)
-        // Sugere a vista na ordem mais comum: frente, costas, lateral direita, lateral esquerda.
-        const usadas = new Set([...fotos, ...novas].map((x) => x.vista))
-        const vista = VISTAS.find((v) => v !== 'Outra' && !usadas.has(v)) || 'Outra'
-        novas.push({ id: crypto.randomUUID(), ...f, vista })
+        // A IA identifica a vista de cada foto; dá para escolher à mão se quiser.
+        novas.push({ id: crypto.randomUUID(), ...f, vista: 'Automática' })
       } catch (err) {
         setErro(err.message)
       }
@@ -75,12 +73,11 @@ export default function AnexarFotos({ fotos, setFotos }) {
           ))}
         </div>
       )}
-      {fotos.length === 0 && (
-        <p className="mt-2 text-xs leading-relaxed text-cinza-600">
-          Dica: corpo inteiro, de pé, câmera parada na altura do quadril, a uns 2 a 3 metros, fundo liso e roupa que mostre o contorno. Use fotos
-          só com o consentimento do paciente.
-        </p>
-      )}
+      <p className="mt-2 text-xs leading-relaxed text-cinza-600">
+        <strong className="text-petroleo-escuro">Para medir bem: corpo inteiro, dos pés à cabeça</strong>, de pé, câmera parada na altura do quadril,
+        a uns 3 metros. Sem os pés na foto não dá para traçar a linha de prumo. Teste de Adams: por trás, câmera na altura das costas. Use fotos
+        só com o consentimento do paciente.
+      </p>
       {erro && <p className="mt-2 text-xs font-medium text-alerta">{erro}</p>}
     </div>
   )

@@ -5,6 +5,7 @@ import MapaColuna from '../components/coluna/MapaColuna.jsx'
 import { nomeSegmento, TODOS_CODIGOS } from '../components/coluna/segmentos.js'
 import { paraLista } from '../components/ui/Campo.jsx'
 import FotoAnotada, { ListaMedidas } from '../components/postura/FotoAnotada.jsx'
+import { nomeVista } from '../lib/postura.js'
 
 // Versão para impressão / PDF do resumo do paciente.
 // parte: 'completo' (para o médico) ou 'exercicios' (para o educador físico).
@@ -124,13 +125,13 @@ export default function Impressao({ dados, parte, postura }) {
               f.url ? (
                 <div key={i} className="quebra-evitar">
                   {postura.marcacoes[i] ? <FotoAnotada src={f.url} marcacao={postura.marcacoes[i]} /> : <img src={f.url} alt="" className="w-full" />}
-                  <div className="mt-1 text-[8.5pt] font-bold text-[#0A4247]">{f.vista}</div>
+                  <div className="mt-1 text-[8.5pt] font-bold text-[#0A4247]">{i + 1}. {nomeVista(postura.marcacoes[i], f.vista)}</div>
                   {postura.marcacoes[i] && <div className="text-[8pt]"><ListaMedidas marcacao={postura.marcacoes[i]} /></div>}
                 </div>
               ) : null
             )}
           </div>
-          <p className="mt-1 text-[8pt] text-[#5C6668]">Linha amarela tracejada: linha de prumo. Linhas verdes: alinhamento entre os pontos anatômicos. Linhas vermelhas: distância até o prumo. Medidas estimadas por foto.</p>
+          <p className="mt-1 text-[8pt] text-[#5C6668]">Linha amarela tracejada: linha de prumo (ou linha média da pelve/trocânter quando a foto não mostra os pés). Linhas verdes: alinhamento entre os pontos anatômicos. Linhas vermelhas: distância até a linha amarela. Medidas estimadas por foto.</p>
           {postura.postura.resumo && <p className="mt-2">{postura.postura.resumo}</p>}
           <table className="mt-2 w-full border-collapse text-[9.5pt]">
             <tbody>

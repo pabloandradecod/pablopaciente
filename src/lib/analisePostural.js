@@ -37,3 +37,39 @@ export async function marcarFotos(fotos, aoProgresso) {
   await Promise.all(trabalhadores)
   return { marcacoes, custo }
 }
+
+// Refaz a análise postural de um relatório salvo (fotos do espaço privado), mantendo os exercícios.
+export async function refazerAnalise({ relatorio, paciente, campos, respostas, exercicios, aoProgresso }) {
+  const { urlsFotosPosturais } = await import('./api.js')
+  const { reduzirFoto } = await import('./fotos.js')
+  const { montarEsquemaConsolidacao, montarMensagemConsolidacao, montarSistemaConsolidacao, normalizarPostura } = await import('./assistente.js')
+  const { achadosEmTexto } = await import('./postura.js')
+  const salvas = relatorio.fotos || []
+  aoProgresso?.('Baixando as fotos...')
+  const urls = await urlsFotosPosturais(salvas.map((f) => f.caminho))
+  const fotos = []
+  for (const f of salvas) {
+    const blob = await fetch(urls[f.caminho]).then((r) => {
+      if (!r.ok) throw new Error('Não consegui baixar uma das fotos.')
+      return r.blob()
+    })
+    const pronta = await reduzirFoto(new File([blob], 'foto.jpg', { type: blob.type || 'image/jpeg' }))
+    URL.revokeObjectURL(pronta.previa)
+    fotos.push({ ...pronta, vista: f.vista })
+  }
+  const { marcacoes, custo: c1 } = await marcarFotos(fotos, (feitas, total) => aoProgresso?.(`Marcando os pontos e medindo as fotos (${feitas} de ${total})...`))
+  aoProgresso?.('Consolidando a análise...')
+  const vistas = fotos.map((f) => f.vista)
+  const r = await chamarAssistente({
+    sistema: montarSistemaConsolidacao(),
+    mensagem: montarMensagemConsolidacao({ paciente, campos, respostas, exercicios, analiseFotos: achadosEmTexto(marcacoes, vistas) }),
+    esquema: montarEsquemaConsolidacao()
+  })
+  return { marcacoes, postura: normalizarPostura(r.dados?.postura), custo: c1 + (r.custo_usd || 0) }
+}
+
+// Texto do relatório salvo a partir da análise.
+export function textoRelatorioPostural(postura) {
+  const linhas = postura.achados.map((a) => `- ${a.regiao} (${a.lado}, ${a.intensidade.toLowerCase()}): ${a.achado}`).join('\n')
+  return `## Análise postural\n${postura.resumo}\n\n${linhas}${postura.limitacoes ? `\n\n## Limitações das fotos\n${postura.limitacoes}` : ''}`
+}

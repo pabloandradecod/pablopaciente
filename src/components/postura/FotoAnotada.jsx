@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { NOME_PONTO, medidas } from '../../lib/postura.js'
+import { NOME_PONTO, linhaReferencia, medidas, nomeVista } from '../../lib/postura.js'
 
 const AMARELO = '#F4C542'
 const PETROLEO = '#0E5C62'
@@ -33,10 +33,9 @@ export default function FotoAnotada({ src, marcacao, aoMudar, mostrarRotulos = t
   const meds = tam && marcacao ? medidas(marcacao, { largura: W, altura: H }) : []
   const valor = (chave) => meds.find((m) => m.chave === chave)?.valor
 
-  // Linha de prumo
-  let prumoX = null
-  if (tipo === 'frontal' && pt('tornozelo_d') && pt('tornozelo_e')) prumoX = (pt('tornozelo_d').x + pt('tornozelo_e').x) / 2
-  if (tipo === 'lateral' && pt('tornozelo')) prumoX = pt('tornozelo').x
+  // Linha vertical de referência: prumo (com os pés na foto) ou pelve/trocânter (foto cortada)
+  const ref = tam ? linhaReferencia(marcacao, { largura: W, altura: H }) : null
+  const prumoX = ref?.x ?? null
 
   const rotulo = (x, y, texto) => {
     const fs = 11 * s
@@ -67,7 +66,7 @@ export default function FotoAnotada({ src, marcacao, aoMudar, mostrarRotulos = t
     <div className={`relative overflow-hidden bg-cinza-100 ${className}`}>
       <img
         src={src}
-        alt={marcacao?.vista || 'Foto postural'}
+        alt={nomeVista(marcacao)}
         onLoad={(e) => setTam({ w: e.currentTarget.naturalWidth, h: e.currentTarget.naturalHeight })}
         className="block w-full select-none"
         draggable={false}
@@ -93,7 +92,10 @@ export default function FotoAnotada({ src, marcacao, aoMudar, mostrarRotulos = t
           </g>
 
           {prumoX != null && (
-            <line x1={prumoX} y1="0" x2={prumoX} y2={H} stroke={AMARELO} strokeWidth={2 * s} strokeDasharray={`${8 * s} ${5 * s}`} />
+            <>
+              <line x1={prumoX} y1="0" x2={prumoX} y2={H} stroke={AMARELO} strokeWidth={2 * s} strokeDasharray={`${8 * s} ${5 * s}`} />
+              {mostrarRotulos && rotulo(prumoX, H - 18 * s, ref.nome)}
+            </>
           )}
 
           {tipo === 'frontal' && (
@@ -127,9 +129,10 @@ export default function FotoAnotada({ src, marcacao, aoMudar, mostrarRotulos = t
             </>
           )}
 
-          {/* Pontos anatômicos */}
+          {/* Pontos anatômicos (a ponta do nariz só orienta o lado do rosto: ponto menor, vazado) */}
           {Object.keys(P).map((id) => {
             const p = pt(id)
+            if (id === 'nariz') return <circle key={id} cx={p.x} cy={p.y} r={2.6 * s} fill="none" stroke={AMARELO} strokeWidth={1.4 * s} pointerEvents="none" />
             return (
               <g key={id}>
                 <circle
@@ -154,6 +157,11 @@ export default function FotoAnotada({ src, marcacao, aoMudar, mostrarRotulos = t
           })}
         </svg>
       )}
+      {(tipo === 'adams' || tipo === 'inadequada') && (
+        <span className={`absolute left-2 top-2 rounded-full px-2.5 py-1 text-[11px] font-extrabold ${tipo === 'adams' ? 'bg-destaque text-petroleo-escuro' : 'bg-black/60 text-white'}`}>
+          {tipo === 'adams' ? 'Teste de Adams' : 'Sem medição'}
+        </span>
+      )}
     </div>
   )
 }
@@ -161,7 +169,11 @@ export default function FotoAnotada({ src, marcacao, aoMudar, mostrarRotulos = t
 // Lista das medidas de uma foto.
 export function ListaMedidas({ marcacao }) {
   const meds = medidas(marcacao)
-  if (marcacao?.tipo === 'inadequada') return <p className="text-xs text-cinza-600">Foto não permite avaliação{marcacao.observacao ? `: ${marcacao.observacao}` : '.'}</p>
+  if (marcacao?.tipo === 'inadequada') return <p className="text-xs leading-snug text-cinza-600">Não foi possível medir nesta foto.</p>
+  if (marcacao?.tipo === 'adams') {
+    const a = marcacao.achados[0]
+    return <p className="line-clamp-4 text-xs leading-snug text-cinza-600">{a ? a.achado : 'Flexão anterior do tronco para observar a simetria das costas.'}</p>
+  }
   if (!meds.length) return <p className="text-xs text-cinza-600">Sem pontos suficientes para medir.</p>
   return (
     <ul className="space-y-1 text-xs leading-snug">

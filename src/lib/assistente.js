@@ -99,7 +99,7 @@ Responda preenchendo o JSON definido:
 
 // Regras extras quando o Dr. Pablo anexa fotos posturais (só no modo API).
 const POSTURA = `ANÁLISE POSTURAL (há fotos da postura)
-10. A análise FOTO A FOTO já foi feita (pontos anatômicos, medidas em graus e em % da altura em relação à linha de prumo, e achados) e vem na mensagem, em ANÁLISE DAS FOTOS. Consolide em "postura": um resumo do padrão postural e a lista de achados SEM repetir o mesmo achado de fotos diferentes, citando a medida quando houver (ex.: "ombro direito mais alto, inclinação de 3,2°") e em "vista" as fotos onde aparece.
+10. A análise FOTO A FOTO já foi feita (pontos anatômicos, medidas em graus e em % da altura em relação à linha de prumo, e achados) e vem na mensagem, em ANÁLISE DAS FOTOS. Consolide em "postura": um resumo do padrão postural e a lista de achados SEM repetir o mesmo achado de fotos diferentes, citando a medida quando houver (ex.: "ombro direito mais alto, inclinação de 3,2°"). Em "vista", só as fotos onde aparece, curto (ex.: "Fotos 3 e 6"). Inclua o resultado do teste de Adams quando houver. Se duas fotos discordarem, use a mais confiável e cite a divergência em "limitacoes" (no máximo 3 frases curtas).
 11. Use linguagem de observação ("aparente", "sugere", "na foto"), nunca diagnóstico fechado. Um desvio lateral é "desvio lateral aparente", não "escoliose". Postura sozinha não explica a dor: em "relevancia", relacione o achado com a queixa quando fizer sentido e diga quando a relação não for clara.
 12. Em "limitacoes", reúna as limitações das fotos (ângulo e altura da câmera, distância, roupa, fotos inadequadas) e lembre que as medidas por foto são estimativas.
 13. A prescrição responde ao relato E aos achados posturais relevantes. Em cada achado relevante, liste em "exercicios" os nomes EXATOS dos exercícios da prescrição que o trabalham ([] se nenhum).
@@ -458,7 +458,7 @@ function esquemaExerciciosProprios(biblioteca) {
 
 // Regras da análise postural quando a prescrição é gerada pela ficha (sem relatório).
 const POSTURA_EXERCICIOS = `ANÁLISE POSTURAL (há fotos da postura)
-7. A análise FOTO A FOTO já foi feita (pontos anatômicos, medidas em graus e em % da altura em relação à linha de prumo, e achados) e vem na mensagem, em ANÁLISE DAS FOTOS. Consolide em "postura": um resumo do padrão postural e a lista de achados SEM repetir o mesmo achado de fotos diferentes, citando a medida quando houver (ex.: "ombro direito mais alto, inclinação de 3,2°") e em "vista" as fotos onde aparece.
+7. A análise FOTO A FOTO já foi feita (pontos anatômicos, medidas em graus e em % da altura em relação à linha de prumo, e achados) e vem na mensagem, em ANÁLISE DAS FOTOS. Consolide em "postura": um resumo do padrão postural e a lista de achados SEM repetir o mesmo achado de fotos diferentes, citando a medida quando houver (ex.: "ombro direito mais alto, inclinação de 3,2°"). Em "vista", só as fotos onde aparece, curto (ex.: "Fotos 3 e 6"). Inclua o resultado do teste de Adams quando houver. Se duas fotos discordarem, use a mais confiável e cite a divergência em "limitacoes" (no máximo 3 frases curtas).
 8. Use linguagem de observação ("aparente", "sugere", "na foto"), nunca diagnóstico fechado. Um desvio lateral é "desvio lateral aparente", não "escoliose". Postura sozinha não explica a dor: em "relevancia", relacione com a avaliação quando fizer sentido e diga quando a relação não for clara. "achado" e "relevancia" com uma frase objetiva cada.
 9. Em "limitacoes", reúna as limitações das fotos (ângulo e altura da câmera, distância, roupa, fotos inadequadas) e lembre que as medidas por foto são estimativas.
 10. A prescrição responde à avaliação E aos achados posturais relevantes. Em cada achado, liste em "exercicios" os nomes EXATOS dos exercícios desta prescrição que o trabalham ([] se nenhum).
@@ -520,6 +520,35 @@ export function montarEsquemaExercicios({ biblioteca, comFotos = false }) {
       ...(comFotos ? { postura: ESQUEMA_POSTURA } : {})
     }
   }
+}
+
+// ---------------------------------------------------------------- refazer só a análise postural
+// Usado no botão "Refazer análise postural" da ficha: mantém os exercícios já prescritos.
+
+export function montarSistemaConsolidacao() {
+  return `Você é um fisioterapeuta com doutorado em biomecânica e avaliação postural, apoiando o Dr. Pablo Andrade (fisioterapeuta, Três Pontas/MG). A análise FOTO A FOTO já foi feita (pontos anatômicos, medidas em graus e em % em relação à linha de referência, e achados) e vem na mensagem. Consolide em "postura".
+
+REGRAS
+1. "resumo": 2 ou 3 frases com o padrão postural geral, em linguagem clara.
+2. "achados": um item por achado, SEM repetir o mesmo achado de fotos diferentes, citando a medida quando houver (ex.: "ombro direito mais alto, inclinação de 3,2°"). "achado" e "relevancia" com uma frase objetiva cada. Em "vista", só as fotos onde aparece, curto (ex.: "Fotos 3 e 6"). Inclua o resultado do teste de Adams quando houver.
+3. Linguagem de observação ("aparente", "sugere"), nunca diagnóstico. Desvio lateral é "desvio lateral aparente", não "escoliose". Postura sozinha não explica a dor: em "relevancia", relacione com a avaliação quando fizer sentido e diga quando a relação não for clara.
+4. Em "exercicios" de cada achado, use SOMENTE nomes da lista EXERCÍCIOS PRESCRITOS que trabalham aquele achado ([] se nenhum).
+5. Se duas fotos discordarem, use a mais confiável e cite a divergência em "limitacoes". "limitacoes": no máximo 3 frases curtas (enquadramento, roupa, câmera) e a lembrança de que as medidas são estimativas.
+6. Nunca prometa cura ou resultado. Não use "vértebra fora do lugar".`
+}
+
+export function montarMensagemConsolidacao({ paciente, campos, respostas, exercicios, analiseFotos }) {
+  return `${montarMensagemExercicios({ paciente, campos, respostas, notas: '' }).replace(/\n\nO QUE O DR. PABLO QUER PRIORIZAR:[\s\S]*$/, '')}
+
+EXERCÍCIOS PRESCRITOS
+${exercicios.length ? exercicios.map((e) => `- ${e}`).join('\n') : '(nenhum)'}
+
+ANÁLISE DAS FOTOS:
+${analiseFotos}`
+}
+
+export function montarEsquemaConsolidacao() {
+  return { type: 'object', additionalProperties: false, required: ['postura'], properties: { postura: ESQUEMA_POSTURA } }
 }
 
 const normalizarNome = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()

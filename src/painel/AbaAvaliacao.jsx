@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { definirRelatorioVisivel, listarCampos, listarRelatorios, salvarAvaliacao, ultimaAvaliacao } from '../lib/api.js'
+import { atualizarRelatorio, definirRelatorioVisivel, listarCampos, listarRelatorios, salvarAvaliacao, ultimaAvaliacao } from '../lib/api.js'
+import { refazerAnalise, textoRelatorioPostural } from '../lib/analisePostural.js'
 import TextoRelatorio from '../components/TextoRelatorio.jsx'
 import Icone from '../components/ui/Icone.jsx'
 import GerarExercicios from './GerarExercicios.jsx'
@@ -76,13 +77,35 @@ export default function AbaAvaliacao({ pacienteId, paciente }) {
       </div>
       {av.id && <p className="text-xs text-cinza-600">Avaliação de {formatarData(av.data)}. Os campos podem ser ajustados em Ajustes.</p>}
       {paciente && <GerarExercicios key={av.id || 'nova'} paciente={paciente} campos={campos} avaliacao={av} aoSalvar={() => setVersaoRel((v) => v + 1)} />}
-      <Relatorios key={versaoRel} pacienteId={pacienteId} />
+      <Relatorios key={versaoRel} pacienteId={pacienteId} paciente={paciente} campos={campos} respostas={av.respostas} />
     </div>
   )
 }
 
-function Relatorios({ pacienteId }) {
+function Relatorios({ pacienteId, paciente, campos, respostas }) {
   const [lista, setLista] = useState([])
+  const [refazendo, setRefazendo] = useState('')
+  const [msgRefazer, setMsgRefazer] = useState('')
+
+  async function refazer(r) {
+    const n = (r.fotos || []).length
+    if (!confirm(`Refazer a análise das ${n} fotos com a versão mais nova? Os exercícios prescritos continuam os mesmos. Custo aproximado: US$ ${(0.035 * n + 0.03).toFixed(2).replace('.', ',')}.`)) return
+    setMsgRefazer('')
+    try {
+      const novo = await refazerAnalise({
+        relatorio: r, paciente, campos, respostas: respostas || {}, exercicios: r.resposta?.exercicios || [], aoProgresso: setRefazendo
+      })
+      const atualizado = await atualizarRelatorio(r.id, {
+        resposta: { ...r.resposta, postura: novo.postura, marcacoes: novo.marcacoes },
+        relatorio: textoRelatorioPostural(novo.postura)
+      })
+      setLista((l) => l.map((x) => (x.id === r.id ? atualizado : x)))
+      setMsgRefazer(`Análise refeita. Custo: cerca de US$ ${novo.custo.toFixed(3).replace('.', ',')}.`)
+    } catch (e) {
+      setMsgRefazer(e.message)
+    }
+    setRefazendo('')
+  }
   useEffect(() => {
     listarRelatorios(pacienteId).then(setLista).catch(() => {})
   }, [pacienteId])
@@ -111,6 +134,13 @@ function Relatorios({ pacienteId }) {
           </span>
         </label>
         <AnalisePostural postura={postural.resposta.postura} fotos={postural.fotos || []} marcacoes={postural.resposta.marcacoes || []} />
+        <div className="mt-4 border-t border-cinza-100 pt-3">
+          <Botao variante="secundario" tamanho="sm" icone="estrela" onClick={() => refazer(postural)} carregando={Boolean(refazendo)}>
+            Refazer análise postural
+          </Botao>
+          {refazendo && <p className="mt-2 text-xs font-semibold text-petroleo">{refazendo}</p>}
+          {msgRefazer && !refazendo && <p className={`mt-2 text-xs font-medium ${/refeita/.test(msgRefazer) ? 'text-ok' : 'text-alerta'}`}>{msgRefazer}</p>}
+        </div>
       </Card>
     )}
     <Card>

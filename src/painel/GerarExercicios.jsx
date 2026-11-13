@@ -13,7 +13,7 @@ import { AreaTexto } from '../components/ui/Campo.jsx'
 import { CartoesSugestoes, salvarPrescricaoPropria } from './prescricaoPropria.jsx'
 import AnexarFotos from './AnexarFotos.jsx'
 import AnalisePostural from './AnalisePostural.jsx'
-import { marcarFotos } from '../lib/analisePostural.js'
+import { marcarFotos, textoRelatorioPostural } from '../lib/analisePostural.js'
 import { achadosEmTexto } from '../lib/postura.js'
 
 const real = (v) => `US$ ${v.toFixed(3).replace('.', ',')}`
@@ -130,10 +130,9 @@ export default function GerarExercicios({ paciente, campos, avaliacao, aoSalvar 
         // Fotos no espaço privado; a análise fica nos relatórios da ficha.
         const fotosSalvas = []
         for (const f of resultado.fotos) fotosSalvas.push({ caminho: await enviarFotoPostural(paciente.id, f.blob), vista: f.vista })
-        const linhas = resultado.postura.achados.map((a) => `- ${a.regiao} (${a.lado}, ${a.intensidade.toLowerCase()}): ${a.achado}`).join('\n')
         await salvarRelatorio({
           paciente_id: paciente.id,
-          relatorio: `## Análise postural\n${resultado.postura.resumo}\n\n${linhas}${resultado.postura.limitacoes ? `\n\n## Limitações das fotos\n${resultado.postura.limitacoes}` : ''}`,
+          relatorio: textoRelatorioPostural(resultado.postura),
           resposta: { postura: resultado.postura, marcacoes: resultado.marcacoes, exercicios: sugestoes.filter((s) => s.incluir).map((s) => s.nome), alertas: [] },
           origem: 'api',
           fotos: fotosSalvas,
