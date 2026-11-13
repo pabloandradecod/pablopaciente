@@ -65,7 +65,8 @@ Modelo: Claude Opus 5.5, esforço médio, resposta em JSON validado por esquema.
 - No Assistente, **Anexar** aceita até 4 fotos (frente, costas, laterais). O painel reduz cada foto no celular antes de enviar.
 - A IA devolve a análise postural (achados por região, lado, intensidade e os exercícios que trabalham cada achado) junto com o relatório e a prescrição.
 - Ao salvar, as fotos vão para o bucket privado `fotos-posturais` (só o administrador lê; o paciente nunca vê) e a análise aparece na aba **Avaliação** da ficha.
-- Custo: uma análise com 2 fotos ficou em cerca de US$ 0,14 no teste; sem fotos continua por volta de US$ 0,08.
+- Também na ficha (aba **Avaliação**, card **Gerar exercícios com IA**): anexe as fotos e um clique gera a análise postural, os exercícios do Dr. Pablo e o treino de academia A/B/C. São dois pedidos separados à IA (o treino recebe só o texto dos achados, sem as fotos), para não misturar as prescrições. **Salvar tudo na ficha** grava os três.
+- Custo: uma análise com 2 fotos ficou em cerca de US$ 0,14 no teste; com o treino de academia junto, some cerca de US$ 0,07. Sem fotos continua por volta de US$ 0,08.
 - Banco: migração `supabase/migrations/20261113000000_fotos_posturais.sql` (já aplicada).
 
 ## Domínio próprio (pablopaciente.com.br)

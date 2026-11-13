@@ -14,9 +14,7 @@ import TextoRelatorio from '../components/TextoRelatorio.jsx'
 import CampoAvaliacao from './CampoAvaliacao.jsx'
 import { CartoesSugestoes, salvarPrescricaoPropria } from './prescricaoPropria.jsx'
 import AnalisePostural from './AnalisePostural.jsx'
-import { reduzirFoto, VISTAS } from '../lib/fotos.js'
-
-const MAX_FOTOS = 4
+import AnexarFotos from './AnexarFotos.jsx'
 
 const semAcento = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
@@ -381,89 +379,6 @@ function Relato({ paciente, relato, setRelato, aoLevar, copiado, api, aoGerar, g
         </Botao>
       )}
     </Assist>
-  )
-}
-
-// ---------------------------------------------------------------- fotos
-
-function AnexarFotos({ fotos, setFotos }) {
-  const [erro, setErro] = useState('')
-  const [preparando, setPreparando] = useState(false)
-
-  async function escolher(e) {
-    const arquivos = [...(e.target.files || [])]
-    e.target.value = ''
-    if (!arquivos.length) return
-    setErro('')
-    const livres = MAX_FOTOS - fotos.length
-    if (arquivos.length > livres) setErro(`Até ${MAX_FOTOS} fotos. Usei as ${Math.max(livres, 0)} primeiras.`)
-    setPreparando(true)
-    const novas = []
-    for (const arq of arquivos.slice(0, Math.max(livres, 0))) {
-      try {
-        const f = await reduzirFoto(arq)
-        // Sugere a vista na ordem mais comum: frente, costas, lateral direita, lateral esquerda.
-        const usadas = new Set([...fotos, ...novas].map((x) => x.vista))
-        const vista = VISTAS.find((v) => v !== 'Outra' && !usadas.has(v)) || 'Outra'
-        novas.push({ id: crypto.randomUUID(), ...f, vista })
-      } catch (err) {
-        setErro(err.message)
-      }
-    }
-    setFotos((l) => [...l, ...novas])
-    setPreparando(false)
-  }
-
-  return (
-    <div className="mt-3 rounded-2xl border border-dashed border-cinza-200 p-3">
-      <div className="flex items-center justify-between gap-3">
-        <div>
-          <p className="text-sm font-bold text-petroleo-escuro">Fotos posturais <span className="font-semibold text-cinza-400">(opcional)</span></p>
-          <p className="text-xs text-cinza-600">A IA aponta as alterações posturais e já prescreve os exercícios.</p>
-        </div>
-        {fotos.length < MAX_FOTOS && (
-          <label className="flex h-10 shrink-0 cursor-pointer items-center gap-1.5 rounded-xl bg-petroleo-claro px-3 text-sm font-bold text-petroleo">
-            <Icone nome="camera" tamanho={18} />
-            {preparando ? 'Preparando...' : 'Anexar'}
-            <input type="file" accept="image/*" multiple className="hidden" onChange={escolher} disabled={preparando} />
-          </label>
-        )}
-      </div>
-      {fotos.length > 0 && (
-        <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
-          {fotos.map((f) => (
-            <div key={f.id} className="overflow-hidden rounded-xl border border-cinza-100 bg-white">
-              <div className="relative">
-                <img src={f.previa} alt={f.vista} className="aspect-[3/4] w-full object-cover" />
-                <button
-                  type="button"
-                  onClick={() => setFotos((l) => l.filter((x) => x.id !== f.id))}
-                  aria-label="Remover foto"
-                  className="absolute right-1.5 top-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-black/55 text-white"
-                >
-                  <Icone nome="x" tamanho={14} />
-                </button>
-              </div>
-              <select
-                value={f.vista}
-                onChange={(e) => setFotos((l) => l.map((x) => (x.id === f.id ? { ...x, vista: e.target.value } : x)))}
-                aria-label="Vista da foto"
-                className="h-9 w-full border-t border-cinza-100 bg-white px-1.5 text-xs font-semibold text-petroleo-escuro focus:outline-none"
-              >
-                {VISTAS.map((v) => <option key={v}>{v}</option>)}
-              </select>
-            </div>
-          ))}
-        </div>
-      )}
-      {fotos.length === 0 && (
-        <p className="mt-2 text-xs leading-relaxed text-cinza-600">
-          Dica: corpo inteiro, de pé, câmera parada na altura do quadril, a uns 2 a 3 metros, fundo liso e roupa que mostre o contorno. Use fotos
-          só com o consentimento do paciente.
-        </p>
-      )}
-      {erro && <p className="mt-2 text-xs font-medium text-alerta">{erro}</p>}
-    </div>
   )
 }
 

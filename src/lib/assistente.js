@@ -340,16 +340,19 @@ CATÁLOGO DE EXERCÍCIOS (código e nome). Todos têm animação. Use somente es
 ${catalogo.texto}`
 }
 
-export function montarMensagemTreino({ paciente, avaliacaoAnterior, prescricao, diretriz }) {
+export function montarMensagemTreino({ paciente, avaliacaoAnterior, prescricao, diretriz, postura }) {
   const av = avaliacaoAnterior?.respostas && Object.keys(avaliacaoAnterior.respostas).length
     ? `Avaliação mais recente (${avaliacaoAnterior.data}): ${JSON.stringify(avaliacaoAnterior.respostas)}`
     : 'Sem avaliação registrada.'
-  const exs = prescricao?.length ? prescricao.map((p) => p.exercicios?.nome).filter(Boolean).join(', ') : 'nenhum'
+  const exs = prescricao?.length ? prescricao.map((p) => p.exercicios?.nome || p.nome).filter(Boolean).join(', ') : 'nenhum'
+  const textoPostura = postura?.achados?.length
+    ? `\nANÁLISE POSTURAL (feita por fotos; considere ao escolher e equilibrar os exercícios, sem tratar como diagnóstico):\n${postura.resumo ? `${postura.resumo}\n` : ''}${postura.achados.map((a) => `- ${a.regiao} (${a.lado}, ${a.intensidade.toLowerCase()}): ${a.achado}`).join('\n')}`
+    : ''
   return `PACIENTE
 Primeiro nome: ${paciente.nome.trim().split(/\s+/)[0]}
 Idade: ${idade(paciente.data_nascimento) ?? 'não informada'} anos
 ${av}
-Exercícios terapêuticos atuais: ${exs}
+Exercícios terapêuticos atuais: ${exs}${textoPostura}
 
 DIRETRIZ DO DR. PABLO:
 """
@@ -453,7 +456,15 @@ function esquemaExerciciosProprios(biblioteca) {
   }
 }
 
-export function montarSistemaExercicios({ biblioteca }) {
+// Regras da análise postural quando a prescrição é gerada pela ficha (sem relatório).
+const POSTURA_EXERCICIOS = `ANÁLISE POSTURAL POR FOTO (há fotos anexadas)
+7. Analise cada foto considerando a vista informada antes dela. Descreva em detalhe os achados observáveis, sempre com o lado: posição da cabeça, ombros e escápulas, coluna torácica, coluna lombar, alinhamento lateral do tronco (inclinação, desvio lateral aparente, triângulo de Talles), pelve (inclinação anterior ou posterior, desnível, rotação), quadril, joelhos (valgo, varo, hiperextensão, flexo), pés e tornozelos e distribuição de peso.
+8. Use linguagem de observação ("aparente", "sugere", "na foto"), nunca diagnóstico fechado. Um desvio lateral é "desvio lateral aparente", não "escoliose". Postura sozinha não explica a dor: em "relevancia", relacione com a avaliação quando fizer sentido e diga quando a relação não for clara. "achado" e "relevancia" com uma frase objetiva cada.
+9. Seja honesto sobre limitações (ângulo e altura da câmera, distância, lente, roupa, posição dos pés, iluminação) em "limitacoes". Se uma foto não mostrar a pessoa de corpo inteiro ou não for uma foto de postura, diga isso e não crie achados para ela.
+10. A prescrição responde à avaliação E aos achados posturais relevantes. Em cada achado, liste em "exercicios" os nomes EXATOS dos exercícios desta prescrição que o trabalham ([] se nenhum).
+11. Se a avaliação estiver vazia, baseie-se nas fotos.`
+
+export function montarSistemaExercicios({ biblioteca, comFotos = false }) {
   return `Você é um fisioterapeuta com doutorado, referência em coluna vertebral, dor lombar e quiropraxia baseada em evidências. Com base na avaliação feita pelo Dr. Pablo Andrade (fisioterapeuta, Três Pontas/MG), você monta os EXERCÍCIOS DO DR. PABLO: a prescrição terapêutica que o paciente faz em casa.
 
 SEPARAÇÃO OBRIGATÓRIA
@@ -468,12 +479,12 @@ REGRAS
 4. Para cada exercício: séries; em "reps", só as repetições ou o tempo de UMA série (ex.: "10", "8 por lado", "20 s"); "instrucoes" passo a passo em 2 a 4 frases simples, para o paciente entender sozinho; "observacao" com o principal cuidado ou erro a evitar.
 5. Nunca prometa cura, prazo ou resultado. Não use "vértebra fora do lugar", "deslocada" ou "colocada no lugar".
 6. "orientacao": 1 ou 2 frases para o paciente sobre frequência e quando parar.
-
+${comFotos ? `\n${POSTURA_EXERCICIOS}\n` : ''}
 BIBLIOTECA DO DR. PABLO (código e nome)
 ${listaBibliotecaPropria(biblioteca)}`
 }
 
-export function montarMensagemExercicios({ paciente, campos, respostas, notas }) {
+export function montarMensagemExercicios({ paciente, campos, respostas, notas, fotos = [] }) {
   const porChave = Object.fromEntries((campos || []).map((c) => [c.chave, c]))
   const linhas = Object.entries(respostas || {})
     .filter(([, v]) => v !== null && v !== '' && !(Array.isArray(v) && !v.length))
@@ -495,17 +506,18 @@ ${linhas || '(sem respostas)'}
 O QUE O DR. PABLO QUER PRIORIZAR:
 """
 ${notas?.trim() || 'Sem observação extra.'}
-"""`
+"""${fotos.length ? `\n\nFOTOS POSTURAIS ANEXADAS (${fotos.length}): ${fotos.map((v, i) => `foto ${i + 1} = ${v}`).join('; ')}.` : ''}`
 }
 
-export function montarEsquemaExercicios({ biblioteca }) {
+export function montarEsquemaExercicios({ biblioteca, comFotos = false }) {
   return {
     type: 'object',
     additionalProperties: false,
-    required: ['exercicios', 'orientacao'],
+    required: ['exercicios', 'orientacao', ...(comFotos ? ['postura'] : [])],
     properties: {
       orientacao: { type: 'string' },
-      exercicios: esquemaExerciciosProprios(biblioteca)
+      exercicios: esquemaExerciciosProprios(biblioteca),
+      ...(comFotos ? { postura: ESQUEMA_POSTURA } : {})
     }
   }
 }

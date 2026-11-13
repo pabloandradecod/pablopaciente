@@ -16,6 +16,7 @@ export default function AbaAvaliacao({ pacienteId, paciente }) {
   const [av, setAv] = useState(null)
   const [salvando, setSalvando] = useState(false)
   const [msg, setMsg] = useState('')
+  const [versaoRel, setVersaoRel] = useState(0) // recarrega os relatórios depois de salvar a análise postural
 
   useEffect(() => {
     Promise.all([listarCampos(), ultimaAvaliacao(pacienteId)])
@@ -74,8 +75,8 @@ export default function AbaAvaliacao({ pacienteId, paciente }) {
         {msg && <span className={`text-sm font-medium ${msg.includes('salva') ? 'text-ok' : 'text-alerta'}`}>{msg}</span>}
       </div>
       {av.id && <p className="text-xs text-cinza-600">Avaliação de {formatarData(av.data)}. Os campos podem ser ajustados em Ajustes.</p>}
-      {paciente && <GerarExercicios key={av.id || 'nova'} paciente={paciente} campos={campos} avaliacao={av} />}
-      <Relatorios pacienteId={pacienteId} />
+      {paciente && <GerarExercicios key={av.id || 'nova'} paciente={paciente} campos={campos} avaliacao={av} aoSalvar={() => setVersaoRel((v) => v + 1)} />}
+      <Relatorios key={versaoRel} pacienteId={pacienteId} />
     </div>
   )
 }
