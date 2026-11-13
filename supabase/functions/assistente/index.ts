@@ -9,6 +9,10 @@ const MODELO = "claude-opus-5-5";
 // Preço por milhão de tokens (US$) para estimar o custo de cada pedido.
 const PRECO = { entrada: 4, cacheLeitura: 0.2, cacheEscrita: 5, saida: 20 };
 const LIMITE_TEXTO = 400_000; // caracteres
+// Fotos posturais: até 4, já reduzidas no painel (lado maior ~1568 px).
+const MAX_IMAGENS = 4;
+const LIMITE_IMAGEM = 4_500_000; // caracteres em base64 por foto (a API aceita até 5 MB)
+const TIPOS_IMAGEM = ["image/jpeg", "image/png", "image/webp"];
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",
@@ -71,13 +75,29 @@ Deno.serve(async (req) => {
   }
   if (sistema.length + mensagem.length > LIMITE_TEXTO) return resposta({ erro: "Texto longo demais." }, 413);
 
+  // Fotos (opcionais): cada uma vira um bloco de imagem, precedido da vista (ex.: "Foto 1: vista lateral direita").
+  const imagens = Array.isArray(corpo.imagens) ? corpo.imagens : [];
+  if (imagens.length > MAX_IMAGENS) return resposta({ erro: `Envie no máximo ${MAX_IMAGENS} fotos.` }, 400);
+  const blocosImagem: unknown[] = [];
+  for (const [i, img] of imagens.entries()) {
+    if (!TIPOS_IMAGEM.includes(img?.media_type) || typeof img?.data !== "string" || !img.data) {
+      return resposta({ erro: "Foto em formato não aceito. Use JPG, PNG ou WebP." }, 400);
+    }
+    if (img.data.length > LIMITE_IMAGEM) return resposta({ erro: "Foto grande demais. Tente de novo (o painel reduz a foto antes de enviar)." }, 413);
+    const vista = typeof img.vista === "string" && img.vista.trim() ? img.vista.trim().slice(0, 60) : "vista não informada";
+    blocosImagem.push({ type: "text", text: `Foto ${i + 1}: ${vista}` });
+    blocosImagem.push({ type: "image", source: { type: "base64", media_type: img.media_type, data: img.data } });
+  }
+  // Imagens antes do texto: a API recomenda essa ordem.
+  const conteudo = blocosImagem.length ? [...blocosImagem, { type: "text", text: mensagem }] : mensagem;
+
   const cliente = new Anthropic({ apiKey: chave });
   const montar = (schema: unknown) => ({
     model: MODELO,
     max_tokens: 16000,
     // Sem cache: os pedidos são espaçados (mais de 5 min), e gravar cache custaria mais.
     system: sistema,
-    messages: [{ role: "user", content: mensagem }],
+    messages: [{ role: "user", content: conteudo }],
     output_config: { effort: "medium", format: { type: "json_schema", schema } },
   });
 
@@ -118,7 +138,7 @@ Deno.serve(async (req) => {
   }
 
   if (msg.stop_reason === "refusal") return resposta({ erro: "A IA não respondeu a este pedido. Reformule o relato e tente de novo." }, 422);
-  if (msg.stop_reason === "max_tokens") return resposta({ erro: "A resposta ficou longa demais. Tente um relato mais objetivo." }, 422);
+  if (msg.stop_reason === "max_tokens") return resposta({ erro: "A resposta ficou longa demais. Tente um relato mais objetivo ou menos fotos." }, 422);
 
   const texto = (msg.content || []).filter((b: any) => b.type === "text").map((b: any) => b.text).join("");
   let dados: unknown;

@@ -97,11 +97,20 @@ Responda preenchendo o JSON definido:
 - "avaliacao": uma chave para cada campo de CAMPOS, no formato indicado; use null quando o relato não informar.
 - "exercicios": os exercícios do Dr. Pablo, com "codigo" da biblioteca (ou "novo") e "nome".`
 
-// Parte fixa (igual para todos os pacientes): fica em cache na API.
-export function montarSistema({ campos, biblioteca, modo = 'manual' }) {
-  return `${REGRAS}
+// Regras extras quando o Dr. Pablo anexa fotos posturais (só no modo API).
+const POSTURA = `ANÁLISE POSTURAL POR FOTO (há fotos anexadas)
+10. Analise cada foto considerando a vista informada antes dela. Descreva em detalhe os achados observáveis, sempre com o lado: posição da cabeça (anteriorização, inclinação, rotação), ombros (protração, elevação, assimetria de altura), escápulas (abdução, alamento, assimetria), coluna torácica (cifose aumentada ou diminuída), coluna lombar (lordose aumentada ou retificada), alinhamento lateral do tronco (inclinação, desvio lateral aparente, triângulo de Talles assimétrico), pelve (inclinação anterior ou posterior, desnível de cristas ilíacas, rotação), quadril, joelhos (valgo, varo, hiperextensão, flexo), pés e tornozelos (pronação, supinação, arco) e distribuição de peso.
+11. Use linguagem de observação ("aparente", "sugere", "na foto"), nunca diagnóstico fechado. Um desvio lateral é "desvio lateral aparente", não "escoliose". Postura sozinha não explica a dor: em "relevancia", relacione o achado com a queixa quando fizer sentido e diga quando a relação não for clara.
+12. Seja honesto sobre limitações: ângulo e altura da câmera, distância, lente, roupa, posição dos pés e iluminação. O que a foto não permitir avaliar vai em "limitacoes", sem inventar. Se uma foto não mostrar a pessoa de corpo inteiro ou não for uma foto de postura, diga isso e não crie achados para ela.
+13. A prescrição responde ao relato E aos achados posturais relevantes. Em cada achado relevante, liste em "exercicios" os nomes EXATOS dos exercícios da prescrição que o trabalham ([] se nenhum).
+14. O detalhe completo vai em "postura". No relatório, inclua o título ## Análise postural logo depois de ## Resumo com no máximo 4 tópicos curtos (só os achados mais relevantes, sem repetir a lista inteira). O relatório continua enxuto (até umas 300 palavras). Em "postura", escreva "achado" e "relevancia" com uma frase objetiva cada.
+15. Se não houver relato escrito, baseie-se nas fotos e deixe null os campos da avaliação que dependem da conversa com o paciente.`
 
-${modo === 'api' ? FORMATO_API : FORMATO_MANUAL}
+// Parte fixa (igual para todos os pacientes).
+export function montarSistema({ campos, biblioteca, modo = 'manual', fotos = [] }) {
+  return `${REGRAS}
+${modo === 'api' && fotos.length ? `\n${POSTURA}\n` : ''}
+${modo === 'api' ? FORMATO_API : FORMATO_MANUAL}${modo === 'api' && fotos.length ? '\n- "postura": a análise postural das fotos (regras 10 a 14).' : ''}
 
 CAMPOS DA AVALIAÇÃO (chave | formato | rótulo | opções)
 ${montarCampos(campos)}
@@ -111,7 +120,7 @@ ${listaBibliotecaPropria(biblioteca)}`
 }
 
 // Parte variável: o paciente, o relato e, se houver, o ajuste pedido.
-export function montarMensagem({ paciente, avaliacaoAnterior, totalSessoes, relato, anterior, ajuste, modo = 'manual' }) {
+export function montarMensagem({ paciente, avaliacaoAnterior, totalSessoes, relato, anterior, ajuste, modo = 'manual', fotos = [] }) {
   const historico = avaliacaoAnterior?.respostas && Object.keys(avaliacaoAnterior.respostas).length
     ? `Avaliação anterior (${avaliacaoAnterior.data}): ${JSON.stringify(avaliacaoAnterior.respostas)}`
     : 'Sem avaliação anterior registrada.'
@@ -120,9 +129,12 @@ Primeiro nome: ${paciente.nome.trim().split(/\s+/)[0]}
 Idade: ${idade(paciente.data_nascimento) ?? 'não informada'} anos
 Sessões já realizadas: ${totalSessoes}
 ${historico}`
+  const textoFotos = fotos.length ? `\n\nFOTOS POSTURAIS ANEXADAS (${fotos.length}): ${fotos.map((v, i) => `foto ${i + 1} = ${v}`).join('; ')}.` : ''
   let corpo
-  if (relato?.trim()) {
-    corpo = `RELATO DA AVALIAÇÃO (ditado/escrito pelo Dr. Pablo):\n"""\n${relato.trim()}\n"""`
+  if (relato?.trim() || (modo === 'api' && fotos.length)) {
+    corpo = relato?.trim()
+      ? `RELATO DA AVALIAÇÃO (ditado/escrito pelo Dr. Pablo):\n"""\n${relato.trim()}\n"""${textoFotos}`
+      : `SEM RELATO ESCRITO. Analise as fotos e monte a prescrição a partir dos achados posturais.${textoFotos}`
     if (anterior && ajuste?.trim()) {
       corpo += `\n\nRESPOSTA ANTERIOR:\n${JSON.stringify(anterior)}\n\nAJUSTE PEDIDO PELO DR. PABLO:\n"""\n${ajuste.trim()}\n"""`
     }
@@ -139,7 +151,7 @@ export function montarPrompt(args) {
 }
 
 // Esquema JSON da resposta (modo API): garante formato e ids válidos.
-export function montarEsquema({ campos, biblioteca }) {
+export function montarEsquema({ campos, biblioteca, comFotos = false }) {
   const nulo = (schema) => ({ anyOf: [schema, { type: 'null' }] })
   const porTipo = (c) => {
     const ops = c.opcoes || []
@@ -162,7 +174,7 @@ export function montarEsquema({ campos, biblioteca }) {
   return {
     type: 'object',
     additionalProperties: false,
-    required: ['relatorio', 'alertas', 'avaliacao', 'exercicios'],
+    required: ['relatorio', 'alertas', 'avaliacao', 'exercicios', ...(comFotos ? ['postura'] : [])],
     properties: {
       relatorio: { type: 'string' },
       alertas: { type: 'array', items: { type: 'string' } },
@@ -172,9 +184,59 @@ export function montarEsquema({ campos, biblioteca }) {
         required: ativos.map((c) => c.chave),
         properties: Object.fromEntries(ativos.map((c) => [c.chave, nulo(porTipo(c))]))
       },
-      exercicios: esquemaExerciciosProprios(biblioteca)
+      exercicios: esquemaExerciciosProprios(biblioteca),
+      ...(comFotos ? { postura: ESQUEMA_POSTURA } : {})
     }
   }
+}
+
+export const REGIOES_POSTURA = ['Cabeça e pescoço', 'Ombros e escápulas', 'Coluna torácica', 'Coluna lombar', 'Pelve', 'Quadril', 'Joelhos', 'Pés e tornozelos', 'Tronco (alinhamento geral)']
+export const INTENSIDADES = ['Leve', 'Moderada', 'Acentuada']
+
+const ESQUEMA_POSTURA = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['resumo', 'achados', 'limitacoes'],
+  properties: {
+    resumo: { type: 'string', description: '2 a 3 frases com o padrão postural geral' },
+    achados: {
+      type: 'array',
+      items: {
+        type: 'object',
+        additionalProperties: false,
+        required: ['regiao', 'achado', 'lado', 'intensidade', 'vista', 'relevancia', 'exercicios'],
+        properties: {
+          regiao: { type: 'string', enum: REGIOES_POSTURA },
+          achado: { type: 'string', description: 'o que se observa, em detalhe' },
+          lado: { type: 'string', enum: ['Direito', 'Esquerdo', 'Bilateral', 'Central'] },
+          intensidade: { type: 'string', enum: INTENSIDADES },
+          vista: { type: 'string', description: 'em qual foto/vista aparece' },
+          relevancia: { type: 'string', description: 'relação com a queixa, ou "relação não clara"' },
+          exercicios: { type: 'array', items: { type: 'string' }, description: 'nomes exatos dos exercícios prescritos que trabalham o achado' }
+        }
+      }
+    },
+    limitacoes: { type: 'string', description: 'o que as fotos não permitem avaliar' }
+  }
+}
+
+// Limpa a análise postural devolvida (ou null se não houver).
+export function normalizarPostura(p) {
+  if (!p || typeof p !== 'object') return null
+  const achados = (Array.isArray(p.achados) ? p.achados : [])
+    .filter((a) => a && String(a.achado || '').trim())
+    .map((a) => ({
+      regiao: String(a.regiao || 'Tronco (alinhamento geral)'),
+      achado: String(a.achado).trim(),
+      lado: String(a.lado || ''),
+      intensidade: INTENSIDADES.includes(a.intensidade) ? a.intensidade : 'Leve',
+      vista: String(a.vista || ''),
+      relevancia: String(a.relevancia || ''),
+      exercicios: Array.isArray(a.exercicios) ? a.exercicios.map(String).filter(Boolean) : []
+    }))
+  // Ordem de cima para baixo no corpo.
+  achados.sort((x, y) => REGIOES_POSTURA.indexOf(x.regiao) - REGIOES_POSTURA.indexOf(y.regiao))
+  return { resumo: String(p.resumo || '').trim(), achados, limitacoes: String(p.limitacoes || '').trim() }
 }
 
 // Converte a resposta da API no mesmo formato da ponte manual.
@@ -185,7 +247,8 @@ export function normalizarRespostaApi(dados) {
     dados: {
       avaliacao,
       alertas: (dados?.alertas || []).filter((a) => typeof a === 'string' && a.trim()),
-      exercicios: (dados?.exercicios || []).filter((e) => e && (e.nome || e.codigo))
+      exercicios: (dados?.exercicios || []).filter((e) => e && (e.nome || e.codigo)),
+      postura: normalizarPostura(dados?.postura)
     }
   }
 }

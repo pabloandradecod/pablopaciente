@@ -20,11 +20,16 @@ Autorizo também que o relato da minha avaliação, sem meu nome completo, telef
 por ferramenta de inteligência artificial (Claude, da Anthropic, com servidores fora do Brasil) apenas para apoiar o
 Dr. Pablo na organização do relatório e do plano de exercícios. As decisões clínicas são sempre do profissional.
 
+Autorizo que o Dr. Pablo fotografe minha postura (de pé, de frente, de costas e de lado) para a avaliação. As fotos ficam
+guardadas em área restrita, só ele tem acesso, e podem ser analisadas pela mesma ferramenta de inteligência artificial para
+apoiar a avaliação postural. Posso pedir a exclusão das fotos a qualquer momento.
+
 ---
 
 ## Pontos para decidir na revisão
 
 - Parágrafo da inteligência artificial: incluído em 2026-11-04 por causa do Assistente do painel. Ao aprovar, atualize o texto e a versão em Ajustes.
+- Parágrafo das fotos posturais: incluído em 2026-11-13 por causa da análise postural por foto. Fotos do corpo são dado de saúde sensível: só fotografe com este consentimento assinado.
 
 - Prazo de guarda do prontuário: confirmar a exigência atual do COFFITO e do CREFITO-4. O resumo do link pode ser revogado a qualquer momento, mas o prontuário continua sob sua guarda.
 - Canal para o paciente pedir exclusão ou correção (sugestão: o próprio WhatsApp do consultório).

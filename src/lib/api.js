@@ -199,6 +199,20 @@ export async function pacientePedirSOS(token, chave, triagem) {
 }
 
 // ---------------- Assistente (relatórios internos) ----------------
+// ---------------- Fotos posturais (bucket privado) ----------------
+export async function enviarFotoPostural(pacienteId, blob) {
+  const caminho = `${pacienteId}/${crypto.randomUUID()}.jpg`
+  checar(await supabase.storage.from('fotos-posturais').upload(caminho, blob, { contentType: 'image/jpeg', upsert: false }))
+  return caminho
+}
+// Link temporário (1 hora) para ver as fotos no painel.
+export async function urlsFotosPosturais(caminhos) {
+  if (!caminhos?.length) return {}
+  const { data, error } = await supabase.storage.from('fotos-posturais').createSignedUrls(caminhos, 3600)
+  if (error) return {}
+  return Object.fromEntries((data || []).filter((d) => d.signedUrl).map((d) => [d.path, d.signedUrl]))
+}
+
 export async function listarRelatorios(pacienteId) {
   return checar(
     await supabase.from('relatorios_ia').select('*').eq('paciente_id', pacienteId).order('criado_em', { ascending: false })

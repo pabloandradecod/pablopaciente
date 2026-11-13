@@ -9,6 +9,7 @@ import Botao from '../components/ui/Botao.jsx'
 import { Campo } from '../components/ui/Campo.jsx'
 import Carregando from '../components/ui/Carregando.jsx'
 import CampoAvaliacao from './CampoAvaliacao.jsx'
+import AnalisePostural from './AnalisePostural.jsx'
 
 export default function AbaAvaliacao({ pacienteId, paciente }) {
   const [campos, setCampos] = useState(null)
@@ -84,7 +85,19 @@ function Relatorios({ pacienteId }) {
   useEffect(() => {
     listarRelatorios(pacienteId).then(setLista).catch(() => {})
   }, [pacienteId])
+  // A análise postural mais recente fica em destaque na ficha.
+  const postural = lista.find((r) => r.resposta?.postura)
   return (
+    <>
+    {postural && (
+      <Card>
+        <h2 className="flex items-center gap-2 font-bold text-petroleo-escuro"><Icone nome="camera" tamanho={18} /> Análise postural</h2>
+        <p className="mb-3 mt-1 text-xs text-cinza-600">
+          Feita pelas fotos em {formatarDataHora(postural.criado_em)}. Só você vê; as fotos ficam em espaço privado. Toque numa foto para ampliar.
+        </p>
+        <AnalisePostural postura={postural.resposta.postura} fotos={postural.fotos || []} />
+      </Card>
+    )}
     <Card>
       <div className="flex items-center justify-between gap-3">
         <h2 className="flex items-center gap-2 font-bold text-petroleo-escuro"><Icone nome="conversa" tamanho={18} /> Relatórios do assistente</h2>
@@ -99,10 +112,14 @@ function Relatorios({ pacienteId }) {
               {formatarDataHora(r.criado_em)}
               {r.resposta?.alertas?.length > 0 && <span className="ml-2 rounded bg-alerta-claro px-1.5 py-0.5 text-[11px] font-bold text-alerta">alerta</span>}
             </summary>
+            {r.resposta?.postura && r !== postural && (
+              <div className="mt-3 rounded-2xl bg-cinza-50 p-3"><AnalisePostural postura={r.resposta.postura} fotos={r.fotos || []} /></div>
+            )}
             <div className="mt-3"><TextoRelatorio texto={r.relatorio} /></div>
           </details>
         ))}
       </div>
     </Card>
+    </>
   )
 }

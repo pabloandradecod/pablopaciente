@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import {
-  assistenteDisponivel, chamarAssistente, contarSessoes, listarCampos, listarExercicios, listarPacientes, listarPrescricao, salvarAvaliacao,
+  assistenteDisponivel, chamarAssistente, contarSessoes, enviarFotoPostural, listarCampos, listarExercicios, listarPacientes, listarPrescricao, salvarAvaliacao,
   salvarRelatorio, ultimaAvaliacao
 } from '../lib/api.js'
 import { filtrarAvaliacao, ligarSugestoes, lerResposta, montarEsquema, montarMensagem, montarPrompt, montarSistema, normalizarRespostaApi } from '../lib/assistente.js'
@@ -13,6 +13,10 @@ import { Simbolo } from '../components/ui/Logo.jsx'
 import TextoRelatorio from '../components/TextoRelatorio.jsx'
 import CampoAvaliacao from './CampoAvaliacao.jsx'
 import { CartoesSugestoes, salvarPrescricaoPropria } from './prescricaoPropria.jsx'
+import AnalisePostural from './AnalisePostural.jsx'
+import { reduzirFoto, VISTAS } from '../lib/fotos.js'
+
+const MAX_FOTOS = 4
 
 const semAcento = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
@@ -58,6 +62,7 @@ export default function Assistente() {
   const [gerando, setGerando] = useState(false)
   const [erroIa, setErroIa] = useState('')
   const [manual, setManual] = useState(false)
+  const [fotos, setFotos] = useState([]) // [{ id, blob, data, media_type, previa, vista }]
   const fim = useRef(null)
 
   useEffect(() => {
@@ -87,6 +92,7 @@ export default function Assistente() {
     setSalvo(false)
     setErroIa('')
     setManual(false)
+    setFotos([])
     const [campos, biblioteca, avaliacaoAnterior, totalSessoes] = await Promise.all([
       listarCampos(),
       listarExercicios(),
@@ -115,16 +121,18 @@ export default function Assistente() {
 
   // Modo API: gera direto no painel. `ajuste` refaz a última resposta com o pedido do Dr. Pablo.
   async function gerarComIa(ajuste) {
-    if (!relato.trim()) return setErroIa('Escreva ou dite o relato antes de gerar.')
+    if (!relato.trim() && !fotos.length) return setErroIa('Escreva ou dite o relato, ou anexe fotos, antes de gerar.')
     setGerando(true)
     setErroIa('')
     try {
-      const sistema = montarSistema({ ...contexto, modo: 'api' })
-      const mensagem = montarMensagem({ paciente, ...contexto, relato, anterior: ajuste ? leitura?.bruto : null, ajuste, modo: 'api' })
+      const vistas = fotos.map((f) => f.vista)
+      const sistema = montarSistema({ ...contexto, modo: 'api', fotos: vistas })
+      const mensagem = montarMensagem({ paciente, ...contexto, relato, anterior: ajuste ? leitura?.bruto : null, ajuste, modo: 'api', fotos: vistas })
       const r = await chamarAssistente({
         sistema,
         mensagem,
-        esquema: montarEsquema(contexto)
+        esquema: montarEsquema({ ...contexto, comFotos: fotos.length > 0 }),
+        imagens: fotos.map((f) => ({ media_type: f.media_type, data: f.data, vista: f.vista }))
       })
       const n = normalizarRespostaApi(r.dados)
       setLeitura({
@@ -133,7 +141,8 @@ export default function Assistente() {
         dados: { ...n.dados, avaliacao: filtrarAvaliacao(n.dados.avaliacao, contexto.campos) },
         bruto: r.dados,
         custo: r.custo_usd,
-        origem: 'api'
+        origem: 'api',
+        fotos: fotos.map((f) => ({ blob: f.blob, previa: f.previa, vista: f.vista }))
       })
     } catch (e) {
       setErroIa(e.message)
@@ -218,6 +227,8 @@ export default function Assistente() {
             gerando={gerando}
             jaGerou={Boolean(leitura)}
             aoUsarManual={() => setManual(true)}
+            fotos={fotos}
+            setFotos={setFotos}
           />
         )}
 
@@ -225,9 +236,9 @@ export default function Assistente() {
           <Assist>
             <p className="flex items-center gap-2 font-semibold text-petroleo">
               <span className="h-4 w-4 animate-spin rounded-full border-2 border-petroleo border-t-transparent" />
-              Analisando a avaliação e montando a prescrição...
+              {fotos.length ? 'Analisando as fotos, a avaliação e montando a prescrição...' : 'Analisando a avaliação e montando a prescrição...'}
             </p>
-            <p className="mt-1 text-sm text-cinza-600">Leva de 20 a 60 segundos.</p>
+            <p className="mt-1 text-sm text-cinza-600">{fotos.length ? 'Com fotos leva de 30 a 90 segundos.' : 'Leva de 20 a 60 segundos.'}</p>
           </Assist>
         )}
 
@@ -304,7 +315,9 @@ export default function Assistente() {
 
         {salvo && (
           <Assist>
-            <p className="font-bold">Pronto. Avaliação, exercícios e relatório salvos na ficha de {primeiroNome(paciente.nome)}.</p>
+            <p className="font-bold">
+              Pronto. Avaliação, {leitura?.dados?.postura ? 'análise postural, ' : ''}exercícios e relatório salvos na ficha de {primeiroNome(paciente.nome)}.
+            </p>
             <p className="mt-1 text-sm text-cinza-600">O relatório fica só para você. O paciente vê a avaliação resumida e os exercícios no link.</p>
             <div className="mt-3 flex flex-wrap gap-2">
               <Botao para={`/painel/pacientes/${paciente.id}`} icone="usuario">Abrir ficha</Botao>
@@ -321,13 +334,13 @@ export default function Assistente() {
 
 // ---------------------------------------------------------------- relato
 
-function Relato({ paciente, relato, setRelato, aoLevar, copiado, api, aoGerar, gerando, jaGerou, aoUsarManual }) {
+function Relato({ paciente, relato, setRelato, aoLevar, copiado, api, aoGerar, gerando, jaGerou, aoUsarManual, fotos, setFotos }) {
   const ditado = useDitado((t) => setRelato((r) => (r ? `${r} ${t}` : t)))
   return (
     <Assist>
       <p>
-        Me conte a avaliação de <strong>{primeiroNome(paciente.nome)}</strong>: queixa, tempo, testes, achados, o que você tratou. Pode
-        {api ? 'escrever ou ditar aqui.' : 'escrever ou ditar aqui, ou deixar para ditar direto no Claude.'}
+        Me conte a avaliação de <strong>{primeiroNome(paciente.nome)}</strong>: queixa, tempo, testes, achados, o que você tratou.{' '}
+        {api ? 'Pode escrever ou ditar aqui e, se quiser, anexar fotos da postura.' : 'Pode escrever ou ditar aqui, ou deixar para ditar direto no Claude.'}
       </p>
       <div className="relative mt-3">
         <textarea
@@ -352,13 +365,14 @@ function Relato({ paciente, relato, setRelato, aoLevar, copiado, api, aoGerar, g
       </div>
       {ditado.ouvindo && <p className="mt-1 text-xs font-semibold text-alerta">Ouvindo... toque no quadrado para parar.</p>}
       {!ditado.suportado && <p className="mt-1 text-xs text-cinza-600">Para ditar neste aparelho, use o microfone do teclado.</p>}
+      {api && <AnexarFotos fotos={fotos} setFotos={setFotos} />}
       {api ? (
         <>
-          <Botao tamanho="lg" bloco className="mt-3" icone="estrela" onClick={aoGerar} carregando={gerando} disabled={!relato.trim()}>
+          <Botao tamanho="lg" bloco className="mt-3" icone="estrela" onClick={aoGerar} carregando={gerando} disabled={!relato.trim() && !fotos.length}>
             {jaGerou ? 'Gerar de novo' : 'Gerar com IA'}
           </Botao>
           <button onClick={aoUsarManual} className="mt-2 w-full text-center text-xs font-semibold text-cinza-600 underline">
-            ou usar a ponte manual (copiar para o app do Claude)
+            ou usar a ponte manual (copiar para o app do Claude, sem fotos)
           </button>
         </>
       ) : (
@@ -367,6 +381,89 @@ function Relato({ paciente, relato, setRelato, aoLevar, copiado, api, aoGerar, g
         </Botao>
       )}
     </Assist>
+  )
+}
+
+// ---------------------------------------------------------------- fotos
+
+function AnexarFotos({ fotos, setFotos }) {
+  const [erro, setErro] = useState('')
+  const [preparando, setPreparando] = useState(false)
+
+  async function escolher(e) {
+    const arquivos = [...(e.target.files || [])]
+    e.target.value = ''
+    if (!arquivos.length) return
+    setErro('')
+    const livres = MAX_FOTOS - fotos.length
+    if (arquivos.length > livres) setErro(`Até ${MAX_FOTOS} fotos. Usei as ${Math.max(livres, 0)} primeiras.`)
+    setPreparando(true)
+    const novas = []
+    for (const arq of arquivos.slice(0, Math.max(livres, 0))) {
+      try {
+        const f = await reduzirFoto(arq)
+        // Sugere a vista na ordem mais comum: frente, costas, lateral direita, lateral esquerda.
+        const usadas = new Set([...fotos, ...novas].map((x) => x.vista))
+        const vista = VISTAS.find((v) => v !== 'Outra' && !usadas.has(v)) || 'Outra'
+        novas.push({ id: crypto.randomUUID(), ...f, vista })
+      } catch (err) {
+        setErro(err.message)
+      }
+    }
+    setFotos((l) => [...l, ...novas])
+    setPreparando(false)
+  }
+
+  return (
+    <div className="mt-3 rounded-2xl border border-dashed border-cinza-200 p-3">
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <p className="text-sm font-bold text-petroleo-escuro">Fotos posturais <span className="font-semibold text-cinza-400">(opcional)</span></p>
+          <p className="text-xs text-cinza-600">A IA aponta as alterações posturais e já prescreve os exercícios.</p>
+        </div>
+        {fotos.length < MAX_FOTOS && (
+          <label className="flex h-10 shrink-0 cursor-pointer items-center gap-1.5 rounded-xl bg-petroleo-claro px-3 text-sm font-bold text-petroleo">
+            <Icone nome="camera" tamanho={18} />
+            {preparando ? 'Preparando...' : 'Anexar'}
+            <input type="file" accept="image/*" multiple className="hidden" onChange={escolher} disabled={preparando} />
+          </label>
+        )}
+      </div>
+      {fotos.length > 0 && (
+        <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+          {fotos.map((f) => (
+            <div key={f.id} className="overflow-hidden rounded-xl border border-cinza-100 bg-white">
+              <div className="relative">
+                <img src={f.previa} alt={f.vista} className="aspect-[3/4] w-full object-cover" />
+                <button
+                  type="button"
+                  onClick={() => setFotos((l) => l.filter((x) => x.id !== f.id))}
+                  aria-label="Remover foto"
+                  className="absolute right-1.5 top-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-black/55 text-white"
+                >
+                  <Icone nome="x" tamanho={14} />
+                </button>
+              </div>
+              <select
+                value={f.vista}
+                onChange={(e) => setFotos((l) => l.map((x) => (x.id === f.id ? { ...x, vista: e.target.value } : x)))}
+                aria-label="Vista da foto"
+                className="h-9 w-full border-t border-cinza-100 bg-white px-1.5 text-xs font-semibold text-petroleo-escuro focus:outline-none"
+              >
+                {VISTAS.map((v) => <option key={v}>{v}</option>)}
+              </select>
+            </div>
+          ))}
+        </div>
+      )}
+      {fotos.length === 0 && (
+        <p className="mt-2 text-xs leading-relaxed text-cinza-600">
+          Dica: corpo inteiro, de pé, câmera parada na altura do quadril, a uns 2 a 3 metros, fundo liso e roupa que mostre o contorno. Use fotos
+          só com o consentimento do paciente.
+        </p>
+      )}
+      {erro && <p className="mt-2 text-xs font-medium text-alerta">{erro}</p>}
+    </div>
   )
 }
 
@@ -388,6 +485,7 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
   // Exercícios do Dr. Pablo: liga à biblioteca própria (nunca à galeria de academia).
   const [sugestoes, setSugestoes] = useState(() => ligarSugestoes(leitura.dados, biblioteca))
   const [msgVideo, setMsgVideo] = useState('')
+  const [postura, setPostura] = useState(leitura.dados.postura || null)
   const av = leitura.dados.avaliacao
   const preenchidos = campos.filter((c) => av[c.chave] !== undefined)
   const vazios = campos.filter((c) => av[c.chave] === undefined)
@@ -401,7 +499,18 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
     try {
       await salvarAvaliacao({ paciente_id: paciente.id, data: hojeISO(), respostas: leitura.dados.avaliacao })
       await salvarPrescricaoPropria({ pacienteId: paciente.id, sugestoes, substituir, atuais })
-      await salvarRelatorio({ paciente_id: paciente.id, relatorio: leitura.relatorio || '(sem texto)', resposta: leitura.dados, origem: leitura.origem === 'api' ? 'api' : 'ponte_manual' })
+      // Fotos vão para o espaço privado; o relatório guarda só o caminho e a vista.
+      const fotosSalvas = []
+      for (const f of postura ? leitura.fotos || [] : []) {
+        fotosSalvas.push({ caminho: await enviarFotoPostural(paciente.id, f.blob), vista: f.vista })
+      }
+      await salvarRelatorio({
+        paciente_id: paciente.id,
+        relatorio: leitura.relatorio || '(sem texto)',
+        resposta: { ...leitura.dados, postura },
+        origem: leitura.origem === 'api' ? 'api' : 'ponte_manual',
+        ...(fotosSalvas.length ? { fotos: fotosSalvas } : {})
+      })
       aoSalvar()
     } catch (e) {
       setErro(e.message)
@@ -439,6 +548,20 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
           </div>
         )}
       </div>
+
+      {/* Análise postural (quando há fotos) */}
+      {postura && (
+        <div className="mt-4">
+          <div className="mb-2 flex items-center gap-2 font-bold text-petroleo-escuro"><Icone nome="camera" tamanho={18} /> Análise postural</div>
+          <div className="rounded-2xl bg-cinza-50 p-3">
+            <AnalisePostural
+              postura={postura}
+              fotos={leitura.fotos || []}
+              aoRemover={(i) => setPostura((p) => ({ ...p, achados: p.achados.filter((_, k) => k !== i) }))}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Avaliação preenchida */}
       <div className="mt-4">

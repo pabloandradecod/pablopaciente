@@ -58,7 +58,15 @@ npm run dev                  # http://localhost:5173/painel
 3. A função `assistente` (código em `supabase/functions/assistente/index.ts`) já está publicada. Para republicar: `supabase functions deploy assistente`.
 4. Recarregue o painel: o botão **Gerar com IA** aparece no Assistente. Sem a chave, o painel usa a ponte manual (copiar e colar no app do Claude).
 
-Modelo: Claude Opus 5.5, esforço médio, resposta em JSON validado por esquema (só exercícios da galeria). Cada análise mostra o custo estimado.
+Modelo: Claude Opus 5.5, esforço médio, resposta em JSON validado por esquema. Cada análise mostra o custo estimado.
+
+### Fotos posturais
+
+- No Assistente, **Anexar** aceita até 4 fotos (frente, costas, laterais). O painel reduz cada foto no celular antes de enviar.
+- A IA devolve a análise postural (achados por região, lado, intensidade e os exercícios que trabalham cada achado) junto com o relatório e a prescrição.
+- Ao salvar, as fotos vão para o bucket privado `fotos-posturais` (só o administrador lê; o paciente nunca vê) e a análise aparece na aba **Avaliação** da ficha.
+- Custo: uma análise com 2 fotos ficou em cerca de US$ 0,14 no teste; sem fotos continua por volta de US$ 0,08.
+- Banco: migração `supabase/migrations/20261113000000_fotos_posturais.sql` (já aplicada).
 
 ## Domínio próprio (pablopaciente.com.br)
 
