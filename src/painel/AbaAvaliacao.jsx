@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { listarCampos, listarRelatorios, salvarAvaliacao, ultimaAvaliacao } from '../lib/api.js'
+import { definirRelatorioVisivel, listarCampos, listarRelatorios, salvarAvaliacao, ultimaAvaliacao } from '../lib/api.js'
 import TextoRelatorio from '../components/TextoRelatorio.jsx'
 import Icone from '../components/ui/Icone.jsx'
 import GerarExercicios from './GerarExercicios.jsx'
@@ -93,10 +93,24 @@ function Relatorios({ pacienteId }) {
     {postural && (
       <Card>
         <h2 className="flex items-center gap-2 font-bold text-petroleo-escuro"><Icone nome="camera" tamanho={18} /> Análise postural</h2>
-        <p className="mb-3 mt-1 text-xs text-cinza-600">
-          Feita pelas fotos em {formatarDataHora(postural.criado_em)}. Só você vê; as fotos ficam em espaço privado. Toque numa foto para ampliar.
-        </p>
-        <AnalisePostural postura={postural.resposta.postura} fotos={postural.fotos || []} />
+        <p className="mb-3 mt-1 text-xs text-cinza-600">Feita pelas fotos em {formatarDataHora(postural.criado_em)}. Toque numa foto para ampliar.</p>
+        <label className="mb-3 flex items-start gap-2.5 rounded-2xl border border-cinza-100 p-3 text-sm">
+          <input
+            type="checkbox"
+            checked={Boolean(postural.visivel_paciente)}
+            onChange={async (e) => {
+              const v = e.target.checked
+              setLista((l) => l.map((r) => (r.id === postural.id ? { ...r, visivel_paciente: v } : r)))
+              await definirRelatorioVisivel(postural.id, v).catch(() => {})
+            }}
+            className="mt-0.5 h-5 w-5 shrink-0 accent-[#0E5C62]"
+          />
+          <span>
+            <strong>Mostrar no link do paciente</strong>
+            <span className="block text-xs text-cinza-600">Ele vê as fotos com as marcações, as medidas e os achados, e o PDF dele inclui a análise.</span>
+          </span>
+        </label>
+        <AnalisePostural postura={postural.resposta.postura} fotos={postural.fotos || []} marcacoes={postural.resposta.marcacoes || []} />
       </Card>
     )}
     <Card>
@@ -114,7 +128,7 @@ function Relatorios({ pacienteId }) {
               {r.resposta?.alertas?.length > 0 && <span className="ml-2 rounded bg-alerta-claro px-1.5 py-0.5 text-[11px] font-bold text-alerta">alerta</span>}
             </summary>
             {r.resposta?.postura && r !== postural && (
-              <div className="mt-3 rounded-2xl bg-cinza-50 p-3"><AnalisePostural postura={r.resposta.postura} fotos={r.fotos || []} /></div>
+              <div className="mt-3 rounded-2xl bg-cinza-50 p-3"><AnalisePostural postura={r.resposta.postura} fotos={r.fotos || []} marcacoes={r.resposta.marcacoes || []} /></div>
             )}
             <div className="mt-3"><TextoRelatorio texto={r.relatorio} /></div>
           </details>

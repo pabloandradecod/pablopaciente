@@ -98,10 +98,10 @@ Responda preenchendo o JSON definido:
 - "exercicios": os exercícios do Dr. Pablo, com "codigo" da biblioteca (ou "novo") e "nome".`
 
 // Regras extras quando o Dr. Pablo anexa fotos posturais (só no modo API).
-const POSTURA = `ANÁLISE POSTURAL POR FOTO (há fotos anexadas)
-10. Analise cada foto considerando a vista informada antes dela. Descreva em detalhe os achados observáveis, sempre com o lado: posição da cabeça (anteriorização, inclinação, rotação), ombros (protração, elevação, assimetria de altura), escápulas (abdução, alamento, assimetria), coluna torácica (cifose aumentada ou diminuída), coluna lombar (lordose aumentada ou retificada), alinhamento lateral do tronco (inclinação, desvio lateral aparente, triângulo de Talles assimétrico), pelve (inclinação anterior ou posterior, desnível de cristas ilíacas, rotação), quadril, joelhos (valgo, varo, hiperextensão, flexo), pés e tornozelos (pronação, supinação, arco) e distribuição de peso.
+const POSTURA = `ANÁLISE POSTURAL (há fotos da postura)
+10. A análise FOTO A FOTO já foi feita (pontos anatômicos, medidas em graus e em % da altura em relação à linha de prumo, e achados) e vem na mensagem, em ANÁLISE DAS FOTOS. Consolide em "postura": um resumo do padrão postural e a lista de achados SEM repetir o mesmo achado de fotos diferentes, citando a medida quando houver (ex.: "ombro direito mais alto, inclinação de 3,2°") e em "vista" as fotos onde aparece.
 11. Use linguagem de observação ("aparente", "sugere", "na foto"), nunca diagnóstico fechado. Um desvio lateral é "desvio lateral aparente", não "escoliose". Postura sozinha não explica a dor: em "relevancia", relacione o achado com a queixa quando fizer sentido e diga quando a relação não for clara.
-12. Seja honesto sobre limitações: ângulo e altura da câmera, distância, lente, roupa, posição dos pés e iluminação. O que a foto não permitir avaliar vai em "limitacoes", sem inventar. Se uma foto não mostrar a pessoa de corpo inteiro ou não for uma foto de postura, diga isso e não crie achados para ela.
+12. Em "limitacoes", reúna as limitações das fotos (ângulo e altura da câmera, distância, roupa, fotos inadequadas) e lembre que as medidas por foto são estimativas.
 13. A prescrição responde ao relato E aos achados posturais relevantes. Em cada achado relevante, liste em "exercicios" os nomes EXATOS dos exercícios da prescrição que o trabalham ([] se nenhum).
 14. O detalhe completo vai em "postura". No relatório, inclua o título ## Análise postural logo depois de ## Resumo com no máximo 4 tópicos curtos (só os achados mais relevantes, sem repetir a lista inteira). O relatório continua enxuto (até umas 300 palavras). Em "postura", escreva "achado" e "relevancia" com uma frase objetiva cada.
 15. Se não houver relato escrito, baseie-se nas fotos e deixe null os campos da avaliação que dependem da conversa com o paciente.`
@@ -120,7 +120,7 @@ ${listaBibliotecaPropria(biblioteca)}`
 }
 
 // Parte variável: o paciente, o relato e, se houver, o ajuste pedido.
-export function montarMensagem({ paciente, avaliacaoAnterior, totalSessoes, relato, anterior, ajuste, modo = 'manual', fotos = [] }) {
+export function montarMensagem({ paciente, avaliacaoAnterior, totalSessoes, relato, anterior, ajuste, modo = 'manual', fotos = [], analiseFotos = '' }) {
   const historico = avaliacaoAnterior?.respostas && Object.keys(avaliacaoAnterior.respostas).length
     ? `Avaliação anterior (${avaliacaoAnterior.data}): ${JSON.stringify(avaliacaoAnterior.respostas)}`
     : 'Sem avaliação anterior registrada.'
@@ -129,7 +129,7 @@ Primeiro nome: ${paciente.nome.trim().split(/\s+/)[0]}
 Idade: ${idade(paciente.data_nascimento) ?? 'não informada'} anos
 Sessões já realizadas: ${totalSessoes}
 ${historico}`
-  const textoFotos = fotos.length ? `\n\nFOTOS POSTURAIS ANEXADAS (${fotos.length}): ${fotos.map((v, i) => `foto ${i + 1} = ${v}`).join('; ')}.` : ''
+  const textoFotos = fotos.length ? `\n\nANÁLISE DAS FOTOS (${fotos.length} fotos):\n${analiseFotos}` : ''
   let corpo
   if (relato?.trim() || (modo === 'api' && fotos.length)) {
     corpo = relato?.trim()
@@ -457,10 +457,10 @@ function esquemaExerciciosProprios(biblioteca) {
 }
 
 // Regras da análise postural quando a prescrição é gerada pela ficha (sem relatório).
-const POSTURA_EXERCICIOS = `ANÁLISE POSTURAL POR FOTO (há fotos anexadas)
-7. Analise cada foto considerando a vista informada antes dela. Descreva em detalhe os achados observáveis, sempre com o lado: posição da cabeça, ombros e escápulas, coluna torácica, coluna lombar, alinhamento lateral do tronco (inclinação, desvio lateral aparente, triângulo de Talles), pelve (inclinação anterior ou posterior, desnível, rotação), quadril, joelhos (valgo, varo, hiperextensão, flexo), pés e tornozelos e distribuição de peso.
+const POSTURA_EXERCICIOS = `ANÁLISE POSTURAL (há fotos da postura)
+7. A análise FOTO A FOTO já foi feita (pontos anatômicos, medidas em graus e em % da altura em relação à linha de prumo, e achados) e vem na mensagem, em ANÁLISE DAS FOTOS. Consolide em "postura": um resumo do padrão postural e a lista de achados SEM repetir o mesmo achado de fotos diferentes, citando a medida quando houver (ex.: "ombro direito mais alto, inclinação de 3,2°") e em "vista" as fotos onde aparece.
 8. Use linguagem de observação ("aparente", "sugere", "na foto"), nunca diagnóstico fechado. Um desvio lateral é "desvio lateral aparente", não "escoliose". Postura sozinha não explica a dor: em "relevancia", relacione com a avaliação quando fizer sentido e diga quando a relação não for clara. "achado" e "relevancia" com uma frase objetiva cada.
-9. Seja honesto sobre limitações (ângulo e altura da câmera, distância, lente, roupa, posição dos pés, iluminação) em "limitacoes". Se uma foto não mostrar a pessoa de corpo inteiro ou não for uma foto de postura, diga isso e não crie achados para ela.
+9. Em "limitacoes", reúna as limitações das fotos (ângulo e altura da câmera, distância, roupa, fotos inadequadas) e lembre que as medidas por foto são estimativas.
 10. A prescrição responde à avaliação E aos achados posturais relevantes. Em cada achado, liste em "exercicios" os nomes EXATOS dos exercícios desta prescrição que o trabalham ([] se nenhum).
 11. Se a avaliação estiver vazia, baseie-se nas fotos.`
 
@@ -484,7 +484,7 @@ BIBLIOTECA DO DR. PABLO (código e nome)
 ${listaBibliotecaPropria(biblioteca)}`
 }
 
-export function montarMensagemExercicios({ paciente, campos, respostas, notas, fotos = [] }) {
+export function montarMensagemExercicios({ paciente, campos, respostas, notas, fotos = [], analiseFotos = '' }) {
   const porChave = Object.fromEntries((campos || []).map((c) => [c.chave, c]))
   const linhas = Object.entries(respostas || {})
     .filter(([, v]) => v !== null && v !== '' && !(Array.isArray(v) && !v.length))
@@ -506,7 +506,7 @@ ${linhas || '(sem respostas)'}
 O QUE O DR. PABLO QUER PRIORIZAR:
 """
 ${notas?.trim() || 'Sem observação extra.'}
-"""${fotos.length ? `\n\nFOTOS POSTURAIS ANEXADAS (${fotos.length}): ${fotos.map((v, i) => `foto ${i + 1} = ${v}`).join('; ')}.` : ''}`
+"""${fotos.length ? `\n\nANÁLISE DAS FOTOS (${fotos.length} fotos):\n${analiseFotos}` : ''}`
 }
 
 export function montarEsquemaExercicios({ biblioteca, comFotos = false }) {

@@ -60,14 +60,15 @@ npm run dev                  # http://localhost:5173/painel
 
 Modelo: Claude Opus 5.5, esforço médio, resposta em JSON validado por esquema. Cada análise mostra o custo estimado.
 
-### Fotos posturais
+### Fotos posturais (avaliação biomecânica)
 
-- No Assistente, **Anexar** aceita até 4 fotos (frente, costas, laterais). O painel reduz cada foto no celular antes de enviar.
-- A IA devolve a análise postural (achados por região, lado, intensidade e os exercícios que trabalham cada achado) junto com o relatório e a prescrição.
-- Ao salvar, as fotos vão para o bucket privado `fotos-posturais` (só o administrador lê; o paciente nunca vê) e a análise aparece na aba **Avaliação** da ficha.
-- Também na ficha (aba **Avaliação**, card **Gerar exercícios com IA**): anexe as fotos e um clique gera a análise postural, os exercícios do Dr. Pablo e o treino de academia A/B/C. São dois pedidos separados à IA (o treino recebe só o texto dos achados, sem as fotos), para não misturar as prescrições. **Salvar tudo na ficha** grava os três.
-- Custo: uma análise com 2 fotos ficou em cerca de US$ 0,14 no teste; com o treino de academia junto, some cerca de US$ 0,07. Sem fotos continua por volta de US$ 0,08.
-- Banco: migração `supabase/migrations/20261113000000_fotos_posturais.sql` (já aplicada).
+- Até 20 fotos por avaliação (frente, costas, laterais), no Assistente ou na ficha (aba **Avaliação**, card **Gerar exercícios com IA**).
+- Etapa 1: a IA marca os pontos anatômicos de cada foto (cabeça, acrômios, cristas ilíacas, joelhos, maléolos; no perfil, trago, acrômio, trocânter, joelho e maléolo), em lotes de 4 fotos, 3 lotes ao mesmo tempo.
+- O painel desenha por cima de cada foto: grade quadriculada, linha de prumo, linhas de alinhamento e as medidas (inclinação de ombros, pelve e joelhos em graus; distâncias até o prumo em % da altura; ângulos da cabeça e do tronco no perfil). Tocando na foto, dá para arrastar os pontos para corrigir.
+- Etapa 2: a prescrição (exercícios do Dr. Pablo) e a análise consolidada recebem só o texto das medidas e achados, sem reenviar as fotos. Etapa 3 (opcional): treino de academia A/B/C.
+- Ao salvar, as fotos vão para o bucket privado `fotos-posturais`. A análise aparece na ficha e, com **Mostrar no link do paciente** marcado (padrão), também no link e no PDF do paciente. O link busca as fotos pela função `paciente-fotos`, que confere token e chave do aparelho e devolve links de 1 hora.
+- Custo de referência: cerca de US$ 0,07 por lote de 2 fotos na marcação; 20 fotos devem ficar perto de US$ 0,60, mais uns US$ 0,13 de prescrição e treino.
+- Banco: migrações `20261113000000_fotos_posturais.sql` e `20261113010000_postura_no_link.sql` (já aplicadas).
 
 ## Domínio próprio (pablopaciente.com.br)
 

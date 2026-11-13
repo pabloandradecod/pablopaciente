@@ -4,6 +4,7 @@ import { formatarTelefone, WHATSAPP_CONSULTORIO } from '../lib/whatsapp.js'
 import MapaColuna from '../components/coluna/MapaColuna.jsx'
 import { nomeSegmento, TODOS_CODIGOS } from '../components/coluna/segmentos.js'
 import { paraLista } from '../components/ui/Campo.jsx'
+import FotoAnotada, { ListaMedidas } from '../components/postura/FotoAnotada.jsx'
 
 // Versão para impressão / PDF do resumo do paciente.
 // parte: 'completo' (para o médico) ou 'exercicios' (para o educador físico).
@@ -29,7 +30,7 @@ function Titulo({ children }) {
   return <h2 className="mb-2 mt-6 border-b-2 border-[#0E5C62] pb-1 text-[13pt] font-extrabold text-[#0A4247]">{children}</h2>
 }
 
-export default function Impressao({ dados, parte }) {
+export default function Impressao({ dados, parte, postura }) {
   const { paciente, avaliacao, sessoes, exercicios, treino } = dados
   const treinos = (treino?.treinos || []).filter((t) => t.itens?.length)
   const ultima = sessoes.at(-1)
@@ -112,6 +113,36 @@ export default function Impressao({ dados, parte }) {
               </tbody>
             </table>
           </div>
+        </section>
+      )}
+
+      {completo && postura && (
+        <section>
+          <Titulo>Avaliação postural por fotos ({formatarData(postura.data.slice(0, 10))})</Titulo>
+          <div className="grid grid-cols-3 gap-3">
+            {postura.fotos.map((f, i) =>
+              f.url ? (
+                <div key={i} className="quebra-evitar">
+                  {postura.marcacoes[i] ? <FotoAnotada src={f.url} marcacao={postura.marcacoes[i]} /> : <img src={f.url} alt="" className="w-full" />}
+                  <div className="mt-1 text-[8.5pt] font-bold text-[#0A4247]">{f.vista}</div>
+                  {postura.marcacoes[i] && <div className="text-[8pt]"><ListaMedidas marcacao={postura.marcacoes[i]} /></div>}
+                </div>
+              ) : null
+            )}
+          </div>
+          <p className="mt-1 text-[8pt] text-[#5C6668]">Linha amarela tracejada: linha de prumo. Linhas verdes: alinhamento entre os pontos anatômicos. Linhas vermelhas: distância até o prumo. Medidas estimadas por foto.</p>
+          {postura.postura.resumo && <p className="mt-2">{postura.postura.resumo}</p>}
+          <table className="mt-2 w-full border-collapse text-[9.5pt]">
+            <tbody>
+              {postura.postura.achados.map((a, k) => (
+                <tr key={k} className="border-b border-[#ECEEEE] align-top">
+                  <td className="w-[28%] py-1 pr-2 font-semibold text-[#5C6668]">{a.regiao}{a.lado ? ` · ${a.lado}` : ''}</td>
+                  <td className="py-1">{a.achado} <span className="text-[#5C6668]">({a.intensidade.toLowerCase()})</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {postura.postura.limitacoes && <p className="mt-1 text-[8.5pt] text-[#5C6668]">Limitações: {postura.postura.limitacoes}</p>}
         </section>
       )}
 

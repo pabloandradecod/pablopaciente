@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Icone from '../components/ui/Icone.jsx'
 import { reduzirFoto, VISTAS } from '../lib/fotos.js'
 
-export const MAX_FOTOS = 4
+export const MAX_FOTOS = 20
 
 // Fotos posturais: escolher, reduzir no celular e marcar a vista de cada uma.
 export default function AnexarFotos({ fotos, setFotos }) {
@@ -49,7 +49,7 @@ export default function AnexarFotos({ fotos, setFotos }) {
         )}
       </div>
       {fotos.length > 0 && (
-        <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+        <div className="mt-3 grid grid-cols-3 gap-2 sm:grid-cols-5">
           {fotos.map((f) => (
             <div key={f.id} className="overflow-hidden rounded-xl border border-cinza-100 bg-white">
               <div className="relative">

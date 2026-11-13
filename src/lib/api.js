@@ -213,6 +213,17 @@ export async function urlsFotosPosturais(caminhos) {
   return Object.fromEntries((data || []).filter((d) => d.signedUrl).map((d) => [d.path, d.signedUrl]))
 }
 
+// Mostrar ou esconder a análise postural no link do paciente.
+export async function definirRelatorioVisivel(id, visivel) {
+  checar(await supabase.from('relatorios_ia').update({ visivel_paciente: visivel }).eq('id', id).select('id'))
+}
+// Link do paciente: links temporários das fotos da análise postural liberada.
+export async function pacienteFotos(token, chave) {
+  const { data, error } = await supabase.functions.invoke('paciente-fotos', { body: { token, chave } })
+  if (error || data?.erro) return []
+  return data?.urls || []
+}
+
 export async function listarRelatorios(pacienteId) {
   return checar(
     await supabase.from('relatorios_ia').select('*').eq('paciente_id', pacienteId).order('criado_em', { ascending: false })

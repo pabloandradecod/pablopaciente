@@ -13,6 +13,8 @@ import { AreaTexto } from '../components/ui/Campo.jsx'
 import { CartoesSugestoes, salvarPrescricaoPropria } from './prescricaoPropria.jsx'
 import AnexarFotos from './AnexarFotos.jsx'
 import AnalisePostural from './AnalisePostural.jsx'
+import { marcarFotos } from '../lib/analisePostural.js'
+import { achadosEmTexto } from '../lib/postura.js'
 
 const real = (v) => `US$ ${v.toFixed(3).replace('.', ',')}`
 
@@ -53,14 +55,22 @@ export default function GerarExercicios({ paciente, campos, avaliacao, aoSalvar 
     const vistas = fotos.map((f) => f.vista)
     let custo = 0
     try {
-      // 1) Exercícios do Dr. Pablo (+ análise postural)
-      setEtapa(fotos.length ? 'Analisando as fotos e montando os exercícios do Dr. Pablo...' : 'Montando os exercícios do Dr. Pablo...')
+      // 0) Fotos: a IA marca os pontos anatômicos e os desvios de cada foto (em lotes).
+      let marcacoes = []
+      if (fotos.length) {
+        const m = await marcarFotos(fotos, (feitas, total) => setEtapa(`Marcando os pontos e medindo as fotos (${feitas} de ${total})...`))
+        marcacoes = m.marcacoes
+        custo += m.custo
+      }
+      // 1) Exercícios do Dr. Pablo + análise postural consolidada (só texto, sem reenviar as fotos)
+      setEtapa(fotos.length ? 'Consolidando a análise postural e montando os exercícios do Dr. Pablo...' : 'Montando os exercícios do Dr. Pablo...')
       const biblioteca = await listarExercicios()
       const r1 = await chamarAssistente({
         sistema: montarSistemaExercicios({ biblioteca, comFotos: fotos.length > 0 }),
-        mensagem: montarMensagemExercicios({ paciente, campos, respostas: avaliacao?.respostas || {}, notas, fotos: vistas }),
-        esquema: montarEsquemaExercicios({ biblioteca, comFotos: fotos.length > 0 }),
-        imagens: fotos.map((f) => ({ media_type: f.media_type, data: f.data, vista: f.vista }))
+        mensagem: montarMensagemExercicios({
+          paciente, campos, respostas: avaliacao?.respostas || {}, notas, fotos: vistas, analiseFotos: fotos.length ? achadosEmTexto(marcacoes, vistas) : ''
+        }),
+        esquema: montarEsquemaExercicios({ biblioteca, comFotos: fotos.length > 0 })
       })
       custo += r1.custo_usd || 0
       const novas = ligarSugestoes(r1.dados, biblioteca)
@@ -69,6 +79,7 @@ export default function GerarExercicios({ paciente, campos, avaliacao, aoSalvar 
       const base = {
         postura,
         fotos: fotos.map((f) => ({ blob: f.blob, previa: f.previa, vista: f.vista })),
+        marcacoes,
         orientacao: r1.dados?.orientacao || '',
         treinos: null,
         orientacoesTreino: '',
@@ -123,13 +134,14 @@ export default function GerarExercicios({ paciente, campos, avaliacao, aoSalvar 
         await salvarRelatorio({
           paciente_id: paciente.id,
           relatorio: `## Análise postural\n${resultado.postura.resumo}\n\n${linhas}${resultado.postura.limitacoes ? `\n\n## Limitações das fotos\n${resultado.postura.limitacoes}` : ''}`,
-          resposta: { postura: resultado.postura, exercicios: sugestoes.filter((s) => s.incluir).map((s) => s.nome), alertas: [] },
+          resposta: { postura: resultado.postura, marcacoes: resultado.marcacoes, exercicios: sugestoes.filter((s) => s.incluir).map((s) => s.nome), alertas: [] },
           origem: 'api',
-          fotos: fotosSalvas
+          fotos: fotosSalvas,
+          visivel_paciente: true
         })
         partes.push('análise postural')
       }
-      setMsg(`Salvo na ficha: ${partes.join(', ')}. Já aparece no link do paciente (a análise postural fica só para você).`)
+      setMsg(`Salvo na ficha: ${partes.join(', ')}. Já aparece no link do paciente.`)
       aoSalvar?.()
     } catch (e) {
       setMsg(e.message)
@@ -190,7 +202,7 @@ export default function GerarExercicios({ paciente, campos, avaliacao, aoSalvar 
             {etapa}
           </p>
         )}
-        {gerando && <p className="mt-1 text-xs text-cinza-600">{comTreino ? 'O conjunto leva de 1 a 2 minutos.' : 'Leva de 20 a 60 segundos.'}</p>}
+        {gerando && <p className="mt-1 text-xs text-cinza-600">{fotos.length > 4 ? 'Com muitas fotos leva de 2 a 4 minutos.' : comTreino ? 'O conjunto leva de 1 a 2 minutos.' : 'Leva de 20 a 60 segundos.'}</p>}
       </div>
 
       {resultado && (
@@ -204,6 +216,8 @@ export default function GerarExercicios({ paciente, campos, avaliacao, aoSalvar 
                 <AnalisePostural
                   postura={resultado.postura}
                   fotos={resultado.fotos}
+                  marcacoes={resultado.marcacoes}
+                  aoMudarMarcacao={(i, m) => setResultado((r) => ({ ...r, marcacoes: r.marcacoes.map((x, k) => (k === i ? m : x)) }))}
                   aoRemover={(i) => setResultado((r) => ({ ...r, postura: { ...r.postura, achados: r.postura.achados.filter((_, k) => k !== i) } }))}
                 />
               </div>

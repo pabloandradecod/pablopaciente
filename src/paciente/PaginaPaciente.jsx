@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { pacienteDados, urlVideo } from '../lib/api.js'
+import { pacienteDados, pacienteFotos, urlVideo } from '../lib/api.js'
 import { supabaseConfigurado } from '../lib/supabase.js'
 import { formatarData, formatarDataCurta } from '../lib/datas.js'
 import { TEXTOS } from '../lib/textos.js'
@@ -16,6 +16,8 @@ import GraficoEvolucao, { corDor } from '../components/GraficoEvolucao.jsx'
 import VideoLoop from '../components/VideoLoop.jsx'
 import Impressao from './Impressao.jsx'
 import { paraLista } from '../components/ui/Campo.jsx'
+import AnalisePostural from '../painel/AnalisePostural.jsx'
+import { normalizarPostura } from '../lib/assistente.js'
 
 export default function PaginaPaciente() {
   const [acesso, setAcesso] = useState(() => tokenDoLink())
@@ -147,11 +149,32 @@ function lerFeitos() {
 const SECOES = [
   { id: 'avaliacao', rotulo: 'Avaliação' },
   { id: 'coluna', rotulo: 'Coluna' },
+  { id: 'postura', rotulo: 'Postura' },
   { id: 'evolucao', rotulo: 'Evolução' },
   { id: 'exercicios', rotulo: 'Exercícios' },
   { id: 'treino', rotulo: 'Academia' },
   { id: 'indicar', rotulo: 'Indicar' }
 ]
+
+// Análise postural liberada pelo Dr. Pablo: os dados vêm com o resto; as fotos, por links temporários.
+function usePostura(bruto, acesso) {
+  const [urls, setUrls] = useState(null)
+  useEffect(() => {
+    if (!bruto?.postura) return
+    pacienteFotos(acesso.token, acesso.chave).then(setUrls)
+  }, [bruto, acesso.token, acesso.chave])
+  return useMemo(() => {
+    const postura = normalizarPostura(bruto?.postura)
+    if (!postura) return null
+    const vistas = bruto.vistas || []
+    return {
+      data: String(bruto.data || ''),
+      postura,
+      marcacoes: bruto.marcacoes || [],
+      fotos: vistas.map((v, i) => ({ vista: v, url: urls?.[i] || null }))
+    }
+  }, [bruto, urls])
+}
 
 function CabecalhoSecao({ numero, titulo, sub }) {
   return (
@@ -171,6 +194,7 @@ function CabecalhoSecao({ numero, titulo, sub }) {
 function Conteudo({ dados, acesso }) {
   const { paciente, avaliacao, sessoes, exercicios, treino } = dados
   const treinos = (treino?.treinos || []).filter((t) => t.itens?.length)
+  const postura = usePostura(dados.postura, acesso)
   const [sessaoSel, setSessaoSel] = useState(null)
   const [parteImpressao, setParteImpressao] = useState('completo')
   const [imprimir, setImprimir] = useState(0)
@@ -212,7 +236,7 @@ function Conteudo({ dados, acesso }) {
   const comDor = sessoes.filter((s) => s.dor_antes != null)
   const itens = (avaliacao?.itens || []).filter((i) => temValor(i))
   const secoes = SECOES.filter(
-    (s) => (s.id !== 'avaliacao' || itens.length) && (s.id !== 'evolucao' || comDor.length) && (s.id !== 'exercicios' || exercicios.length) && (s.id !== 'treino' || treinos.length)
+    (s) => (s.id !== 'avaliacao' || itens.length) && (s.id !== 'evolucao' || comDor.length) && (s.id !== 'exercicios' || exercicios.length) && (s.id !== 'treino' || treinos.length) && (s.id !== 'postura' || postura)
   )
 
   // Destaca no menu a seção que está na tela.
@@ -336,11 +360,29 @@ function Conteudo({ dados, acesso }) {
           )}
         </section>
 
-        {/* 03. Evolução */}
+        {/* 03. Postura */}
+        {postura && (
+          <section id="postura" className="scroll-mt-20">
+            <Revelar>
+              <CabecalhoSecao
+                numero="03"
+                titulo="Sua postura"
+                sub={`Avaliação postural pelas fotos de ${formatarData(postura.data.slice(0, 10))}. Toque numa foto para ver maior.`}
+              />
+            </Revelar>
+            <Revelar>
+              <div className="rounded-[28px] bg-white p-5 shadow-[0_1px_0_rgba(0,0,0,0.04)]">
+                <AnalisePostural postura={postura.postura} fotos={postura.fotos} marcacoes={postura.marcacoes} paciente />
+              </div>
+            </Revelar>
+          </section>
+        )}
+
+        {/* 04. Evolução */}
         {comDor.length > 0 && (
           <section id="evolucao" className="scroll-mt-20">
             <Revelar>
-              <CabecalhoSecao numero="03" titulo="Sua evolução" sub="Sua dor numa escala de 0 (sem dor) a 10 (pior dor possível)." />
+              <CabecalhoSecao numero="04" titulo="Sua evolução" sub="Sua dor numa escala de 0 (sem dor) a 10 (pior dor possível)." />
             </Revelar>
             <Revelar>
               <Evolucao sessoes={comDor} />
@@ -352,7 +394,7 @@ function Conteudo({ dados, acesso }) {
         {exercicios.length > 0 && (
           <section id="exercicios" className="scroll-mt-20">
             <Revelar>
-              <CabecalhoSecao numero="04" titulo="Exercícios do Dr. Pablo" sub="Seus exercícios de casa. Faça no seu ritmo. Se a dor aumentar durante um exercício, pare e avise o Dr. Pablo." />
+              <CabecalhoSecao numero="05" titulo="Exercícios do Dr. Pablo" sub="Seus exercícios de casa. Faça no seu ritmo. Se a dor aumentar durante um exercício, pare e avise o Dr. Pablo." />
             </Revelar>
             <Exercicios exercicios={exercicios} />
           </section>
@@ -362,7 +404,7 @@ function Conteudo({ dados, acesso }) {
         {treinos.length > 0 && (
           <section id="treino" className="scroll-mt-20">
             <Revelar>
-              <CabecalhoSecao numero="05" titulo="Exercícios para academia" sub="Sugestão de treino para a academia, dividida em A, B e C." />
+              <CabecalhoSecao numero="06" titulo="Exercícios para academia" sub="Sugestão de treino para a academia, dividida em A, B e C." />
             </Revelar>
             <SugestaoTreino treinos={treinos} orientacoes={treino?.observacao} />
           </section>
@@ -410,7 +452,7 @@ function Conteudo({ dados, acesso }) {
 
       <BotaoSOS token={acesso.token} chave={acesso.chave} nome={paciente.nome} />
     </div>
-    <Impressao dados={dados} parte={parteImpressao} />
+    <Impressao dados={dados} parte={parteImpressao} postura={postura} />
     </>
   )
 }
@@ -648,7 +690,7 @@ function Indicacao({ nome }) {
   return (
     <div className="relative overflow-hidden rounded-[32px] bg-petroleo-escuro p-7 text-white">
       <img src="/marca/simbolo.webp" alt="" aria-hidden="true" className="pointer-events-none absolute -right-10 -top-6 h-56 opacity-[0.08] invert" />
-      <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-destaque">06 · Indique</p>
+      <p className="text-xs font-extrabold uppercase tracking-[0.25em] text-destaque">07 · Indique</p>
       <h2 className="mt-3 text-[30px] font-extrabold leading-[1.05] tracking-tight">
         Conhece alguém que vive com dor nas costas?
       </h2>

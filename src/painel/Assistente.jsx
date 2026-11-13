@@ -15,6 +15,8 @@ import CampoAvaliacao from './CampoAvaliacao.jsx'
 import { CartoesSugestoes, salvarPrescricaoPropria } from './prescricaoPropria.jsx'
 import AnalisePostural from './AnalisePostural.jsx'
 import AnexarFotos from './AnexarFotos.jsx'
+import { marcarFotos } from '../lib/analisePostural.js'
+import { achadosEmTexto } from '../lib/postura.js'
 
 const semAcento = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
@@ -60,7 +62,8 @@ export default function Assistente() {
   const [gerando, setGerando] = useState(false)
   const [erroIa, setErroIa] = useState('')
   const [manual, setManual] = useState(false)
-  const [fotos, setFotos] = useState([]) // [{ id, blob, data, media_type, previa, vista }]
+  const [fotos, setFotos] = useState([]) // [{ id, blob, data, media_type, previa, vista, proporcao }]
+  const [progresso, setProgresso] = useState('')
   const fim = useRef(null)
 
   useEffect(() => {
@@ -124,14 +127,26 @@ export default function Assistente() {
     setErroIa('')
     try {
       const vistas = fotos.map((f) => f.vista)
+      // Fotos: marca os pontos uma vez; num ajuste, reaproveita a marcação já feita.
+      let marcacoes = ajuste && leitura?.marcacoes?.length === fotos.length ? leitura.marcacoes : []
+      let custoFotos = 0
+      if (fotos.length && !marcacoes.length) {
+        const m = await marcarFotos(fotos, (feitas, total) => setProgresso(`Marcando os pontos e medindo as fotos (${feitas} de ${total})...`))
+        marcacoes = m.marcacoes
+        custoFotos = m.custo
+      }
+      setProgresso('')
       const sistema = montarSistema({ ...contexto, modo: 'api', fotos: vistas })
-      const mensagem = montarMensagem({ paciente, ...contexto, relato, anterior: ajuste ? leitura?.bruto : null, ajuste, modo: 'api', fotos: vistas })
+      const mensagem = montarMensagem({
+        paciente, ...contexto, relato, anterior: ajuste ? leitura?.bruto : null, ajuste, modo: 'api', fotos: vistas,
+        analiseFotos: fotos.length ? achadosEmTexto(marcacoes, vistas) : ''
+      })
       const r = await chamarAssistente({
         sistema,
         mensagem,
-        esquema: montarEsquema({ ...contexto, comFotos: fotos.length > 0 }),
-        imagens: fotos.map((f) => ({ media_type: f.media_type, data: f.data, vista: f.vista }))
+        esquema: montarEsquema({ ...contexto, comFotos: fotos.length > 0 })
       })
+      r.custo_usd = (r.custo_usd || 0) + custoFotos
       const n = normalizarRespostaApi(r.dados)
       setLeitura({
         versao: Date.now(),
@@ -140,7 +155,8 @@ export default function Assistente() {
         bruto: r.dados,
         custo: r.custo_usd,
         origem: 'api',
-        fotos: fotos.map((f) => ({ blob: f.blob, previa: f.previa, vista: f.vista }))
+        fotos: fotos.map((f) => ({ blob: f.blob, previa: f.previa, vista: f.vista })),
+        marcacoes
       })
     } catch (e) {
       setErroIa(e.message)
@@ -234,9 +250,9 @@ export default function Assistente() {
           <Assist>
             <p className="flex items-center gap-2 font-semibold text-petroleo">
               <span className="h-4 w-4 animate-spin rounded-full border-2 border-petroleo border-t-transparent" />
-              {fotos.length ? 'Analisando as fotos, a avaliação e montando a prescrição...' : 'Analisando a avaliação e montando a prescrição...'}
+              {progresso || (fotos.length ? 'Consolidando a análise postural e montando a prescrição...' : 'Analisando a avaliação e montando a prescrição...')}
             </p>
-            <p className="mt-1 text-sm text-cinza-600">{fotos.length ? 'Com fotos leva de 30 a 90 segundos.' : 'Leva de 20 a 60 segundos.'}</p>
+            <p className="mt-1 text-sm text-cinza-600">{fotos.length > 4 ? 'Com muitas fotos leva de 2 a 4 minutos.' : fotos.length ? 'Com fotos leva de 1 a 2 minutos.' : 'Leva de 20 a 60 segundos.'}</p>
           </Assist>
         )}
 
@@ -401,6 +417,7 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
   const [sugestoes, setSugestoes] = useState(() => ligarSugestoes(leitura.dados, biblioteca))
   const [msgVideo, setMsgVideo] = useState('')
   const [postura, setPostura] = useState(leitura.dados.postura || null)
+  const [marcacoes, setMarcacoes] = useState(leitura.marcacoes || [])
   const av = leitura.dados.avaliacao
   const preenchidos = campos.filter((c) => av[c.chave] !== undefined)
   const vazios = campos.filter((c) => av[c.chave] === undefined)
@@ -422,9 +439,9 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
       await salvarRelatorio({
         paciente_id: paciente.id,
         relatorio: leitura.relatorio || '(sem texto)',
-        resposta: { ...leitura.dados, postura },
+        resposta: { ...leitura.dados, postura, ...(marcacoes.length ? { marcacoes } : {}) },
         origem: leitura.origem === 'api' ? 'api' : 'ponte_manual',
-        ...(fotosSalvas.length ? { fotos: fotosSalvas } : {})
+        ...(fotosSalvas.length ? { fotos: fotosSalvas, visivel_paciente: true } : {})
       })
       aoSalvar()
     } catch (e) {
@@ -472,6 +489,8 @@ function Revisao({ paciente, contexto, leitura, setLeitura, aoSalvar, aoAjustar,
             <AnalisePostural
               postura={postura}
               fotos={leitura.fotos || []}
+              marcacoes={marcacoes}
+              aoMudarMarcacao={(i, m) => setMarcacoes((l) => l.map((x, k) => (k === i ? m : x)))}
               aoRemover={(i) => setPostura((p) => ({ ...p, achados: p.achados.filter((_, k) => k !== i) }))}
             />
           </div>
