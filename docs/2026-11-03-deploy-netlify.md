@@ -72,6 +72,12 @@ Modelo: Claude Opus 5.5, esforço médio, resposta em JSON validado por esquema.
 - Custo de referência: cerca de US$ 0,07 por lote de 2 fotos na marcação; 20 fotos devem ficar perto de US$ 0,60, mais uns US$ 0,13 de prescrição e treino.
 - Banco: migrações `20261113000000_fotos_posturais.sql` e `20261113010000_postura_no_link.sql` (já aplicadas).
 
+### Fotos dos exercícios
+
+- Cada exercício do Dr. Pablo pode ter fotos (`exercicios.fotos`), além do vídeo. Com 2 ou mais fotos (início e fim do movimento), elas alternam sozinhas no link do paciente, como uma animação curta.
+- As fotos da série de 2026-11-18 ficam em `public/fotos-exercicios/` (seed `supabase/seed/2026-11-18-fotos-exercicios.sql`). Fotos novas enviadas pela Biblioteca (botão **Adicionar fotos**) vão para o bucket `exercicios`.
+- Migração `20261118000000_fotos_exercicios.sql` (já aplicada).
+
 ## Domínio próprio (pablopaciente.com.br)
 
 1. **Netlify:** Domain management > Add a domain > `pablopaciente.com.br` > confirmar. Adicione também `www.pablopaciente.com.br`.

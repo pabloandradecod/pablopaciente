@@ -1,4 +1,5 @@
 import { formatarData } from '../lib/datas.js'
+import { urlFoto } from '../lib/api.js'
 import { TEXTOS } from '../lib/textos.js'
 import { formatarTelefone, WHATSAPP_CONSULTORIO } from '../lib/whatsapp.js'
 import MapaColuna from '../components/coluna/MapaColuna.jsx'
@@ -25,6 +26,11 @@ function valorTexto(item) {
 
 function capa(video) {
   return video?.startsWith('galeria/') ? `/${video.replace(/\.mp4$/, '.webp')}` : null
+}
+// Foto do exercício para o PDF: a última da sequência (posição final do movimento).
+function fotoPdf(fotos) {
+  const f = fotos?.length ? fotos[fotos.length > 2 ? 1 : fotos.length - 1] : null
+  return f ? urlFoto(f) : null
 }
 
 function Titulo({ children }) {
@@ -154,8 +160,10 @@ export default function Impressao({ dados, parte, postura }) {
             <tbody>
               {exercicios.map((e, k) => (
                 <tr key={k} className="quebra-evitar border-b border-[#ECEEEE] align-top">
-                  <td className="w-[62px] py-2 pr-3">
-                    {capa(e.video_path) ? (
+                  <td className="w-[94px] py-2 pr-3">
+                    {fotoPdf(e.fotos) ? (
+                      <img src={fotoPdf(e.fotos)} alt="" className="h-[64px] w-[86px] rounded object-contain" />
+                    ) : capa(e.video_path) ? (
                       <img src={capa(e.video_path)} alt="" className="h-[56px] w-[56px] object-contain" />
                     ) : (
                       <div className="flex h-[56px] w-[56px] items-center justify-center rounded bg-[#E7F1F1] text-[14pt] font-extrabold text-[#0E5C62]">{k + 1}</div>

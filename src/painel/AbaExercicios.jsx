@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { adicionarPrescricao, atualizarPrescricao, listarExercicios, listarPrescricao, removerPrescricao } from '../lib/api.js'
+import { urlFoto, adicionarPrescricao, atualizarPrescricao, listarExercicios, listarPrescricao, removerPrescricao } from '../lib/api.js'
 import Botao from '../components/ui/Botao.jsx'
 import Icone from '../components/ui/Icone.jsx'
 import Modal from '../components/ui/Modal.jsx'
@@ -69,9 +69,16 @@ export default function AbaExercicios({ pacienteId }) {
         {itens.map((i) => (
           <li key={i.id} className="rounded-2xl border border-cinza-100 bg-white p-4">
             <div className="flex items-start justify-between gap-3">
-              <div className="font-semibold">
-                {i.exercicios?.nome}
-                {!i.exercicios?.video_path && <span className="ml-2 rounded bg-alerta-claro px-1.5 py-0.5 text-[11px] font-bold text-alerta">sem vídeo</span>}
+              <div className="flex min-w-0 items-center gap-3">
+                {i.exercicios?.fotos?.length > 0 && (
+                  <img src={urlFoto(i.exercicios.fotos[Math.min(1, i.exercicios.fotos.length - 1)])} alt="" className="h-12 w-16 shrink-0 rounded-lg bg-cinza-50 object-contain" />
+                )}
+                <div className="font-semibold">
+                  {i.exercicios?.nome}
+                  {!i.exercicios?.video_path && !i.exercicios?.fotos?.length && (
+                    <span className="ml-2 rounded bg-alerta-claro px-1.5 py-0.5 text-[11px] font-bold text-alerta">sem foto</span>
+                  )}
+                </div>
               </div>
               <button
                 onClick={async () => {
@@ -133,7 +140,8 @@ export default function AbaExercicios({ pacienteId }) {
                     <span className="block font-semibold">{e.nome}</span>
                     <span className="text-xs text-cinza-600">
                       {e.series_padrao} séries × {e.reps_padrao}
-                      {!e.video_path && <span className="ml-1.5 font-semibold text-alerta">· sem vídeo</span>}
+                      {!e.video_path && !e.fotos?.length && <span className="ml-1.5 font-semibold text-alerta">· sem foto</span>}
+                      {!e.video_path && e.fotos?.length > 0 && <span className="ml-1.5 font-semibold text-ok">· com fotos</span>}
                     </span>
                   </span>
                   <Icone nome="mais" className="text-petroleo" />

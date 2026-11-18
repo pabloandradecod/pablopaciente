@@ -14,6 +14,7 @@ import MapaColuna, { LegendaMapa } from '../components/coluna/MapaColuna.jsx'
 import { nomeSegmento, TODOS_CODIGOS } from '../components/coluna/segmentos.js'
 import GraficoEvolucao, { corDor } from '../components/GraficoEvolucao.jsx'
 import VideoLoop from '../components/VideoLoop.jsx'
+import { FotosExercicio } from '../components/MidiaExercicio.jsx'
 import Impressao from './Impressao.jsx'
 import { paraLista } from '../components/ui/Campo.jsx'
 import AnalisePostural from '../painel/AnalisePostural.jsx'
@@ -641,6 +642,13 @@ function Exercicios({ exercicios }) {
                 <div className="relative">
                   {/* Vídeos próprios (gravados no celular) são verticais; as animações, quadradas. */}
                   <VideoLoop src={urlVideo(e.video_path)} proporcao={e.video_path.startsWith('galeria/') ? 'aspect-[4/3]' : 'aspect-[3/4]'} />
+                  <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-xs font-extrabold text-petroleo-escuro">
+                    {i + 1} / {exercicios.length}
+                  </span>
+                </div>
+              ) : e.fotos?.length ? (
+                <div className="relative">
+                  <FotosExercicio fotos={e.fotos} nome={e.nome} />
                   <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-xs font-extrabold text-petroleo-escuro">
                     {i + 1} / {exercicios.length}
                   </span>

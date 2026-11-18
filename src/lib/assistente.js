@@ -433,7 +433,7 @@ function bibliotecaComCodigos(biblioteca) {
 }
 
 function listaBibliotecaPropria(biblioteca) {
-  const l = bibliotecaComCodigos(biblioteca).map(({ codigo, exercicio }) => `${codigo} ${exercicio.nome}${exercicio.video_path ? ' (já tem vídeo do Dr. Pablo)' : ''}`)
+  const l = bibliotecaComCodigos(biblioteca).map(({ codigo, exercicio }) => `${codigo} ${exercicio.nome}${exercicio.video_path ? ' (tem vídeo do Dr. Pablo)' : exercicio.fotos?.length ? ' (tem fotos do Dr. Pablo)' : ''}`)
   return l.length ? l.join('\n') : '(vazia: use "codigo": "novo")'
 }
 
@@ -475,7 +475,7 @@ SEPARAÇÃO OBRIGATÓRIA
 REGRAS
 1. Monte entre 4 e 7 exercícios adequados à fase (aguda: alívio, mobilidade suave, isometria; subaguda e crônica: controle motor e fortalecimento progressivo de core, glúteos e quadril).
 2. Nome: curto e padrão em português, como um fisioterapeuta brasileiro chamaria (ex.: "Ponte de glúteo", "Prancha lateral com joelhos apoiados", "Gato e camelo").
-3. Se um exercício da biblioteca servir, use o código dele em "codigo" e o MESMO nome; prefira os que já têm vídeo. Para um exercício que não está na biblioteca, "codigo": "novo".
+3. Se um exercício da biblioteca servir, use o código dele em "codigo" e o MESMO nome; prefira os que já têm vídeo ou fotos. Para um exercício que não está na biblioteca, "codigo": "novo".
 4. Para cada exercício: séries; em "reps", só as repetições ou o tempo de UMA série (ex.: "10", "8 por lado", "20 s"); "instrucoes" passo a passo em 2 a 4 frases simples, para o paciente entender sozinho; "observacao" com o principal cuidado ou erro a evitar.
 5. Nunca prometa cura, prazo ou resultado. Não use "vértebra fora do lugar", "deslocada" ou "colocada no lugar".
 6. "orientacao": 1 ou 2 frases para o paciente sobre frequência e quando parar.
@@ -567,6 +567,7 @@ export function ligarSugestoes(dados, biblioteca) {
       observacao: s.observacao || '',
       exercicioId: e?.id || null,
       video: e?.video_path || null,
+      fotos: e?.fotos || [],
       incluir: true
     }
   })

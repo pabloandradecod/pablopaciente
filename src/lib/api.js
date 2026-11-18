@@ -128,11 +128,28 @@ export function urlVideo(caminho) {
   return supabase.storage.from('exercicios').getPublicUrl(caminho).data.publicUrl
 }
 
+// Fotos dos exercícios: "fotos-exercicios/..." ficam no site; as enviadas pelo painel, no bucket "exercicios".
+export function urlFoto(caminho) {
+  if (!caminho) return null
+  if (caminho.startsWith('fotos-exercicios/') || caminho.startsWith('blob:')) return caminho.startsWith('blob:') ? caminho : `/${caminho}`
+  if (!supabase) return null
+  return supabase.storage.from('exercicios').getPublicUrl(caminho).data.publicUrl
+}
+export async function enviarFotoExercicio(blob) {
+  const caminho = `fotos/${crypto.randomUUID()}.jpg`
+  checar(await supabase.storage.from('exercicios').upload(caminho, blob, { contentType: 'image/jpeg', upsert: false }))
+  return caminho
+}
+export async function removerFotoExercicio(caminho) {
+  if (!caminho || caminho.startsWith('fotos-exercicios/')) return
+  await supabase.storage.from('exercicios').remove([caminho])
+}
+
 export async function listarPrescricao(pacienteId) {
   return checar(
     await supabase
       .from('paciente_exercicios')
-      .select('*, exercicios(id, nome, video_path, instrucoes)')
+      .select('*, exercicios(id, nome, video_path, fotos, instrucoes)')
       .eq('paciente_id', pacienteId)
       .order('ordem')
   )

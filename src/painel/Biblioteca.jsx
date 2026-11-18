@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
-import { enviarVideo, excluirExercicio, listarExercicios, removerVideo, salvarExercicio, urlVideo } from '../lib/api.js'
+import { enviarFotoExercicio, enviarVideo, excluirExercicio, listarExercicios, removerFotoExercicio, removerVideo, salvarExercicio, urlFoto, urlVideo } from '../lib/api.js'
+import MidiaExercicio from '../components/MidiaExercicio.jsx'
+import { reduzirFoto } from '../lib/fotos.js'
 import GaleriaAcademia from './GaleriaAcademia.jsx'
 import Botao from '../components/ui/Botao.jsx'
 import { AreaTexto, Campo, Rotulo } from '../components/ui/Campo.jsx'
@@ -8,12 +10,14 @@ import Modal from '../components/ui/Modal.jsx'
 import Carregando from '../components/ui/Carregando.jsx'
 import VideoLoop from '../components/VideoLoop.jsx'
 
-const VAZIO = { nome: '', instrucoes: '', series_padrao: 3, reps_padrao: '10', video_path: null, ativo: true }
+const VAZIO = { nome: '', instrucoes: '', series_padrao: 3, reps_padrao: '10', video_path: null, fotos: [], ativo: true }
 
 export default function Biblioteca() {
   const [lista, setLista] = useState(null)
   const [edicao, setEdicao] = useState(null)
   const [arquivo, setArquivo] = useState(null)
+  const [novasFotos, setNovasFotos] = useState([]) // [{ blob, previa }]
+  const [removidas, setRemovidas] = useState([])
   const [salvando, setSalvando] = useState(false)
   const [erro, setErro] = useState('')
   const [aba, setAba] = useState('pablo') // 'pablo' | 'academia'
@@ -24,8 +28,10 @@ export default function Biblioteca() {
   }, [])
 
   function abrir(ex) {
-    setEdicao(ex ? { ...ex } : { ...VAZIO })
+    setEdicao(ex ? { ...ex, fotos: ex.fotos || [] } : { ...VAZIO })
     setArquivo(null)
+    setNovasFotos([])
+    setRemovidas([])
     setErro('')
   }
 
@@ -42,7 +48,12 @@ export default function Biblioteca() {
         dados.video_path = await enviarVideo(arquivo)
         await removerVideo(antigo)
       }
+      // Fotos novas vão para o bucket; as tiradas da lista são apagadas depois de salvar.
+      const caminhos = []
+      for (const f of novasFotos) caminhos.push(await enviarFotoExercicio(f.blob))
+      dados.fotos = [...(dados.fotos || []), ...caminhos]
       await salvarExercicio(dados)
+      for (const c of removidas) await removerFotoExercicio(c)
       setEdicao(null)
       carregar()
     } catch (err) {
@@ -56,6 +67,7 @@ export default function Biblioteca() {
     try {
       await excluirExercicio(edicao.id)
       await removerVideo(edicao.video_path)
+      for (const c of edicao.fotos || []) await removerFotoExercicio(c)
       setEdicao(null)
       carregar()
     } catch (err) {
@@ -82,7 +94,7 @@ export default function Biblioteca() {
       ) : (
       <>
       <div className="mb-4 flex items-center justify-between gap-3">
-        <p className="text-sm text-cinza-600">Sua biblioteca, com os vídeos que você grava. É daqui que sai a prescrição terapêutica dos pacientes.</p>
+        <p className="text-sm text-cinza-600">Sua biblioteca, com as fotos e os vídeos que você grava. É daqui que sai a prescrição terapêutica dos pacientes.</p>
         <Botao icone="mais" onClick={() => abrir(null)}>Novo</Botao>
       </div>
 
@@ -90,12 +102,15 @@ export default function Biblioteca() {
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {lista?.map((ex) => (
           <button key={ex.id} onClick={() => abrir(ex)} className={`overflow-hidden rounded-2xl border border-cinza-100 bg-white text-left transition hover:border-petroleo/30 ${ex.ativo ? '' : 'opacity-60'}`}>
-            <VideoLoop src={urlVideo(ex.video_path)} proporcao="aspect-[4/3]" />
+            <MidiaExercicio video={ex.video_path} fotos={ex.fotos} proporcao="aspect-[4/3]" nome={ex.nome} />
             <div className="p-4">
               <div className="flex items-center justify-between gap-2">
                 <span className="font-semibold">{ex.nome}</span>
                 {!ex.ativo && <span className="rounded-full bg-cinza-100 px-2 py-0.5 text-xs font-semibold text-cinza-600">Inativo</span>}
-                {ex.ativo && !ex.video_path && <span className="rounded-full bg-alerta-claro px-2 py-0.5 text-xs font-semibold text-alerta">Sem vídeo</span>}
+                {ex.ativo && !ex.video_path && !ex.fotos?.length && <span className="rounded-full bg-alerta-claro px-2 py-0.5 text-xs font-semibold text-alerta">Sem foto</span>}
+                {ex.ativo && !ex.video_path && ex.fotos?.length > 0 && (
+                  <span className="shrink-0 rounded-full bg-petroleo-claro px-2 py-0.5 text-xs font-semibold text-petroleo">{ex.fotos.length} {ex.fotos.length === 1 ? 'foto' : 'fotos'}</span>
+                )}
               </div>
               <div className="mt-0.5 text-xs text-cinza-600">{ex.series_padrao} séries × {ex.reps_padrao}</div>
             </div>
@@ -120,6 +135,64 @@ export default function Biblioteca() {
                 <Icone nome="upload" tamanho={18} />
                 <span className="truncate">{arquivo ? arquivo.name : edicao.video_path ? 'Trocar vídeo' : 'Enviar vídeo'}</span>
                 <input type="file" accept="video/*" className="hidden" onChange={(e) => setArquivo(e.target.files?.[0] || null)} />
+              </label>
+            </div>
+            <div>
+              <Rotulo dica="(início e fim do movimento; alternam sozinhas)">Fotos</Rotulo>
+              {(edicao.fotos.length > 0 || novasFotos.length > 0) && (
+                <div className="mb-2 grid grid-cols-3 gap-2">
+                  {edicao.fotos.map((c) => (
+                    <div key={c} className="relative overflow-hidden rounded-xl bg-cinza-50">
+                      <img src={urlFoto(c)} alt="" className="aspect-[4/3] w-full object-contain" />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setEdicao({ ...edicao, fotos: edicao.fotos.filter((x) => x !== c) })
+                          setRemovidas((r) => [...r, c])
+                        }}
+                        aria-label="Remover foto"
+                        className="absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-black/55 text-white"
+                      >
+                        <Icone nome="x" tamanho={12} />
+                      </button>
+                    </div>
+                  ))}
+                  {novasFotos.map((f, k) => (
+                    <div key={f.previa} className="relative overflow-hidden rounded-xl bg-cinza-50 ring-2 ring-destaque">
+                      <img src={f.previa} alt="" className="aspect-[4/3] w-full object-contain" />
+                      <button
+                        type="button"
+                        onClick={() => setNovasFotos((l) => l.filter((_, i) => i !== k))}
+                        aria-label="Remover foto nova"
+                        className="absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-black/55 text-white"
+                      >
+                        <Icone nome="x" tamanho={12} />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <label className="flex h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-cinza-200 text-sm font-semibold text-petroleo hover:bg-petroleo-claro">
+                <Icone nome="camera" tamanho={18} />
+                Adicionar fotos
+                <input
+                  type="file"
+                  accept="image/*"
+                  multiple
+                  className="hidden"
+                  onChange={async (e) => {
+                    const arqs = [...(e.target.files || [])]
+                    e.target.value = ''
+                    for (const a of arqs) {
+                      try {
+                        const f = await reduzirFoto(a)
+                        setNovasFotos((l) => [...l, { blob: f.blob, previa: f.previa }])
+                      } catch (err) {
+                        setErro(err.message)
+                      }
+                    }
+                  }}
+                />
               </label>
             </div>
             <AreaTexto id="ex-inst" rotulo="Instruções" rows={4} value={edicao.instrucoes} onChange={(e) => setEdicao({ ...edicao, instrucoes: e.target.value })} />

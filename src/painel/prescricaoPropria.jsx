@@ -6,6 +6,7 @@ import {
 } from '../lib/api.js'
 import { ehGaleria, normalizarNome } from '../lib/assistente.js'
 import Icone from '../components/ui/Icone.jsx'
+import { FotosExercicio } from '../components/MidiaExercicio.jsx'
 
 const LIMITE_MB = 50
 
@@ -91,10 +92,12 @@ export function CartoesSugestoes({ sugestoes, setSugestoes, aoMensagem }) {
             <div className="w-20 shrink-0">
               {s.video ? (
                 <video src={urlVideo(s.video)} muted loop autoPlay playsInline className="aspect-[3/4] w-20 rounded-xl bg-cinza-100 object-cover" />
+              ) : s.fotos?.length ? (
+                <FotosExercicio fotos={s.fotos} nome={s.nome} className="rounded-xl" />
               ) : (
                 <div className="flex aspect-[3/4] w-20 flex-col items-center justify-center gap-1 rounded-xl bg-cinza-50 text-center text-[10px] font-semibold text-cinza-400">
-                  <Icone nome="video" tamanho={20} />
-                  sem vídeo
+                  <Icone nome="camera" tamanho={20} />
+                  sem foto
                 </div>
               )}
             </div>
