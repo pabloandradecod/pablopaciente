@@ -211,8 +211,32 @@ export async function pacienteConfirmar(token, nascimento) {
 export async function pacienteDados(token, chave) {
   return checar(await supabase.rpc('paciente_dados', { p_token: token, p_chave: chave }))
 }
+export async function pacienteCheckin(token, chave, dor, exercicios) {
+  return checar(await supabase.rpc('paciente_checkin', { p_token: token, p_chave: chave, p_dor: dor, p_exercicios: exercicios }))
+}
 export async function pacientePedirSOS(token, chave, triagem) {
   return checar(await supabase.rpc('paciente_pedir_sos', { p_token: token, p_chave: chave, p_triagem: triagem }))
+}
+
+// ---------------- Retornos e plano ----------------
+export async function dadosRetornos() {
+  const desde = new Date(Date.now() - 200 * 86400000).toISOString()
+  const [pacientes, sessoes, checkins, contatos] = await Promise.all([
+    supabase.from('pacientes').select('id, nome, whatsapp, plano_sessoes').then(checar),
+    supabase.from('sessoes').select('paciente_id, data, dor_antes, dor_depois').gte('data', desde.slice(0, 10)).then(checar),
+    supabase.from('checkins').select('paciente_id, dor, exercicios, criado_em').gte('criado_em', desde).then(checar),
+    supabase.from('contatos').select('paciente_id, motivo, criado_em').gte('criado_em', desde).then(checar)
+  ])
+  return { pacientes, sessoes, checkins, contatos }
+}
+export async function registrarContato(pacienteId, motivo) {
+  return checar(await supabase.from('contatos').insert({ paciente_id: pacienteId, motivo }).select().single())
+}
+export async function listarCheckins(pacienteId) {
+  return checar(await supabase.from('checkins').select('*').eq('paciente_id', pacienteId).order('criado_em', { ascending: false }).limit(20))
+}
+export async function salvarPlano(pacienteId, plano) {
+  return checar(await supabase.from('pacientes').update(plano).eq('id', pacienteId).select('id, plano_sessoes, plano_frequencia, plano_objetivo').single())
 }
 
 // ---------------- Assistente (relatórios internos) ----------------

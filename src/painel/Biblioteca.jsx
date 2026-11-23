@@ -107,6 +107,7 @@ export default function Biblioteca() {
               <div className="flex items-center justify-between gap-2">
                 <span className="font-semibold">{ex.nome}</span>
                 {!ex.ativo && <span className="rounded-full bg-cinza-100 px-2 py-0.5 text-xs font-semibold text-cinza-600">Inativo</span>}
+                {ex.ativo && ex.crise_ordem != null && <span className="shrink-0 rounded-full bg-destaque-claro px-2 py-0.5 text-xs font-semibold text-petroleo-escuro">Crise</span>}
                 {ex.ativo && !ex.video_path && !ex.fotos?.length && <span className="rounded-full bg-alerta-claro px-2 py-0.5 text-xs font-semibold text-alerta">Sem foto</span>}
                 {ex.ativo && !ex.video_path && ex.fotos?.length > 0 && (
                   <span className="shrink-0 rounded-full bg-petroleo-claro px-2 py-0.5 text-xs font-semibold text-petroleo">{ex.fotos.length} {ex.fotos.length === 1 ? 'foto' : 'fotos'}</span>
@@ -203,6 +204,18 @@ export default function Biblioteca() {
             <label className="flex items-center gap-3 text-sm font-medium">
               <input type="checkbox" checked={edicao.ativo} onChange={(e) => setEdicao({ ...edicao, ativo: e.target.checked })} className="h-5 w-5 accent-[#0E5C62]" />
               Ativo (aparece para prescrever)
+            </label>
+            <label className="flex items-start gap-3 text-sm font-medium">
+              <input
+                type="checkbox"
+                checked={edicao.crise_ordem != null}
+                onChange={(e) => setEdicao({ ...edicao, crise_ordem: e.target.checked ? 50 : null })}
+                className="mt-0.5 h-5 w-5 shrink-0 accent-[#0E5C62]"
+              />
+              <span>
+                Rotina para dias de crise
+                <span className="block text-xs font-normal text-cinza-600">Aparece no link de todos os pacientes quando pedem retorno e na seção de exercícios.</span>
+              </span>
             </label>
             {erro && <p className="text-sm font-medium text-alerta">{erro}</p>}
             <div className="flex gap-2">

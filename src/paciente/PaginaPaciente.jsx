@@ -7,6 +7,7 @@ import { WHATSAPP_CONSULTORIO } from '../lib/whatsapp.js'
 import { gravarAcesso, limparChave, tokenDoLink } from './acesso.js'
 import Confirmacao, { Tela } from './Confirmacao.jsx'
 import BotaoSOS from './BotaoSOS.jsx'
+import { CheckinCard, CheckinsAnteriores, PlanoCard, RotinaCrise } from './Retorno.jsx'
 import Logo, { Simbolo } from '../components/ui/Logo.jsx'
 import Icone from '../components/ui/Icone.jsx'
 import Carregando from '../components/ui/Carregando.jsx'
@@ -271,6 +272,12 @@ function Conteudo({ dados, acesso }) {
             </p>
           </Revelar>
 
+          {dados.checkin_pendente && (
+            <Revelar atraso={60} className="mt-7">
+              <CheckinCard acesso={acesso} nome={paciente.primeiro_nome} ultimaSessao={ultima} />
+            </Revelar>
+          )}
+
           <Revelar atraso={100} className="mt-7">
             <AvaliacaoGoogle />
           </Revelar>
@@ -284,6 +291,12 @@ function Conteudo({ dados, acesso }) {
                 rotulo="última sessão"
                 destaque
               />
+            </Revelar>
+          )}
+
+          {dados.plano && (
+            <Revelar atraso={180} className="mt-3">
+              <PlanoCard plano={dados.plano} feitas={sessoes.length} nome={paciente.primeiro_nome} />
             </Revelar>
           )}
         </div>
@@ -386,7 +399,7 @@ function Conteudo({ dados, acesso }) {
               <CabecalhoSecao numero="04" titulo="Sua evolução" sub="Sua dor numa escala de 0 (sem dor) a 10 (pior dor possível)." />
             </Revelar>
             <Revelar>
-              <Evolucao sessoes={comDor} />
+              <Evolucao sessoes={comDor} checkins={dados.checkins} />
             </Revelar>
           </section>
         )}
@@ -398,6 +411,18 @@ function Conteudo({ dados, acesso }) {
               <CabecalhoSecao numero="05" titulo="Exercícios do Dr. Pablo" sub="Seus exercícios de casa. Faça no seu ritmo. Se a dor aumentar durante um exercício, pare e avise o Dr. Pablo." />
             </Revelar>
             <Exercicios exercicios={exercicios} />
+            {dados.crise?.length > 0 && (
+              <details className="group mt-4 rounded-[28px] bg-white p-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
+                  <span>
+                    <span className="block text-lg font-extrabold text-petroleo-escuro">Se travar: rotina para dias de crise</span>
+                    <span className="block text-sm text-cinza-600">Movimentos suaves para os dias em que a dor apertar.</span>
+                  </span>
+                  <Icone nome="seta" tamanho={20} className="shrink-0 text-petroleo transition group-open:rotate-90" />
+                </summary>
+                <div className="mt-4"><RotinaCrise crise={dados.crise} /></div>
+              </details>
+            )}
           </section>
         )}
 
@@ -451,7 +476,7 @@ function Conteudo({ dados, acesso }) {
         </footer>
       </main>
 
-      <BotaoSOS token={acesso.token} chave={acesso.chave} nome={paciente.nome} />
+      <BotaoSOS token={acesso.token} chave={acesso.chave} nome={paciente.nome} crise={dados.crise} />
     </div>
     <Impressao dados={dados} parte={parteImpressao} postura={postura} />
     </>
@@ -540,7 +565,7 @@ function Etiquetas({ lista }) {
 
 // ---------------------------------------------------------------- evolução
 
-function Evolucao({ sessoes }) {
+function Evolucao({ sessoes, checkins }) {
   const primeira = sessoes[0]
   const ultima = sessoes.at(-1)
 
@@ -553,6 +578,7 @@ function Evolucao({ sessoes }) {
           <BlocoDor rotulo="Ao sair" valor={primeira.dor_depois} />
         </div>
         <p className="mt-4 text-xs text-cinza-600">O gráfico aparece a partir da segunda sessão.</p>
+        <CheckinsAnteriores checkins={checkins} />
       </div>
     )
   }
@@ -572,6 +598,7 @@ function Evolucao({ sessoes }) {
         <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-sm bg-destaque" /> 4 a 6</span>
         <span className="flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-sm bg-laranja" /> 7 a 10</span>
       </div>
+      <CheckinsAnteriores checkins={checkins} />
     </div>
   )
 }

@@ -12,6 +12,7 @@ const FichaPaciente = lazy(() => import('./painel/FichaPaciente.jsx'))
 const SessaoForm = lazy(() => import('./painel/SessaoForm.jsx'))
 const Biblioteca = lazy(() => import('./painel/Biblioteca.jsx'))
 const FilaSOS = lazy(() => import('./painel/FilaSOS.jsx'))
+const Retornos = lazy(() => import('./painel/Retornos.jsx'))
 const Configuracoes = lazy(() => import('./painel/Configuracoes.jsx'))
 const PreviaColuna = lazy(() => import('./PreviaColuna.jsx'))
 
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="pacientes/:id/sessoes/:sessaoId" element={<SessaoForm />} />
           <Route path="exercicios" element={<Biblioteca />} />
           <Route path="sos" element={<FilaSOS />} />
+          <Route path="retornos" element={<Retornos />} />
           <Route path="configuracoes" element={<Configuracoes />} />
         </Route>
         <Route path="/previa-coluna" element={<PreviaColuna />} />

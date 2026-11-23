@@ -11,6 +11,7 @@ import Botao from '../components/ui/Botao.jsx'
 
 const ITENS = [
   { para: '/painel', rotulo: 'Assistente', icone: 'conversa', fim: true },
+  { para: '/painel/retornos', rotulo: 'Retornos', icone: 'telefone' },
   { para: '/painel/pacientes', rotulo: 'Pacientes', icone: 'usuarios' },
   { para: '/painel/sos', rotulo: 'Fila SOS', icone: 'sirene' },
   { para: '/painel/exercicios', rotulo: 'Exercícios', icone: 'haltere' },
@@ -94,14 +95,14 @@ function LayoutAutenticado() {
       </main>
 
       {/* Navegação inferior no celular */}
-      <nav className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-5 border-t border-cinza-100 bg-white pb-[env(safe-area-inset-bottom)] md:hidden">
+      <nav className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-6 border-t border-cinza-100 bg-white pb-[env(safe-area-inset-bottom)] md:hidden">
         {ITENS.map((i) => (
           <NavLink
             key={i.para}
             to={i.para}
             end={i.fim}
             className={({ isActive }) =>
-              `relative flex flex-col items-center gap-0.5 py-2.5 text-[10.5px] font-semibold ${isActive ? 'text-petroleo' : 'text-cinza-600'}`
+              `relative flex flex-col items-center gap-0.5 py-2.5 text-[10px] font-semibold ${isActive ? 'text-petroleo' : 'text-cinza-600'}`
             }
           >
             <Icone nome={i.icone} tamanho={22} />

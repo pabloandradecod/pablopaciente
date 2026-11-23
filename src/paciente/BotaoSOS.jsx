@@ -5,11 +5,12 @@ import { preencher, TEXTOS } from '../lib/textos.js'
 import Botao from '../components/ui/Botao.jsx'
 import Icone from '../components/ui/Icone.jsx'
 import Modal from '../components/ui/Modal.jsx'
+import { RotinaCrise } from './Retorno.jsx'
 
 const T = TEXTOS.sos
 
 // Botão fixo no rodapé + triagem de sinais de alerta (cauda equina).
-export default function BotaoSOS({ token, chave, nome }) {
+export default function BotaoSOS({ token, chave, nome, crise = [] }) {
   const [aberto, setAberto] = useState(false)
   return (
     <>
@@ -20,12 +21,12 @@ export default function BotaoSOS({ token, chave, nome }) {
           </Botao>
         </div>
       </div>
-      {aberto && <Triagem token={token} chave={chave} nome={nome} aoFechar={() => setAberto(false)} />}
+      {aberto && <Triagem token={token} chave={chave} nome={nome} crise={crise} aoFechar={() => setAberto(false)} />}
     </>
   )
 }
 
-function Triagem({ token, chave, nome, aoFechar }) {
+function Triagem({ token, chave, nome, crise, aoFechar }) {
   const [respostas, setRespostas] = useState({})
   const [etapa, setEtapa] = useState('perguntas') // perguntas | alerta | registrado | erro
   const [enviando, setEnviando] = useState(false)
@@ -90,6 +91,15 @@ function Triagem({ token, chave, nome, aoFechar }) {
         >
           {T.confirmar}
         </Botao>
+        {crise?.length > 0 && (
+          <div className="mt-6 border-t border-cinza-100 pt-5">
+            <p className="text-lg font-extrabold text-petroleo-escuro">Enquanto espera o retorno</p>
+            <p className="mb-3 mt-0.5 text-sm text-cinza-600">
+              Movimentos suaves para os dias de crise. Faça só o que for confortável e pare se a dor aumentar.
+            </p>
+            <RotinaCrise crise={crise} />
+          </div>
+        )}
       </Modal>
     )
   }

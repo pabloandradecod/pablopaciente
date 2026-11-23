@@ -78,6 +78,14 @@ Modelo: Claude Opus 5.5, esforço médio, resposta em JSON validado por esquema.
 - As fotos da série de 2026-11-18 ficam em `public/fotos-exercicios/` (seed `supabase/seed/2026-11-18-fotos-exercicios.sql`). Fotos novas enviadas pela Biblioteca (botão **Adicionar fotos**) vão para o bucket `exercicios`.
 - Migração `20261118000000_fotos_exercicios.sql` (já aplicada).
 
+### Retornos, check-in e plano de tratamento
+
+- **Retornos** (menu do painel): lista "Quem chamar hoje" com a mensagem de WhatsApp pronta. Categorias: dor subiu no check-in, parou os exercícios, sem retorno há 21 dias ou mais, plano concluído (reavaliação/manutenção) e pedir o check-in da semana. Depois de "Chamar" ou "Já falei", o paciente sai da lista por 7 dias (tabela `contatos`). Regras em `src/lib/retornos.js`.
+- **Check-in no link**: a partir de 5 dias depois da última sessão (no máximo 1 vez por semana), o link pergunta a dor de 0 a 10 e se fez os exercícios (função `paciente_checkin`, tabela `checkins`). Dor alta oferece marcar retorno pelo WhatsApp.
+- **Plano de tratamento**: na ficha, aba Sessões (número de sessões, frequência, objetivo). No link aparece "Sessão X de Y" com barra de progresso e próxima etapa; ao concluir, oferece reavaliação.
+- **Rotina de crise**: exercícios marcados como "Rotina para dias de crise" na Biblioteca aparecem no link (seção de exercícios) e depois do pedido de retorno no botão SOS.
+- Migração `20261123000000_retornos_e_plano.sql` e seed `2026-11-23-rotina-crise.sql` (já aplicados).
+
 ## Domínio próprio (pablopaciente.com.br)
 
 1. **Netlify:** Domain management > Add a domain > `pablopaciente.com.br` > confirmar. Adicione também `www.pablopaciente.com.br`.

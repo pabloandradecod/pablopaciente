@@ -85,7 +85,7 @@ export default function FichaPaciente() {
       </div>
 
       {aba === 'avaliacao' && <AbaAvaliacao pacienteId={id} paciente={p} />}
-      {aba === 'sessoes' && <AbaSessoes pacienteId={id} />}
+      {aba === 'sessoes' && <AbaSessoes pacienteId={id} paciente={p} />}
       {aba === 'exercicios' && <AbaExercicios pacienteId={id} />}
       {aba === 'treino' && <AbaTreino paciente={p} />}
       {aba === 'link' && <AbaLink paciente={p} />}
