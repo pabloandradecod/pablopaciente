@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { enviarFotoExercicio, enviarVideo, excluirExercicio, listarExercicios, removerFotoExercicio, removerVideo, salvarExercicio, urlFoto, urlVideo } from '../lib/api.js'
 import MidiaExercicio from '../components/MidiaExercicio.jsx'
+import VideoGuiado, { ehVideoGuiado } from '../components/VideoGuiado.jsx'
 import { reduzirFoto } from '../lib/fotos.js'
 import GaleriaAcademia from './GaleriaAcademia.jsx'
 import Botao from '../components/ui/Botao.jsx'
@@ -102,7 +103,7 @@ export default function Biblioteca() {
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {lista?.map((ex) => (
           <button key={ex.id} onClick={() => abrir(ex)} className={`overflow-hidden rounded-2xl border border-cinza-100 bg-white text-left transition hover:border-petroleo/30 ${ex.ativo ? '' : 'opacity-60'}`}>
-            <MidiaExercicio video={ex.video_path} fotos={ex.fotos} proporcao="aspect-[4/3]" nome={ex.nome} />
+            <MidiaExercicio video={ex.video_path} fotos={ex.fotos} proporcao="aspect-[4/3]" nome={ex.nome} estatico />
             <div className="p-4">
               <div className="flex items-center justify-between gap-2">
                 <span className="font-semibold">{ex.nome}</span>
@@ -113,7 +114,7 @@ export default function Biblioteca() {
                   <span className="shrink-0 rounded-full bg-petroleo-claro px-2 py-0.5 text-xs font-semibold text-petroleo">{ex.fotos.length} {ex.fotos.length === 1 ? 'foto' : 'fotos'}</span>
                 )}
               </div>
-              <div className="mt-0.5 text-xs text-cinza-600">{ex.series_padrao} séries × {ex.reps_padrao}</div>
+              <div className="mt-0.5 text-xs text-cinza-600">{ex.series_padrao} {Number(ex.series_padrao) === 1 ? "série" : "séries"} × {ex.reps_padrao}</div>
             </div>
           </button>
         ))}
@@ -129,7 +130,11 @@ export default function Biblioteca() {
               <Rotulo dica="(10 a 20 s, vertical, até 50 MB)">Vídeo em loop</Rotulo>
               {(arquivo || edicao.video_path) && (
                 <div className="mb-2 overflow-hidden rounded-xl">
-                  <VideoLoop src={arquivo ? URL.createObjectURL(arquivo) : urlVideo(edicao.video_path)} />
+                  {!arquivo && ehVideoGuiado(edicao.video_path) ? (
+                    <VideoGuiado caminho={edicao.video_path} nome={edicao.nome} />
+                  ) : (
+                    <VideoLoop src={arquivo ? URL.createObjectURL(arquivo) : urlVideo(edicao.video_path)} />
+                  )}
                 </div>
               )}
               <label className="flex h-11 cursor-pointer items-center justify-center gap-2 rounded-xl border border-dashed border-cinza-200 text-sm font-semibold text-petroleo hover:bg-petroleo-claro">

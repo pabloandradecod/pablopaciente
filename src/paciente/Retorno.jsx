@@ -4,6 +4,7 @@ import { linkWhatsapp, WHATSAPP_CONSULTORIO } from '../lib/whatsapp.js'
 import { formatarDataCurta } from '../lib/datas.js'
 import { corDor } from '../components/GraficoEvolucao.jsx'
 import { FotosExercicio } from '../components/MidiaExercicio.jsx'
+import VideoGuiado, { ehVideoGuiado } from '../components/VideoGuiado.jsx'
 import Botao from '../components/ui/Botao.jsx'
 import Icone from '../components/ui/Icone.jsx'
 
@@ -199,7 +200,9 @@ export function RotinaCrise({ crise, compacta = false }) {
       {crise.map((e, i) => (
         <li key={i} className="flex gap-3 rounded-2xl border border-cinza-100 bg-white p-2.5">
           <div className="w-28 shrink-0 overflow-hidden rounded-xl">
-            {e.fotos?.length ? (
+            {ehVideoGuiado(e.video_path) ? (
+              <VideoGuiado caminho={e.video_path} nome={e.nome} compacto />
+            ) : e.fotos?.length ? (
               <FotosExercicio fotos={e.fotos} nome={e.nome} proporcaoFixa="aspect-[4/3]" />
             ) : (
               <div className="flex aspect-[4/3] items-center justify-center bg-petroleo-claro text-lg font-extrabold text-petroleo">{i + 1}</div>

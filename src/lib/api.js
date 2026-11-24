@@ -117,13 +117,13 @@ export async function enviarVideo(arquivo) {
   return caminho
 }
 export async function removerVideo(caminho) {
-  if (!caminho || caminho.startsWith('galeria/')) return
+  if (!caminho || caminho.startsWith('galeria/') || caminho.startsWith('videos-exercicios/')) return
   await supabase.storage.from('exercicios').remove([caminho])
 }
 export function urlVideo(caminho) {
   if (!caminho) return null
   // Animações da galeria ficam no próprio site.
-  if (caminho.startsWith('galeria/')) return `/${caminho}`
+  if (caminho.startsWith('galeria/') || caminho.startsWith('videos-exercicios/')) return `/${caminho}`
   if (!supabase) return null
   return supabase.storage.from('exercicios').getPublicUrl(caminho).data.publicUrl
 }

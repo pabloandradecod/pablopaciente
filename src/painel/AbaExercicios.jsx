@@ -139,7 +139,7 @@ export default function AbaExercicios({ pacienteId }) {
                   <span>
                     <span className="block font-semibold">{e.nome}</span>
                     <span className="text-xs text-cinza-600">
-                      {e.series_padrao} séries × {e.reps_padrao}
+                      {e.series_padrao} {Number(e.series_padrao) === 1 ? "série" : "séries"} × {e.reps_padrao}
                       {!e.video_path && !e.fotos?.length && <span className="ml-1.5 font-semibold text-alerta">· sem foto</span>}
                       {!e.video_path && e.fotos?.length > 0 && <span className="ml-1.5 font-semibold text-ok">· com fotos</span>}
                     </span>

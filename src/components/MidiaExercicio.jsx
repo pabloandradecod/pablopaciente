@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { urlFoto, urlVideo } from '../lib/api.js'
 import VideoLoop from './VideoLoop.jsx'
+import VideoGuiado, { ehVideoGuiado } from './VideoGuiado.jsx'
 import Icone from './ui/Icone.jsx'
 
 const semMovimento = () => typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
@@ -55,7 +56,18 @@ export function FotosExercicio({ fotos, className = '', intervalo = 1600, nome =
 }
 
 // Mídia de um exercício do Dr. Pablo: vídeo (se houver), senão fotos, senão aviso.
-export default function MidiaExercicio({ video, fotos = [], proporcao = 'aspect-[4/3]', className = '', nome = '' }) {
+export default function MidiaExercicio({ video, fotos = [], proporcao = 'aspect-[4/3]', className = '', nome = '', estatico = false }) {
+  if (video && ehVideoGuiado(video) && estatico) {
+    return (
+      <div className={`relative ${proporcao} w-full overflow-hidden bg-petroleo-escuro ${className}`}>
+        <img src={`/${video.replace(/\.mp4$/, '.webp')}`} alt="" loading="lazy" className="h-full w-full object-cover" />
+        <span className="absolute bottom-2 left-2 flex items-center gap-1 rounded-full bg-black/55 px-2 py-0.5 text-[11px] font-bold text-white">
+          <Icone nome="video" tamanho={12} /> Vídeo do Dr. Pablo
+        </span>
+      </div>
+    )
+  }
+  if (video && ehVideoGuiado(video)) return <VideoGuiado caminho={video} nome={nome} className={className} />
   if (video) return <VideoLoop src={urlVideo(video)} proporcao={proporcao} className={className} />
   if (fotos?.length) return <FotosExercicio fotos={fotos} className={className} nome={nome} proporcaoFixa={proporcao} />
   return (

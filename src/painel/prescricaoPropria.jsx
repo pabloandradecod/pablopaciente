@@ -90,7 +90,12 @@ export function CartoesSugestoes({ sugestoes, setSugestoes, aoMensagem }) {
         <div key={i} className={`rounded-2xl border bg-white p-3 ${s.incluir ? 'border-petroleo/25' : 'border-cinza-100 opacity-60'}`}>
           <div className="flex items-start gap-3">
             <div className="w-20 shrink-0">
-              {s.video ? (
+              {s.video && s.video.startsWith('videos-exercicios/') ? (
+                <div className="relative">
+                  <img src={`/${s.video.replace(/\.mp4$/, '.webp')}`} alt="" className="aspect-[3/4] w-20 rounded-xl bg-cinza-100 object-cover" />
+                  <span className="absolute bottom-1 left-1 rounded bg-black/55 px-1 text-[9px] font-bold text-white">vídeo</span>
+                </div>
+              ) : s.video ? (
                 <video src={urlVideo(s.video)} muted loop autoPlay playsInline className="aspect-[3/4] w-20 rounded-xl bg-cinza-100 object-cover" />
               ) : s.fotos?.length ? (
                 <FotosExercicio fotos={s.fotos} nome={s.nome} className="rounded-xl" />

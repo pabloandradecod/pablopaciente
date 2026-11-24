@@ -86,6 +86,13 @@ Modelo: Claude Opus 5.5, esforço médio, resposta em JSON validado por esquema.
 - **Rotina de crise**: exercícios marcados como "Rotina para dias de crise" na Biblioteca aparecem no link (seção de exercícios) e depois do pedido de retorno no botão SOS.
 - Migração `20261123000000_retornos_e_plano.sql` e seed `2026-11-23-rotina-crise.sql` (já aplicados).
 
+### Vídeos guiados (Protocolo Postura Livre)
+
+- Ficam em `public/videos-exercicios/<nome>.mp4` (720p, com o som da explicação) com a capa `<nome>.webp`. O exercício aponta para eles em `video_path = 'videos-exercicios/<nome>.mp4'`.
+- No link e no painel aparecem com capa e botão de play; ao tocar, o vídeo roda com som e controles. Vídeo tem prioridade sobre as fotos.
+- Para um lote novo: rodar o script de preparo (ffmpeg: 720p, CRF 26, áudio AAC 96k mono, `+faststart`, capa em ~30% do vídeo) e registrar em um seed como `supabase/seed/2026-11-24-videos-exercicios.sql`.
+- A IA prioriza os exercícios com vídeo nas prescrições novas.
+
 ## Domínio próprio (pablopaciente.com.br)
 
 1. **Netlify:** Domain management > Add a domain > `pablopaciente.com.br` > confirmar. Adicione também `www.pablopaciente.com.br`.
